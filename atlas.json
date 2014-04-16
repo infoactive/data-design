@@ -1,13 +1,11 @@
 {
   "branch": "master",
   "files": [
-    "cover.html",
-    "01-titlepage.html",
-    "02-copyright.html",
-    "03-toc.html",
-    "04-preface.html",
-    "05-chapter.html",
-    "06-appendix.html"
+    "01-intro/cover.html",
+    "01-intro/introduction.html",
+    "02-data-fundamentals/ch01-basic-data-types.html",
+    "02-data-fundamentals/ch02-descriptive-vs-inferential-statistics.html",
+    "02-data-fundamentals/ch03-about-data-aggregation.html"
   ],
   "formats": {
     "pdf": {
