@@ -249,6 +249,14 @@ section[data-type="chapter"] hgroup h2 {
   border-color: #e2a537;
 }
 
+#ch2 .chapter-font-color {
+}
+
+#ch2 .chapter-bg-color {
+}
+
+#ch2 blockquote {
+}
 /* entries for parts in the table of contents */
 
 nav[data-type="toc"] li[data-type="part"] { 
