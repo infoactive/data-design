@@ -37,6 +37,13 @@ body
   font-weight: normal
   font-style: normal
 
+@font-face
+  font-family: 'source_sans_proitalic'
+  src: url('../fonts/sourcesanspro-italic-webfont.eot')
+  src: url('../fonts/sourcesanspro-italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcesanspro-italic-webfont.woff') format('woff'), url('../fonts/sourcesanspro-italic-webfont.ttf') format('truetype'), url('../fonts/sourcesanspro-italic-webfont.svg#source_sans_proitalic') format('svg')
+  font-weight: normal
+  font-style: normal
+
 $yellow: #eeb11e
 $orange: #e76f24
 $red: #cf4627
@@ -44,13 +51,13 @@ $blue: #41a2ba
 $violet: #3b4770
 $green: #6baf44
 $light-gray: #efefef
-$gray: #ccc
+$gray: #d1d2d4
 
 $colors: $blue $yellow $green $violet $red
 
 p, dd
   font-family: 'source_sans_proregular', sans-serif
-  font-size: 1.2em
+  font-size: 1.1em
   line-height: 150%
   text-indent: 0
 
@@ -65,6 +72,10 @@ section[data-type="sect3"] > h3 + p
 
 p a
   display: inline
+
+em
+  font-family: 'source_sans_proitalic', sans-serif
+  font-style: normal
 
 section[data-type="titlepage"]
   h1
@@ -155,9 +166,9 @@ section[data-type="chapter"] hgroup
 
 section[data-type="chapter"] hgroup h1
   font-family: 'source_sans_probold', sans-serif
-  font-size: 2.5em
+  font-size: 2.6em
   margin-top: 0em
-  margin-bottom: 1.6em
+  margin-bottom: 1.5em
   text-align: center
   text-transform: uppercase
   color: #444
@@ -274,7 +285,7 @@ section[data-type="appendix"] > h1
 
 
 section[data-type="sect1"] h1
-  font-size: 2em
+  font-size: 2.2em
   margin-top: 40px
   margin-bottom: 20px
 
@@ -333,51 +344,98 @@ dd p
 table
   margin-top: 30px
   margin-bottom: 30px
-  border-bottom: 1px solid #888
+  border-bottom: 1px solid $gray
   border-collapse: collapse
 
 
 table caption
   font-family: 'source_sans_proregular', sans-serif
-  font-size: 0.8em
   line-height: 120%
   text-align: left
   margin: 0 0 20px 0
   padding: 0
 
-
 tr
   border-width: 0px
 
-
 th
   font-family: 'source_sans_proregular', sans-serif
-  font-size: 0.8em
   line-height: 120%
   text-align: left
   margin-top: 0
-  border-top: 1px solid #888
-  border-bottom: 1px solid #888
-
+  border-top: 1px solid $gray
+  border-bottom: 1px solid $gray
+  border-left: 1px solid $gray
+  padding: .5em 1.5em .5em 3em
+  font-size: 1.3em
+  color: white
 
 th, td
-  padding: 6px
+  border-bottom: 1px solid $gray
+  border-left: 1px solid $gray
+  &:last-child
+    border-right: 1px solid $gray
 
+td
+  padding: 1.5em
+  padding-bottom: 1em
+  vertical-align: top
 
 td, table p
   font-family: 'source_sans_proregular', sans-serif
-  font-size: 12px
   line-height: 120%
-
 
 table p
   text-indent: 0
-  margin-top: 6px
+  font-size: .95em
 
+table ul
+  padding: 0 1.5em
+  li
+    margin-bottom: 1em
 
 td pre.programlisting, td pre.screen, td pre.literallayout, td code
   white-space: pre-wrap
   word-wrap: break-word
+
+table.question-and-answer
+  th:nth-child(1)
+    background: url('../../images/shared-icons/search.png') 1.2em no-repeat #444
+  th:nth-child(2)
+    background: url('../../images/shared-icons/arrow.png') 1.2em no-repeat $blue
+  td
+    width: 50%
+  td:nth-child(2)
+    p
+      color: #999
+    h2
+      font-family: 'source_sans_prosemibold', sans-serif
+      color: $blue
+      font-size: .95em
+      margin: 0
+      + p
+        margin-top: 0
+
+table.pros-and-cons
+  th:nth-child(1)
+    background: url('../../images/shared-icons/check.png') 1.2em no-repeat $green
+  th:nth-child(2)
+    background: url('../../images/shared-icons/close.png') 1.2em no-repeat darken($gray, 15)
+  td
+    width: 50%
+  td:nth-child(2)
+    background: $light-gray
+
+table.sections
+  th:nth-child(1)
+    background: url('../../images/shared-icons/sections.png') 1.2em no-repeat #444
+  th:nth-child(2)
+    background: url('../../images/shared-icons/add.png') 1.2em no-repeat $blue
+  h2
+    font-family: 'source_sans_prosemibold', sans-serif
+    color: $blue
+    font-size: .95em
+    margin: 0
 
 figure 
   margin: 40px 0
@@ -436,23 +494,22 @@ aside p
 
 div[data-type="note"], 
 div[data-type="warning"]
-  padding: 20px 40px
+  padding: 15px 40px 20px 110px
   margin: 50px 0 40px
   page-break-inside: avoid
   background: #efefef
   border-radius: 2px
   position: relative
 
+div[data-type="warning"]
+  background: $gray
 
 div[data-type="note"] img
   position: absolute
-  top: -22px
-  left: -22px
-  border-radius: 50%
-  padding: 6px
-  width: 60px
-  border: 5px solid white
-
+  top: 36px
+  left: 32px
+  width: 50px
+  float: left
 
 div[data-type="note"] h1, 
 div[data-type="warning"] h1
@@ -556,16 +613,14 @@ div.navbar p a
 @media screen and (min-width: 480px) and (max-width: 1024px)
   body
     width: 100%
-    padding: 20px
+    padding: 30px
   
-
-
 // iPhone
 
 @media screen and (max-width: 480px)
   body
     width: 100%
-    padding: 10px
+    padding: 30px
   
   div.navbar
     position: relative
