@@ -64,8 +64,9 @@ body {
 
 p, dd { /* general text styles */
   font-family: 'source_sans_proregular', sans-serif;
-  font-size: 1em;
-  line-height: 125%;
+  font-size: 1.1em;
+  line-height: 150%;
+  text-indent: 0;
 }
 
 section[data-type="preface"] > h1 + p, 
@@ -83,6 +84,7 @@ section[data-type="sect3"] > h3 + p {
 p a {
   display: inline;
 }
+
 
 /* frontmatter */
 
@@ -206,26 +208,43 @@ nav[data-type="toc"] li[data-type="appendix"] {
 }
 
 section[data-type="chapter"] hgroup {
-  border-radius: 2px;
-  padding: 20px;
-}
-
-section[data-type="chapter"] hgroup img {
-  float: left;
+  border-bottom: 18px solid #eeeeee;
+  margin-bottom: 5em;
 }
 
 section[data-type="chapter"] hgroup h1 {
   font-family: 'source_sans_probold', sans-serif;
   font-size: 2.5em;
-  margin: 0;
+  margin-top: 0em;
+  margin-bottom: 1.6em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #444;
 }
 
 section[data-type="chapter"] hgroup h2 {
-  padding-left: 120px;
-  height: 100px;
-  padding-top: 54px;
+  font-family: 'source_sans_prolight', sans-serif;
+  text-align: center;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 .5em;
+  letter-spacing: 2px;
+  font-size: 1.3em;
+  padding: 12px;
+}
+
+/*colors yellow eeb11e, orange e76f24,red cf4627, blue 41a2ba, violet 3b4770, green 6baf44 */
+
+.icon {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  margin: 5em auto 3.5em;
+}
+
+.icon img {
+  width: 150px;
+  height: 150px;
+  margin: 45px;
 }
 
 #ch1 hgroup {
@@ -237,7 +256,8 @@ section[data-type="chapter"] hgroup h2 {
   color: #000000;
 }
 
-#ch1 .chapter-font-color {
+#ch1 .chapter-font-color,
+#ch4 .chapter-font-color {
   color: #e2a537;
 }
 
@@ -257,6 +277,13 @@ section[data-type="chapter"] hgroup h2 {
 
 #ch2 blockquote {
 }
+
+#ch4 .chapter-bg-color {
+  background: #e2a537;
+}
+
+
+
 /* entries for parts in the table of contents */
 
 nav[data-type="toc"] li[data-type="part"] { 
@@ -357,7 +384,7 @@ section[data-type="appendix"] > h1 {
 /* section headings */
 
 section[data-type="sect1"] h1 { /* A-level headings */
-  font-size: 1.5em;
+  font-size: 2em;
   margin-top: 40px;
   margin-bottom: 20px;
 }
