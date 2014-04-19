@@ -1,0 +1,137 @@
+<section data-type="chapter" id="ch4">
+  <div class="chapter-bg-color icon">
+    <img src="../images/sections/03/survey.png" />
+  </div>
+  <hgroup>
+    <h2>Chapter 7</h2>
+    <h1>Data Parsing</h1>
+  </hgroup>
+
+  <section data-type="sect1">
+
+  <p>One aspect of data that is difficult to both learn and teach is how to get your data in shape so that it’s useful. </p>
+
+  <p>Have you ever been given a data set where you couldn’t get directly get the information you needed?  Maybe complete addresses were in a single field, preventing you from getting stats about specific cities and states.  Perhaps a vendor sent a spreadsheet with 6000 part numbers but their numbering system includes the warehouse code followed by the part number and you need the part numbers by themselves.</p>
+
+  INSERT TABLE
+
+  <p>Separating information from a single field into multiple fields is one part of data preparation.  Many people hate this part of working with data, but someone has to clean this stuff up!</p>
+
+  <p>Whether you’re a highly-paid data analyst with billions of records or a 1-person business with a 90-person contact list, you’ll be faced with messy data at some point.  Unfortunately, data parsing isn’t a straightforward task and there’s no one right way to go about doing it.  Each data set is unique and some techniques may be used just once in a lifetime.</p>
+
+  <p>Consider the challenge presented in the data set below about malls:</p>
+
+  INSERT TABLE
+
+  <p>You want the mall name, address, city, and state to be stored in separate fields.  The data set has hundreds of malls in it so splitting the entries apart by hand would take a lot of time.   The mall names are bold, which makes it easy to visually distinguish where the mall name stops and the address starts, but not all the addresses begin with numbers, so no standard tool exists for parsing the data into separate fields.  Code can be written that will recognize the bold and plain font weights and peel them apart, but since this is a rare situation, it is likely that you won’t have it right at hand.  This is a case where you might write code (or have someone write it for you) that you’ll never use for this purpose again.</p>
+
+  <p>We can’t teach you everything about how to split data in this chapter since every situation is unique, as mentioned before.  However, there are some strategies that are useful in many cases.  We’ll go through a few of these, as well as some common data parsing challenges and their sources, to help get you started.</p>
+
+  <h2>Let's begin</h2>
+
+  <p>A straightforward example that many people encounter is separating first names from last names.  You may receive a data set where full names are contained in a single field and you need the first and last names to be separate, or there may already be separate fields for first and last names, but some of the entries have the full name in one of the fields.</p>
+
+  INSERT TABLE
+
+  <p>When data sets come to us this way, the challenge is seemingly fairly easy to resolve.  There are common ways of getting the first names and last names separated for Keith, Fumi, and Warren.   The easiest way is to look for the space, break the name apart at the space, and voila!</p>
+
+  <p>This is simple enough, but when we add in reality, things get complicated FAST:</p>
+
+  <p>What if your data set has thousands of records?  You’ll be spending a lot of time manually separating names, and there are far more potential name combinations than just first and last name.</p>
+
+  INSERT TABLE
+
+  <h2>Now what? Let's make some decisions</h2>
+
+  <p>Let’s say we’re faced with separating the names so that you can sort by last name and our list has 500 names (a number too big to consider hand-typing, and an unpaid intern will get up and walk out if assigned this vile task).</p>
+
+  <p>Before beginning, we need to know certain things:</p>
+
+  <ul>
+    <li>Why is it important to parse this specific field?  Is anything being hurt by having names all in one field?</li>
+    <li>What do we want the result to look like?
+      <ul>
+        <li>Is it important to keep ‘Rev’ and create a separate field to hold other titles like Dr, Mrs, Capt, etc.?</li>
+        <li>Should ‘Jr’ stay with the last name or should there be a separate field for it?</li>
+        <li>Should middle initials be kept? In their own field? With the first name? With the last name?</li>
+        <li>Do we want to keep professional designations?</li>
+
+      </ul>
+    </li>
+    <li>Is it worth the cost of getting it done?  In simple cases, you may be able to hire an intern to complete the work, but this might not be ideal for complicated ones.  What if a professional said they could fix the list for $1000?</li>
+    <li>What do we do with incomplete or incorrect entries (highlighted in yellow in the table above)?</li>
+  </ul>
+
+  <p>These questions should be answered before you start parsing your data. If you just dive in, you can create a larger mess, and these decisions can actually make your parsing process much easier. For example, if you decide that the professional designations don’t matter, there might be an easy way to get rid of them and simplify other parts of the project.</p>
+
+  <p>Say you’re working with a list of 20,000 stores, 19,400 in the US and 600 in Canada.  They have different phone number and address formatting than the US stores. You’re trying to figure out if you need a separate fields for the Canadian data or a separate data set altogether, so you ask the client what their preference is.</p>
+
+  <p>Their answer is simple. They aren’t conducting business in Canada. So, just delete those records. GREAT! Just 19,400 records left.</p>
+
+  <h2>Now how do we parse this data?</h2>
+
+  <p>There are so many parsing techniques, we could write an entire book on just this subject alone.  You can parse data in Excel, or if you have programming skills, you can use Python, SQL, or any number of other languages.  There’s too much for us to cover in this chapter, but for some good references, check out Appendix F.  For right now, we’ll cover some basic starting strategies for parsing so you’ll be better equipped to take on those references when you’re ready.</p>
+
+  <h3>Strategy Tips</h3>
+
+  <h4>Start by looking for the low-hanging fruit</h4>
+
+  <p>In many instances, most of the data that needs to be parsed is fairly simple. Out of 500 names, you may discover that 200 have just a first and last name.  Set these aside. Leave them alone.  Then look at the remaining 300 names.</p>
+
+  <h4>Identify the oddities</h4>
+
+  <p>Look through your data set for the no-names, super-complicated names, incomplete names, non-person names and any entries you don’t know what to do with. Set these aside.  Maybe there are 40.</p>
+
+  <h4>Look for similarities and work in chunks</h4>
+
+  <p>Of the 260 remaining names, maybe 60 are complicated by professional alphabet soup after their names. Whether you’re deleting them or putting them in their own field, handle them all together.</p>
+
+  <p>You’ll be left with the names free of the alphabet soup. For those that have just a first and last name, add those to the 300 that were set aside.</p>
+
+  <p>We do the same with the 2-part last names, and other remaining types.</p>
+
+  <h4>Begin parsing</h4>
+
+  <p>With the names in different buckets we can apply parsing techniques to the entire groups.</p>
+
+  <p>Maybe our first-name-last-name-only group is 290 at this point. Parse that and we’re more than 50% done.</p>
+
+  <p>Then we move to the group that has a single middle initial. They will require their own parsing strategy but the good news is that the strategy can be applied to the group.</p>
+
+  <p>Then we move on to another chunk; e.g., the 2-parts last names; and so on. New strategy applied to each separate chunk of the dataset.</p>
+
+  <h4>Just plain manual effort</h4>
+
+  <p>The 40 oddities may come down to just re-typing manually. </p>
+
+  <div class="note">
+    <p>Quite often, when we’re handling data in real life, some of these take care of themselves. Maybe a non-name record turns out to be a duplicate of a record that’s complete. We can just delete the incorrect record and move on.</p>
+  </div>
+
+  <h3>Preventing the need for data parsing</h3>
+
+  <p>The best solutions are preventive. Do whatever you can to prevent receiving data that will eventually need to be parsed.</p>
+
+  <ul>
+    <li>Use data validation on user inputs</li>
+    <li>Set up forms so that phone numbers and dates can be input only one way.</li>
+    <li>Determine if you want to collect office extensions. Set up a separate field for those so that they don’t get mixed in with phone numbers that don’t have an extension.</li>    
+    <li>Decide if it’s ok that people might add things like Jr, DVM, PhD, CPA after their names. Do you want to handle these any different? Do you want to handle professional designations separate from suffixes like Jr, II, III?</li>
+  </ul>
+
+  <h4>Accept that data sets are never 100% clean</h4>
+
+  <p>As hard as we try, we can’t force people to input 100% accurate data, and we make errors ourselves as we work with data. Thus, it’s important to accept that data sets are never perfect, and develop some sense of “good enough.”</p>
+
+  <p>For example, you have a list of 100 contacts from your database of 100,000 contacts and you notice that 4 of the 100 have the first and last names together in one field. Do you take on a project of combing through and correcting all 100,000 records?</p>
+
+  <p>It depends.</p>
+
+  <p>You may make a formal decision that the data is clean enough for your purposes or this may be too dirty for how you’re using the data.</p>
+
+  <h4>Consider the cost of having messy data and getting it clean</h4>
+
+  <p>Data parsing has costs.  If you hire someone to do the parsing for you, the cost is financial.  If you’re going to do the parsing yourself, it costs you or someone on your project time (and maybe a little sanity).  If you’ll never use a phone number, fax number or need to refer to someone as Reverend, you may make the decision to delete such data and stop collecting it.</p>
+
+  </section>
+</section>
