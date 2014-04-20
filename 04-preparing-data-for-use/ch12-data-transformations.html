@@ -24,7 +24,8 @@
     <h2>Understanding transformations using sample data</h2>
 
     <p>Now let us see how data transformations can be implemented on a sample data. We will use population data of all 51 US states as of 2012 with values ranging from 500K to 40 Million. The first step towards any data transformation is to evaluate the given distribution and then decide upon using appropriate transformations if needed. For this we can plot a histogram of the given values and understand the shape of the data better.</p>
-Table - Summarized view of raw population values
+    
+    <figure>Table - Summarized view of raw population values</figure>
 
     <p>Given the population data, one needs to bin the range of values into various groups and identify the frequency of each group. Table above summarizes the data that is needed for the histogram. Population bin variable refers to range of population values and frequency represents the number of states falling under each bin respectively.</p>
 
@@ -45,17 +46,22 @@ Table - Summarized view of raw population values
     <p>So far we have successfully learned about how log transformation can help in fitting the distribution to a normal pattern. In this process, we have used the log transformed values instead of untransformed ones. Generally speaking, data transformation methods involve application of mathematical function to the raw values and these transformed values are further used for running statistical tests. However, one needs to be careful while reporting or interpreting any insights derived from the transformed data because a transformation changes the unit of the data. When we apply logarithmic function on actual population variable, the unit of measurement becomes the log of the population values. So when results are being shared you should be careful whether these are based on transformed values or raw values.</p>
 
     <h2>Dealing with back transformation</h2>
+
     <p>A better approach would be to back transform the final results and report them in their original units. Back transformation involves doing the opposite of the mathematical function being used in the first place. In the population example, once we apply the log transformation, remember that the relative scale of population unit changes. As you can see the mean value of the log transformed values is between 15 and 16 from Figure 2 whereas Figure 1 shows the mean value of untransformed values is in the range of 6 Million. For the natural log transformation, one would back-transform by raising e to the power of the respective transformed value.</p>
+
     <h2>How to choose the right transformation method</h2>
+
     <p>As we develop more understanding about various transformation methods, one would wonder how to go about choosing a particular method amongst many possible ones. The answer to this question is not straight forward and often we need to rely on either by trial and error method or by building knowledge of common techniques. As per the population example, we observed that log transformation tend to work better to deal with skewed data compared to square-root method. Likewise, depending on the problem you are trying to solve, needed output can be achieved by different transformation techniques. A general strategy would be applying some of the common techniques such as log, square-root, reciprocal, cube-root and square transformations and choosing the one with better results after observing the distributions of the transformed values.</p>
+
     <h2>Common transformation methods</h2>
-    <p>Let us take a closer look at some of these transformation methods,
+
+    <p>Let us take a closer look at some of these transformation methods,</p>
       <ul>
         <li>Reciprocal: The reciprocal method involves computing inverse values of untransformed data and is known to have a drastic effect on distribution shape. When reciprocal method is implemented, small values would become larger and large values would become smaller. Also, the unit of measurement would become a ratio of 1 to the actual units of raw values.</li>
         <li>Cube-root: Similar to square-root, cube-root method involves applying a mathematical function which raises the power of raw values to the power of 1/3. It also works well with skewed data and specifically good in dealing with right skew problem. One major advantage is that this method can be applied to negative values also which is not possible with square root or log transformation.</li>
         <li>Square: This transformation method computes the squared values of untransformed data and generally will have a moderate effect on distribution shape. Unlike square-root or cube-root methods which deal with right skew problem, square method is good with left skew problem.</li>
         <li>Time Series Data Transformations: A time series is a type of data which have a time element associated with it. These series of data is typically arranged in increasing order of the time to capture dependency between successive observations. Some of the common data series which follow time series pattern are daily values of stock data and periodical sales values reported by companies. Like many data distributions, even time series data is not devoid of noise and needs some data manipulation before using it for any meaningful analyses. Smoothing techniques are the most common ones to deal with time series data.</li>
         <li>Smoothing: Smoothing techniques are mostly employed to deal with irregularities or random fluctuations in time series data. Often using untransformed data would not help us derive any meaningful results, and thus subjected to transformations. The most common type of smoothing technique is moving average smoothing which is the simple average of observations over a defined number of time periods. More advanced smoothing techniques which are widely used are Splines and LOESS (locally weighted regression). Generally, the choice of a particular smoothing technique depends more on the type of noise which exists in any time series data.</li>
-      </ul>
+    </ul>
   </section>
 </section>
