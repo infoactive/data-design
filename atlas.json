@@ -1,6 +1,7 @@
 {
   "branch": "master",
   "files": [
+    "toc.html",
     "01-intro/introduction.html",
     "02-data-fundamentals/ch01-basic-data-types.html",
     "02-data-fundamentals/ch02-descriptive-vs-inferential-statistics.html",
