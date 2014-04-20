@@ -322,6 +322,27 @@ section[data-type="chapter"] header p {
 #ch21 .chapter-bg-color, #ch21 .icon {
   background: #eeb11e; }
 
+#ch22 blockquote {
+  border-color: #6baf44; }
+#ch22 .chapter-font-color {
+  color: #6baf44; }
+#ch22 .chapter-bg-color, #ch22 .icon {
+  background: #6baf44; }
+
+#ch23 blockquote {
+  border-color: #3b4770; }
+#ch23 .chapter-font-color {
+  color: #3b4770; }
+#ch23 .chapter-bg-color, #ch23 .icon {
+  background: #3b4770; }
+
+#ch24 blockquote {
+  border-color: #cf4627; }
+#ch24 .chapter-font-color {
+  color: #cf4627; }
+#ch24 .chapter-bg-color, #ch24 .icon {
+  background: #cf4627; }
+
 nav[data-type="toc"] li[data-type="part"] {
   margin-top: 25px; }
 
