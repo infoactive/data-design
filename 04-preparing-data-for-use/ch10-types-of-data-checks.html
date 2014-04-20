@@ -6,4 +6,84 @@
     <p>Chapter 10</p>
     <h1>Types of Data Checks</h1>
   </header>
+
+  <section data-type="sect1">
+
+  <p>The checking of data is crucial if you and your audience are going to have confidence in its insights. The basic approach is quite straightforward - you have fields of data and each of those fields will have expected values. For instance, an age will be between 0 and 120 years and in many cases will be less than 80 years, transaction dates will be in the recent past, often within the last year or two especially if you’re dealing with an internet only data source such as a Twitter stream.</p>
+
+  <p>However, the checking of data although easy to understand and important to do, is a complex problem to solve. The root cause of much of this complexity is the huge range of ways in which data can be wrong or in a different format to the one we expect. </p>
+
+  <h2>When to Check</h2>
+
+  <p>An example data set that was particularly challenging came from a telecom company who provided the useful service of tracking customers changing phone numbers. The idea was great, the implementation less so, they provided the database but no checking on the data, and that data was supplied by 100s of smaller phone service providers. That database is in daily use and is a great example of how not to gather data, and why checking is important. Imagine you’re tracking the types of phone changes by age, the small example below shows a few of the issues - </p>
+
+  <p>PhoneNumberType mixes codes and text</p>
+  <p>Age field has 0 meaning unknown - not good for averages, and is 112 a genuine age?</p>
+
+  <figure>Table 1</figure>
+
+  <p>The basic rule for data checking is - check early, check often. By checking early, at data entry time, there is a chance to correct that data.  For example if your gender field expects the values F or M but the user enters something different such as an A or space then the user can be prompted to correct the data. If the validation isn’t done until later then incorrect values will reach the database, you’ll know they’re wrong but will be unable to fix the issue. Occasionally it’s possible to compare incorrect fields with other linked datasets and then use that to fix the original data. That can be complex and lead to further issues - which data source is correct?</p>
+
+  <p>If you are in the happy position of controlling how the data is being gathered then you have a great advantage, as one of the easiest forms of checking is done as soon as the data is being entered.  This type of data check is called a front-end check or a client-side check because it happens on the front end or client side, before the data is submitted to the database.  It most is commonly done by making sure that your data collection application or web page is designed to only accepts valid types of input.  </p>
+
+  <p>For example, states and countries should always be selected from a list and if you're dealing with international data then the choice of country should limit which state choices are valid. In this way your system will be constrained to only allow good data as it's entered.. The approach isn't perfect though. A classic internet speed bump is the form that waits until you’ve entered every field and submitted before letting on there was an issue at the start. A better approach is to check every field as it is entered but that has disadvantages as it is harder to code and can make the web page too 'chatty' (i.e. there is a continual stream of checking requests being sent to the server0. As a compromise, some simple checking and validation can be carried out entirely in the browser. However, that isn't always possible as some checking will require data or processes that are only available on the server itself. This often occurs when secure values - credit card verification for instance are being checked.</p>
+
+  <h2>Trust no one</h2>
+
+  <p>Even with great design a good rule of thumb is never trust user data. If it has been entered by a person, then somewhere along the line there will be mistakes. Even if there are client side checks, there should always be server side  or back-end checks, too - these are the checks that happen after the data is submitted.  There are good reasons for this.  You may have different front end applications providing data and some may have excellent client side checks, while others do not.  Unclean or unchecked data may arrive in your system through integration with other data services or applications. The example telecom database was so poor because it had too many owners with little oversight between them, and no regard for the end user.</p>
+
+  <p>A further golden rule is to only use text fields where necessary. For instance it’s normal to split an address into Line1, Line2, City, State, Country, PostCode, but in the UK it’s very common to just ask for the PostCode and the street number as those two pieces of information can be then be used to find the exact address. In this way the PostCode is validated automatically and the address data is clean as it’s not entered by the user. In other countries, we have to use text fields, and in that case lots of checking should occur. Commas in data can cause all kinds of problems as many data files are in comma separated (CSV) format. An extra comma creates an extra unexpected field, and any subsequent fields will be moved to the right. For this reason alone it's good to not cut/paste data from excel, instead save to a file and then read into your next application.</p>
+
+  <figure>Table 2</figure>
+
+  <p>An additional comma in the second record has pushed the data to the right, this is an easy problem for a human to spot, but will break most automated systems. A good check is to look for extra data beyond where the last field (“country”) would be.</p>
+
+  <h2>Data Formats and Checking</h2>
+
+  <p>When dealing with numbers there are many issues you should check for. Do the numbers make sense? Is the price really $1,000,000 or has someone entered an incorrect value? Similarly, if the number is zero or negative, does that mean the product was given away, or was someone paid to remove it? For accounting reasons many data sources are required to negative prices in order to properly balance the books.</p>
+
+  <p>In addition, checking numeric values for spaces and letters is useful, but currency and negative values can make that hard as your data may look as follows. All of these are different and valid ways of showing a currency, and contain non-numeric character values. </p>
+
+  <blockquote>
+    <p>
+      $-1,123.45 
+      <br />(1123.45) 
+      <br />-US$1123.45 
+      <br />-112345E-02 
+    </p>
+  </blockquote>
+
+  <p>Letters in numbers aren't necessarily wrong, and negative values will be formatted in many different ways. </p>
+
+  <p>Dates also exhibit many issues that we have to check for. The first is the problem of differences in international formatting. If you see the date 1/12/2013, that's January 12, 2013 in America, but in the UK it's December 1.  If you're lucky, you'll receive dates in an international format such as 2014-01-12. As a bonus, dates in this standardized format (http://whatis.techtarget.com/definition/ISO-date-format) can be sorted even if they're stored as text. </p>
+
+  <p>As websites have an international audience and many visualisations look at trend over time, the checking of dates is important to make sure what you show is correct. It may be clear to you that you're dealing with a date, but many of the data sources you come across will treat all data as text, and it's up to you to make sure what you're using makes sense. To see what we mean by this, type 2014-01-12 into Excel.  It will recognize that as a date and store it appropriately. Now change the cell type to text and you'll see the number 41651. The reason for this is that Excel stores dates as the number of days since 1900-Jan-01.  When you change a date field to text what you get is that number, rather than the date you were expecting.</p>
+
+  <p>Another form of checking that you need to be familiar with is analysing and validating the work of others, if only to make sure the visualizations and numbers actually make sense. This can happen in a work situation where you need to proof the the work of others or online where public visualizations will sometimes provide the underlying data so you can try your own analysis. In both instances the first check is to just recalculate any totals. After that look at the visualisation with a critical eye, do the figures make sense, do they support the story or contradict it - checking doesn’t just have to be for errors, it can be for understanding to. This will give you good experience when moving onto your own data checking and is the first thing to try when someone passes you a report, just as a quick check of the data.</p>
+
+  <h2>Data Versions</h2>
+
+  <p>Another big source of data checking problems is the version of the data you're dealing with.</p>
+
+  <p>As applications and systems change over the years, fields will be added, removed and most problematic their purpose will be changed. For instance the Australian postcode is 4 digit and is stored in a 4 character field. Other systems have been changed to use a more accurate 5 digit identifier called the SLA. When data from those systems is combined, I often see the 5 digit values chopped down to fit into a postcode field. Checking fields for these kinds of changes can be hard, with the PostCode and SLA figures the lookup tables are in the public domain, but it takes additional investigation to release why a location field with 4 digits, that matches neither value.</p>
+
+  <p>Gathering additional fields which won't be part of the output such as CreatedDate is advised. For the new fields any records that exist from before won't have that field filled, often for numeric values this will mean the older records will be filled with zeros. The knock on affect on your visualizations can be huge, averages will be wrong, trend lines will be incomplete. For those fields that have been removed the same issue will be seen. It's relatively rare for an unused field to be removed from data, instead it's often left blank or worse used for a different purpose. In some instances being able to find when the data was entered can be a challenge in itself, but as you become familiar with your data so your expertise, especially around any unusual fields, increases.</p>
+
+  <figure>Table 3</figure>
+
+  <p>Here you can see the effect of adding two new fields, ServerId and CreatedOn, to an existing data source. It’s likely that change was put into place 03/01/2013 (March 1, 2013), so if your analysis is only looking at data since that date then you can track sales/server.  However, there’s no data before that in this source, so if you want to look at what was happening on January 1, 2013, you need to find additional data elsewhere.</p>
+
+  <p>One of the most important checking issues is that the meaning of fields and the values in them may change over time. In a perfect world, every change would be well documented so you would know exactly what the data means. The reality is that these changes are rarely fully documented. The next best way of knowing what the data in a field really represents is to talk the administrators and users of the system. </p>
+
+  <h2>Tools</h2>
+
+  <p>To check data, we need tools, and one of the easiest to use is Excel. As we've discussed the basis of checking is to make sure that values are within an expected range, is the data complete, and is the data internally consistent? Excel can help with all these kinds of checks by using the it's Data -> Filter command.  Excel will handle files upto 1 million rows in size, even if your data is larger than that using a tool to analyse a sample should be a standard pre-requisite before any analysis starts.</p>
+
+  <p>With filtering enabled  in excel you can quickly see what range of values are in each column. That on it's own is very useful, you can quickly find out if these values are within the expected range, are there any blanks. You can also see any oddities such as the words 'Blank', 'N/A', Null these entries will often be seen when data is being entered by hand, in a call centre for instance.</p>
+
+  <p>In addition to seeing the different values in each column in the data, you can instantly see how many records there are with a specific value by selecting it - the count is displayed in the bottom left of the Excel window. Checking for ranges of values is also easy as an option on the filter drop down Number Filters -> Between.</p>
+
+  <p>(I realise this last bit is prescriptive, but Excel really is the best and most accessible tool for this so a little direction seems necessary)</p>
+
+  </section>
 </section>
