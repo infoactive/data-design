@@ -7,6 +7,83 @@
     <h1>Data Cleaning</h1>
   </header>
 
-  <h1>Hm. No content yet.</h1>
-  <p>This is some text.</p>
+  <section data-type="sect1">
+
+    <h2>What does it mean when we say data is clean?</h2>
+
+    <p>Cleaning data. Analysts and developers spend more than half their time doing it and the other half complaining about having to do it. But what exactly does mean to clean data, and if it's so important why can't those releasing the data do the cleaning for us?</p>
+
+    <p>The truth is clean data is relative. There is no perfect schema or format that will serve every purpose. What data looks like depends on where it came from, how it was collected, how it was stored. How you clean data depends what you need to do with it. A visualization may need the data adjusted one way. Other types of analysis may need it adjusted in a completely different way.</p>
+
+    <h2>Removing Formatting and Special Characters</h2>
+
+    <p>Data exported from a website database can be a treasure trove of "Wait ... wait the heck is that?" moments. HTML-- escaped and unescaped-- special characters, strings mixed in with integers, and oh encoding ... encoding!</p>
+
+    <h2>What to do?</h2>
+
+    <p>The first option-- if you are working with data that follows a specific standardized format-- is to parse it. By reading code as code we are able to isolate the plain text values without the hassle of pattern matching.</p>
+
+    <p>The main issue with parsing formatted data is how liberally the person collecting the data followed the standard. HTML with identifiers could pose a problem, as could data stored in the attributes of XML instead of in between tags. JSON requires strings be double quoted, but some people nevertheless try to use single quotes. Variations can even cause the parser to choke or make it difficult for any cleaning script to grab the data correctly and completely.</p>
+
+    <p>So if parsing is not an option, then the next best solution are regular expressions (from here on otherwise referred to as regex). Regex is exoensive, and writing a good pattern is an artful on to itself. It's not just about matching the data you want, it's about not matching other things accidentally.</p>
+
+    <p>For example a pattern like '[0-9]+\s[a-z]+\s[a-z]+/i' will match the address '1200 Orange Road' but it will also match '360 bananas eaten'. Making the regex more specific (perhaps '[0-9]+\s[a-z]+\s(rd|st|ave)/i') will eliminate some false positives, but may also eliminate valuable data if the source suddenly decides to change it up and spell out Road rather than abbrievating it. A human being knows 'Road' and 'Rd' are the same thing, a computer doesn't know that unless you tell it.</p>
+
+    <h2>Breaking Up Columns</h2>
+
+    <p>While we're talking about addresses, a common problem with location based information is deciding how fine the breakdown should be. Do we need address, city, state and zip to all be separate columns? Should latitude and longitude be stored individually or as a set of coordinates? Whatever the choice made, it's guaranteed it will be the wrong choice for someone else.</p>
+
+    <p>The easier of the two is putting separate columns together. There are a variety of ways to do that depending on what tools you are using to clean your data. On the most basic level it's simply a matter of writing a script that read the original data file, converts columns into variables and then writes a new data file in which certain variables are merged.</p>
+
+    <p>In fancier statistical programs there are commands to create new columns based on combining the values of other columns.</p>
+
+    <p>Separating a column into multiple parts can be more challenging. Once again we can use regex here, but far easier would be the split the data on some kind of delimiter.</p>
+
+    <p>For example, if we want to break up coordinates into latitude and longitude most likely our original data looks something like this: (27.175015 , 78.042155)</p>
+
+    <p>The two values we need are separated by a comma. We can write a script that splits the string '(27.175015 , 78.042155)' into parts based on the location of any commas. This will give us two strings '(27.175015 ' and ' 78.042155)' respectively. Then we trim the whitespace (a procedure so common it is built in to virtually every programming language) and remove the parenthesis with a simple string replace.</p>
+
+    <p>Now we have latitude and longitude and we can do as we please with them.</p>
+
+    <h2>Converting Units</h2>
+
+    <p>Computers tend to be less flexible in how they see the world than people are. A big part of data cleaning is rearranging things so that the computer knows what it is looking at and what to do with it. Sometimes we fail at what we want to do with data purely because our machines need a slight alteration between types we can barely tell the difference between.</p>
+
+    <p>For example, '24' is not always the same thing as 24. Some programs and language may need numbers to be specifically defined as numbers in order to be treated at numbers. So if the original piece of data was '180lbs' and you thought you could stop at removing just the 'lbs' part you may be mistaken.</p>
+
+    <p>You may also have to address problems with units specific to regions. Are these measurements in metric or imperial? What do we need them to be in?</p>
+
+    <p>What about abbreviations? Should we standardize them? Spell them out? How important is consistency here?</p>
+
+    <p>And on that note...</p>
+
+    <h2>Controlling for Inconsistency</h2>
+
+    <p>Probably the most work intensive of all data cleaning tasks is handling inconsistent information. Multiple languages in a dataset, for example, shouldn't happen but does more and more now that the internet provides us such a powerful data collection tool. Or a single row might have a surprising number (say, a percentage) that doesn't seem to fit anything else.</p>
+
+    <p>Problems with data inconsistency often have to be handled individually, by an actual person. In large datasets they can go unnoticed until the data is visualized or analyzed. For this reason, running some basic descriptive statistics before declaring a dataset clean can be useful. Inconsistencies will often reveal themselves as outliers when establishing ranges or looking at maximum and minimum values.</p>
+
+    <p>Then once you know what you are looking for you can isolate these problems and decide how to fix them.</p>
+
+    <h2>Handling Missing Values</h2>
+
+    <p>One of the worst possible problems with data is finding places where the data is missing or incomplete. There is no way to fix data that has not been collected, but from a cleaning perspective it's important to make sure the missing values are handled in the right way. Depending on your use, that could mean defining a missing column specifically as null, setting it to an empty string or removing the row completely because the amount of data that is there has no value. If your visualization or analysis tool is going to be picky about following a specific schema, mapping null values correctly becomes an important part of the cleaning process.</p>
+
+    <h2>Cleaning Lots of Data</h2>
+
+    <p>Now that you know what to consider when cleaning your data, how do you handle these issues at larger scales? What are your options?</p>
+
+    <p>On the very high level-- meaning terabytes of data-- some form of a map reducer (be it Hadoop or a competitor) is necessary. In most cases the data you are working with will be much smaller than that, and still too big to load the entire file at once.</p>
+
+    <p>Depending on the format of the source file you either want to split the files into parts or stream them. For situations where rows correspond neatly with lines, like CSV, it's pretty easy to cut one file up into multiple parts based on a set number of lines. If you're particularly savvy you can even process these files in parallel and speed up cleaning time.</p>
+
+    <p>For formats where one row of data may span multiple lines it's easier to stream the file, loading each row into memory only when it's needed.</p>
+
+    <h2>Please Be Kind: Document</h2>
+
+    <p>Once we have our data perfectly clean we find ourselves with a new, completely different problem. How do other people know that we have not corrupted the data by making these changes? After all, the data might look completely different from the original source, even if no numbers were changed as we rearranged our information.</p>
+
+    <p>For that reason it's important to document your cleaning procedures. What was the source file? What was done to produce the final version? Documentation can take the form of a ‘read me’ file, or you can include the script and let the code speak for itself. No matter what you choose, it's important to maintain the integrity of the data by documenting how it was changed.</p>
+
+    </section>
 </section>
