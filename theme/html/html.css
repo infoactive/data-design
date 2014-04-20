@@ -155,7 +155,7 @@ section[data-type="chapter"] header h1 {
   text-transform: uppercase;
   color: #444444; }
 
-section[data-type="chapter"] header h2 {
+section[data-type="chapter"] header p {
   font-family: "source_sans_prolight", sans-serif;
   text-align: center;
   text-transform: uppercase;
