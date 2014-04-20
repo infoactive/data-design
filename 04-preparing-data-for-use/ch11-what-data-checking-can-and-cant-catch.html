@@ -7,6 +7,107 @@
     <h1>What Data Checking Can and Can't Catch</h1>
   </header>
 
-  <h1>Hm. No content yet.</h1>
-  <p>This is some text.</p>
+  <section data-type="sect1">
+
+  <p>Now that we have understood what data cleaning is for and what methods and approaches there are to bring our dataset into shape, there is yet the question of what the cleaning can and can’t catch. </p>
+
+  <p>Data cleaning is a mix of systematical searching and improving of the data at hand and the application of a rather high than low familiarity with the topic of the data and how the data was collected or extracted. </p>
+
+  <p>A general rule for cleaning a data set where variables are the columns and the rows represent the actual units of the set units states:</p>
+
+  <ul>
+    <li>if the amount of wrong or missing values in a row is higher than the correct values, it is recommended to exclude that row. </li>
+    <li>if the amount of wrong or missing values in a column is higher than the the correct values in that column, it is recommended to exclude that column. </li>
+  </ul>
+
+  <h3>Screening: Search patterns for identifying wrong values</h3>
+
+  <p>In search of errors and mistakes, these basic types of screening methods should be applied:</p>
+
+  <ul>
+    <li>wrong labels, misspellings, commas or points, and vice versa</li>
+    <li>identify outliers, invalid values and inconsistencies and decide if an extreme value actually is an error during data retrieval or if that variable is of that extreme value</li>
+    <li>lack or excess of data</li>
+    <li>odd patterns in distributions</li>
+    <li>unexpected analysis results</li>
+    <li>missing values (NULLS): redefined rules for dealing with errors and true missing and extreme values are part of good practice</li>
+  </ul>
+
+  <h2>Wrong labels</h2>
+
+  <p>When looking at data, it is always a good approach to use your common sense first and then turn to a more sophisticated manner. Common sense is mainly applied when looking at false labels</p>
+
+  <h3>For example</h3>
+
+  <p>In your spreadsheet where each column represents a single variable, use a data cleaning tool like Google Refine or Data Wrangler to simply have a look at the raw data. You might see already that for the variable “Country” the value United Kingdom shows up as Great Britain, or UK, or GB, or great Britain, or United kingdom, and so forth. Unless the data set differentiates between Great Britain and United Kingdom on purpose, you might want to relabel the values of the variable so that you will have one value left instead of four. </p>
+
+  <h2>Outliers and out-of-rangers</h2>
+
+  <h3>Sorting ordinal, interval or metric data</h3>
+
+  <p>Identifying outliers in the data set gets us to the point where we might still be able to use the spreadsheet and sort by “Descending” for pinpointing high values or “Ascending” for low ones. Outliers are single or small numbers of data values that separate themselves from the rest of the data set.</p>
+
+  <h4>For example</h4>
+
+  <p>The data set is supposed to contain records of hammer prices of art works over the last century. Sorting the column “Hammer Price in US Dollar”, values of 10,000,000 are not unlikely to be recorded correctly, whereas 50 might need a closer look. A 50k in return just needs a new label that matches the intended format (like 50,000 or 50000) depending on the data analysis software and how it deals with numbers.</p>
+
+  <h3>Grouping and binning to spot invalid values</h3>
+
+  <p>Other than extreme values that are rather easy to catch, values that are very close to the valid range but still fall out are a bit trickier to deal with.</p>
+
+  <p>Often it is more crucial to identify those values. The out-of-rangers are much harder to catch since they sneak in easier but due to this fact, there are often a lot more of those and they tend to distort your analysis more since they come in higher amounts. Best way to catch those neighbouring values is to group or bin the variable. Binning is great to transform a continuous (metric) variable into a categorial/interval one. Ranges and values for bins or categories should be created according to definitions and conventions that are used in the data analysis. Also, the visual display of the distribution helps if the intervals oft eh distribution are not predefined and not easily retrievable by common sense only.</p>
+
+  <h4>For example</h4>
+
+  <p>A dataset that is supposed to contain all children of a city that were in pre-school in the year 2014. The age of the children is determined by the variable birthday. Create three categories, for example, too young (0), too old (1) and preschool age range (2) by applying a formula where (0) is below the minimum pre-school age and (1) is above the maximum pre-school. This new category is also a new variable and makes a new column in the dataset (or a temporary placeholder, depending on your software or method).  Then exclude all observations that contain (0) or (1) in their row and your dataset should now only contain children aged 4 to 7. </p>
+
+  <h3>Lack  or excess of data</h3>
+
+  <p>This method is only applicable for metric data, nominal data cannot be sorted. Labels like “United Kingdom” and “United Arab Emirates” cannot be brought into a quantified order, their nominal value is identical.</p>
+
+  <p>Here a simple first single variate data analysis comes into play</p>
+
+  <h4>For example</h4>
+
+  <p>Counting the amount of values with a certain label “United Kingdom”. If the result is odd as to the term that we know that from 1000 data rows roughly 10% should be “United Kingdom”, but the count reveals that there are 300, the data set needs a more thorough investigation. The reverse result on the other side points at a lack of data.</p>
+
+  <p>The same analysis can be applied to ordinal, interval and metric data. Counting values of these data kinds form a frequency distribution (see chapter xyz…) which in return is a great basis for visual analytics of odd distribution patterns </p>
+
+  <h3>Odd patterns: Using graphs to identify outliers, lack or excess of data</h3>
+
+  <p>While the mentioned methods are absolutely reliable to identify messy data, a tool that visualizes the distribution of the variables in the set will bring a more thorough twist to the cleaning.</p>
+
+  <h3>The visual shape of a distribution</h3>
+
+  <p>An extreme value is often considered to be an outlier if it is at least 1.5 times below the lower 25% of all values or 1.5 times above the higher 25% of all values.</p>
+
+  <figure>Example for outliers or lack of data</figure>
+
+  <h3>Plotting count data</h3>
+
+  <figure>Example for excess of data</figure>
+
+  <h2>Inconsistencies</h2>
+ 
+  <p>So far, we have been using simple Excel principles to give our data set a clean condition but beyond the basic relabelling, sorting and categorizing to catch wrong or extreme values, it is often two or more variables combined that spoil the dataset with inconsistent information. A “pregnant man” or a “10-year-old married person” are evenly wrong as simple arithmetic errors of table calculations</p>
+ 
+  <p>it is helpful to incorporate data visualization which makes it a lot easier to spot those odd combinations in a data set. Use your familiarity, common sense, consult colleagues and specialists with regards to typical errors they have encountered to treat your data set accordingly.</p>
+ 
+  <p>Inconsistencies are easier to spot visually since 2 or more variables combined can be displayed and dont have to be tracked down row by row.</p>
+ 
+  <h4>For example</h4>
+
+  <p>Movie visitors statistics that include geolocation information. If you posses a tool that is able to deal with geolocation, look at your dataset and think about values or variables that do not make sense in combination with a certain area and then put those variables to be displayed. The fact...</p>
+
+  <h2>What Data cleaning can’t catch</h2>
+
+  <p>Despite the cleaning of missing values, outliers or recoding wrong labels, data cleaning will not be able to make up for errors that have been made in the past, meaning during the phase of formulating the hypothesis and the study design, the questions and the type of study. </p>
+
+  <p>Error prevention starts with unique codes for answers in questionnaires and arbitrary free values in that regard. </p>
+
+  <h4>For example</h4>
+
+  <p>If in a study age is a variable and participants of any age are accepted, the code for “no age indicated” or “missing” should be clearly differentiable from possible values for age: “null” or “000” but not “99” or “00”. That way, confusion and inconsistencies can be avoided after execution. </p>
+
+  </section>
 </section>
