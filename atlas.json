@@ -8,7 +8,19 @@
     "03-collecting-data/ch04-survey-design.html",
     "03-collecting-data/ch05-codebooks.html",
     "03-collecting-data/ch06-external-data-sources.html",
-    "05-visualizing-data/ch15-graphing-results-of-checkbox-response-questions.html"
+    "04-preparing-data-for-use/ch07-data-parsing.html",
+    "04-preparing-data-for-use/ch08-controlling-vocabulary.html",
+    "04-preparing-data-for-use/ch09-data-cleaning.html",
+    "04-preparing-data-for-use/ch10-types-of-data-checks.html",
+    "04-preparing-data-for-use/ch11-what-data-checking-can-and-cant-catch.html",
+    "04-preparing-data-for-use/ch12-data-transformations.html",
+    "05-visualizing-data/ch13-deciding-which-and-how-much-data-to-illustrate.html",
+    "05-visualizing-data/ch14-choosing-the-right-graph-type-for-your-data.html",
+    "05-visualizing-data/ch15-graphing-results-of-checkbox-response-questions.html",
+    "05-visualizing-data/ch16-anatomy-of-a-graphic.html",
+    "05-visualizing-data/ch17-importance-of-color-font-and-icons.html",
+    "05-visualizing-data/ch18-color-best-practices.html",
+    "05-visualizing-data/ch19-print-vs-web.html"
   ],
   "formats": {
     "pdf": {
@@ -27,7 +39,7 @@
     },
     "html": {
       "toc": true,
-      "index": false
+      "index": true
     }
   },
   "theme": "https://github.com/oreillymedia/atlas_tech1c_theme.git",
