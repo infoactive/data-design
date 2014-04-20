@@ -26,21 +26,12 @@
   "formats": {
     "pdf": {
       "version": "web",
-      "toc": true,
-      "index": false
+      "toc": true
     },
-    "epub": {
-      "index": false,
-      "toc": false,
-      "epubcheck": false
-    },
-    "mobi": {
-      "index": false,
-      "toc": false
-    },
+    "epub": {},
+    "mobi": {},
     "html": {
-      "toc": true,
-      "index": true
+      "toc": true
     }
   },
   "theme": "https://github.com/oreillymedia/atlas_tech1c_theme.git",
