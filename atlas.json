@@ -21,7 +21,9 @@
     "05-visualizing-data/ch16-anatomy-of-a-graphic.html",
     "05-visualizing-data/ch17-importance-of-color-font-and-icons.html",
     "05-visualizing-data/ch18-color-best-practices.html",
-    "05-visualizing-data/ch19-print-vs-web.html"
+    "05-visualizing-data/ch19-print-vs-web.html",
+    "06-what-not-to-do/ch20-ways-to-lie-with-graphs.html",
+    "06-what-not-to-do/ch21-sample-size-and-missingness.html"
   ],
   "formats": {
     "pdf": {
