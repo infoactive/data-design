@@ -10,8 +10,7 @@
     "03-collecting-data/ch05-additional-data-collection-methods.html",
     "03-collecting-data/ch06-codebooks.html",
     "03-collecting-data/ch07-external-data-sources.html",
-    "04-preparing-data-for-use/ch07-data-parsing.html",
-    "04-preparing-data-for-use/ch08-controlling-vocabulary.html",
+    "04-preparing-data-for-use/ch08-data-ppreparation.html",
     "04-preparing-data-for-use/ch09-data-cleaning.html",
     "04-preparing-data-for-use/ch10-types-of-data-checks.html",
     "04-preparing-data-for-use/ch11-what-data-checking-can-and-cant-catch.html",
@@ -24,7 +23,8 @@
     "05-visualizing-data/ch18-color-best-practices.html",
     "05-visualizing-data/ch19-print-vs-web.html",
     "06-what-not-to-do/ch20-ways-to-lie-with-graphs.html",
-    "06-what-not-to-do/ch21-sample-size-and-missingness.html"
+    "06-what-not-to-do/ch21-sample-size-and-missingness.html",
+    "06-what-not-to-do/ch22-common-visualization-mistakes.html"
   ],
   "formats": {
     "pdf": {
