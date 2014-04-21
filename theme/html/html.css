@@ -676,7 +676,7 @@ blockquote {
   border-left: 10px solid #efefef; }
 
 blockquote:before {
-  content: open-quote;
+  content: "\201C";
   font-size: 4em;
   line-height: 0em;
   margin-right: 0.2em;
