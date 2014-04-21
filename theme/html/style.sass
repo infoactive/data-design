@@ -8,6 +8,7 @@ body
   margin: 0 auto
   padding-top: 80px
   font-family: 'source_sans_proregular', sans-serif
+  font-size: 18px
 
 @font-face
   font-family: 'source_sans_proregular'
@@ -57,7 +58,7 @@ $colors: $blue $yellow $green $violet $red
 
 p, dd
   font-family: 'source_sans_proregular', sans-serif
-  font-size: 1.1em
+  font-size: 1em
   line-height: 150%
   text-indent: 0
 
@@ -166,7 +167,7 @@ section[data-type="chapter"] header
 
 section[data-type="chapter"] header h1
   font-family: 'source_sans_probold', sans-serif
-  font-size: 2.6em
+  font-size: 2.4em
   margin-top: 0em
   margin-bottom: 1.5em
   text-align: center
@@ -179,7 +180,7 @@ section[data-type="chapter"] header p
   text-transform: uppercase
   margin: 0 .5em
   letter-spacing: 2px
-  font-size: 1.3em
+  font-size: 1.1em
   padding: 12px
 
 .icon
@@ -198,7 +199,7 @@ section[data-type="chapter"] header p
   #ch#{$i}
     blockquote
       border-color: $color
-    .chapter-font-color
+    .chapter-font-color, section[data-type="sect1"] > h1
       color: $color
     .chapter-bg-color, .icon
       background: $color
@@ -215,7 +216,6 @@ nav[data-type="toc"] li[data-type="part"] > a
 nav[data-type="toc"] li[data-type="part"] ol
   margin-left: 0
   text-indent: 0
-
 
 nav[data-type="toc"] li[data-type="chapter"] 
   margin-top: 20px
@@ -238,14 +238,12 @@ nav[data-type="toc"] li[data-type="chapter"] ol ol
   margin-left: 10px
   text-indent: -10px
 
-
 nav[data-type="toc"] li[data-type="preface"], 
 nav[data-type="toc"] li[data-type="foreword"], 
 nav[data-type="toc"] li[data-type="glossary"], 
 nav[data-type="toc"] li[data-type="index"]
   font-size: 1em
   line-height: 120%
-
 
 nav[data-type="toc"] li[data-type="preface"] ol, 
 nav[data-type="toc"] li[data-type="foreword"] ol
@@ -257,6 +255,7 @@ div[data-type="part"],
 section[data-type="chapter"], 
 section[data-type="appendix"]
   page-break-after: always 
+  margin-bottom: 10em
 
 
 nav[data-type="toc"] > h1, 
@@ -284,8 +283,8 @@ section[data-type="appendix"] > h1
   text-align: left
 
 
-section[data-type="sect1"] h1
-  font-size: 2.2em
+section[data-type="sect1"] > h1
+  font-size: 2em
   margin-top: 40px
   margin-bottom: 20px
 
@@ -346,7 +345,7 @@ table
   margin-bottom: 30px
   border-bottom: 1px solid $gray
   border-collapse: collapse
-
+  font-size: .9em
 
 table caption
   font-family: 'source_sans_proregular', sans-serif
@@ -388,7 +387,6 @@ td, table p
 
 table p
   text-indent: 0
-  font-size: .95em
 
 table ul
   padding: 0 1.5em
@@ -412,7 +410,7 @@ table.question-and-answer
     h2
       font-family: 'source_sans_prosemibold', sans-serif
       color: $blue
-      font-size: .95em
+      font-size: 1em
       margin: 0
       + p
         margin-top: 0
@@ -495,22 +493,16 @@ aside p
 
 div[data-type="note"], 
 div[data-type="warning"]
-  padding: 15px 40px 20px 110px
   margin: 50px 0 40px
   page-break-inside: avoid
   background: #efefef
   border-radius: 2px
-  position: relative
+  padding: 15px 40px 20px 40px
 
 div[data-type="warning"]
-  background: $gray
-
-div[data-type="note"] img
-  position: absolute
-  top: 36px
-  left: 32px
-  width: 50px
-  float: left
+  background: url("../../images/shared-icons/warning.png") 1.5em 1.5em no-repeat $light-gray
+  border-top: 16px solid $red      
+  padding-left: 110px
 
 div[data-type="note"] h1, 
 div[data-type="warning"] h1
@@ -588,6 +580,7 @@ div.navbar
   width: 100%
   padding: 10px 20px 10px 20px
   border-bottom: 1px solid #d8d8d8
+  font-size: .9em
 
 div.navbar h1
   float: left
