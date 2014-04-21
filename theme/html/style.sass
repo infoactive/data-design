@@ -199,7 +199,7 @@ section[data-type="chapter"] header p
   #ch#{$i}
     blockquote
       border-color: $color
-    .chapter-font-color, section[data-type="sect1"] > h1
+    .chapter-font-color, section[data-type="sect1"] > h1, blockquote:before
       color: $color
     .chapter-bg-color, .icon
       background: $color
@@ -490,7 +490,6 @@ aside p
   text-indent: 0
   margin-top: 6px
 
-
 div[data-type="note"], 
 div[data-type="warning"]
   margin: 50px 0 40px
@@ -513,7 +512,6 @@ div[data-type="warning"] h1
   margin: 4px 0
   padding: 0
 
-
 div[data-type="note"] p, 
 div[data-type="warning"] p
   font-family: 'source_sans_proregular', sans-serif
@@ -524,22 +522,18 @@ div[data-type="warning"] p
 pre, code
   font-family: monospace
 
-
 pre
   font-size: 0.9em
   line-height: 120%
   margin: 10px
   overflow-x: auto
 
-
 code
   font-size: 0.9em
   line-height: 120%
 
-
 table pre
   text-indent: 0
-
 
 div[data-type="note"] code, 
 div[data-type="warning"] code, 
@@ -547,7 +541,6 @@ aside code,
 table code
   font-size: inherit
   line-height: inherit
-
 
 div[data-type="example"] h5
   font-family: 'source_sans_proregular', sans-serif
@@ -558,13 +551,20 @@ div[data-type="example"] h5
   margin-top: 30px
 
 blockquote
-  font-family: 'source_sans_prolight', sans-serif
-  font-size: 1em
+  font-family: 'source_sans_proitalic', sans-serif
+  font-size: 1.1em
   line-height: 130%
   margin: 30px
-  padding-left: 20px
-  border-left: 8px solid #efefef
-
+  padding: 20px
+  background: lighten($light-gray, 2)
+  border-left: 10px solid #efefef
+  
+blockquote:before
+  content: open-quote
+  font-size: 4em
+  line-height: 0em
+  margin-right: 0.2em
+  vertical-align: -0.4em
 
 blockquote p
   text-indent: 0
