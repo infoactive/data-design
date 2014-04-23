@@ -34,7 +34,10 @@
     "epub": {},
     "mobi": {},
     "html": {
-      "toc": true
+      "toc": true,
+      "javascripts": [
+        "js/retina.min.js"
+      ]
     }
   },
   "theme": "https://github.com/oreillymedia/atlas_tech1c_theme.git",
