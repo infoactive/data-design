@@ -193,9 +193,12 @@ section[data-type="chapter"] header p
   height: 150px
   margin: 45px
 
-@for $i from 1 through 24
-  $color: nth($colors, $i % 5 + 1)
-  #ch#{$i}
+$color-names: blue yellow green violet red
+
+@for $i from 1 through 5
+  $color: nth($colors, $i)
+  $color-name: nth($color-names, $i)
+  .#{nth($color-names, $i)}
     blockquote
       border-color: $color
     .chapter-font-color, section[data-type="sect1"] > h1, blockquote:before
