@@ -191,11 +191,11 @@ section[data-type="chapter"] header p {
   background: #6baf44; }
 
 #ch3 blockquote {
-  border-color: #3b4770; }
+  border-color: #3e5084; }
 #ch3 .chapter-font-color, #ch3 section[data-type="sect1"] > h1, #ch3 blockquote:before {
-  color: #3b4770; }
+  color: #3e5084; }
 #ch3 .chapter-bg-color, #ch3 .icon {
-  background: #3b4770; }
+  background: #3e5084; }
 
 #ch4 blockquote {
   border-color: #cf4627; }
@@ -226,11 +226,11 @@ section[data-type="chapter"] header p {
   background: #6baf44; }
 
 #ch8 blockquote {
-  border-color: #3b4770; }
+  border-color: #3e5084; }
 #ch8 .chapter-font-color, #ch8 section[data-type="sect1"] > h1, #ch8 blockquote:before {
-  color: #3b4770; }
+  color: #3e5084; }
 #ch8 .chapter-bg-color, #ch8 .icon {
-  background: #3b4770; }
+  background: #3e5084; }
 
 #ch9 blockquote {
   border-color: #cf4627; }
@@ -261,11 +261,11 @@ section[data-type="chapter"] header p {
   background: #6baf44; }
 
 #ch13 blockquote {
-  border-color: #3b4770; }
+  border-color: #3e5084; }
 #ch13 .chapter-font-color, #ch13 section[data-type="sect1"] > h1, #ch13 blockquote:before {
-  color: #3b4770; }
+  color: #3e5084; }
 #ch13 .chapter-bg-color, #ch13 .icon {
-  background: #3b4770; }
+  background: #3e5084; }
 
 #ch14 blockquote {
   border-color: #cf4627; }
@@ -296,11 +296,11 @@ section[data-type="chapter"] header p {
   background: #6baf44; }
 
 #ch18 blockquote {
-  border-color: #3b4770; }
+  border-color: #3e5084; }
 #ch18 .chapter-font-color, #ch18 section[data-type="sect1"] > h1, #ch18 blockquote:before {
-  color: #3b4770; }
+  color: #3e5084; }
 #ch18 .chapter-bg-color, #ch18 .icon {
-  background: #3b4770; }
+  background: #3e5084; }
 
 #ch19 blockquote {
   border-color: #cf4627; }
@@ -331,11 +331,11 @@ section[data-type="chapter"] header p {
   background: #6baf44; }
 
 #ch23 blockquote {
-  border-color: #3b4770; }
+  border-color: #3e5084; }
 #ch23 .chapter-font-color, #ch23 section[data-type="sect1"] > h1, #ch23 blockquote:before {
-  color: #3b4770; }
+  color: #3e5084; }
 #ch23 .chapter-bg-color, #ch23 .icon {
-  background: #3b4770; }
+  background: #3e5084; }
 
 #ch24 blockquote {
   border-color: #cf4627; }
@@ -440,7 +440,6 @@ ul, ol {
 
 ul li, ol li,
 ul li p, ol li p {
-  font-family: "source_sans_proregular", sans-serif;
   font-size: 1em;
   line-height: 120%;
   margin-top: 5px;
@@ -684,8 +683,7 @@ blockquote:before {
 
 blockquote p {
   text-indent: 0;
-  font-family: "source_sans_prolight", sans-serif;
-  color: #888888; }
+  font-family: "source_sans_proitalic", sans-serif; }
 
 div.navbar {
   font-family: "source_sans_proregular", sans-serif;
