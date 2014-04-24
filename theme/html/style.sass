@@ -206,7 +206,7 @@ $color-names: blue yellow green violet red
   $light-color: nth($light-colors, $i)
   $color-name: nth($color-names, $i)
   .#{nth($color-names, $i)}
-    blockquote
+    blockquote, [data-type="example"]
       border-color: $color
     .chapter-font-color, section[data-type="sect1"] > h1, blockquote:before
       color: $color
@@ -313,8 +313,8 @@ ul li, ol li,
 ul li p, ol li p
   font-family: 'source_sans_proregular', sans-serif
   font-size: 1em
-  line-height: 120%
-  margin-top: 5px
+  line-height: 150%
+  margin-top: 1em
   text-indent: 0
 
 dl
@@ -540,6 +540,11 @@ aside code,
 table code
   font-size: inherit
   line-height: inherit
+
+div[data-type="example"]
+  padding: 20px
+  background: lighten($light-gray, 2)
+  border-left: 10px solid #efefef
 
 div[data-type="example"] h5
   font-family: 'source_sans_proregular', sans-serif
