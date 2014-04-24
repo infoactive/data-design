@@ -1,20 +1,25 @@
 {
   "branch": "master",
   "files": [
+    "01-intro/cover.html",
     "toc.html",
     "01-intro/introduction.html",
+    "02-data-fundamentals/02-section-cover.html",
     "02-data-fundamentals/ch01-basic-data-types.html",
     "02-data-fundamentals/ch02-descriptive-vs-inferential-statistics.html",
     "02-data-fundamentals/ch03-about-data-aggregation.html",
+    "03-collecting-data/03-section-cover.html",
     "03-collecting-data/ch04-survey-design.html",
     "03-collecting-data/ch05-additional-data-collection-methods.html",
     "03-collecting-data/ch06-codebooks.html",
     "03-collecting-data/ch07-external-data-sources.html",
+    "04-preparing-data-for-use/04-section-cover.html",
     "04-preparing-data-for-use/ch08-data-preparation.html",
     "04-preparing-data-for-use/ch09-data-cleaning.html",
     "04-preparing-data-for-use/ch10-types-of-data-checks.html",
     "04-preparing-data-for-use/ch11-what-data-checking-can-and-cant-catch.html",
     "04-preparing-data-for-use/ch12-data-transformations.html",
+    "05-visualizing-data/05-section-cover.html",
     "05-visualizing-data/ch13-deciding-which-and-how-much-data-to-illustrate.html",
     "05-visualizing-data/ch14-choosing-the-right-graph-type-for-your-data.html",
     "05-visualizing-data/ch15-graphing-results-of-checkbox-response-questions.html",
@@ -22,9 +27,11 @@
     "05-visualizing-data/ch17-importance-of-color-font-and-icons.html",
     "05-visualizing-data/ch18-color-best-practices.html",
     "05-visualizing-data/ch19-print-vs-web.html",
+    "06-what-not-to-do/06-section-cover.html",
     "06-what-not-to-do/ch20-ways-to-lie-with-graphs.html",
     "06-what-not-to-do/ch21-sample-size-and-missingness.html",
-    "06-what-not-to-do/ch22-common-visualization-mistakes.html"
+    "06-what-not-to-do/ch22-common-visualization-mistakes.html",
+    "07-conclusion/07-section-cover.html"
   ],
   "formats": {
     "pdf": {
