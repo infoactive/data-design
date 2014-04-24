@@ -62,6 +62,13 @@ $light-green: lighten($green, 50)
 $colors: $blue $yellow $green $violet $red
 $light-colors: $light-blue $light-yellow $light-green $light-violet $light-red
 
+@mixin transition($transition-property, $transition-time, $method)
+  -webkit-transition: $transition-property $transition-time $method
+  -moz-transition: $transition-property $transition-time $method
+  -ms-transition: $transition-property $transition-time $method
+  -o-transition: $transition-property $transition-time $method
+  transition: $transition-property $transition-time $method
+
 p, dd
   font-family: 'source_sans_proregular', sans-serif
   font-size: 1em
@@ -608,13 +615,32 @@ div.navbar p a
 .navigation
   ul
     text-decoration: none
+    list-style-type: none
     li
       position: fixed
-      bottom: 20px
+      bottom: 18px
+      a
+        opacity: .3
+        text-transform: lowercase
+        text-decoration: none
+        color: black
+        width: 66px
+        height: 26px
+        display: block
+        @include transition(opacity, .3s, ease-in-out)
+        &:hover
+          opacity: .8
+          @include transition(opacity, .3s, ease-in-out)
     li:nth-child(1)
       right: 30px
+      a
+        padding-right: 30px
+        background: url('../../images/shared-icons/next.png') right no-repeat 
     li:nth-child(2)
       left: 30px
+      a
+        padding-left: 30px
+        background: url('../../images/shared-icons/prev.png') left no-repeat 
 
 // iPad
 
@@ -622,7 +648,19 @@ div.navbar p a
   body
     width: 100%
     padding: 30px
-  
+
+@media screen and (max-width: 960px)
+  .navigation
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 3em
+    background: $light-gray
+    border-top: 1px solid $gray
+    ul li
+      bottom: 14px
+
 // iPhone
 
 @media screen and (max-width: 480px)

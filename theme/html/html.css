@@ -609,19 +609,57 @@ div.navbar p a {
   color: #999999; }
 
 .navigation ul {
-  text-decoration: none; }
+  text-decoration: none;
+  list-style-type: none; }
   .navigation ul li {
     position: fixed;
-    bottom: 20px; }
+    bottom: 18px; }
+    .navigation ul li a {
+      opacity: 0.3;
+      text-transform: lowercase;
+      text-decoration: none;
+      color: black;
+      width: 66px;
+      height: 26px;
+      display: block;
+      -webkit-transition: opacity 0.3s ease-in-out;
+      -moz-transition: opacity 0.3s ease-in-out;
+      -ms-transition: opacity 0.3s ease-in-out;
+      -o-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out; }
+      .navigation ul li a:hover {
+        opacity: 0.8;
+        -webkit-transition: opacity 0.3s ease-in-out;
+        -moz-transition: opacity 0.3s ease-in-out;
+        -ms-transition: opacity 0.3s ease-in-out;
+        -o-transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out; }
   .navigation ul li:nth-child(1) {
     right: 30px; }
+    .navigation ul li:nth-child(1) a {
+      padding-right: 30px;
+      background: url("../../images/shared-icons/next.png") right no-repeat; }
   .navigation ul li:nth-child(2) {
     left: 30px; }
+    .navigation ul li:nth-child(2) a {
+      padding-left: 30px;
+      background: url("../../images/shared-icons/prev.png") left no-repeat; }
 
 @media screen and (min-width: 480px) and (max-width: 1024px) {
   body {
     width: 100%;
     padding: 30px; } }
+@media screen and (max-width: 960px) {
+  .navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3em;
+    background: #efefef;
+    border-top: 1px solid #d1d2d4; }
+    .navigation ul li {
+      bottom: 14px; } }
 @media screen and (max-width: 480px) {
   body {
     width: 100%;
