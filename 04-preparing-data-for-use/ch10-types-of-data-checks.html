@@ -20,7 +20,50 @@
   <p>PhoneNumberType mixes codes and text</p>
   <p>Age field has 0 meaning unknown - not good for averages, and is 112 a genuine age?</p>
 
-  <figure>Table 1</figure>
+  <table>
+   <tr>
+      <th>RecordId</th>
+      <th>PhoneNumberType</th>
+      <th>Age</th>
+      <th>New Customer</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>MOBILE</td>
+      <td>0</td>
+      <td>NO</td>
+      <td>$12.45 </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Mobile</td>
+      <td>47</td>
+      <td>Y</td>
+      <td>12 45</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Land Line</td>
+      <td>34</td>
+      <td>YES</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>LandLine</td>
+      <td>23</td>
+      <td>YES</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>LL</td>
+      <td>112</td>
+      <td>Y</td>
+      <td>$1K</td>
+    </tr>
+  </table>
 
   <p>The basic rule for data checking is - check early, check often. By checking early, at data entry time, there is a chance to correct that data.  For example if your gender field expects the values F or M but the user enters something different such as an A or space then the user can be prompted to correct the data. If the validation isn’t done until later then incorrect values will reach the database, you’ll know they’re wrong but will be unable to fix the issue. Occasionally it’s possible to compare incorrect fields with other linked datasets and then use that to fix the original data. That can be complex and lead to further issues - which data source is correct?</p>
 
@@ -34,7 +77,41 @@
 
   <p>A further golden rule is to only use text fields where necessary. For instance it’s normal to split an address into Line1, Line2, City, State, Country, PostCode, but in the UK it’s very common to just ask for the PostCode and the street number as those two pieces of information can be then be used to find the exact address. In this way the PostCode is validated automatically and the address data is clean as it’s not entered by the user. In other countries, we have to use text fields, and in that case lots of checking should occur. Commas in data can cause all kinds of problems as many data files are in comma separated (CSV) format. An extra comma creates an extra unexpected field, and any subsequent fields will be moved to the right. For this reason alone it's good to not cut/paste data from excel, instead save to a file and then read into your next application.</p>
 
-  <figure>Table 2</figure>
+  <table>
+   <tr>
+      <th>Title</th>
+      <th>Name</th>
+      <th>FamilyName</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>Town</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr>
+      <td>Bill </td>
+      <td>Short</td>
+      <td>&nbsp;</td>
+      <td>13</td>
+      <td>A The Street</td>
+      <td>Hastings</td>
+      <td>VIC</td>
+      <td>AUS</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Mr</td>
+      <td>William</td>
+      <td>Tall</td>
+      <td>27 The Close</td>
+      <td>&nbsp;</td>
+      <td>Guildford</td>
+      <td>VIC</td>
+      <td>AUS</td>
+    </tr>
+  </table>
 
   <p>An additional comma in the second record has pushed the data to the right, this is an easy problem for a human to spot, but will break most automated systems. A good check is to look for extra data beyond where the last field (“country”) would be.</p>
 
@@ -69,7 +146,38 @@
 
   <p>Gathering additional fields which won't be part of the output such as CreatedDate is advised. For the new fields any records that exist from before won't have that field filled, often for numeric values this will mean the older records will be filled with zeros. The knock on affect on your visualizations can be huge, averages will be wrong, trend lines will be incomplete. For those fields that have been removed the same issue will be seen. It's relatively rare for an unused field to be removed from data, instead it's often left blank or worse used for a different purpose. In some instances being able to find when the data was entered can be a challenge in itself, but as you become familiar with your data so your expertise, especially around any unusual fields, increases.</p>
 
-  <figure>Table 3</figure>
+  <table>
+   <tr>
+      <th>Amount</th>
+      <th>PaymentType</th>
+      <th>ServerId</th>
+      <th>CreatedOn</th>
+    </tr>
+    <tr>
+      <td>$100 </td>
+      <td>CC</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>$143 </td>
+      <td>Cash</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>$27 </td>
+      <td>Amex</td>
+      <td>237</td>
+      <td>3/1/2013</td>
+    </tr>
+    <tr>
+      <td>$45 </td>
+      <td>Cash</td>
+      <td>467</td>
+      <td>3/1/2013</td>
+    </tr>
+  </table>
 
   <p>Here you can see the effect of adding two new fields, ServerId and CreatedOn, to an existing data source. It’s likely that change was put into place 03/01/2013 (March 1, 2013), so if your analysis is only looking at data since that date then you can track sales/server.  However, there’s no data before that in this source, so if you want to look at what was happening on January 1, 2013, you need to find additional data elsewhere.</p>
 
