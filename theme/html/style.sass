@@ -4,9 +4,7 @@
   box-sizing: border-box 
 
 body
-  max-width: 700px
-  margin: 0 auto
-  padding-top: 80px
+  max-width: 100%
   font-family: 'source_sans_proregular', sans-serif
   font-size: 18px
 
@@ -90,6 +88,10 @@ p a
 em
   font-family: 'source_sans_proitalic', sans-serif
   font-style: normal
+
+section
+  max-width: 700px
+  margin: 0 auto
 
 section[data-type="titlepage"]
   h1
@@ -185,6 +187,7 @@ section[data-type="chapter"] header h1
   text-align: center
   text-transform: uppercase
   color: #444
+  -webkit-font-smoothing: antialiased
 
 section[data-type="chapter"] header p
   font-family: 'source_sans_prolight', sans-serif
@@ -206,6 +209,14 @@ section[data-type="chapter"] header p
   height: 150px
   margin: 45px
 
+section[data-type="cover"]
+  width: 100%
+  max-width: 100%
+  margin: 0
+  padding: 0
+  height: 100%
+  position: absolute
+
 $color-names: blue yellow green violet red
 
 @for $i from 1 through 5
@@ -217,7 +228,7 @@ $color-names: blue yellow green violet red
       border-color: $color
     .chapter-font-color, section[data-type="sect1"] > h1, blockquote:before
       color: $color
-    .chapter-bg-color, .icon, th
+    .chapter-bg-color, .icon, th, section[data-type="cover"]
       background: $color
     tr:nth-child(2n + 1)
       background: $light-color
