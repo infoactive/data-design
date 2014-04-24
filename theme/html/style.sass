@@ -209,7 +209,7 @@ section[data-type="chapter"] header p
   height: 150px
   margin: 45px
 
-section[data-type="part"]
+section[data-type="chapter"].cover
   width: 100%
   max-width: 100%
   margin: 0
@@ -228,7 +228,7 @@ $color-names: blue yellow green violet red
       border-color: $color
     .chapter-font-color, section[data-type="sect1"] > h1, blockquote:before
       color: $color
-    .chapter-bg-color, .icon, th, section[data-type="part"]
+    .chapter-bg-color, .icon, th, section[data-type="chapter"].cover
       background: $color
     tr:nth-child(2n + 1)
       background: $light-color

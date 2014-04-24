@@ -179,7 +179,7 @@ section[data-type="chapter"] header p {
   height: 150px;
   margin: 45px; }
 
-section[data-type="part"] {
+section[data-type="chapter"].cover {
   width: 100%;
   max-width: 100%;
   margin: 0;
@@ -191,7 +191,7 @@ section[data-type="part"] {
   border-color: #41a2ba; }
 .blue .chapter-font-color, .blue section[data-type="sect1"] > h1, .blue blockquote:before {
   color: #41a2ba; }
-.blue .chapter-bg-color, .blue .icon, .blue th, .blue section[data-type="part"] {
+.blue .chapter-bg-color, .blue .icon, .blue th, .blue section[data-type="chapter"].cover {
   background: #41a2ba; }
 .blue tr:nth-child(2n + 1) {
   background: #f4fafb; }
@@ -200,7 +200,7 @@ section[data-type="part"] {
   border-color: #eeb11e; }
 .yellow .chapter-font-color, .yellow section[data-type="sect1"] > h1, .yellow blockquote:before {
   color: #eeb11e; }
-.yellow .chapter-bg-color, .yellow .icon, .yellow th, .yellow section[data-type="part"] {
+.yellow .chapter-bg-color, .yellow .icon, .yellow th, .yellow section[data-type="chapter"].cover {
   background: #eeb11e; }
 .yellow tr:nth-child(2n + 1) {
   background: #fef9ef; }
@@ -209,7 +209,7 @@ section[data-type="part"] {
   border-color: #6baf44; }
 .green .chapter-font-color, .green section[data-type="sect1"] > h1, .green blockquote:before {
   color: #6baf44; }
-.green .chapter-bg-color, .green .icon, .green th, .green section[data-type="part"] {
+.green .chapter-bg-color, .green .icon, .green th, .green section[data-type="chapter"].cover {
   background: #6baf44; }
 .green tr:nth-child(2n + 1) {
   background: #f8fcf6; }
@@ -218,7 +218,7 @@ section[data-type="part"] {
   border-color: #3e5084; }
 .violet .chapter-font-color, .violet section[data-type="sect1"] > h1, .violet blockquote:before {
   color: #3e5084; }
-.violet .chapter-bg-color, .violet .icon, .violet th, .violet section[data-type="part"] {
+.violet .chapter-bg-color, .violet .icon, .violet th, .violet section[data-type="chapter"].cover {
   background: #3e5084; }
 .violet tr:nth-child(2n + 1) {
   background: #f8f9fc; }
@@ -227,7 +227,7 @@ section[data-type="part"] {
   border-color: #cf4627; }
 .red .chapter-font-color, .red section[data-type="sect1"] > h1, .red blockquote:before {
   color: #cf4627; }
-.red .chapter-bg-color, .red .icon, .red th, .red section[data-type="part"] {
+.red .chapter-bg-color, .red .icon, .red th, .red section[data-type="chapter"].cover {
   background: #cf4627; }
 .red tr:nth-child(2n + 1) {
   background: #fef9f7; }
