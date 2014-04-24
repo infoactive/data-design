@@ -176,7 +176,7 @@ section[data-type="chapter"] header p {
   height: 150px;
   margin: 45px; }
 
-.blue blockquote {
+.blue blockquote, .blue [data-type="example"] {
   border-color: #41a2ba; }
 .blue .chapter-font-color, .blue section[data-type="sect1"] > h1, .blue blockquote:before {
   color: #41a2ba; }
@@ -185,7 +185,7 @@ section[data-type="chapter"] header p {
 .blue tr:nth-child(2n + 1) {
   background: #f4fafb; }
 
-.yellow blockquote {
+.yellow blockquote, .yellow [data-type="example"] {
   border-color: #eeb11e; }
 .yellow .chapter-font-color, .yellow section[data-type="sect1"] > h1, .yellow blockquote:before {
   color: #eeb11e; }
@@ -194,7 +194,7 @@ section[data-type="chapter"] header p {
 .yellow tr:nth-child(2n + 1) {
   background: #fef9ef; }
 
-.green blockquote {
+.green blockquote, .green [data-type="example"] {
   border-color: #6baf44; }
 .green .chapter-font-color, .green section[data-type="sect1"] > h1, .green blockquote:before {
   color: #6baf44; }
@@ -203,7 +203,7 @@ section[data-type="chapter"] header p {
 .green tr:nth-child(2n + 1) {
   background: #f8fcf6; }
 
-.violet blockquote {
+.violet blockquote, .violet [data-type="example"] {
   border-color: #3e5084; }
 .violet .chapter-font-color, .violet section[data-type="sect1"] > h1, .violet blockquote:before {
   color: #3e5084; }
@@ -212,7 +212,7 @@ section[data-type="chapter"] header p {
 .violet tr:nth-child(2n + 1) {
   background: #f8f9fc; }
 
-.red blockquote {
+.red blockquote, .red [data-type="example"] {
   border-color: #cf4627; }
 .red .chapter-font-color, .red section[data-type="sect1"] > h1, .red blockquote:before {
   color: #cf4627; }
@@ -319,8 +319,8 @@ ul li, ol li,
 ul li p, ol li p {
   font-family: "source_sans_proregular", sans-serif;
   font-size: 1em;
-  line-height: 120%;
-  margin-top: 5px;
+  line-height: 150%;
+  margin-top: 1em;
   text-indent: 0; }
 
 dl {
@@ -543,6 +543,11 @@ aside code,
 table code {
   font-size: inherit;
   line-height: inherit; }
+
+div[data-type="example"] {
+  padding: 20px;
+  background: #f4f4f4;
+  border-left: 10px solid #efefef; }
 
 div[data-type="example"] h5 {
   font-family: "source_sans_proregular", sans-serif;

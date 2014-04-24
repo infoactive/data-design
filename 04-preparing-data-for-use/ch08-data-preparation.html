@@ -13,7 +13,24 @@
 
   <p>Have you ever been given a data set where you couldn’t get directly get the information you needed?  Maybe complete addresses were in a single field, preventing you from getting stats about specific cities and states.  Perhaps a vendor sent a spreadsheet with 6000 part numbers but their numbering system includes the warehouse code followed by the part number and you need the part numbers by themselves.</p>
 
-  INSERT TABLE
+  <table>
+    <tr>
+      <th>You Want</th>
+      <th>They Provide</th>
+    </tr>
+    <tr>
+      <td>C77000S</td>
+      <td>GA3C77000S</td>
+    </tr>
+    <tr>
+      <td>W30000P</td>
+      <td>GA1W30000P</td>
+    </tr>
+    <tr>
+      <td>D21250G</td>
+      <td>DE1D21250G</td>
+    </tr>
+  </table>
 
   <p>Separating information from a single field into multiple fields is one part of data preparation.  Many people hate this part of working with data, but someone has to clean this stuff up!</p>
 
@@ -21,7 +38,32 @@
 
   <p>Consider the challenge presented in the data set below about malls:</p>
 
-  INSERT TABLE
+  <table>
+    <tr>
+      <th>Mall</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+    </tr>
+    <tr>
+      <td>Warm Willows Mall&nbsp;Peters Road Marrison, MI</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Jaspers&nbsp;Martinson &amp; Timberlake Rds Reed, FL</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Lara Lafayette Shoppes&nbsp;17 Industrial Drive Elm, CT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
 
   <p>You want the mall name, address, city, and state to be stored in separate fields.  The data set has hundreds of malls in it so splitting the entries apart by hand would take a lot of time.   The mall names are bold, which makes it easy to visually distinguish where the mall name stops and the address starts, but not all the addresses begin with numbers, so no standard tool exists for parsing the data into separate fields.  Code can be written that will recognize the bold and plain font weights and peel them apart, but since this is a rare situation, it is likely that you won’t have it right at hand.  This is a case where you might write code (or have someone write it for you) that you’ll never use for this purpose again.</p>
 
@@ -31,7 +73,36 @@
 
   <p>A straightforward example that many people encounter is separating first names from last names.  You may receive a data set where full names are contained in a single field and you need the first and last names to be separate, or there may already be separate fields for first and last names, but some of the entries have the full name in one of the fields.</p>
 
-  INSERT TABLE
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Keith Pallard</td>
+    </tr>
+    <tr>
+      <td>Fumi Takano</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Rhonda</td>
+      <td>Johnson</td>
+    </tr>
+    <tr>
+      <td>Warren Andersen</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Juan</td>
+      <td>Tyler</td>
+    </tr>
+    <tr>
+      <td>Cicely</td>
+      <td>Pope</td>
+    </tr>
+  </table>
 
   <p>When data sets come to us this way, the challenge is seemingly fairly easy to resolve.  There are common ways of getting the first names and last names separated for Keith, Fumi, and Warren.   The easiest way is to look for the space, break the name apart at the space, and voila!</p>
 
@@ -39,7 +110,68 @@
 
   <p>What if your data set has thousands of records?  You’ll be spending a lot of time manually separating names, and there are far more potential name combinations than just first and last name.</p>
 
-  INSERT TABLE
+ <table>
+    <tr>
+      <td>Middle Initials</td>
+      <td>Martina C. Daniels</td>
+    </tr>
+    <tr>
+      <td>Professional Designations</td>
+      <td>Lloyd Carson DVM</td>
+    </tr>
+    <tr>
+      <td>2-part Last Names</td>
+      <td>Lora de Carlo</td>
+    </tr>
+    <tr>
+      <td>Prefixes</td>
+      <td>Rev Herman Phillips</td>
+    </tr>
+    <tr>
+      <td>Suffixes</td>
+      <td>Jimmy Walford III</td>
+    </tr>
+    <tr>
+      <td>Hyphenated Last Names</td>
+      <td>Tori Baker-Andersen</td>
+    </tr>
+    <tr>
+      <td>Last Name First</td>
+      <td>Kincaid Jr, Paul</td>
+    </tr>
+    <tr>
+      <td>2-part First Names</td>
+      <td>Ray Anne Lipscomb</td>
+    </tr>
+    <tr>
+      <td>Aw, c&rsquo;mon!</td>
+      <td>Rev Rhonda-Lee St. Andrews-Fernandez, DD, MSW</td>
+    </tr>
+    <tr>
+      <td>Are you kidding me?</td>
+      <td>Murray Wilkins 993 E Plymouth Blvd</td>
+    </tr>
+    <tr>
+      <td>No/Missing First Name</td>
+      <td>O&rsquo;Connor</td>
+    </tr>
+    <tr>
+      <td>No/Missing Last Name</td>
+      <td>Tanya</td>
+    </tr>
+    <tr>
+      <td>No name at all</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>I have no earthly idea!</td>
+      <td>JJ</td>
+    </tr>
+    <tr>
+      <td>Not a person&rsquo;s name at all</td>
+      <td>North City Garden Supply</td>
+    </tr>
+  </table>
 
   <h2>Now what? Let's make some decisions</h2>
 
