@@ -46,7 +46,6 @@ body
   font-style: normal
 
 $yellow: #eeb11e
-$orange: #e76f24
 $red: #cf4627
 $blue: #41a2ba
 $violet: #3e5084
@@ -54,7 +53,14 @@ $green: #6baf44
 $light-gray: #efefef
 $gray: #d1d2d4
 
+$light-yellow: lighten($yellow, 44)
+$light-red: lighten($red, 50)
+$light-blue: lighten($blue, 48)
+$light-violet: lighten($violet, 60)
+$light-green: lighten($green, 50)
+
 $colors: $blue $yellow $green $violet $red
+$light-colors: $light-blue $light-yellow $light-green $light-violet $light-red
 
 p, dd
   font-family: 'source_sans_proregular', sans-serif
@@ -197,14 +203,17 @@ $color-names: blue yellow green violet red
 
 @for $i from 1 through 5
   $color: nth($colors, $i)
+  $light-color: nth($light-colors, $i)
   $color-name: nth($color-names, $i)
   .#{nth($color-names, $i)}
     blockquote
       border-color: $color
     .chapter-font-color, section[data-type="sect1"] > h1, blockquote:before
       color: $color
-    .chapter-bg-color, .icon
+    .chapter-bg-color, .icon, th
       background: $color
+    tr:nth-child(2n + 1)
+      background: $light-color
 
 nav[data-type="toc"] li[data-type="part"] 
   margin-top: 25px
@@ -349,7 +358,7 @@ th
   border-top: 1px solid $gray
   border-bottom: 1px solid $gray
   border-left: 1px solid $gray
-  padding: .5em 1.5em .5em 3em
+  padding: .5em 1.5em
   font-size: 1.3em
   color: white
 
@@ -380,6 +389,14 @@ table ul
 td pre.programlisting, td pre.screen, td pre.literallayout, td code
   white-space: pre-wrap
   word-wrap: break-word
+
+table.question-and-answer,
+table.pros-and-cons,
+table.sections
+  th
+    padding: .5em 1.5em .5em 3em
+  tr:nth-child(2n + 1)
+    background: transparent
 
 table.question-and-answer
   th:nth-child(1)

@@ -180,36 +180,46 @@ section[data-type="chapter"] header p {
   border-color: #41a2ba; }
 .blue .chapter-font-color, .blue section[data-type="sect1"] > h1, .blue blockquote:before {
   color: #41a2ba; }
-.blue .chapter-bg-color, .blue .icon {
+.blue .chapter-bg-color, .blue .icon, .blue th {
   background: #41a2ba; }
+.blue tr:nth-child(2n + 1) {
+  background: #f4fafb; }
 
 .yellow blockquote {
   border-color: #eeb11e; }
 .yellow .chapter-font-color, .yellow section[data-type="sect1"] > h1, .yellow blockquote:before {
   color: #eeb11e; }
-.yellow .chapter-bg-color, .yellow .icon {
+.yellow .chapter-bg-color, .yellow .icon, .yellow th {
   background: #eeb11e; }
+.yellow tr:nth-child(2n + 1) {
+  background: #fef9ef; }
 
 .green blockquote {
   border-color: #6baf44; }
 .green .chapter-font-color, .green section[data-type="sect1"] > h1, .green blockquote:before {
   color: #6baf44; }
-.green .chapter-bg-color, .green .icon {
+.green .chapter-bg-color, .green .icon, .green th {
   background: #6baf44; }
+.green tr:nth-child(2n + 1) {
+  background: #f8fcf6; }
 
 .violet blockquote {
   border-color: #3e5084; }
 .violet .chapter-font-color, .violet section[data-type="sect1"] > h1, .violet blockquote:before {
   color: #3e5084; }
-.violet .chapter-bg-color, .violet .icon {
+.violet .chapter-bg-color, .violet .icon, .violet th {
   background: #3e5084; }
+.violet tr:nth-child(2n + 1) {
+  background: #f8f9fc; }
 
 .red blockquote {
   border-color: #cf4627; }
 .red .chapter-font-color, .red section[data-type="sect1"] > h1, .red blockquote:before {
   color: #cf4627; }
-.red .chapter-bg-color, .red .icon {
+.red .chapter-bg-color, .red .icon, .red th {
   background: #cf4627; }
+.red tr:nth-child(2n + 1) {
+  background: #fef9f7; }
 
 nav[data-type="toc"] li[data-type="part"] {
   margin-top: 25px; }
@@ -354,7 +364,7 @@ th {
   border-top: 1px solid #d1d2d4;
   border-bottom: 1px solid #d1d2d4;
   border-left: 1px solid #d1d2d4;
-  padding: 0.5em 1.5em 0.5em 3em;
+  padding: 0.5em 1.5em;
   font-size: 1.3em;
   color: white; }
 
@@ -385,6 +395,15 @@ table ul {
 td pre.programlisting, td pre.screen, td pre.literallayout, td code {
   white-space: pre-wrap;
   word-wrap: break-word; }
+
+table.question-and-answer th,
+table.pros-and-cons th,
+table.sections th {
+  padding: 0.5em 1.5em 0.5em 3em; }
+table.question-and-answer tr:nth-child(2n + 1),
+table.pros-and-cons tr:nth-child(2n + 1),
+table.sections tr:nth-child(2n + 1) {
+  background: transparent; }
 
 table.question-and-answer th:nth-child(1) {
   background: url("../../images/shared-icons/search.png") 1.2em no-repeat #444444; }
