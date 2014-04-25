@@ -669,7 +669,7 @@ div.navbar {
     color: white;
     -webkit-font-smoothing: antialiased; }
 
-.nav-btn {
+.btn {
   width: 30px;
   height: 30px;
   text-indent: -9999px;
@@ -679,7 +679,7 @@ div.navbar {
   -ms-transition: opacity 0.2s ease-in-out;
   -o-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out; }
-  .nav-btn:hover {
+  .btn:hover {
     cursor: pointer;
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
@@ -687,12 +687,12 @@ div.navbar {
     -ms-transition: opacity 0.2s ease-in-out;
     -o-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out; }
-  .nav-btn.open {
+  .btn.open {
     position: fixed;
     left: 30px;
     top: 24px;
     background: url("../../images/shared-icons/nav.png") no-repeat; }
-  .nav-btn.close {
+  .btn.close {
     margin-top: 12px;
     float: right;
     margin-right: 20px;
