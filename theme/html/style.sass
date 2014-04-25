@@ -7,6 +7,7 @@ body
   max-width: 100%
   font-family: 'source_sans_proregular', sans-serif
   font-size: 18px
+  margin: 0
 
 @font-face
   font-family: 'source_sans_proregular'
@@ -216,6 +217,27 @@ section[data-type="chapter"].cover
   padding: 0
   height: 100%
   position: absolute
+  border-bottom: 62px solid rgba(255,255,255,.1)
+  color: white
+  h1
+    text-transform: uppercase
+    font-size: 5em
+    width: 500px
+    margin-left: 40px
+    margin-top: 24px
+    top: 0px
+  p
+    width: 500px
+    text-align: justify
+    margin-left: 40px
+    background: rgba(0,0,0,.1)
+    padding: 20px 30px
+  img
+    position: absolute
+    opacity: .1
+    right: 0px
+    bottom: 0
+    width: 40%
 
 $color-names: blue yellow green violet red
 
@@ -228,7 +250,7 @@ $color-names: blue yellow green violet red
       border-color: $color
     .chapter-font-color, section[data-type="sect1"] > h1, blockquote:before
       color: $color
-    .chapter-bg-color, .icon, th, section[data-type="chapter"].cover
+    .chapter-bg-color, .icon, th, &.cover
       background: $color
     tr:nth-child(2n + 1)
       background: $light-color
@@ -627,6 +649,7 @@ div.navbar p a
   ul
     text-decoration: none
     list-style-type: none
+    margin: 0
     li
       position: fixed
       bottom: 18px
@@ -658,6 +681,8 @@ div.navbar p a
 @media screen and (min-width: 480px) and (max-width: 1024px)
   body
     width: 100%
+
+  section[data-type="chapter"]
     padding: 30px
 
 @media screen and (max-width: 960px)
@@ -672,7 +697,7 @@ div.navbar p a
     ul
       padding: 0
       li
-        bottom: 14px
+        bottom: 5px
         position: relative
         &:nth-child(1)
           float: right
@@ -681,12 +706,33 @@ div.navbar p a
           float: left
           left: 20px
 
+  .cover + .navigation
+    position: absolute
+    background: transparent
+    border: none
+
+  .navbar
+    display: none
+
 // iPhone
 
 @media screen and (max-width: 480px)
   body
     width: 100%
+
+  section[data-type="chapter"]
     padding: 30px
+    &.cover 
+      padding: 0 30px
+      h1
+        font-size: 3em
+        width: auto
+        text-align: center
+        margin-left: 0
+        margin-top: 1em
+      p
+        margin-left: 0
+        width: auto
   
   div.navbar
     position: relative

@@ -6,7 +6,8 @@
 body {
   max-width: 100%;
   font-family: "source_sans_proregular", sans-serif;
-  font-size: 18px; }
+  font-size: 18px;
+  margin: 0; }
 
 @font-face {
   font-family: "source_sans_proregular";
@@ -185,13 +186,34 @@ section[data-type="chapter"].cover {
   margin: 0;
   padding: 0;
   height: 100%;
-  position: absolute; }
+  position: absolute;
+  border-bottom: 62px solid rgba(255, 255, 255, 0.1);
+  color: white; }
+  section[data-type="chapter"].cover h1 {
+    text-transform: uppercase;
+    font-size: 5em;
+    width: 500px;
+    margin-left: 40px;
+    margin-top: 24px;
+    top: 0px; }
+  section[data-type="chapter"].cover p {
+    width: 500px;
+    text-align: justify;
+    margin-left: 40px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px 30px; }
+  section[data-type="chapter"].cover img {
+    position: absolute;
+    opacity: 0.1;
+    right: 0px;
+    bottom: 0;
+    width: 40%; }
 
 .blue blockquote, .blue [data-type="example"] {
   border-color: #41a2ba; }
 .blue .chapter-font-color, .blue section[data-type="sect1"] > h1, .blue blockquote:before {
   color: #41a2ba; }
-.blue .chapter-bg-color, .blue .icon, .blue th, .blue section[data-type="chapter"].cover {
+.blue .chapter-bg-color, .blue .icon, .blue th, .blue.cover {
   background: #41a2ba; }
 .blue tr:nth-child(2n + 1) {
   background: #f4fafb; }
@@ -200,7 +222,7 @@ section[data-type="chapter"].cover {
   border-color: #eeb11e; }
 .yellow .chapter-font-color, .yellow section[data-type="sect1"] > h1, .yellow blockquote:before {
   color: #eeb11e; }
-.yellow .chapter-bg-color, .yellow .icon, .yellow th, .yellow section[data-type="chapter"].cover {
+.yellow .chapter-bg-color, .yellow .icon, .yellow th, .yellow.cover {
   background: #eeb11e; }
 .yellow tr:nth-child(2n + 1) {
   background: #fef9ef; }
@@ -209,7 +231,7 @@ section[data-type="chapter"].cover {
   border-color: #6baf44; }
 .green .chapter-font-color, .green section[data-type="sect1"] > h1, .green blockquote:before {
   color: #6baf44; }
-.green .chapter-bg-color, .green .icon, .green th, .green section[data-type="chapter"].cover {
+.green .chapter-bg-color, .green .icon, .green th, .green.cover {
   background: #6baf44; }
 .green tr:nth-child(2n + 1) {
   background: #f8fcf6; }
@@ -218,7 +240,7 @@ section[data-type="chapter"].cover {
   border-color: #3e5084; }
 .violet .chapter-font-color, .violet section[data-type="sect1"] > h1, .violet blockquote:before {
   color: #3e5084; }
-.violet .chapter-bg-color, .violet .icon, .violet th, .violet section[data-type="chapter"].cover {
+.violet .chapter-bg-color, .violet .icon, .violet th, .violet.cover {
   background: #3e5084; }
 .violet tr:nth-child(2n + 1) {
   background: #f8f9fc; }
@@ -227,7 +249,7 @@ section[data-type="chapter"].cover {
   border-color: #cf4627; }
 .red .chapter-font-color, .red section[data-type="sect1"] > h1, .red blockquote:before {
   color: #cf4627; }
-.red .chapter-bg-color, .red .icon, .red th, .red section[data-type="chapter"].cover {
+.red .chapter-bg-color, .red .icon, .red th, .red.cover {
   background: #cf4627; }
 .red tr:nth-child(2n + 1) {
   background: #fef9f7; }
@@ -621,7 +643,8 @@ div.navbar p a {
 
 .navigation ul {
   text-decoration: none;
-  list-style-type: none; }
+  list-style-type: none;
+  margin: 0; }
   .navigation ul li {
     position: fixed;
     bottom: 18px; }
@@ -658,7 +681,9 @@ div.navbar p a {
 
 @media screen and (min-width: 480px) and (max-width: 1024px) {
   body {
-    width: 100%;
+    width: 100%; }
+
+  section[data-type="chapter"] {
     padding: 30px; } }
 @media screen and (max-width: 960px) {
   .navigation {
@@ -672,18 +697,39 @@ div.navbar p a {
     .navigation ul {
       padding: 0; }
       .navigation ul li {
-        bottom: 14px;
+        bottom: 5px;
         position: relative; }
         .navigation ul li:nth-child(1) {
           float: right;
           right: 22px; }
         .navigation ul li:nth-child(2) {
           float: left;
-          left: 20px; } }
+          left: 20px; }
+
+  .cover + .navigation {
+    position: absolute;
+    background: transparent;
+    border: none; }
+
+  .navbar {
+    display: none; } }
 @media screen and (max-width: 480px) {
   body {
-    width: 100%;
+    width: 100%; }
+
+  section[data-type="chapter"] {
     padding: 30px; }
+    section[data-type="chapter"].cover {
+      padding: 0 30px; }
+      section[data-type="chapter"].cover h1 {
+        font-size: 3em;
+        width: auto;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 1em; }
+      section[data-type="chapter"].cover p {
+        margin-left: 0;
+        width: auto; }
 
   div.navbar {
     position: relative;
