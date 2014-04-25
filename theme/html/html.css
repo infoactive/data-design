@@ -167,7 +167,7 @@ nav[data-type="toc"] li[data-type="appendix"] {
   font-size: 1em;
   line-height: 120%;
   text-indent: 0;
-  margin-top: 20px; }
+  margin-top: 0px; }
 
 section[data-type="chapter"] header {
   border-bottom: 18px solid #eeeeee;
