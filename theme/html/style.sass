@@ -664,13 +664,8 @@ div.navbar
     background: #7b7b7b
     color: white
     -webkit-font-smoothing: antialiased
-  .btn.close
-    margin-top: 12px
-    float: right
-    margin-right: 20px
-    background: url('../../images/shared-icons/close-black.png') no-repeat
 
-.btn
+.nav-btn
   width: 30px
   height: 30px
   text-indent: -9999px
@@ -680,12 +675,16 @@ div.navbar
     cursor: pointer
     opacity: 1
     @include transition(opacity, .2s, ease-in-out)
-
-.btn.open
-  position: fixed
-  left: 30px
-  top: 24px
-  background: url('../../images/shared-icons/nav.png') no-repeat
+  &.open
+    position: fixed
+    left: 30px
+    top: 24px
+    background: url('../../images/shared-icons/nav.png') no-repeat
+  &.close
+    margin-top: 12px
+    float: right
+    margin-right: 20px
+    background: url('../../images/shared-icons/close-black.png') no-repeat
 
 div.navbar p
   float: right
