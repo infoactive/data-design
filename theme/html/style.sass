@@ -149,11 +149,32 @@ section[data-type="dedication"]
   text-align: center
   padding-top: 100px
 
+nav[data-type="toc"]
+  margin-top: 132px
+
 nav[data-type="toc"] a
   font-style: normal
+  padding: 20px 0 18px
+  padding-left: 20px
+  border-bottom: 1px solid #ccc
+  border-right: 1px solid #ccc
+  display: block
+  text-decoration: none
+  color: #444
+  @include transition(all, .2s, ease-in-out)
+  &:hover
+    color: #222
+    background: desaturate(lighten($blue, 20), 12) 
+    @include transition(all, .2s, ease-in-out)
+
+nav[data-type="toc"] li ol li a
+  padding-left: 40px
+  background: $light-gray
 
 nav[data-type="toc"] li
   list-style-type: none
+  font-family: 'source_sans_proregular', sans-serif
+  margin-top: 0
 
 nav[data-type="toc"] > h1
   font-size: 1.5em
@@ -162,18 +183,11 @@ nav[data-type="toc"] > h1
   margin-bottom: 50px
   text-align: center
 
-nav[data-type="toc"] a 
-  text-decoration: none
-
-nav[data-type="toc"] li
-  font-family: 'source_sans_proregular', sans-serif
-
 nav[data-type="toc"] li[data-type="chapter"], 
 nav[data-type="toc"] li[data-type="part"], 
 nav[data-type="toc"] li[data-type="appendix"] 
   font-size: 1em
   line-height: 120%
-  margin-left: 0
   text-indent: 0
 
 section[data-type="chapter"] header
@@ -227,7 +241,7 @@ section[data-type="chapter"].cover
     margin-top: 24px
     top: 0px
   p
-    width: 500px
+    width: 600px
     text-align: justify
     margin-left: 40px
     background: rgba(0,0,0,.1)
@@ -255,6 +269,10 @@ $color-names: blue yellow green violet red
     tr:nth-child(2n + 1)
       background: $light-color
 
+nav[data-type="toc"] ol
+  padding: 0
+  margin: 0
+
 nav[data-type="toc"] li[data-type="part"] 
   margin-top: 25px
 
@@ -267,9 +285,6 @@ nav[data-type="toc"] li[data-type="part"] ol
   margin-left: 0
   text-indent: 0
 
-nav[data-type="toc"] li[data-type="chapter"] 
-  margin-top: 20px
-
 nav[data-type="toc"] li[data-type="chapter"]:last-of-type, 
 nav[data-type="toc"] li[data-type="appendix"] 
   margin-bottom: 20px
@@ -278,7 +293,7 @@ nav[data-type="toc"] li[data-type="chapter"] ol
   font-family: 'source_sans_proregular', sans-serif
   font-size: 1em
   line-height: 120%
-  margin-left: 20px
+  margin-left: 0px
   text-indent: -10px
 
 nav[data-type="toc"] li[data-type="chapter"] ol ol 
@@ -616,46 +631,61 @@ blockquote p
 
 div.navbar
   font-family: 'source_sans_proregular', sans-serif
-  background-color: #E8E8E8
+  background-color: #dfdfdf
   position: fixed
   top: 0
   left: -320px
   width: 320px
-  padding: 10px 20px 10px 20px
+  padding: 0
   border-bottom: 1px solid #d8d8d8
   font-size: .9em
+  overflow: scroll
+  height: 100%
+  z-index: 2
+  .title
+    background: #666
+    position: fixed
+    width: 320px
   h1
+    font-family: 'source_sans_prosemibold'
+    text-transform: uppercase
+    font-size: 1.7em
     float: left
-    width: 280px
-  .nav-close
-    float: left
+    width: 250px
+    margin: 0
+    padding: 14px 20px
+    color: white
+    -webkit-font-smoothing: antialiased
+  h2
+    clear: both
+    font-size: 1em
+    margin-bottom: 0
+    padding: 14px 20px
+    background: #7b7b7b
+    color: white
+    -webkit-font-smoothing: antialiased
+  .btn.close
+    margin-top: 12px
+    float: right
+    margin-right: 20px
     background: url('../../images/shared-icons/close-black.png') no-repeat
-    text-indent: -9999px
-    width: 30px
-    height: 30px
 
-.nav-open
-  position: fixed
+.btn
   width: 30px
   height: 30px
+  text-indent: -9999px
+  opacity: .3
+  @include transition(opacity, .2s, ease-in-out)
+  &:hover
+    cursor: pointer
+    opacity: 1
+    @include transition(opacity, .2s, ease-in-out)
+
+.btn.open
+  position: fixed
   left: 30px
   top: 24px
-  opacity: .3
-  @include transition(opacity, .4s, ease-in-out)
   background: url('../../images/shared-icons/nav.png') no-repeat
-  text-indent: -9999px
-  &:hover
-    opacity: 1
-    cursor: pointer
-    @include transition(opacity, .4s, ease-in-out)
-
-div.navbar h1
-  float: left
-  font-size: 1em
-  font-weight: normal
-  padding: 0
-  margin: 0
-  color: #999
 
 div.navbar p
   float: right
