@@ -619,11 +619,35 @@ div.navbar
   background-color: #E8E8E8
   position: fixed
   top: 0
-  left: 0
-  width: 100%
+  left: -320px
+  width: 320px
   padding: 10px 20px 10px 20px
   border-bottom: 1px solid #d8d8d8
   font-size: .9em
+  h1
+    float: left
+    width: 280px
+  .nav-close
+    float: left
+    background: url('../../images/shared-icons/close-black.png') no-repeat
+    text-indent: -9999px
+    width: 30px
+    height: 30px
+
+.nav-open
+  position: fixed
+  width: 30px
+  height: 30px
+  left: 30px
+  top: 24px
+  opacity: .3
+  @include transition(opacity, .4s, ease-in-out)
+  background: url('../../images/shared-icons/nav.png') no-repeat
+  text-indent: -9999px
+  &:hover
+    opacity: 1
+    cursor: pointer
+    @include transition(opacity, .4s, ease-in-out)
 
 div.navbar h1
   float: left

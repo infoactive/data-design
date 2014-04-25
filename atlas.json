@@ -43,7 +43,8 @@
     "html": {
       "toc": true,
       "javascripts": [
-        "js/retina.min.js"
+        "js/retina.min.js",
+        "//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
       ]
     }
   },
