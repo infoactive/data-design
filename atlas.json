@@ -2,7 +2,6 @@
   "branch": "master",
   "files": [
     "01-intro/cover.html",
-    "toc.html",
     "01-intro/introduction.html",
     "02-data-fundamentals/02-section-cover.html",
     "02-data-fundamentals/ch01-basic-data-types.html",
