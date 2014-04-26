@@ -8,7 +8,7 @@
 </header>
 
 <section class="id" data-type="sect1">
-<p>When trying to turn data into information, the data you start with matters a lot. Data can be simple factoids, in which someone else has done all of the analysis, or raw transactions, where the exploration is left entirely to the user.</p>
+<p>When trying to turn data into information, the data you start with matters a lot. Data can be simple factoids, in which someone else has done all of the analysis, or raw transactions, where the exploration is left entirely to the user.</p>
 
 <figure><img alt="Raw vs. Aggregated Data" src="../images/sections/02/raw-vs-aggregated.png" /></figure>
 
@@ -37,7 +37,7 @@
 
 <p>Most data sets fall somewhere in the middle. If we know what kind of data we have to begin with, we can greatly simplify the task of correctly visualizing it the first time. Getting a communicator to describe the information in the first place, either through a wizard or simply by having them use one of several templates filled with sample data, makes this far easier.</p>
 
-<p>Let's look at these types of aggregation one by one, using the example of coffee consumption. Let's assume a cafe tracks each cup of coffee sold, and records two pieces of information about the sale: the gender of the buyer, and the kind of coffee (regular, decaf, or mocha).</p>
+<p>Let's look at these types of aggregation one by one, using the example of coffee consumption. Let's assume a caf&eacute;  tracks each cup of coffee sold, and records two pieces of information about the sale: the gender of the buyer, and the kind of coffee (regular, decaf, or mocha).</p>
 
 <p>The basic table of this data, by year, looks like this<span class="footnote " data-type="footnote">This is completely made up coffee data, BTW.</span>:</p>
 
@@ -162,7 +162,7 @@
 
 <h2>Series</h2>
 
-<p>This is one type of information (the <em>dependent</em> variable) compared to another (the <em>independent</em> variable). Often, the independent variable is time.</p>
+<p>This is one type of information (the <em>dependent</em> variable) compared to another (the <em>independent</em> variable). Often, the independent variable is time.</p>
 
 <table>
 	<tbody>
@@ -183,7 +183,7 @@
 	</tbody>
 </table>
 
-<p>In this example, the total sales of coffee <em>depends</em> on the year. That is, the year is independent (&quot;pick a year, any year&quot;) and the sales is dependent (&quot;based on that year, the consumption is 23,005 cups&quot;).</p>
+<p>In this example, the total sales of coffee <em>depends</em> on the year. That is, the year is independent (&quot;pick a year, any year&quot;) and the sales is dependent (&quot;based on that year, the consumption is 23,005 cups&quot;).</p>
 
 <p>It can also be some other set of continuous data, such as temperature. Consider this table of hypothermia survival times, in which water temperature is the independent variable:</p>
 
@@ -275,7 +275,7 @@
 
 <figure>[Image goes here]</figure>
 
-<p>In cases where there are several dependent variables for each independent one, we often show the information as a scatterplot or heat map, or do some kind of processing (such as an average) to simplify what's shown. We'll come back to this in the Summary Records section below.</p>
+<p>In cases where there are several dependent variables for each independent one, we often show the information as a scatterplot or heat map, or do some kind of processing (such as an average) to simplify what's shown. We'll come back to this in the Summary Records section below.</p>
 
 <h2>Multiseries</h2>
 
@@ -488,14 +488,14 @@
 
 <h3>It's hard to explore summarized data</h3>
 
-<p>Even if we know the meaning of this data, and realize it is two separate multiseries tables (one on gender and one on coffee type) we can't explore it deeply. For example, we can't find out how many women drank regular coffee in 2000.</p>
+<p>Even if we know the meaning of this data, and realize it is two separate multiseries tables (one on gender and one on coffee type) we can't explore it deeply. For example, we can't find out how many women drank regular coffee in 2000.</p>
 
 <p>This is a common, and important, mistake. Many people are tempted to say:</p>
 
 <ul>
 	<li>36.7% of cups sold in 2000 were sold to women.</li>
 	<li>And there were 9,929 cups of regular sold in 2000.</li>
-	<li>Therefore, 3642.5 cups of regular were sold to women.</li>
+	<li>Therefore, 3,642.5 cups of regular were sold to women.</li>
 </ul>
 
 <p>This is wrong. It can only be done when you know that one category of information (coffee type) is evenly distributed across another (gender). The fact that the result isn't even a whole number reminds us not to do this, as nobody was served a half cup.</p>
@@ -504,7 +504,7 @@
 
 <h2>Summary records</h2>
 
-<p>The following table looks like the kind of data a point-of-sale system at a cafe might generate. It includes a column of categorical information (gender, where there are two possible types) and subtotals for each type of coffee. It also includes the totals by the cup for those types.</p>
+<p>The following table looks like the kind of data a point-of-sale system at a caf&eacute; might generate. It includes a column of categorical information (gender, where there are two possible types) and subtotals for each type of coffee. It also includes the totals by the cup for those types.</p>
 
 <table>
 	<tbody>
@@ -599,7 +599,7 @@
 	<li>We sold a total of 33 cups</li>
 </ul>
 
-<p>But more importantly, we can combine categories of data to ask more exploratory questions. For example: <em>Do women prefer a certain kind of coffee?</em> This is the kind of thing Excel, well, excels at, and it's often done using a tool called a Pivot Table.</p>
+<p>But more importantly, we can combine categories of data to ask more exploratory questions. For example: <em>Do women prefer a certain kind of coffee?</em> This is the kind of thing Excel, well, excels at, and it's often done using a tool called a Pivot Table.</p>
 
 <p>Here's a table looking at the average number of regular, decaf, and mocha cups consumed by male and female patrons:</p>
 
@@ -632,7 +632,7 @@
 	</tbody>
 </table>
 
-<p>Looking at this table, we can see a pretty clear trend: Women like regular; men seem evenly split across all three types of coffee<span class="footnote" data-type="footnote">This isn't enough data to make a statistically reliable statement like this. But it's made up data anyway, so stop thinking so much about coffee consumption.</span>.</p>
+<p>Looking at this table, we can see a pretty clear trend: Women like regular; men seem evenly split across all three types of coffee<span class="footnote" data-type="footnote">This isn't enough data to make a statistically reliable statement like this. But it's made up data anyway, so stop thinking so much about coffee consumption.</span>.</p>
 
 <p>The thing about this data, however, is that it's still been aggregated somehow. We summarized the data along several dimensions, gender and coffee type, by aggregating them by the name of the patron. While this isn't raw data, it's close.</p>
 
@@ -748,11 +748,11 @@
 
 <p>But averages hide things. Perhaps some people have a single cup of a particular type, and others have many. There are ways to visualize the spread, or variance, of data that indicate the underlying shape of the information, including heat charts, histograms, and scatterplots. But when keeping the underlying data, you can wind up with more than one <em>dependent</em> variable for each <em>independent</em> variable.</p>
 
-<p>For example, here's a scatterplot from <em>Freakonomics<span class="footnote " data-type="footnote"><a href="http://freakonomics.com/2011/04/01/graph-fight-more-on-taylor%E2%80%99s-scatterplot/" target="_blank">http://freakonomics.com/2011/04/01/graph-fight-more-on-taylor%E2%80%99s-scatterplot/</a></span></em> that compares unemployment data to investment. There isn't a one-to-one ratio here, at least not at this level, because a particular level of investment (the independent metric) may produce different levels of unemployment (the presumed dependent metric) in different years.</p>
+<p>For example, here's a scatterplot from <em>Freakonomics<span class="footnote " data-type="footnote"><a href="http://freakonomics.com/2011/04/01/graph-fight-more-on-taylor%E2%80%99s-scatterplot/" target="_blank">http://freakonomics.com/2011/04/01/graph-fight-more-on-taylor%E2%80%99s-scatterplot/</a></span></em> that compares unemployment data to investment. There isn't a one-to-one ratio here, at least not at this level, because a particular level of investment (the independent metric) may produce different levels of unemployment (the presumed dependent metric) in different years.</p>
 
 <figure>[Image goes here]</figure>
 
-<p>This is a good example of why scatterplots are good: They show outliers. In our coffee data, a better visualization (such as a histogram, which counts how many people fit into each bucket that made up an average) might reveal that a few people are drinking a lot of coffee, and a large number of people are drinking a small amount.</p>
+<p>This is a good example of why scatterplots are good: They show outliers. In our coffee data, a better visualization (such as a histogram, which counts how many people fit into each bucket that made up an average) &Acirc;might reveal that a few people are drinking a lot of coffee, and a large number of people are drinking a small amount.</p>
 
 <p>Consider this histogram of the number of cups per patron. All we did was tally up how many people had one cup, how many had two, how many had three, and so on. Then we plotted how <em>frequently</em> each number occurred, which is why this is called a <em>frequency histogram</em>.</p>
 
@@ -764,11 +764,11 @@
 
 <p>Even this data, verbose and informative as it is, isn't the raw information. It's still aggregated.</p>
 
-<p>Aggregation happens in many ways. For example, a restaurant receipt usually aggregates data by table. There's no way to find out what an individual person at the table had for dinner, just the food that was served and what it cost. To get to really specific exploration, however, we need data at the transaction level.</p>
+<p>Aggregation happens in many ways. For example, a restaurant receipt usually aggregates data by table. There's no way to find out what an individual person at the table had for dinner, just the food that was served and what it cost. To get to really specific exploration, however, we need data at the transaction level.</p>
 
 <h2>Individual transactions</h2>
 
-<p>Transactional records capture things about a specific event. There's no aggregation of the data along a dimension like someone's name (though their name may be captured). It's not rolled up over time. It's instantaneous.</p>
+<p>Transactional records capture things about a specific event. There's no aggregation of the data along a dimension like someone's name (though their name may be captured). It's not rolled up over time. It's instantaneous.</p>
 
 <table>
 	<tbody>
@@ -865,7 +865,7 @@
 	</tbody>
 </table>
 
-<p>These transactions can be aggregated by any column. They can be cross-referenced by those columns. The timestamps can also be aggregated into buckets (hourly, daily, or annually). Ultimately, the initial data set we saw of coffee consumption per year results from this raw data, summarized significantly.</p>
+<p>These transactions can be aggregated by any column. They can be cross-referenced by those columns. The timestamps can also be aggregated into buckets (hourly, daily, or annually). Ultimately, the initial data set we saw of coffee consumption per year results from this raw data, summarized significantly.</p>
 
 <h2>The subjective nature of data storytelling</h2>
 
