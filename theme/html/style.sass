@@ -150,39 +150,73 @@ section[data-type="dedication"]
   text-align: center
   padding-top: 100px
 
-nav[data-type="toc"]
+nav.toc
   margin-top: 132px
-
-nav[data-type="toc"] a
-  font-style: normal
-  padding: 20px 0 18px
-  padding-left: 20px
-  border-bottom: 1px solid #ccc
-  border-right: 1px solid #ccc
-  display: block
-  text-decoration: none
-  color: #444
-  @include transition(all, .2s, ease-in-out)
-  &:hover
-    color: #222
-    background: desaturate(lighten($blue, 20), 12) 
-    @include transition(all, .2s, ease-in-out)
-
-nav[data-type="toc"] li ol li a
-  padding-left: 40px
-  background: $light-gray
-
-nav[data-type="toc"] li
-  list-style-type: none
-  font-family: 'source_sans_proregular', sans-serif
-  margin-top: 0
-
-nav[data-type="toc"] > h1
-  font-size: 1.5em
-  line-height: 120%
-  margin-top: 80px
-  margin-bottom: 50px
-  text-align: center
+  a
+    font-style: normal
+    text-decoration: none
+    padding-left: 20px 
+    display: inline-block
+    width: auto
+    padding-bottom: 18px
+    color: #444
+    &:hover
+      text-decoration: underline
+  li ol li a
+    padding-left: 30px
+  li
+    list-style-type: none
+    font-family: 'source_sans_proregular', sans-serif
+    margin-top: 0
+    padding: 20px 0 0px
+    border-bottom: 1px solid #ccc
+    @include transition(background, .2s, ease-in-out)
+    &:hover
+      color: #222
+      background: desaturate(lighten($blue, 20), 12) 
+      @include transition(background, .2s, ease-in-out)
+  > h1
+    font-size: 1.5em
+    line-height: 120%
+    margin-top: 80px
+    margin-bottom: 50px
+    text-align: center
+  ol
+    padding: 0
+    margin: 0
+  li[data-type="part"] 
+    margin-top: 0px
+    border-right: 1px solid #ccc
+    > ol
+      display: none
+      li:last-child
+        border-bottom: none
+      a
+        display: block
+        padding: 20px 30px 18px
+        width: 100%
+    ol
+      margin-left: 0
+      text-indent: 0
+  li[data-type="chapter"] 
+    padding: 0 0 0 8px
+    background: darken($gray, 12)
+    &:hover, &.active
+      background: $blue 
+    ol 
+      display: none
+      font-family: 'source_sans_proregular', sans-serif
+      font-size: 1em
+      line-height: 120%
+      margin-left: 0px
+      text-indent: -10px
+    a
+      background: $light-gray
+      @include transition(background, .2s, ease-in-out)
+      &:hover
+        background: white
+        text-decoration: none
+        @include transition(background, .2s, ease-in-out)
 
 nav[data-type="toc"] li[data-type="chapter"], 
 nav[data-type="toc"] li[data-type="part"], 
@@ -192,6 +226,24 @@ nav[data-type="toc"] li[data-type="appendix"]
   text-indent: 0
   margin-top: 0px
 
+nav[data-type="toc"] li[data-type="chapter"]:last-of-type, 
+nav[data-type="toc"] li[data-type="appendix"] 
+  margin-bottom: 20px
+
+nav[data-type="toc"] li[data-type="chapter"] ol ol 
+  margin-left: 10px
+  text-indent: -10px
+
+nav[data-type="toc"] li[data-type="preface"], 
+nav[data-type="toc"] li[data-type="foreword"], 
+nav[data-type="toc"] li[data-type="glossary"], 
+nav[data-type="toc"] li[data-type="index"]
+  font-size: 1em
+  line-height: 120%
+
+nav[data-type="toc"] li[data-type="preface"] ol, 
+nav[data-type="toc"] li[data-type="foreword"] ol
+  display: none
 section[data-type="chapter"] header
   border-bottom: 18px solid #eeeeee
   margin-bottom: 5em
@@ -270,48 +322,6 @@ $color-names: blue yellow green violet red
       background: $color
     tr:nth-child(2n + 1)
       background: $light-color
-
-nav[data-type="toc"] ol
-  padding: 0
-  margin: 0
-
-nav[data-type="toc"] li[data-type="part"] 
-  margin-top: 0px
-  > a
-    border-bottom: 1px solid #ccc
-    width: 100%
-    display: inline-block
-    background: #aaa
-  ol
-    margin-left: 0
-    text-indent: 0
-
-nav[data-type="toc"] li[data-type="chapter"]:last-of-type, 
-nav[data-type="toc"] li[data-type="appendix"] 
-  margin-bottom: 20px
-
-nav[data-type="toc"] li[data-type="chapter"] ol 
-  display: none
-  font-family: 'source_sans_proregular', sans-serif
-  font-size: 1em
-  line-height: 120%
-  margin-left: 0px
-  text-indent: -10px
-
-nav[data-type="toc"] li[data-type="chapter"] ol ol 
-  margin-left: 10px
-  text-indent: -10px
-
-nav[data-type="toc"] li[data-type="preface"], 
-nav[data-type="toc"] li[data-type="foreword"], 
-nav[data-type="toc"] li[data-type="glossary"], 
-nav[data-type="toc"] li[data-type="index"]
-  font-size: 1em
-  line-height: 120%
-
-nav[data-type="toc"] li[data-type="preface"] ol, 
-nav[data-type="toc"] li[data-type="foreword"] ol
-  display: none
 
 section[data-type="preface"], 
 div[data-type="part"], 
