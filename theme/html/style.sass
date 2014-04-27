@@ -321,11 +321,11 @@ $color-names: blue yellow green violet red
   .#{nth($color-names, $i)}
     blockquote, [data-type="example"]
       border-color: $color
-    .chapter-font-color, section[data-type="sect1"] > h1, blockquote:before
+    a, .chapter-font-color, section[data-type="sect1"] > h1, blockquote:before
       color: $color
     .chapter-bg-color, .icon, th
       background: $color
-    tr:nth-child(2n + 1)
+    table:not(.custom) tr:nth-child(2n + 1), .highlight
       background: $light-color
   div[data-type="part"].#{nth($color-names, $i)}
     background: $color
@@ -411,9 +411,10 @@ dd p
 table
   margin-top: 30px
   margin-bottom: 30px
-  border-bottom: 1px solid $gray
   border-collapse: collapse
   font-size: .9em
+  display: block
+  overflow: auto
 
 table caption
   font-family: 'source_sans_proregular', sans-serif
@@ -433,19 +434,18 @@ th
   border-top: 1px solid $gray
   border-bottom: 1px solid $gray
   border-left: 1px solid $gray
-  padding: .5em 1.5em
-  font-size: 1.3em
+  font-size: 1em
   color: white
 
 th, td
   border-bottom: 1px solid $gray
   border-left: 1px solid $gray
+  padding: .7em 1.3em
+  white-space: nowrap
   &:last-child
     border-right: 1px solid $gray
 
 td
-  padding: 1.5em
-  padding-bottom: 1em
   vertical-align: top
   font-size: 1em
 
@@ -480,6 +480,8 @@ table.question-and-answer
     background: url('../../images/shared-icons/arrow.png') 1.2em no-repeat $blue
   td
     width: 50%
+    padding: 1.5em
+    padding-bottom: 1em
   td:nth-child(2)
     p
       color: #999
@@ -562,6 +564,40 @@ aside p
   line-height: 130%
   text-indent: 0
   margin-top: 6px
+
+aside[data-type="footnotes"]
+  p
+    line-height: 1.6em
+    margin-bottom: 1.5em
+  a[target="_blank"]
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  a:not([target="_blank"])
+    text-decoration: none
+    float: left
+    width: 1.5em
+    height: 1.5em
+    background: #bbb
+    border-radius: 50%
+    margin: .1em .8em .5em 0
+    &:hover
+      background: #aaa
+    sup
+      margin-right: .5em
+      height: 1em
+      line-height: 0
+      color: white
+      margin: .95em 0.7em
+      display: block
+
+a[data-type="noteref"]
+  text-decoration: none
+  margin: 0 .2em
+  &:hover
+    text-decoration: underline
+  &:focus
+    outline: none
 
 div[data-type="note"], 
 div[data-type="warning"]
