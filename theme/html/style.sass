@@ -276,22 +276,22 @@ nav[data-type="toc"] ol
   margin: 0
 
 nav[data-type="toc"] li[data-type="part"] 
-  margin-top: 25px
-
-nav[data-type="toc"] li[data-type="part"] > a 
-  border-bottom: 1px solid #333
-  width: 100%
-  display: inline-block
-
-nav[data-type="toc"] li[data-type="part"] ol
-  margin-left: 0
-  text-indent: 0
+  margin-top: 0px
+  > a
+    border-bottom: 1px solid #ccc
+    width: 100%
+    display: inline-block
+    background: #aaa
+  ol
+    margin-left: 0
+    text-indent: 0
 
 nav[data-type="toc"] li[data-type="chapter"]:last-of-type, 
 nav[data-type="toc"] li[data-type="appendix"] 
   margin-bottom: 20px
 
 nav[data-type="toc"] li[data-type="chapter"] ol 
+  display: none
   font-family: 'source_sans_proregular', sans-serif
   font-size: 1em
   line-height: 120%
