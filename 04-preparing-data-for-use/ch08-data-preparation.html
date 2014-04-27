@@ -1,269 +1,315 @@
-<section data-type="chapter" class="green">
-  <header>
-    <div class="chapter-bg-color icon">
-      <img src="../images/sections/04/spreadsheet.png" />
-    </div>
-    <p>Chapter 8</p>
-    <h1>Data Preparation</h1>
-  </header>
+<section class="green" data-type="chapter">
+<header>
+<div class="chapter-bg-color icon"><img src="../images/sections/04/spreadsheet.png" /></div>
 
-  <section data-type="sect1">
+<p>Chapter 8</p>
 
-  <p>One aspect of data that is difficult to both learn and teach is how to get your data in shape so that it’s useful. </p>
+<h1>Data Preparation</h1>
+</header>
 
-  <p>Have you ever been given a data set where you couldn’t get directly get the information you needed?  Maybe complete addresses were in a single field, preventing you from getting stats about specific cities and states.  Perhaps a vendor sent a spreadsheet with 6000 part numbers but their numbering system includes the warehouse code followed by the part number and you need the part numbers by themselves.</p>
+<section data-type="sect1">
+<p>One aspect of data that is difficult to both learn and teach is how to get your data in shape so that it&rsquo;s useful. &nbsp;There are a few common preparation tasks that you might encounter when working with data, especially if you&rsquo;re handling data someone else collected. &nbsp;While we can use computers to perform many of the actions required for data preparation, there is a certain amount of manual, hands-on involvement in figuring out exactly which tasks need to be done. For this reason, many people admittedly hate this part of working with data, but someone has to clean this stuff up!&nbsp;</p>
 
-  <table>
-    <tr>
-      <th>You Want</th>
-      <th>They Provide</th>
-    </tr>
-    <tr>
-      <td>C77000S</td>
-      <td>GA3C77000S</td>
-    </tr>
-    <tr>
-      <td>W30000P</td>
-      <td>GA1W30000P</td>
-    </tr>
-    <tr>
-      <td>D21250G</td>
-      <td>DE1D21250G</td>
-    </tr>
-  </table>
+<p>Whether you&rsquo;re a highly-paid data analyst with billions of records or a 1-person business with a 90-person contact list, you&rsquo;ll be faced with messy data at some point. &nbsp;Unfortunately, data preparation isn&rsquo;t a straightforward task and there&rsquo;s no one right way to go about doing it. &nbsp;Each data set is unique and some techniques may be used just once in a lifetime, as you&rsquo;ll see in the malls example below.&nbsp;</p>
 
-  <p>Separating information from a single field into multiple fields is one part of data preparation.  Many people hate this part of working with data, but someone has to clean this stuff up!</p>
+<h2>&nbsp;</h2>
 
-  <p>Whether you’re a highly-paid data analyst with billions of records or a 1-person business with a 90-person contact list, you’ll be faced with messy data at some point.  Unfortunately, data parsing isn’t a straightforward task and there’s no one right way to go about doing it.  Each data set is unique and some techniques may be used just once in a lifetime.</p>
+<p>Separating Data</p>
 
-  <p>Consider the challenge presented in the data set below about malls:</p>
+<p>&nbsp;</p>
 
-  <table>
-    <tr>
-      <th>Mall</th>
-      <th>Address</th>
-      <th>City</th>
-      <th>State</th>
-    </tr>
-    <tr>
-      <td>Warm Willows Mall&nbsp;Peters Road Marrison, MI</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Jaspers&nbsp;Martinson &amp; Timberlake Rds Reed, FL</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Lara Lafayette Shoppes&nbsp;17 Industrial Drive Elm, CT</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
+<p>The first part of data preparation is separating data into the fields that will be most useful for you. &nbsp;</p>
 
-  <p>You want the mall name, address, city, and state to be stored in separate fields.  The data set has hundreds of malls in it so splitting the entries apart by hand would take a lot of time.   The mall names are bold, which makes it easy to visually distinguish where the mall name stops and the address starts, but not all the addresses begin with numbers, so no standard tool exists for parsing the data into separate fields.  Code can be written that will recognize the bold and plain font weights and peel them apart, but since this is a rare situation, it is likely that you won’t have it right at hand.  This is a case where you might write code (or have someone write it for you) that you’ll never use for this purpose again.</p>
+<p>Have you ever been given a data set where you couldn&rsquo;t get directly access the information you needed? &nbsp;Maybe complete addresses were in a single field, preventing you from getting stats about specific cities and states. &nbsp;Perhaps a vendor sent a spreadsheet with 6000 part numbers but their numbering system includes the warehouse code followed by the part number and you need the part numbers by themselves.</p>
 
-  <p>We can’t teach you everything about how to split data in this chapter since every situation is unique, as mentioned before.  However, there are some strategies that are useful in many cases.  We’ll go through a few of these, as well as some common data parsing challenges and their sources, to help get you started.</p>
+<table>
+	<tbody>
+		<tr>
+			<th>You Want</th>
+			<th>They Provide</th>
+		</tr>
+		<tr>
+			<td>C77000S</td>
+			<td>GA3C77000S</td>
+		</tr>
+		<tr>
+			<td>W30000P</td>
+			<td>GA1W30000P</td>
+		</tr>
+		<tr>
+			<td>D21250G</td>
+			<td>DE1D21250G</td>
+		</tr>
+	</tbody>
+</table>
 
-  <h2>Let's begin</h2>
+<p>Consider the challenge presented in the data set below about malls:</p>
 
-  <p>A straightforward example that many people encounter is separating first names from last names.  You may receive a data set where full names are contained in a single field and you need the first and last names to be separate, or there may already be separate fields for first and last names, but some of the entries have the full name in one of the fields.</p>
+<table>
+	<tbody>
+		<tr>
+			<th>Mall</th>
+			<th>Address</th>
+			<th>City</th>
+			<th>State</th>
+		</tr>
+		<tr>
+			<td>Warm Willows Mall&nbsp;Peters Road Marrison, MI</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Jaspers&nbsp;Martinson &amp; Timberlake Rds Reed, FL</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Lara Lafayette Shoppes&nbsp;17 Industrial Drive Elm, CT</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
 
-  <table>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Keith Pallard</td>
-    </tr>
-    <tr>
-      <td>Fumi Takano</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Rhonda</td>
-      <td>Johnson</td>
-    </tr>
-    <tr>
-      <td>Warren Andersen</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Juan</td>
-      <td>Tyler</td>
-    </tr>
-    <tr>
-      <td>Cicely</td>
-      <td>Pope</td>
-    </tr>
-  </table>
+<p>You want the mall name, address, city, and state to be stored in separate fields. &nbsp;The data set has hundreds of malls in it so splitting the entries apart by hand would take a lot of time. &nbsp; The mall names are bold, which makes it easy to visually distinguish where the mall name stops and the address starts, but not all the addresses begin with numbers, so no standard tool exists for separating the data into different fields. &nbsp;Code can be written that will recognize the bold and plain font weights and peel them apart, but since this is a rare situation, it is likely that you won&rsquo;t have it right at hand. &nbsp;This is a case where you might write code (or have someone write it for you) that you&rsquo;ll never use for this purpose again.</p>
 
-  <p>When data sets come to us this way, the challenge is seemingly fairly easy to resolve.  There are common ways of getting the first names and last names separated for Keith, Fumi, and Warren.   The easiest way is to look for the space, break the name apart at the space, and voila!</p>
+<p>We can&rsquo;t teach you everything about how to split data in this chapter since every situation is unique, as mentioned before. &nbsp;However, there are some strategies that are useful in many cases. &nbsp;We&rsquo;ll go through a few of these, as well as some common challenges and their sources, to help get you started. &nbsp;</p>
 
-  <p>This is simple enough, but when we add in reality, things get complicated FAST:</p>
+<h2>Let's begin</h2>
 
-  <p>What if your data set has thousands of records?  You’ll be spending a lot of time manually separating names, and there are far more potential name combinations than just first and last name.</p>
+<p>A straightforward example that many people encounter is separating first names from last names. &nbsp;You may receive a data set where full names are contained in a single field and you need the first and last names to be separate, or there may already be separate fields for first and last names, but some of the entries have the full name in one of the fields.</p>
 
- <table>
-    <tr>
-      <td>Middle Initials</td>
-      <td>Martina C. Daniels</td>
-    </tr>
-    <tr>
-      <td>Professional Designations</td>
-      <td>Lloyd Carson DVM</td>
-    </tr>
-    <tr>
-      <td>2-part Last Names</td>
-      <td>Lora de Carlo</td>
-    </tr>
-    <tr>
-      <td>Prefixes</td>
-      <td>Rev Herman Phillips</td>
-    </tr>
-    <tr>
-      <td>Suffixes</td>
-      <td>Jimmy Walford III</td>
-    </tr>
-    <tr>
-      <td>Hyphenated Last Names</td>
-      <td>Tori Baker-Andersen</td>
-    </tr>
-    <tr>
-      <td>Last Name First</td>
-      <td>Kincaid Jr, Paul</td>
-    </tr>
-    <tr>
-      <td>2-part First Names</td>
-      <td>Ray Anne Lipscomb</td>
-    </tr>
-    <tr>
-      <td>Aw, c&rsquo;mon!</td>
-      <td>Rev Rhonda-Lee St. Andrews-Fernandez, DD, MSW</td>
-    </tr>
-    <tr>
-      <td>Are you kidding me?</td>
-      <td>Murray Wilkins 993 E Plymouth Blvd</td>
-    </tr>
-    <tr>
-      <td>No/Missing First Name</td>
-      <td>O&rsquo;Connor</td>
-    </tr>
-    <tr>
-      <td>No/Missing Last Name</td>
-      <td>Tanya</td>
-    </tr>
-    <tr>
-      <td>No name at all</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>I have no earthly idea!</td>
-      <td>JJ</td>
-    </tr>
-    <tr>
-      <td>Not a person&rsquo;s name at all</td>
-      <td>North City Garden Supply</td>
-    </tr>
-  </table>
+<table>
+	<tbody>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Keith Pallard</td>
+		</tr>
+		<tr>
+			<td>Fumi Takano</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Rhonda</td>
+			<td>Johnson</td>
+		</tr>
+		<tr>
+			<td>Warren Andersen</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Juan</td>
+			<td>Tyler</td>
+		</tr>
+		<tr>
+			<td>Cicely</td>
+			<td>Pope</td>
+		</tr>
+	</tbody>
+</table>
 
-  <h2>Now what? Let's make some decisions</h2>
+<p>When data sets come to us this way, the challenge is seemingly fairly easy to resolve. &nbsp;There are common ways of pulling apart the first names and last names for Keith, Fumi, and Warren. &nbsp; The easiest way is to look for the space, break the name apart at the space, and voila!</p>
 
-  <p>Let’s say we’re faced with separating the names so that you can sort by last name and our list has 500 names (a number too big to consider hand-typing, and an unpaid intern will get up and walk out if assigned this vile task).</p>
+<p>This is simple enough, but when we add in reality, things get complicated FAST:<br />
+What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a lot of time manually separating names, and there are far more potential name combinations than just first and last name.</p>
 
-  <p>Before beginning, we need to know certain things:</p>
+<table>
+	<tbody>
+		<tr>
+			<td>Middle Initials</td>
+			<td>Martina C. Daniels</td>
+		</tr>
+		<tr>
+			<td>Professional Designations</td>
+			<td>Lloyd Carson DVM</td>
+		</tr>
+		<tr>
+			<td>2-part Last Names</td>
+			<td>Lora de Carlo</td>
+		</tr>
+		<tr>
+			<td>Prefixes</td>
+			<td>Rev Herman Phillips</td>
+		</tr>
+		<tr>
+			<td>Suffixes</td>
+			<td>Jimmy Walford III</td>
+		</tr>
+		<tr>
+			<td>Hyphenated Last Names</td>
+			<td>Tori Baker-Andersen</td>
+		</tr>
+		<tr>
+			<td>Last Name First</td>
+			<td>Kincaid Jr, Paul</td>
+		</tr>
+		<tr>
+			<td>2-part First Names</td>
+			<td>Ray Anne Lipscomb</td>
+		</tr>
+		<tr>
+			<td>Aw, c&rsquo;mon!</td>
+			<td>Rev Rhonda-Lee St. Andrews-Fernandez, DD, MSW</td>
+		</tr>
+		<tr>
+			<td>Are you kidding me?</td>
+			<td>Murray Wilkins 993 E Plymouth Blvd</td>
+		</tr>
+		<tr>
+			<td>No/Missing First Name</td>
+			<td>O&rsquo;Connor</td>
+		</tr>
+		<tr>
+			<td>No/Missing Last Name</td>
+			<td>Tanya</td>
+		</tr>
+		<tr>
+			<td>No name at all</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>I have no earthly idea!</td>
+			<td>JJ</td>
+		</tr>
+		<tr>
+			<td>Not a person&rsquo;s name at all</td>
+			<td>North City Garden Supply</td>
+		</tr>
+	</tbody>
+</table>
 
-  <ul>
-    <li>Why is it important to parse this specific field?  Is anything being hurt by having names all in one field?</li>
-    <li>What do we want the result to look like?
-      <ul>
-        <li>Is it important to keep ‘Rev’ and create a separate field to hold other titles like Dr, Mrs, Capt, etc.?</li>
-        <li>Should ‘Jr’ stay with the last name or should there be a separate field for it?</li>
-        <li>Should middle initials be kept? In their own field? With the first name? With the last name?</li>
-        <li>Do we want to keep professional designations?</li>
+<h2>Now what? Let's make some decisions</h2>
 
-      </ul>
-    </li>
-    <li>Is it worth the cost of getting it done?  In simple cases, you may be able to hire an intern to complete the work, but this might not be ideal for complicated ones.  What if a professional said they could fix the list for $1000?</li>
-    <li>What do we do with incomplete or incorrect entries (highlighted in yellow in the table above)?</li>
-  </ul>
+<p>Let&rsquo;s say we&rsquo;re faced with separating the names so that you can sort by last name and our list has 500 names (a number too big to consider hand-typing, and an unpaid intern will get up and walk out if assigned this vile task).</p>
 
-  <p>These questions should be answered before you start parsing your data. If you just dive in, you can create a larger mess, and these decisions can actually make your parsing process much easier. For example, if you decide that the professional designations don’t matter, there might be an easy way to get rid of them and simplify other parts of the project.</p>
+<p>Before beginning, we need to know certain things:</p>
 
-  <p>Say you’re working with a list of 20,000 stores, 19,400 in the US and 600 in Canada.  They have different phone number and address formatting than the US stores. You’re trying to figure out if you need a separate fields for the Canadian data or a separate data set altogether, so you ask the client what their preference is.</p>
+<ul>
+	<li>Why is it important to parse this specific field? Is anything being hurt by having names all in one field?</li>
+	<li>What do we want the result to look like?
+	<ul>
+		<li>s it important to keep &lsquo;Rev&rsquo; and create a separate field to hold other titles like Dr, Mrs, Capt, etc.?</li>
+		<li>Should &lsquo;Jr&rsquo; stay with the last name or should there be a separate field for it?</li>
+		<li>Should middle initials be kept? In their own field? With the first name? With the last name?</li>
+		<li>Do we want to keep professional designations?</li>
+	</ul>
+	</li>
+	<li>Is it worth the cost of getting it done? &nbsp;In simple cases, you may be able to hire an intern to complete the work, but this might not be ideal for complicated ones. &nbsp;What if a professional said they could fix the list for $1000?</li>
+	<li>What do we do with incomplete or incorrect entries (highlighted in yellow in the table above)?</li>
+</ul>
 
-  <p>Their answer is simple. They aren’t conducting business in Canada. So, just delete those records. GREAT! Just 19,400 records left.</p>
+<p>These questions should be answered before you start working with your data. If you just dive in, you can create a larger mess, and these decisions can actually make the process much easier. For example, if you decide that the professional designations don&rsquo;t matter, there might be an easy way to get rid of them and simplify other parts of the project.</p>
 
-  <h2>Now how do we parse this data?</h2>
+<p>Say you&rsquo;re working with a list of 20,000 stores, 19,400 in the US and 600 in Canada. &nbsp;They have different phone number and address formatting than the US stores. You&rsquo;re trying to figure out if you need separate fields for the Canadian data or another data set altogether, so you ask the client what their preference is.</p>
 
-  <p>There are so many parsing techniques, we could write an entire book on just this subject alone.  You can parse data in Excel, or if you have programming skills, you can use Python, SQL, or any number of other languages.  There’s too much for us to cover in this chapter, but for some good references, check out Appendix F.  For right now, we’ll cover some basic starting strategies for parsing so you’ll be better equipped to take on those references when you’re ready.</p>
+<p>Their answer is simple. They aren&rsquo;t conducting business in Canada and they don&rsquo;t care if you delete those records. GREAT! Just 19,400 records left. &nbsp;</p>
 
-  <h3>Strategy Tips</h3>
+<h2>Now, how do we break up this data?</h2>
 
-  <h4>Start by looking for the low-hanging fruit</h4>
+<p>There are so many techniques, we could write an entire book on this subject alone. &nbsp;You can break apart the data in Excel, or if you have programming skills, you can use Python, SQL, or any number of other languages. &nbsp;There&rsquo;s too much for us to cover in this chapter, but for some good references, check out Appendix YYY. &nbsp;For right now, we&rsquo;ll cover some basic starting strategies so you&rsquo;ll be better equipped to take on those references when you&rsquo;re ready.&nbsp;</p>
 
-  <p>In many instances, most of the data that needs to be parsed is fairly simple. Out of 500 names, you may discover that 200 have just a first and last name.  Set these aside. Leave them alone.  Then look at the remaining 300 names.</p>
+<h3>Strategy Tips</h3>
 
-  <h4>Identify the oddities</h4>
+<h4>Start by looking for the low-hanging fruit</h4>
 
-  <p>Look through your data set for the no-names, super-complicated names, incomplete names, non-person names and any entries you don’t know what to do with. Set these aside.  Maybe there are 40.</p>
+<p>In many instances, most of the data that needs to be separated is fairly simple. Out of 500 names, you may discover that 200 have just a first and last name. &nbsp;Set these aside. Leave them alone. &nbsp;Then look at the remaining 300 names.</p>
 
-  <h4>Look for similarities and work in chunks</h4>
+<h4>Identify the oddities</h4>
 
-  <p>Of the 260 remaining names, maybe 60 are complicated by professional alphabet soup after their names. Whether you’re deleting them or putting them in their own field, handle them all together.</p>
+<p>Look through your data set for the no-names, super-complicated names, incomplete names, non-person names and any entries you don&rsquo;t know what to do with. Set these aside. &nbsp;Maybe there are 40.&nbsp;</p>
 
-  <p>You’ll be left with the names free of the alphabet soup. For those that have just a first and last name, add those to the 300 that were set aside.</p>
+<h4>Look for similarities and work in chunks</h4>
 
-  <p>We do the same with the 2-part last names, and other remaining types.</p>
+<p>Of the 260 remaining names, maybe 60 are complicated by professional alphabet soup after their names. Whether you&rsquo;re deleting these professional designations or putting the designations in their own field separate from the name, work with them all at once. &nbsp;Now the designations are separate (or deleted) and you have a field with just names. &nbsp;For those that have only a first and last name, add those to the 300 that were set aside at the beginning.</p>
 
-  <h4>Begin parsing</h4>
+<p>We put the 2-part last names and other remaining types into their own groups.</p>
 
-  <p>With the names in different buckets we can apply parsing techniques to the entire groups.</p>
+<h4>Start by separating the names</h4>
 
-  <p>Maybe our first-name-last-name-only group is 290 at this point. Parse that and we’re more than 50% done.</p>
+<p>Of the 260 remaining names, maybe 60 are complicated by professional alphabet soup after their names. Whether you&rsquo;re deleting these professional designations or putting the designations in their own field separate from the name, work with them all at once. &nbsp;Now the designations are separate (or deleted) and you have a field with just names. &nbsp;For those that have only a first and last name, add those to the 300 that were set aside at the beginning.</p>
 
-  <p>Then we move to the group that has a single middle initial. They will require their own parsing strategy but the good news is that the strategy can be applied to the group.</p>
+<p>We put the 2-part last names and other remaining types into their own groups.</p>
 
-  <p>Then we move on to another chunk; e.g., the 2-parts last names; and so on. New strategy applied to each separate chunk of the dataset.</p>
+<h4>Just plain manual effort</h4>
 
-  <h4>Just plain manual effort</h4>
+<p>The 40 oddities you identified at the start may come down to just re-typing manually, depending what is odd about them.&nbsp;</p>
 
-  <p>The 40 oddities may come down to just re-typing manually. </p>
+<div class="note">
+<p>NOTE: Sometimes, when we&rsquo;re handling data in real life, records take care of themselves. For example, maybe a non-name record turns out to be a duplicate of a record that&rsquo;s complete. &nbsp;In that case, we can just delete the incorrect record and move on.</p>
+</div>
 
-  <div class="note">
-    <p>Quite often, when we’re handling data in real life, some of these take care of themselves. Maybe a non-name record turns out to be a duplicate of a record that’s complete. We can just delete the incorrect record and move on.</p>
-  </div>
+<h3>Other common fields that need to be split</h3>
 
-  <h3>Preventing the need for data parsing</h3>
+<p>Depending on how data are collected, there are other fields you may be interested in splitting up besides names. &nbsp;Some of the most common are:</p>
 
-  <p>The best solutions are preventive. Do whatever you can to prevent receiving data that will eventually need to be parsed.</p>
+<ul>
+	<li>
+	<p>Address information</p>
+	</li>
+	<li>
+	<p><span style="line-height: 1.5em;">Phone numbers, particularly if you need the area code to be separate</span></p>
+	</li>
+	<li>
+	<p><span style="line-height: 1.5em;">Emails, if you&rsquo;re curious about domain information</span></p>
+	</li>
+	<li>
+	<p><span style="line-height: 1.5em;">Date, if you only want year or month&nbsp;</span></p>
+	</li>
+</ul>
 
-  <ul>
-    <li>Use data validation on user inputs</li>
-    <li>Set up forms so that phone numbers and dates can be input only one way.</li>
-    <li>Determine if you want to collect office extensions. Set up a separate field for those so that they don’t get mixed in with phone numbers that don’t have an extension.</li>    
-    <li>Decide if it’s ok that people might add things like Jr, DVM, PhD, CPA after their names. Do you want to handle these any different? Do you want to handle professional designations separate from suffixes like Jr, II, III?</li>
-  </ul>
+<h4>Unit and type conversion</h4>
 
-  <h4>Accept that data sets are never 100% clean</h4>
+<p>Another important data preparation task is making sure that all the data in a single field are given in the same units. &nbsp;Ideally, you would have specified the unit type on the input form, but you may be working with someone else&rsquo;s data set or the data may have been collected directly from other sources where the information was gathered directly from machines that measure in particular units. &nbsp;For example, you might have details from medical records from multiple countries and the patients&rsquo; weights could be in pounds for some records but in kilograms for others. &nbsp;It is important to convert all the numbers to either pounds or kilograms so that they are all on the same scale, otherwise the records cannot be directly compared to each other and any visualization you do of the original data would look quite strange indeed!</p>
 
-  <p>As hard as we try, we can’t force people to input 100% accurate data, and we make errors ourselves as we work with data. Thus, it’s important to accept that data sets are never perfect, and develop some sense of “good enough.”</p>
+<p><span style="line-height: 1.5em;">{insert bar graph of weight ranges, with some people measured in lbs and some in kilos; the people measured in kilos will seem to be extremely tiny!}</span></p>
 
-  <p>For example, you have a list of 100 contacts from your database of 100,000 contacts and you notice that 4 of the 100 have the first and last names together in one field. Do you take on a project of combing through and correcting all 100,000 records?</p>
+<p>You should do a quick scan of the variables in your data set to identify any fields that could potentially have different units represented in them so you can figure out if these conversions are necessary. &nbsp;If they are, you might need to reference an additional field to identify what the original units are that you should be converting from so you know what records need to be changed. &nbsp;If there isn&rsquo;t a specific field that lists the units themselves, other fields like geographic location can be helpful. &nbsp;If you cannot find a field that lets you know what the units are but you suspect that a conversion is necessary, you should contact the original provider of the data to obtain that information. &nbsp;It may turn out that you actually don&rsquo;t need to convert and your data is just strange, but it&rsquo;s better to check and make sure than to ignore a potential conversion that needs to happen. &nbsp;</p>
 
-  <p>It depends.</p>
+<p>Another type of conversion that is sometimes less obvious is data type conversion. &nbsp;It is important to make sure that all of the data in a single field is being stored as the same TYPE of data or your visualization might not appear correctly, depending on how your software interprets the information. &nbsp;For example, a number like 80 might look like a number to you, but the computer might actually be storing it as text rather than in a numeric form. &nbsp;Some visualization software will go ahead and treat any text that looks like a number as a number, but other software will not. &nbsp;It is a good idea to check that each of your fields (or variables) is storing as a specific data type, such as text or number, rather than as &ldquo;general&rdquo;. &nbsp;This will ensure that anything that is captured in that field is being treated as the data type that you mean for it to be.&nbsp;</p>
 
-  <p>You may make a formal decision that the data is clean enough for your purposes or this may be too dirty for how you’re using the data.</p>
+<h4>Controlling for inconsistencies</h4>
 
-  <h4>Consider the cost of having messy data and getting it clean</h4>
+<p>One of the most work intensive of all data cleaning tasks is handling inconsistent information. &nbsp;For example, we see multiple languages popping up in a single data set more often now that the internet allows us to easily collect data from users all around the world. &nbsp;This can sometimes create problems when you&rsquo;re trying to group things up for visualization purposes, depending on how your data entry form is designed and what data from the set you&rsquo;re using. &nbsp;Perhaps you do a survey of college students and one of the text fields asks for their major. &nbsp;One student might enter &ldquo;Math&rdquo; while another enters &ldquo;Mathematics&rdquo; while still another types &ldquo;Applied Mathematics.&rdquo; &nbsp;You know that all these are considered the same major on your campus, but a computer or visualization software would not group these records together. &nbsp;You would need to create a single controlled vocabulary term (e.g. change them all to say &ldquo;Math&rdquo; or &ldquo;Mathematics&rdquo;) or create a separate coded field (see Chapter XXX, pg. YYY) if you wanted to have them treated as part of the same category.</p>
 
-  <p>Data parsing has costs.  If you hire someone to do the parsing for you, the cost is financial.  If you’re going to do the parsing yourself, it costs you or someone on your project time (and maybe a little sanity).  If you’ll never use a phone number, fax number or need to refer to someone as Reverend, you may make the decision to delete such data and stop collecting it.</p>
+<p><span style="line-height: 1.5em;">{Graphic of pie charts with majors without controlling and with controlling}</span></p>
 
-  </section>
+<p>Although the computer can aid in changing values, problems with data inconsistency often have to be handled semi-manually. If you are looking through text fields, much like when you do data coding, find and replace is your best friend. As long as you know what the main variants are of the data that you want to control, you can quickly change them all to be the same value. &nbsp;</p>
+
+<p>{find and replace graphic from excel} &nbsp;&nbsp;</p>
+
+<h4>Missing Values</h4>
+
+<p>One of the most frustrating problems is when data fields are simply blank or are incomplete. If data have not been collected, you may be able to return to the source to fill in what is missing, but you may also no longer have access to the source. &nbsp;It may also be possible that you do not know who the source was, for example, in the case of an anonymous survey. &nbsp;If you are not able to obtain the data, it is important to handle the missing values correctly. &nbsp;You should set pre-defined values that you can enter in where the missing values would be so when someone looks at your data set, they know that the data for that field is actually missing and you didn&rsquo;t just forget to type it in. &nbsp;</p>
+
+<p>These values should fall well outside the range of your reasonable data so that they clearly stand for &ldquo;missing data and not possibly anything else&rdquo;. For data sets that do not deal with negative numbers, &ldquo;-9&rdquo; is often used as this default value, at least in the numeric fields. &nbsp;&ldquo;999&rdquo; is another popular choice for data sets that do not use large numbers, and a single period (.) is used by some statistical software programs that may be used with data sets with both negative and large numbers. &nbsp;For text fields, a single dash (-) is commonly used as the indicator for a missing value. &nbsp;</p>
+
+<p>Keep in mind that a missing value is not inherently the same thing as an intentional &ldquo;No Response&rdquo;! &nbsp;You don&rsquo;t have the particular information that the question was asking about in either case, but when someone actively chooses not to answer, that in itself is a piece of data you wouldn&rsquo;t have if the question was unintentionally skipped. &nbsp;That data isn&rsquo;t missing; you know exactly where it is, the respondent just doesn&rsquo;t want you to have it. &nbsp;As discussed in the Survey Design chapter (pg. YYY), it is good to include a &ldquo;Prefer not to answer&rdquo; option for questions that may be of a personal nature, such as race/ethnicity, income, political affiliation, etc. &nbsp;That way, you can designate a code for this type of response so when you are going through your data set later on, you know the difference between the respondents that purposely chose not to provide you a given piece of information and the data that is truly just missing altogether. &nbsp;</p>
+
+<p>It is important to note that for purposes of basic descriptive visualization, missing values are described by including a non-responder category or by noting a change in the sample size. &nbsp;However, in inferential statistics, missing values may be dealt with in a variety of other ways, from exclusion to imputation to full analysis methods like use of EM algorithms. &nbsp;Check out pg. YYY for more resources on missing values in inferential statistics. &nbsp;</p>
+
+<p>{graphic of pie chart with no response %; also graphic of pie chart with lack of no response, but changed sample size (500 surveyed, 470 responded)}</p>
+
+<h4>Minimizing the burden of data preparation tasks</h4>
+
+<p>The best solutions are preventive. &nbsp;If you are the one creating the form for user input, do whatever you can to prevent receiving data that will require intensive handling during the data preparation stages. &nbsp;In the Types of Data Checking chapter (pg. YYY), we&rsquo;ll talk about different strategies for minimizing the number of data preparation tasks that need to be performed. &nbsp;&nbsp;</p>
+
+<p>If you&rsquo;re not the one collecting the data but can speak with the people who are, try to work with them to identify and resolve any problematic data collection points using the strategies in the Types of Data Checking chapter as a guide. &nbsp;</p>
+
+<h2>&nbsp;</h2>
+
+<p>Post-Data Preparation</p>
+
+<p>&nbsp;</p>
+
+<p>Once your data are separated into the fields you want, converted into the units and types you intend to work with, and terminology is controlled, you&rsquo;re ready to proceed to the data cleaning phase where you&rsquo;ll check for actual errors in the data. &nbsp;In the next three chapters, we&rsquo;ll talk about the basic process of data cleaning, different processes for performing checks on your data to find problems, and what you can and can&rsquo;t do with data cleaning. &nbsp;</p>
+
+<p>&nbsp;</p>
+</section>
 </section>
