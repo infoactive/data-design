@@ -6,12 +6,15 @@ $( document ).ready(function() {
     $(".navbar").animate({"left": "-320px"}, 400);
   });
 
-  $("nav.toc li[data-type='part']").on("click", function(e) {
+  $("nav[data-type='toc'] li[data-type='part']").on("click", function(e) {
     $(this).find('> ol').slideToggle();
   });
 
-  currentChapter = $("header h1").text();
-  $("nav.toc li a:contains(" + currentChapter + ")").closest('ol').css("display", "block");
-  $("nav.toc li a:contains(" + currentChapter + ")").closest('li').addClass("active");
+  if (!$("div[data-type='part']")[0]) {
+    console.log('not a part')
+    currentChapter = $("header h1").text();
+    $("nav[data-type='toc'] li a:contains(" + currentChapter + ")").closest('ol').css("display", "block");
+    $("nav[data-type='toc'] li a:contains(" + currentChapter + ")").closest('li').addClass("active");
+  }
 
 });

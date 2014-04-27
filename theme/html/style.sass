@@ -150,7 +150,7 @@ section[data-type="dedication"]
   text-align: center
   padding-top: 100px
 
-nav.toc
+nav[data-type="toc"]
   margin-top: 132px
   a
     font-style: normal
@@ -198,25 +198,27 @@ nav.toc
     ol
       margin-left: 0
       text-indent: 0
-  li[data-type="chapter"] 
-    padding: 0 0 0 8px
-    background: darken($gray, 12)
-    &:hover, &.active
-      background: $blue 
-    ol 
-      display: none
-      font-family: 'source_sans_proregular', sans-serif
-      font-size: 1em
-      line-height: 120%
-      margin-left: 0px
-      text-indent: -10px
-    a
-      background: $light-gray
-      @include transition(background, .2s, ease-in-out)
-      &:hover
-        background: white
-        text-decoration: none
-        @include transition(background, .2s, ease-in-out)
+      li 
+        padding: 0 0 0 8px
+        background: darken($gray, 12)
+        &:hover, &.active
+          background: $blue 
+        ol 
+          display: none
+          font-family: 'source_sans_proregular', sans-serif
+          font-size: 1em
+          line-height: 120%
+          margin-left: 0px
+          text-indent: -10px
+        a
+          background: $light-gray
+          @include transition(background, .2s, ease-in-out)
+          &:hover
+            background: white
+            text-decoration: none
+            @include transition(background, .2s, ease-in-out)
+        &:first-child a
+          border-top: 1px solid #ccc
 
 nav[data-type="toc"] li[data-type="chapter"], 
 nav[data-type="toc"] li[data-type="part"], 
@@ -228,7 +230,7 @@ nav[data-type="toc"] li[data-type="appendix"]
 
 nav[data-type="toc"] li[data-type="chapter"]:last-of-type, 
 nav[data-type="toc"] li[data-type="appendix"] 
-  margin-bottom: 20px
+  margin-bottom: 0px
 
 nav[data-type="toc"] li[data-type="chapter"] ol ol 
   margin-left: 10px
@@ -278,7 +280,7 @@ section[data-type="chapter"] header p
   height: 150px
   margin: 45px
 
-section[data-type="chapter"].cover
+div[data-type="part"]
   width: 100%
   max-width: 100%
   margin: 0
@@ -290,14 +292,14 @@ section[data-type="chapter"].cover
   h1
     text-transform: uppercase
     font-size: 5em
-    width: 500px
-    margin-left: 40px
-    margin-top: 24px
+    max-width: 700px
+    margin: 0 auto
     top: 0px
   p
     width: 600px
     text-align: justify
-    margin-left: 40px
+    max-width: 700px
+    margin: 0 auto
     background: rgba(0,0,0,.1)
     padding: 20px 30px
   img
@@ -318,10 +320,12 @@ $color-names: blue yellow green violet red
       border-color: $color
     .chapter-font-color, section[data-type="sect1"] > h1, blockquote:before
       color: $color
-    .chapter-bg-color, .icon, th, &.cover
+    .chapter-bg-color, .icon, th
       background: $color
     tr:nth-child(2n + 1)
       background: $light-color
+  div[data-type="part"].#{nth($color-names, $i)}
+    background: $color
 
 section[data-type="preface"], 
 div[data-type="part"], 
@@ -368,10 +372,10 @@ section[data-type="sect3"] h3
   margin-bottom: 10px
 
 div[data-type="part"] > h1
-  font-size: 1.8em
+  font-size: 3.8em
   text-align: center
   margin-top: 100px
-  margin-bottom: 70px
+  margin-bottom: 30px
 
 ul, ol
   margin: 10px 0 10px 0
@@ -692,6 +696,7 @@ div.navbar
     left: 30px
     top: 24px
     background: url('../../images/shared-icons/nav.png') no-repeat
+    z-index: 1
   &.close
     margin-top: 16px
     float: right
@@ -768,7 +773,7 @@ div.navbar p a
           float: left
           left: 20px
 
-  .cover + .navigation
+  div[data-type="part"] + .navigation
     position: absolute
     background: transparent
     border: none
@@ -784,17 +789,18 @@ div.navbar p a
 
   section[data-type="chapter"]
     padding: 30px
-    &.cover 
-      padding: 0 30px
-      h1
-        font-size: 3em
-        width: auto
-        text-align: center
-        margin-left: 0
-        margin-top: 1em
-      p
-        margin-left: 0
-        width: auto
+
+  div[data-type="part"] 
+    padding: 0 30px
+    h1
+      font-size: 3em
+      width: auto
+      text-align: center
+      margin-left: 0
+      margin-top: 1em
+    p
+      margin-left: 0
+      width: auto
   
   div.navbar
     position: relative

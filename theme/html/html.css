@@ -120,9 +120,9 @@ section[data-type="dedication"] {
   text-align: center;
   padding-top: 100px; }
 
-nav.toc {
+nav[data-type="toc"] {
   margin-top: 132px; }
-  nav.toc a {
+  nav[data-type="toc"] a {
     font-style: normal;
     text-decoration: none;
     padding-left: 20px;
@@ -130,11 +130,11 @@ nav.toc {
     width: auto;
     padding-bottom: 18px;
     color: #444444; }
-    nav.toc a:hover {
+    nav[data-type="toc"] a:hover {
       text-decoration: underline; }
-  nav.toc li ol li a {
+  nav[data-type="toc"] li ol li a {
     padding-left: 30px; }
-  nav.toc li {
+  nav[data-type="toc"] li {
     list-style-type: none;
     font-family: "source_sans_proregular", sans-serif;
     margin-top: 0;
@@ -145,7 +145,7 @@ nav.toc {
     -ms-transition: background 0.2s ease-in-out;
     -o-transition: background 0.2s ease-in-out;
     transition: background 0.2s ease-in-out; }
-    nav.toc li:hover {
+    nav[data-type="toc"] li:hover {
       color: #222222;
       background: #94c2cd;
       -webkit-transition: background 0.2s ease-in-out;
@@ -153,56 +153,58 @@ nav.toc {
       -ms-transition: background 0.2s ease-in-out;
       -o-transition: background 0.2s ease-in-out;
       transition: background 0.2s ease-in-out; }
-  nav.toc > h1 {
+  nav[data-type="toc"] > h1 {
     font-size: 1.5em;
     line-height: 120%;
     margin-top: 80px;
     margin-bottom: 50px;
     text-align: center; }
-  nav.toc ol {
+  nav[data-type="toc"] ol {
     padding: 0;
     margin: 0; }
-  nav.toc li[data-type="part"] {
+  nav[data-type="toc"] li[data-type="part"] {
     margin-top: 0px;
     border-right: 1px solid #cccccc; }
-    nav.toc li[data-type="part"] > ol {
+    nav[data-type="toc"] li[data-type="part"] > ol {
       display: none; }
-      nav.toc li[data-type="part"] > ol li:last-child {
+      nav[data-type="toc"] li[data-type="part"] > ol li:last-child {
         border-bottom: none; }
-      nav.toc li[data-type="part"] > ol a {
+      nav[data-type="toc"] li[data-type="part"] > ol a {
         display: block;
         padding: 20px 30px 18px;
         width: 100%; }
-    nav.toc li[data-type="part"] ol {
+    nav[data-type="toc"] li[data-type="part"] ol {
       margin-left: 0;
       text-indent: 0; }
-  nav.toc li[data-type="chapter"] {
-    padding: 0 0 0 8px;
-    background: #b1b3b6; }
-    nav.toc li[data-type="chapter"]:hover, nav.toc li[data-type="chapter"].active {
-      background: #41a2ba; }
-    nav.toc li[data-type="chapter"] ol {
-      display: none;
-      font-family: "source_sans_proregular", sans-serif;
-      font-size: 1em;
-      line-height: 120%;
-      margin-left: 0px;
-      text-indent: -10px; }
-    nav.toc li[data-type="chapter"] a {
-      background: #efefef;
-      -webkit-transition: background 0.2s ease-in-out;
-      -moz-transition: background 0.2s ease-in-out;
-      -ms-transition: background 0.2s ease-in-out;
-      -o-transition: background 0.2s ease-in-out;
-      transition: background 0.2s ease-in-out; }
-      nav.toc li[data-type="chapter"] a:hover {
-        background: white;
-        text-decoration: none;
-        -webkit-transition: background 0.2s ease-in-out;
-        -moz-transition: background 0.2s ease-in-out;
-        -ms-transition: background 0.2s ease-in-out;
-        -o-transition: background 0.2s ease-in-out;
-        transition: background 0.2s ease-in-out; }
+      nav[data-type="toc"] li[data-type="part"] ol li {
+        padding: 0 0 0 8px;
+        background: #b1b3b6; }
+        nav[data-type="toc"] li[data-type="part"] ol li:hover, nav[data-type="toc"] li[data-type="part"] ol li.active {
+          background: #41a2ba; }
+        nav[data-type="toc"] li[data-type="part"] ol li ol {
+          display: none;
+          font-family: "source_sans_proregular", sans-serif;
+          font-size: 1em;
+          line-height: 120%;
+          margin-left: 0px;
+          text-indent: -10px; }
+        nav[data-type="toc"] li[data-type="part"] ol li a {
+          background: #efefef;
+          -webkit-transition: background 0.2s ease-in-out;
+          -moz-transition: background 0.2s ease-in-out;
+          -ms-transition: background 0.2s ease-in-out;
+          -o-transition: background 0.2s ease-in-out;
+          transition: background 0.2s ease-in-out; }
+          nav[data-type="toc"] li[data-type="part"] ol li a:hover {
+            background: white;
+            text-decoration: none;
+            -webkit-transition: background 0.2s ease-in-out;
+            -moz-transition: background 0.2s ease-in-out;
+            -ms-transition: background 0.2s ease-in-out;
+            -o-transition: background 0.2s ease-in-out;
+            transition: background 0.2s ease-in-out; }
+        nav[data-type="toc"] li[data-type="part"] ol li:first-child a {
+          border-top: 1px solid #cccccc; }
 
 nav[data-type="toc"] li[data-type="chapter"],
 nav[data-type="toc"] li[data-type="part"],
@@ -214,7 +216,7 @@ nav[data-type="toc"] li[data-type="appendix"] {
 
 nav[data-type="toc"] li[data-type="chapter"]:last-of-type,
 nav[data-type="toc"] li[data-type="appendix"] {
-  margin-bottom: 20px; }
+  margin-bottom: 0px; }
 
 nav[data-type="toc"] li[data-type="chapter"] ol ol {
   margin-left: 10px;
@@ -265,7 +267,7 @@ section[data-type="chapter"] header p {
   height: 150px;
   margin: 45px; }
 
-section[data-type="chapter"].cover {
+div[data-type="part"] {
   width: 100%;
   max-width: 100%;
   margin: 0;
@@ -274,20 +276,20 @@ section[data-type="chapter"].cover {
   position: absolute;
   border-bottom: 62px solid rgba(255, 255, 255, 0.1);
   color: white; }
-  section[data-type="chapter"].cover h1 {
+  div[data-type="part"] h1 {
     text-transform: uppercase;
     font-size: 5em;
-    width: 500px;
-    margin-left: 40px;
-    margin-top: 24px;
+    max-width: 700px;
+    margin: 0 auto;
     top: 0px; }
-  section[data-type="chapter"].cover p {
+  div[data-type="part"] p {
     width: 600px;
     text-align: justify;
-    margin-left: 40px;
+    max-width: 700px;
+    margin: 0 auto;
     background: rgba(0, 0, 0, 0.1);
     padding: 20px 30px; }
-  section[data-type="chapter"].cover img {
+  div[data-type="part"] img {
     position: absolute;
     opacity: 0.1;
     right: 0px;
@@ -298,46 +300,61 @@ section[data-type="chapter"].cover {
   border-color: #41a2ba; }
 .blue .chapter-font-color, .blue section[data-type="sect1"] > h1, .blue blockquote:before {
   color: #41a2ba; }
-.blue .chapter-bg-color, .blue .icon, .blue th, .blue.cover {
+.blue .chapter-bg-color, .blue .icon, .blue th {
   background: #41a2ba; }
 .blue tr:nth-child(2n + 1) {
   background: #f4fafb; }
+
+div[data-type="part"].blue {
+  background: #41a2ba; }
 
 .yellow blockquote, .yellow [data-type="example"] {
   border-color: #eeb11e; }
 .yellow .chapter-font-color, .yellow section[data-type="sect1"] > h1, .yellow blockquote:before {
   color: #eeb11e; }
-.yellow .chapter-bg-color, .yellow .icon, .yellow th, .yellow.cover {
+.yellow .chapter-bg-color, .yellow .icon, .yellow th {
   background: #eeb11e; }
 .yellow tr:nth-child(2n + 1) {
   background: #fef9ef; }
+
+div[data-type="part"].yellow {
+  background: #eeb11e; }
 
 .green blockquote, .green [data-type="example"] {
   border-color: #6baf44; }
 .green .chapter-font-color, .green section[data-type="sect1"] > h1, .green blockquote:before {
   color: #6baf44; }
-.green .chapter-bg-color, .green .icon, .green th, .green.cover {
+.green .chapter-bg-color, .green .icon, .green th {
   background: #6baf44; }
 .green tr:nth-child(2n + 1) {
   background: #f8fcf6; }
+
+div[data-type="part"].green {
+  background: #6baf44; }
 
 .violet blockquote, .violet [data-type="example"] {
   border-color: #3e5084; }
 .violet .chapter-font-color, .violet section[data-type="sect1"] > h1, .violet blockquote:before {
   color: #3e5084; }
-.violet .chapter-bg-color, .violet .icon, .violet th, .violet.cover {
+.violet .chapter-bg-color, .violet .icon, .violet th {
   background: #3e5084; }
 .violet tr:nth-child(2n + 1) {
   background: #f8f9fc; }
+
+div[data-type="part"].violet {
+  background: #3e5084; }
 
 .red blockquote, .red [data-type="example"] {
   border-color: #cf4627; }
 .red .chapter-font-color, .red section[data-type="sect1"] > h1, .red blockquote:before {
   color: #cf4627; }
-.red .chapter-bg-color, .red .icon, .red th, .red.cover {
+.red .chapter-bg-color, .red .icon, .red th {
   background: #cf4627; }
 .red tr:nth-child(2n + 1) {
   background: #fef9f7; }
+
+div[data-type="part"].red {
+  background: #cf4627; }
 
 section[data-type="preface"],
 div[data-type="part"],
@@ -384,10 +401,10 @@ section[data-type="sect3"] h3 {
   margin-bottom: 10px; }
 
 div[data-type="part"] > h1 {
-  font-size: 1.8em;
+  font-size: 3.8em;
   text-align: center;
   margin-top: 100px;
-  margin-bottom: 70px; }
+  margin-bottom: 30px; }
 
 ul, ol {
   margin: 10px 0 10px 0; }
@@ -712,7 +729,8 @@ div.navbar {
     position: fixed;
     left: 30px;
     top: 24px;
-    background: url("../../images/shared-icons/nav.png") no-repeat; }
+    background: url("../../images/shared-icons/nav.png") no-repeat;
+    z-index: 1; }
   .btn.close {
     margin-top: 16px;
     float: right;
@@ -793,7 +811,7 @@ div.navbar p a {
           float: left;
           left: 20px; }
 
-  .cover + .navigation {
+  div[data-type="part"] + .navigation {
     position: absolute;
     background: transparent;
     border: none; }
@@ -806,17 +824,18 @@ div.navbar p a {
 
   section[data-type="chapter"] {
     padding: 30px; }
-    section[data-type="chapter"].cover {
-      padding: 0 30px; }
-      section[data-type="chapter"].cover h1 {
-        font-size: 3em;
-        width: auto;
-        text-align: center;
-        margin-left: 0;
-        margin-top: 1em; }
-      section[data-type="chapter"].cover p {
-        margin-left: 0;
-        width: auto; }
+
+  div[data-type="part"] {
+    padding: 0 30px; }
+    div[data-type="part"] h1 {
+      font-size: 3em;
+      width: auto;
+      text-align: center;
+      margin-left: 0;
+      margin-top: 1em; }
+    div[data-type="part"] p {
+      margin-left: 0;
+      width: auto; }
 
   div.navbar {
     position: relative;
