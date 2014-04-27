@@ -817,10 +817,7 @@ div.navbar p a {
   div[data-type="part"] + .navigation {
     position: absolute;
     background: transparent;
-    border: none; }
-
-  .navbar {
-    display: none; } }
+    border: none; } }
 @media screen and (max-width: 480px) {
   body {
     width: 100%; }
