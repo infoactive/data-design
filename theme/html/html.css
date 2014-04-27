@@ -166,7 +166,8 @@ nav[data-type="toc"] {
     margin-top: 0px;
     border-right: 1px solid #cccccc; }
     nav[data-type="toc"] li[data-type="part"] > a {
-      border-bottom: none; }
+      border-bottom: none;
+      width: auto; }
     nav[data-type="toc"] li[data-type="part"] > ol {
       display: none; }
       nav[data-type="toc"] li[data-type="part"] > ol li:last-child {
