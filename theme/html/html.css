@@ -172,7 +172,8 @@ nav[data-type="toc"] {
       nav[data-type="toc"] li[data-type="part"] > ol a {
         display: block;
         padding: 20px 30px 18px;
-        width: 100%; }
+        width: 100%;
+        border-bottom: none; }
     nav[data-type="toc"] li[data-type="part"] ol {
       margin-left: 0;
       text-indent: 0; }
