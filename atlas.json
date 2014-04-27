@@ -43,7 +43,7 @@
     "epub": {},
     "mobi": {},
     "html": {
-      "toc": true,
+      "toc": false,
       "javascripts": [
         "js/retina.min.js",
         "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js",
