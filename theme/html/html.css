@@ -165,6 +165,8 @@ nav[data-type="toc"] {
   nav[data-type="toc"] li[data-type="part"] {
     margin-top: 0px;
     border-right: 1px solid #cccccc; }
+    nav[data-type="toc"] li[data-type="part"] > a {
+      border-bottom: none; }
     nav[data-type="toc"] li[data-type="part"] > ol {
       display: none; }
       nav[data-type="toc"] li[data-type="part"] > ol li:last-child {
@@ -172,8 +174,7 @@ nav[data-type="toc"] {
       nav[data-type="toc"] li[data-type="part"] > ol a {
         display: block;
         padding: 20px 30px 18px;
-        width: 100%;
-        border-bottom: none; }
+        width: 100%; }
     nav[data-type="toc"] li[data-type="part"] ol {
       margin-left: 0;
       text-indent: 0; }
