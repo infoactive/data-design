@@ -1,10 +1,8 @@
 <section class="violet" data-type="chapter">
 <header>
-<div class="icon"><img src="../images/sections/02/coffee.png" /></div>
-
-<p>Chapter 3</p>
-
-<h1>On Data Aggregation</h1>
+  <div class="icon"><img src="../images/sections/02/coffee.png" /></div>
+  <p>Chapter 3</p>
+  <h1>On Data Aggregation</h1>
 </header>
 
 <section class="id" data-type="sect1">
@@ -158,7 +156,9 @@
 
 <p>A factoid is a piece of trivia. It is calculated from source data, but chosen to emphasize a particular point.</p>
 
-<p><strong>Example:</strong> 36.7% of coffee in 2000 was consumed by women.</p>
+    <div data-type="example">
+      <p><strong>Example:</strong> 36.7% of coffee in 2000 was consumed by women.</p>
+    </div>
 
 <h2>Series</h2>
 
@@ -273,7 +273,7 @@
 
 <p>In many cases, series data has one and only one dependent variable for each independent variable. In other words, there is only one number for coffee consumption for each year on record. This is usually displayed as a bar, series, or column graph.</p>
 
-<figure>[Image goes here]</figure>
+<figure><img alt="Total sales" src="../images/sections/02/total-sales.png" /></figure>
 
 <p>In cases where there are several dependent variables for each independent one, we often show the information as a scatterplot or heat map, or do some kind of processing (such as an average) to simplify what's shown. We'll come back to this in the Summary Records section below.</p>
 
@@ -638,7 +638,7 @@
 
 <p>One good thing about this summarization is that it keeps the data set fairly small. It also suggests ways in which the data might be explored. It is pretty common to find survey data that looks like this; for example, a Google Form might output this kind of data to a survey that says:</p>
 
-<figure>[Image goes here]</figure>
+<figure><img alt="Google form" src="../images/sections/02/google-form.png" /></figure>
 
 <p>Produces the following data in the Google spreadsheet:</p>
 
@@ -744,19 +744,19 @@
 
 <p>We can show the average of each coffee type consumed by cup as a summary.</p>
 
-<figure>[Image goes here]</figure>
+<figure><img alt="Average cups consumed" src="../images/sections/02/average-cups-consumed.png" /></figure>
 
 <p>But averages hide things. Perhaps some people have a single cup of a particular type, and others have many. There are ways to visualize the spread, or variance, of data that indicate the underlying shape of the information, including heat charts, histograms, and scatterplots. But when keeping the underlying data, you can wind up with more than one <em>dependent</em> variable for each <em>independent</em> variable.</p>
 
 <p>For example, here's a scatterplot from <em>Freakonomics<span class="footnote " data-type="footnote"><a href="http://freakonomics.com/2011/04/01/graph-fight-more-on-taylor%E2%80%99s-scatterplot/" target="_blank">http://freakonomics.com/2011/04/01/graph-fight-more-on-taylor%E2%80%99s-scatterplot/</a></span></em> that compares unemployment data to investment. There isn't a one-to-one ratio here, at least not at this level, because a particular level of investment (the independent metric) may produce different levels of unemployment (the presumed dependent metric) in different years.</p>
 
-<figure>[Image goes here]</figure>
+<figure><img alt="Freakonomics scatterplot" src="../images/sections/02/freakonomics.png" /></figure>
 
 <p>This is a good example of why scatterplots are good: They show outliers. In our coffee data, a better visualization (such as a histogram, which counts how many people fit into each bucket that made up an average) might reveal that a few people are drinking a lot of coffee, and a large number of people are drinking a small amount.</p>
 
 <p>Consider this histogram of the number of cups per patron. All we did was tally up how many people had one cup, how many had two, how many had three, and so on. Then we plotted how <em>frequently</em> each number occurred, which is why this is called a <em>frequency histogram</em>.</p>
 
-<figure>[Image goes here]</figure>
+<figure>[In progress - Stefania]</figure>
 
 <p>The <em>average</em> number of cups in this data set is roughly 3. And the <em>mode</em>, or most common number, is 2 cups. But as the histogram shows, there are three heavy coffee drinkers, who've each consumed 7 cups, pushing up the average.</p>
 
