@@ -503,6 +503,12 @@ table.question-and-answer tr:nth-child(2n + 1),
 table.pros-and-cons tr:nth-child(2n + 1),
 table.sections tr:nth-child(2n + 1) {
   background: transparent; }
+table.question-and-answer td, table.question-and-answer th,
+table.pros-and-cons td,
+table.pros-and-cons th,
+table.sections td,
+table.sections th {
+  white-space: normal; }
 
 table.question-and-answer th:nth-child(1) {
   background: url("../../images/shared-icons/search.png") 1.2em no-repeat #444444; }
