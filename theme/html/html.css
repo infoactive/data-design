@@ -417,7 +417,7 @@ ul li p, ol li p {
   font-family: "source_sans_proregular", sans-serif;
   font-size: 1em;
   line-height: 150%;
-  margin-top: 1em;
+  margin-top: 0.5em;
   text-indent: 0; }
 
 dl {
@@ -518,6 +518,10 @@ table.sections th {
   table.sections td p,
   table.sections th p {
     font-size: 1em; }
+table.question-and-answer td,
+table.pros-and-cons td,
+table.sections td {
+  padding: 1.3em 1.5em; }
 
 table.question-and-answer th:nth-child(1) {
   background: url("../../images/shared-icons/search.png") 1.2em no-repeat #444444; }
@@ -537,13 +541,18 @@ table.question-and-answer td:nth-child(2) h2 {
   table.question-and-answer td:nth-child(2) h2 + p {
     margin-top: 0; }
 
-table.pros-and-cons th:nth-child(1) {
+table.good-and-bad th:nth-child(1) {
+  background: url("../../images/shared-icons/good.png") 1.2em no-repeat #6baf44; }
+table.good-and-bad th:nth-child(2) {
+  background: url("../../images/shared-icons/bad.png") 1.2em no-repeat #a9abaf; }
+
+table.yes-and-no th:nth-child(1) {
   background: url("../../images/shared-icons/check.png") 1.2em no-repeat #6baf44; }
-table.pros-and-cons th:nth-child(2) {
-  background: url("../../images/shared-icons/close.png") 1.2em no-repeat #a9abaf; }
-table.pros-and-cons td {
+table.yes-and-no th:nth-child(2) {
+  background: url("../../images/shared-icons/no.png") 1.2em no-repeat #a9abaf; }
+table.yes-and-no td {
   width: 50%; }
-table.pros-and-cons td:nth-child(2) {
+table.yes-and-no td:nth-child(2) {
   background: #efefef; }
 
 table.sections th:nth-child(1) {
@@ -696,6 +705,8 @@ div[data-type="example"] {
   padding: 1px 30px;
   background: #f4f4f4;
   border-left: 10px solid #efefef; }
+  div[data-type="example"].neutral {
+    border-left: 10px solid #a9abaf; }
 
 div[data-type="example"] h5 {
   font-family: "source_sans_proregular", sans-serif;
@@ -789,7 +800,7 @@ div.navbar {
     margin-top: 16px;
     float: right;
     margin-right: 20px;
-    background: url("../../images/shared-icons/close-black.png") no-repeat; }
+    background: url("../../images/shared-icons/close.png") no-repeat; }
 
 div.navbar p {
   float: right;

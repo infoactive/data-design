@@ -388,7 +388,7 @@ ul li p, ol li p
   font-family: 'source_sans_proregular', sans-serif
   font-size: 1em
   line-height: 150%
-  margin-top: 1em
+  margin-top: .5em
   text-indent: 0
 
 dl
@@ -480,6 +480,8 @@ table.sections
     white-space: normal
     p
       font-size: 1em
+  td
+    padding: 1.3em 1.5em
 
 table.question-and-answer
   th:nth-child(1)
@@ -501,11 +503,17 @@ table.question-and-answer
       + p
         margin-top: 0
 
-table.pros-and-cons
+table.good-and-bad
+  th:nth-child(1)
+    background: url('../../images/shared-icons/good.png') 1.2em no-repeat $green
+  th:nth-child(2)
+    background: url('../../images/shared-icons/bad.png') 1.2em no-repeat darken($gray, 15)
+
+table.yes-and-no
   th:nth-child(1)
     background: url('../../images/shared-icons/check.png') 1.2em no-repeat $green
   th:nth-child(2)
-    background: url('../../images/shared-icons/close.png') 1.2em no-repeat darken($gray, 15)
+    background: url('../../images/shared-icons/no.png') 1.2em no-repeat darken($gray, 15)
   td
     width: 50%
   td:nth-child(2)
@@ -663,6 +671,8 @@ div[data-type="example"]
   padding: 1px 30px
   background: lighten($light-gray, 2)
   border-left: 10px solid #efefef
+  &.neutral
+    border-left: 10px solid darken($gray, 15)
 
 div[data-type="example"] h5
   font-family: 'source_sans_proregular', sans-serif
@@ -748,7 +758,7 @@ div.navbar
     margin-top: 16px
     float: right
     margin-right: 20px
-    background: url('../../images/shared-icons/close-black.png') no-repeat
+    background: url('../../images/shared-icons/close.png') no-repeat
 
 div.navbar p
   float: right
