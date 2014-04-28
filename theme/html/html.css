@@ -470,10 +470,12 @@ th {
 th, td {
   border-bottom: 1px solid #d1d2d4;
   border-left: 1px solid #d1d2d4;
-  padding: 0.7em 1.3em;
-  white-space: nowrap; }
+  padding: 0.7em 1.3em; }
   th:last-child, td:last-child {
     border-right: 1px solid #d1d2d4; }
+
+.nowrap th, .nowrap td {
+  white-space: nowrap; }
 
 td {
   vertical-align: top;
@@ -498,10 +500,11 @@ td pre.programlisting, td pre.screen, td pre.literallayout, td code {
 table.question-and-answer th,
 table.pros-and-cons th,
 table.sections th {
+  font-size: 1.3em;
   padding: 0.5em 1.5em 0.5em 3em; }
-table.question-and-answer tr:nth-child(2n + 1),
-table.pros-and-cons tr:nth-child(2n + 1),
-table.sections tr:nth-child(2n + 1) {
+table.question-and-answer tr,
+table.pros-and-cons tr,
+table.sections tr {
   background: transparent; }
 table.question-and-answer td, table.question-and-answer th,
 table.pros-and-cons td,
@@ -509,6 +512,12 @@ table.pros-and-cons th,
 table.sections td,
 table.sections th {
   white-space: normal; }
+  table.question-and-answer td p, table.question-and-answer th p,
+  table.pros-and-cons td p,
+  table.pros-and-cons th p,
+  table.sections td p,
+  table.sections th p {
+    font-size: 1em; }
 
 table.question-and-answer th:nth-child(1) {
   background: url("../../images/shared-icons/search.png") 1.2em no-repeat #444444; }
@@ -641,7 +650,7 @@ div[data-type="warning"] {
 
 div[data-type="warning"] {
   background: url("../../images/shared-icons/warning.png") 1.6em 2em no-repeat #efefef;
-  border-top: 16px solid #cf4627;
+  border-top: 12px solid #cf4627;
   padding-left: 110px; }
 
 div[data-type="note"] h1,
@@ -684,7 +693,7 @@ table code {
   line-height: inherit; }
 
 div[data-type="example"] {
-  padding: 20px;
+  padding: 1px 30px;
   background: #f4f4f4;
   border-left: 10px solid #efefef; }
 

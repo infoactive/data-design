@@ -442,9 +442,11 @@ th, td
   border-bottom: 1px solid $gray
   border-left: 1px solid $gray
   padding: .7em 1.3em
-  white-space: nowrap
   &:last-child
     border-right: 1px solid $gray
+
+.nowrap th, .nowrap td
+  white-space: nowrap
 
 td
   vertical-align: top
@@ -470,11 +472,14 @@ table.question-and-answer,
 table.pros-and-cons,
 table.sections
   th
+    font-size: 1.3em
     padding: .5em 1.5em .5em 3em
-  tr:nth-child(2n + 1)
+  tr
     background: transparent
   td, th
     white-space: normal
+    p
+      font-size: 1em
 
 table.question-and-answer
   th:nth-child(1)
@@ -612,7 +617,7 @@ div[data-type="warning"]
 
 div[data-type="warning"]
   background: url("../../images/shared-icons/warning.png") 1.6em 2em no-repeat $light-gray
-  border-top: 16px solid $red      
+  border-top: 12px solid $red      
   padding-left: 110px
 
 div[data-type="note"] h1, 
@@ -655,7 +660,7 @@ table code
   line-height: inherit
 
 div[data-type="example"]
-  padding: 20px
+  padding: 1px 30px
   background: lighten($light-gray, 2)
   border-left: 10px solid #efefef
 
