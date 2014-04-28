@@ -443,7 +443,8 @@ table {
   border-collapse: collapse;
   font-size: 0.9em;
   display: block;
-  overflow: auto; }
+  overflow: auto;
+  border-bottom: none; }
 
 table caption {
   font-family: "source_sans_proregular", sans-serif;
