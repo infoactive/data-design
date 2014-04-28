@@ -498,28 +498,35 @@ td pre.programlisting, td pre.screen, td pre.literallayout, td code {
   word-wrap: break-word; }
 
 table.question-and-answer th,
-table.pros-and-cons th,
+table.yes-and-no th,
+table.good-and-bad th,
 table.sections th {
   font-size: 1.3em;
   padding: 0.5em 1.5em 0.5em 3em; }
 table.question-and-answer tr,
-table.pros-and-cons tr,
+table.yes-and-no tr,
+table.good-and-bad tr,
 table.sections tr {
   background: transparent; }
 table.question-and-answer td, table.question-and-answer th,
-table.pros-and-cons td,
-table.pros-and-cons th,
+table.yes-and-no td,
+table.yes-and-no th,
+table.good-and-bad td,
+table.good-and-bad th,
 table.sections td,
 table.sections th {
   white-space: normal; }
   table.question-and-answer td p, table.question-and-answer th p,
-  table.pros-and-cons td p,
-  table.pros-and-cons th p,
+  table.yes-and-no td p,
+  table.yes-and-no th p,
+  table.good-and-bad td p,
+  table.good-and-bad th p,
   table.sections td p,
   table.sections th p {
     font-size: 1em; }
 table.question-and-answer td,
-table.pros-and-cons td,
+table.yes-and-no td,
+table.good-and-bad td,
 table.sections td {
   padding: 1.3em 1.5em; }
 
