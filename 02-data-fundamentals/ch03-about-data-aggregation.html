@@ -29,8 +29,52 @@
 			</td>
 		</tr>
 		<tr>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
+			<td>Series</td>
+			<td>
+			<ul>
+				<li>One metric, across an axis</li>
+				<li>Can compare rate of change</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Multiseries</td>
+			<td>
+			<ul>
+				<li>Several metrics, common axis</li>
+				<li>Can compare rate of change, correlation between metrics</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Summable multiseries</td>
+			<td>
+			<ul>
+				<li>Several metrics, common axis</li>
+				<li>Can compare rate of change, correlation between metrics</li>
+				<li>Can compare percentages to whole</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Summary records</td>
+			<td>
+			<ul>
+				<li>One record for each item in a series</li>
+				<li>Metrics in other series have been aggregated somehow</li>
+				<li>Items can be compared</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>Individual transactions</td>
+			<td>
+			<ul>
+				<li>One record per instance</li>
+				<li>No aggregation or combination</li>
+				<li>Maximum drill-down</li>
+			</ul>
+			</td>
 		</tr>
 	</tbody>
 </table>
@@ -187,7 +231,7 @@
 
 <p>In this example, the total sales of coffee <em>depends</em> on the year. That is, the year is independent (&quot;pick a year, any year&quot;) and the sales is dependent (&quot;based on that year, the consumption is 23,005 cups&quot;).</p>
 
-<p>It can also be some other set of continuous data, such as temperature. Consider this table of hypothermia survival times, in which water temperature is the independent variable<span contenteditable="false" data-type="footnote">Personal Flotation Device Manufacturers Association (PFDMA). http://www.pfdma.org/choosing/hypothermia.aspx</span>:</p>
+<p>It can also be some other set of continuous data, such as temperature. Consider this table of hypothermia survival times, in which water temperature is the independent variable<span class="footnote " contenteditable="false" data-type="footnote">Personal Flotation Device Manufacturers Association (PFDMA). http://www.pfdma.org/choosing/hypothermia.aspx</span>:</p>
 
 <table>
 	<tbody>
@@ -226,7 +270,7 @@
 	</tbody>
 </table>
 
-<p>Here's a related example showing age bracket as the independent variable<span contenteditable="false" data-type="footnote">Centers for Disease Control and Prevention, National Center for Health Statistics. Compressed Mortality File (CMF) 1999-2010 on CDC WONDER Online Database, released January 2013. Data are compiled from CMF1999-2010 Series 20 No. 2P, 2013. Accessed at http://wonder.cdc.gov/cmf-icd10.html</span>.</p>
+<p>Here's a related example showing age bracket as the independent variable<span class="footnote" contenteditable="false" data-type="footnote">Centers for Disease Control and Prevention, National Center for Health Statistics. CMF1999-2010 Series 20 No. 2P, 2013: http://wonder.cdc.gov/cmf-icd10.html</span>.</p>
 
 <figure><img alt="Alt Text" class="iimagessections02hypotherm-age-2001png" src="https://git.atlas.oreilly.com/trina/data-design/raw/master/images/sections/02/hypotherm-age-2001.png?private_token=P1Ry9uaVkHtt8fq9Dqzo" />
 <figcaption>&nbsp;</figcaption>
@@ -289,6 +333,7 @@
 	<tbody>
 		<tr>
 			<th>Water Temp (Celsius)</th>
+			<td>ATLAS-CURSOR-HERE</td>
 			<th>Loss of dexterity</th>
 			<th>Unconsciousness</th>
 			<th>Death</th>
