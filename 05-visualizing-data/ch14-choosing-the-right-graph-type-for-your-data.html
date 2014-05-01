@@ -1,8 +1,6 @@
 <section class="violet" data-type="chapter">
 <header>
-<div class="icon">Chapter 5</div>
-
-<div class="icon">Visualizing Data</div>
+<div class="icon">&nbsp;</div>
 
 <div class="icon">
 <section data-type="sect1">
@@ -16,23 +14,211 @@
 
 <p>There are a few important questions to ask yourself when you're trying to decide what type of graph to use.</p>
 
-<p>*How many variables are you trying to graph?</p>
+<section data-type="sect2">
+<h2>How many variable are you trying to graph?</h2>
 
 <p>Some types of charts and graphs lend themselves to simplicity and work best when you're only working with one or two variables. &nbsp;Pie charts, basic bar graphs, and histograms fall into this group. &nbsp;If you have multiple variables that you are trying to show, you will usually do better with a more complex graph type, such as a line graph or a stacked bar graph. &nbsp;(This assumes, of course, that the variables you are attempting to visualize together make sense to have in a single graphic. &nbsp;Keep in mind that more complex is not always better, and sometimes the best choice is to decrease the amount of information that you are trying to display in one place.)</p>
+</section>
 
-<p>*Type of variables</p>
+<section data-type="sect2">
+<h2>Type of variables</h2>
 
-<p>Each kind of graph only works with specific data types. &nbsp;For instance, you use pie charts to show what percent of the total group falls into each of several categories, so it only makes sense to use them with categorical or discrete data. It doesn't make sense to use a pie chart to visualize a continuous variable, unless you break the continuous variable into categories first (see page XXX). {Insert pie charts} &nbsp;Conversely, a line graph is used to plot the value of one continuous variable against another continuous variable, like height by age or income by year. {Insert line graphs} If we have one continuous variable and another discrete variable, like countries per year, a bar graph is more appropriate than a line graph. {Insert bar graph}</p>
+<p><span style="line-height: 1.5em;">Each kind of graph only works with specific data types. &nbsp;For instance, you use pie charts to show what percent of the total group falls into each of several categories, so it only makes sense to use them with categorical or discrete data. It doesn't make sense to use a pie chart to visualize a continuous variable, unless you break the continuous variable into categories first (see page XXX). {Insert pie charts} &nbsp;Conversely, a line graph is used to plot the value of one continuous variable against another continuous variable, like height by age or income by year. {Insert line graphs} If we have one continuous variable and another discrete variable, like countries per year, a bar graph is more appropriate than a line graph. {Insert bar graph}</span><span style="line-height: 1.5em;">&nbsp;</span></p>
+</section>
 
 <div data-type="note">
 <h1>The following table outlines what types of graphs are appropriate to use with different data type combinations:</h1>
-&nbsp;
+
+<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+	<tbody>
+		<tr>
+			<td>ONE VARIABLE</td>
+			<td>Discrete</td>
+			<td>
+			<p>Pie charts</p>
+
+			<p>Histogram (if categories are ordered)</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Continuous</td>
+			<td>Histogram (need to separate variable into categories)</td>
+		</tr>
+		<tr>
+			<td>TWO VARIABLES</td>
+			<td>Discrete+discrete</td>
+			<td>
+			<p>Pie charts</p>
+
+			<p>Bar graphs</p>
+
+			<p>Cartograms</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Discrete+continuous</td>
+			<td>
+			<p>Bar graphs</p>
+
+			<p>Cartograms</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Continuous+continuous</td>
+			<td>
+			<p>Line graphs</p>
+
+			<p>Scatterplots</p>
+			</td>
+		</tr>
+		<tr>
+			<td>3+ VARIABLES</td>
+			<td>&nbsp;</td>
+			<td>
+			<p>Multi-graphs (side by side pie charts, etc.)</p>
+
+			<p>Clustered bar graphs</p>
+
+			<p>Stacked bar graphs</p>
+
+			<p>Line graphs</p>
+
+			<p>Scatterplots</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Remember (see Chapter 1 page XXX) there are some technically discrete data that behave like continuous data, and we can always take continuous data and break it down into discrete groups if we want to use it in, say, a pie chart or bar graph.<span style="line-height: 1.5em;">&nbsp;</span><span style="line-height: 1.5em;">&nbsp;</span><span style="line-height: 1.5em;">&nbsp;</span><span style="line-height: 1.5em;">&nbsp;</span></p>
 
 <p>&nbsp;</p>
 </div>
 </section>
+
+<section data-type="sect1">
+<section data-type="sect2">
+<h2>Overall purpose of graph--what story about your data are you trying to tell?</h2>
+
+<p>Once you've figured out what types of graphs make sense for your data, you need to figure out which one type will work best for your data. &nbsp;In order to do this, you have to identify what story it is about your data that you're trying to tell. &nbsp;</p>
+
+<p><span style="line-height: 1.5em;">Are you interested in a single timepoint or multiple timepoints? &nbsp;If you're just focusing on a single, cross-sectional moment in time, you may do fine with a more basic visualization like a single pie chart. However, if you're looking to show numbers across time, you'll either need to show several pie charts or something with an axis that allows you to display the change in a variable over time. {single timepoint graphs and multiple timepoint graphs}</span></p>
+
+<p><span style="line-height: 1.5em;">Similarly, if the main focus of your narrative is on trends, you may find it beneficial to choose a graph type that allows you to easily visualize the progression of a trait over time. &nbsp;{graph of cartogram over time} &nbsp;Interactive visualizations may be of particular benefit here when they can be utilized. (See page XXX, chapter on print vs. web.)</span></p>
+
+<p><span style="line-height: 1.5em;">If your main focus is on comparisons between groups, side-by-side visualizations such as comparative pie charts, bar charts, or overlaid line graphs allow an audience to immediately see similarities and differences between your categories of interest. &nbsp;These types of visualizations are common and can be extremely beneficial in helping illustrate a narrative, but be sure not to mislead your audience with inappropriate use of layout or color (see page XXX). &nbsp;</span></p>
+
+<p><span style="line-height: 1.5em;">Finally, if your interest is in exploring overall patterns in your data set or the distribution of your data, there are specific types of graphs that will allow you to do just that. &nbsp;Scatterplots let you see where every individual point in the data set lies so you can get a sense of the spread of the data. &nbsp;Histograms tell you what the frequency distribution of the data is for a given variable so you can see range and variance.</span></p>
+</section>
+</section>
+
+<p>{Need transition sentence here}</p>
+
+<p>In the rest of this chapter, we'll discuss some of the most commonly used graph types, what they're used for, and pros and cons of each.</p>
+
+<p>(Put these in tables with a good version and bad version of each type of graph.) &nbsp;DO! &nbsp;DON'T! &nbsp;:D</p>
+
+<section data-type="sect1">
+<h1>Pie Charts</h1>
+
+<p>Data types: discrete; can use continuous data, but need to break into groups first</p>
+
+<p>Used for: Showing what percent of the total group or a particular subgroup fall into each of several specificed categories</p>
+
+<p>Pros: Quick representation of distribution of the group; can be very useful if several pie chart are shown side by side as a means of comparison</p>
+
+<p>Cons: No external reference point when a singular pie chart; don't have any sense of what a single distribution means out of context</p>
+</section>
 </div>
 </header>
 
-<p dir="ltr" style="line-height:1.15;margin-top:0pt;margin-bottom:10pt;">&nbsp;</p>
+<section data-type="sect1">
+<h1>Vertical Bar Graphs</h1>
+
+<h1>&nbsp;</h1>
+
+<p>Data types: X-axis: discrete; Y-axis: discrete or continuous</p>
+
+<p>Used for: Showing the value of a discrete or continuous variable for several different groups</p>
+
+<p>Pros: Allows you to make quick visual comparison between groups; clean graph</p>
+
+<p>Cons: If groups are nominal, ordering is arbitary, so you can change the impact of graph just by reordering the categories; if bars are not labeled, can be hard to determine exact value that each bar represents</p>
+</section>
+
+<section data-type="sect1">
+<h1>Horizontal Bar Graphs</h1>
+
+<p>Data types: Y-axis: discrete; X-axis: discrete or continuous</p>
+
+<p>Used for: Showing the value of a discrete or continuous variable for several different groups</p>
+
+<p>Pros: Allows you to make quick visual comparison between groups; clean graph</p>
+
+<p>Cons: If groups are nominal, ordering is arbitary, so you can change the impact of graph just by reordering the categories; if bars are not labeled, can be hard to determine exact value that each bar represents</p>
+</section>
+
+<section data-type="sect1">
+<h1>Stacked Vertical bar graphs (Note for Trina: The clarity of this one will depend highly on the visuals so make sure to make these clear)</h1>
+
+<p>Data types: X-axis: discrete; Y-axis: discrete or continuous</p>
+
+<p>Used for: Showing the values of a discrete or continuous variable for several different groups within several different groups</p>
+
+<p>Pros: Allows you to make quick visual comparison of the distribution of the subgroup values between groups</p>
+
+<p>Cons: Same as regular bar graphs; also, difficult to compare actual values of the subgroups within each main group</p>
+</section>
+
+<section data-type="sect1">
+<h1>Histograms</h1>
+
+<p>Data types: X-axis: an ordinal or continuous variable broken into groups; Y-axis: counts of how many observations in the data set have a value that falls into that group</p>
+
+<p>Used for: Showing the frequency distribution of a data set for an ordered or continuous variable</p>
+
+<p>Pros: Allows you to quickly gauge the overall distribution of the variable in the data set</p>
+
+<p>Cons: Depends on how fine the categories are; if too small or too big, the shape of the distribution will seem off</p>
+</section>
+
+<section data-type="sect1">
+<h1>Line Graphs</h1>
+
+<p>Data types: X-axis: continuous; Y-axis: continuous</p>
+
+<p>Used for: Showing how the value of one continuous variable changes as the other continuous variable changes; can be grouped by a third variable</p>
+
+<p>Pros: Allows you to see trends and correlations; can quickly compare groups if lines are overlaid</p>
+
+<p>Cons: Important to remember that correlation is not causation - graph can be misleading if not properly interpreted</p>
+</section>
+
+<section data-type="sect1">
+<h1>Scatterplots</h1>
+
+<p>Data types: X-axis: continuous; Y-axis: continuous</p>
+
+<p>Used for: Showing all the data pairs of X and Y in a data set; can be grouped by a third variable</p>
+
+<p>Pros: Allows you to see overall spread of data and cluster effects</p>
+
+<p>Cons: Like line graphs, important to note that correlation is not causation; if patterns are noticed, can be reason to research further, but the graph alone is not proof of association</p>
+</section>
+
+<section data-type="sect1">
+<h1>Cartograms</h1>
+
+<p>Data types: geographic variable and one or more discrete or continuous variables</p>
+
+<p>Used for: Showing the value of one or more discrete or continuous variable on their corresponding map locations</p>
+
+<p>Pros: Gives an immediate view of the geographic distribution of a trait; general meaning is usually readily understood since the graph is map-based</p>
+
+<p>Cons: Can be complicated to correctly interpret if the distinctions between variable levels or geographic locations are not clear enough&nbsp;</p>
+</section>
+
+<p>&nbsp;</p>
 </section>
