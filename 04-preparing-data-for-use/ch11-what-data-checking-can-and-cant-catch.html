@@ -37,9 +37,9 @@
 
   <p>When looking at data, it is always a good approach to use your common sense first and then turn to a more sophisticated manner. Common sense is mainly applied when looking at false labels</p>
 
-  <h3>For example</h3>
-
-  <p>In your spreadsheet where each column represents a single variable, use a data cleaning tool like Google Refine or Data Wrangler to simply have a look at the raw data. You might see already that for the variable “Country” the value United Kingdom shows up as Great Britain, or UK, or GB, or great Britain, or United kingdom, and so forth. Unless the data set differentiates between Great Britain and United Kingdom on purpose, you might want to relabel the values of the variable so that you will have one value left instead of four. </p>
+  <div data-type="example">
+    <p>In your spreadsheet where each column represents a single variable, use a data cleaning tool like Google Refine or Data Wrangler to simply have a look at the raw data. You might see already that for the variable “Country” the value United Kingdom shows up as Great Britain, or UK, or GB, or great Britain, or United kingdom, and so forth. Unless the data set differentiates between Great Britain and United Kingdom on purpose, you might want to relabel the values of the variable so that you will have one value left instead of four. </p>
+  </div>
 
   <h2>Outliers and out-of-rangers</h2>
 
@@ -47,9 +47,9 @@
 
   <p>Identifying outliers in the data set gets us to the point where we might still be able to use the spreadsheet and sort by “Descending” for pinpointing high values or “Ascending” for low ones. Outliers are single or small numbers of data values that separate themselves from the rest of the data set.</p>
 
-  <h4>For example</h4>
-
-  <p>The data set is supposed to contain records of hammer prices of art works over the last century. Sorting the column “Hammer Price in US Dollar”, values of 10,000,000 are not unlikely to be recorded correctly, whereas 50 might need a closer look. A 50k in return just needs a new label that matches the intended format (like 50,000 or 50000) depending on the data analysis software and how it deals with numbers.</p>
+  <div data-type="example">
+    <p>The data set is supposed to contain records of hammer prices of art works over the last century. Sorting the column “Hammer Price in US Dollar”, values of 10,000,000 are not unlikely to be recorded correctly, whereas 50 might need a closer look. A 50k in return just needs a new label that matches the intended format (like 50,000 or 50000) depending on the data analysis software and how it deals with numbers.</p>
+  </div>
 
   <h3>Grouping and binning to spot invalid values</h3>
 
@@ -57,9 +57,9 @@
 
   <p>Often it is more crucial to identify those values. The out-of-rangers are much harder to catch since they sneak in easier but due to this fact, there are often a lot more of those and they tend to distort your analysis more since they come in higher amounts. Best way to catch those neighbouring values is to group or bin the variable. Binning is great to transform a continuous (metric) variable into a categorial/interval one. Ranges and values for bins or categories should be created according to definitions and conventions that are used in the data analysis. Also, the visual display of the distribution helps if the intervals oft eh distribution are not predefined and not easily retrievable by common sense only.</p>
 
-  <h4>For example</h4>
-
-  <p>A dataset that is supposed to contain all children of a city that were in pre-school in the year 2014. The age of the children is determined by the variable birthday. Create three categories, for example, too young (0), too old (1) and preschool age range (2) by applying a formula where (0) is below the minimum pre-school age and (1) is above the maximum pre-school. This new category is also a new variable and makes a new column in the dataset (or a temporary placeholder, depending on your software or method).  Then exclude all observations that contain (0) or (1) in their row and your dataset should now only contain children aged 4 to 7. </p>
+  <div data-type="example">
+    <p>A dataset that is supposed to contain all children of a city that were in pre-school in the year 2014. The age of the children is determined by the variable birthday. Create three categories, for example, too young (0), too old (1) and preschool age range (2) by applying a formula where (0) is below the minimum pre-school age and (1) is above the maximum pre-school. This new category is also a new variable and makes a new column in the dataset (or a temporary placeholder, depending on your software or method).  Then exclude all observations that contain (0) or (1) in their row and your dataset should now only contain children aged 4 to 7. </p>
+  </div>
 
   <h3>Lack  or excess of data</h3>
 
@@ -67,11 +67,11 @@
 
   <p>Here a simple first single variate data analysis comes into play</p>
 
-  <h4>For example</h4>
+  <div data-type="example">
+    <p>Counting the amount of values with a certain label “United Kingdom”. If the result is odd as to the term that we know that from 1000 data rows roughly 10% should be “United Kingdom”, but the count reveals that there are 300, the data set needs a more thorough investigation. The reverse result on the other side points at a lack of data.</p>
 
-  <p>Counting the amount of values with a certain label “United Kingdom”. If the result is odd as to the term that we know that from 1000 data rows roughly 10% should be “United Kingdom”, but the count reveals that there are 300, the data set needs a more thorough investigation. The reverse result on the other side points at a lack of data.</p>
-
-  <p>The same analysis can be applied to ordinal, interval and metric data. Counting values of these data kinds form a frequency distribution (see chapter xyz…) which in return is a great basis for visual analytics of odd distribution patterns </p>
+    <p>The same analysis can be applied to ordinal, interval and metric data. Counting values of these data kinds form a frequency distribution (see chapter xyz…) which in return is a great basis for visual analytics of odd distribution patterns </p>
+  </div>
 
   <h3>Odd patterns: Using graphs to identify outliers, lack or excess of data</h3>
 
@@ -95,9 +95,9 @@
  
   <p>Inconsistencies are easier to spot visually since 2 or more variables combined can be displayed and dont have to be tracked down row by row.</p>
  
-  <h4>For example</h4>
-
-  <p>Movie visitors statistics that include geolocation information. If you posses a tool that is able to deal with geolocation, look at your dataset and think about values or variables that do not make sense in combination with a certain area and then put those variables to be displayed. The fact...</p>
+  <div data-type="example">
+    <p>Movie visitors statistics that include geolocation information. If you posses a tool that is able to deal with geolocation, look at your dataset and think about values or variables that do not make sense in combination with a certain area and then put those variables to be displayed. The fact...</p>
+  </div>
 
   <h2>What Data cleaning can’t catch</h2>
 
