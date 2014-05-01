@@ -231,54 +231,44 @@
 
 <p>In this example, the total sales of coffee <em>depends</em> on the year. That is, the year is independent (&quot;pick a year, any year&quot;) and the sales is dependent (&quot;based on that year, the consumption is 23,005 cups&quot;).</p>
 
-<p>It can also be some other set of continuous data, such as temperature. Consider this table of hypothermia survival times, in which water temperature is the independent variable<span class="footnote" contenteditable="false" data-type="footnote">Hypothermia Prevention: Survival in Cold Water, Minnesota Sea Grant: http://www.seagrant.umn.edu/coastal_communities/hypothermia</span>:</p>
+<p>It can also be some other set of continuous data, such as temperature. Consider this table that shows how long it takes for an adult to sustain a first-degree burn from hot water. Here, water temperature is the independent variable<span class="footnote" contenteditable="false" data-type="footnote">US Government Memorandum, Consumer Product Safety Commission, Peter L. Armstrong, Sept. 15, 1978.</span>:</p>
 
-<table>
+<table height="254" width="430">
 	<tbody>
 		<tr>
-			<th>Water Temp (Celsius)</th>
-			<th>Death</th>
+			<th>Water Temp &deg;C (&deg;F)</th>
+			<th>Time for 1st Degree Burn</th>
 		</tr>
 		<tr>
-			<td>0.3</td>
-			<td>45 min.</td>
+			<td>46.7 (116)</td>
+			<td>35 minutes</td>
 		</tr>
 		<tr>
-			<td>0.3 to 4.4</td>
-			<td>30 to 90 min.</td>
+			<td>50 (122)</td>
+			<td>1 minute</td>
 		</tr>
 		<tr>
-			<td>4.4 to 10</td>
-			<td>1 to 3 hrs.</td>
+			<td>55 (131)</td>
+			<td>5 seconds</td>
 		</tr>
 		<tr>
-			<td>10 to 15.6</td>
-			<td>1 to 6 hrs.</td>
+			<td>60 (140)</td>
+			<td>2 seconds</td>
 		</tr>
 		<tr>
-			<td>15.6 to 21.1</td>
-			<td>2 to 40 hrs.</td>
+			<td>65 (149)</td>
+			<td>1 second</td>
 		</tr>
 		<tr>
-			<td>21.1 to 26.7</td>
-			<td>3 hrs. to indefinite</td>
-		</tr>
-		<tr>
-			<td>Over 26.7</td>
-			<td>Indefinite</td>
+			<td>67.8 (154)</td>
+			<td>Instantaneous</td>
 		</tr>
 	</tbody>
 </table>
 
-<p>Here's a related example showing age bracket as the independent variable<span class="footnote" contenteditable="false" data-type="footnote">Centers for Disease Control and Prevention, National Center for Health Statistics. CMF1999-2010 Series 20 No. 2P, 2013: http://wonder.cdc.gov/cmf-icd10.html</span>.</p>
-
-<figure><img alt="Alt Text" class="iimagessections02hypotherm-age-2001png" src="https://git.atlas.oreilly.com/trina/data-design/raw/master/images/sections/02/hypotherm-age-2001.png?private_token=P1Ry9uaVkHtt8fq9Dqzo" />
-<figcaption>&nbsp;</figcaption>
-</figure>
-
 <p>And it can be a series of non-contiguous, but related, information in a category, such as major car brands, types of dog, vegetables, or the mass of planets in the solar system<span contenteditable="false" data-type="footnote">National Space Science Data Center, NASA: http://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html</span>:</p>
 
-<table height="294" width="198">
+<table height="319" width="233">
 	<tbody>
 		<tr>
 			<th>&nbsp;</th>
@@ -327,49 +317,44 @@
 
 <h2>Multiseries</h2>
 
-<p>A multiseries data set has several pieces of dependent information and one piece of independent information. Here's the data about hypothermia from before, with additional data:</p>
+<p>A multiseries data set has several pieces of dependent information and one piece of independent information. Here's the data about exposure to hot water from before, with additional data<span contenteditable="false" data-type="footnote">US Government Memorandum, Consumer Product Safety Commission, Peter L. Armstrong, Sept. 15, 1978.</span>:</p>
 
-<table height="312" width="446">
+<table height="312" width="494">
 	<tbody>
 		<tr>
-			<th>Water Temp (Celsius)</th>
-			<th>Unconsciousness</th>
-			<th>Death</th>
+			<th>Water Temp &deg;C (&deg;F)</th>
+			<th>Time for 1st Degree Burn</th>
+			<th>Time for 2nd &amp; 3rd Degree Burns</th>
 		</tr>
 		<tr>
-			<td>0.3</td>
-			<td>Under 15 min.</td>
-			<td>45 min.</td>
+			<td>46.7 (116)</td>
+			<td>35 minutes</td>
+			<td>45 minutes</td>
 		</tr>
 		<tr>
-			<td>0.3 to 4.4</td>
-			<td>15 to 30 min.</td>
-			<td>30 to 90 min.</td>
+			<td>50 (122)</td>
+			<td>1 minute</td>
+			<td>5 minutes</td>
 		</tr>
 		<tr>
-			<td>4.4 to 10</td>
-			<td>30 to 60 min.</td>
-			<td>1 to 3 hrs.</td>
+			<td>55 (131)</td>
+			<td>5 seconds</td>
+			<td>25 seconds</td>
 		</tr>
 		<tr>
-			<td>10 to 15.6</td>
-			<td>1 to 2 hrs.</td>
-			<td>1 to 6 hrs.</td>
+			<td>60 (140)</td>
+			<td>2 seconds</td>
+			<td>5 seconds</td>
 		</tr>
 		<tr>
-			<td>15.6 to 21.1</td>
-			<td>2 to 7 hrs.</td>
-			<td>2 to 40 hrs.</td>
+			<td>65 (149)</td>
+			<td>1 second</td>
+			<td>2 seconds</td>
 		</tr>
 		<tr>
-			<td>21.1 to 26.7</td>
-			<td>3 to 12 hrs.</td>
-			<td>3 hrs. to indefinite</td>
-		</tr>
-		<tr>
-			<td>Over 26.7</td>
-			<td>Indefinite</td>
-			<td>Indefinite</td>
+			<td>67.8 (154)</td>
+			<td>Instantaneous</td>
+			<td>1 second</td>
 		</tr>
 	</tbody>
 </table>
