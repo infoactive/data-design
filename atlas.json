@@ -19,7 +19,7 @@
     "04-preparing-data-for-use/ch08-data-preparation.html",
     "04-preparing-data-for-use/ch09-data-cleaning.html",
     "04-preparing-data-for-use/ch10-types-of-data-checks.html",
-    "04-preparing-data-for-use/ch11-what-data-checking-can-and-cant-catch.html",
+    "04-preparing-data-for-use/ch11-what-data-cleaning-can-and-cant-catch.html",
     "04-preparing-data-for-use/ch12-data-transformations.html",
     "05-visualizing-data/05-section-cover.html",
     "05-visualizing-data/ch13-deciding-which-and-how-much-data-to-illustrate.html",
@@ -31,8 +31,7 @@
     "05-visualizing-data/ch19-print-vs-web.html",
     "06-what-not-to-do/06-section-cover.html",
     "06-what-not-to-do/ch20-ways-to-lie-with-graphs.html",
-    "06-what-not-to-do/ch21-sample-size-and-missingness.html",
-    "06-what-not-to-do/ch22-common-visualization-mistakes.html",
+    "06-what-not-to-do/ch21-common-visualization-mistakes.html",
     "07-conclusion/07-section-cover.html"
   ],
   "formats": {
