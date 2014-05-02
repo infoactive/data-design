@@ -8,19 +8,18 @@
 </header>
 
 <section data-type="sect1">
-<p>One aspect of data that is difficult to both learn and teach is how to get your data in shape so that it&rsquo;s useful. &nbsp;There are a few common preparation tasks that you might encounter when working with data, especially if you&rsquo;re handling data someone else collected. &nbsp;While we can use computers to perform many of the actions required for data preparation, there is a certain amount of manual, hands-on involvement in figuring out exactly which tasks need to be done. For this reason, many people admittedly hate this part of working with data, but someone has to clean this stuff up!&nbsp;</p>
+<p>One aspect of data that is difficult to both learn and teach is how to get your data in shape so that it&rsquo;s useful. &nbsp;There are a few common preparation tasks that you might encounter when working with data, especially if you&rsquo;re handling data someone else collected. &nbsp;While we can use computers to perform many of the actions required for data preparation, there is a certain amount of manual involvement in figuring out exactly which tasks need to be done. For this reason, many people admittedly hate this part of working with data, but someone has to clean this stuff up!&nbsp;</p>
 
 <p>Whether you&rsquo;re a highly-paid data analyst with billions of records or a 1-person business with a 90-person contact list, you&rsquo;ll be faced with messy data at some point. &nbsp;Unfortunately, data preparation isn&rsquo;t a straightforward task and there&rsquo;s no one right way to go about doing it. &nbsp;Each data set is unique and some techniques may be used just once in a lifetime, as you&rsquo;ll see in the malls example below.&nbsp;</p>
 
 <h2>&nbsp;</h2>
 
-<p>Separating Data</p>
+<h4>Separating Data</h4>
 
-<p>&nbsp;</p>
 
 <p>The first part of data preparation is separating data into the fields that will be most useful for you. &nbsp;</p>
 
-<p>Have you ever been given a data set where you couldn&rsquo;t get directly access the information you needed? &nbsp;Maybe complete addresses were in a single field, preventing you from getting stats about specific cities and states. &nbsp;Perhaps a vendor sent a spreadsheet with 6000 part numbers but their numbering system includes the warehouse code followed by the part number and you need the part numbers by themselves.</p>
+<p>Have you ever been given a data set where you couldn&rsquo;t directly access the information you needed? &nbsp;Maybe complete addresses were in a single field, preventing you from getting stats about specific cities and states. &nbsp;Perhaps a vendor sent a spreadsheet with 6000 part numbers but their numbering system includes the warehouse code followed by the part number and you need the part numbers by themselves.</p>
 
 <table>
 	<tbody>
@@ -54,19 +53,19 @@
 			<th>State</th>
 		</tr>
 		<tr>
-			<td>Warm Willows Mall&nbsp;Peters Road Marrison, MI</td>
+			<td><b>Warm Willows Mall</b>&nbsp;Peters Road Marrison, MI</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<td>Jaspers&nbsp;Martinson &amp; Timberlake Rds Reed, FL</td>
+			<td><b>Jaspers</b>&nbsp;Martinson &amp; Timberlake Rds Reed, FL</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<td>Lara Lafayette Shoppes&nbsp;17 Industrial Drive Elm, CT</td>
+			<td><b>Lara Lafayette Shoppes</b>&nbsp;17 Industrial Drive Elm, CT</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -82,6 +81,38 @@
 
 <p>A straightforward example that many people encounter is separating first names from last names. &nbsp;You may receive a data set where full names are contained in a single field and you need the first and last names to be separate, or there may already be separate fields for first and last names, but some of the entries have the full name in one of the fields.</p>
 
+<table><tbody><tr>
+<td>
+All in one field:
+<table>
+	<tbody>
+		<tr>
+			<th>Name</th>
+		</tr>
+		<tr>
+			<td>Keith Pallard</td>
+		</tr>
+		<tr>
+			<td>Fumi Takano</td>
+		</tr>
+		<tr>
+			<td>Rhonda Johnson</td>
+		</tr>
+		<tr>
+			<td>Warren Andersen</td>
+		</tr>
+		<tr>
+			<td>Juan Tyler</td>
+		</tr>
+		<tr>
+			<td>Cicely Pope</td>
+		</tr>
+	</tbody>
+</table>
+</td>
+
+<td>
+Have two fields, but not all info is in the correct place:
 <table>
 	<tbody>
 		<tr>
@@ -114,6 +145,11 @@
 		</tr>
 	</tbody>
 </table>
+</td>
+
+</tr></tbody></table>
+
+
 
 <p>When data sets come to us this way, the challenge is seemingly fairly easy to resolve. &nbsp;There are common ways of pulling apart the first names and last names for Keith, Fumi, and Warren. &nbsp; The easiest way is to look for the space, break the name apart at the space, and voila!</p>
 
@@ -304,7 +340,7 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 
 <h2>&nbsp;</h2>
 
-<p>Post-Data Preparation</p>
+<h4>Post-Data Preparation</h4>
 
 <p>&nbsp;</p>
 
