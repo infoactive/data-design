@@ -18,21 +18,73 @@
 
 <h2>Range checks</h2>
 
-<p>Range checks are a very straightforward procedure that we use on numeric fields to see if any values in the data set are above or below the most extreme acceptable values for that variable. &nbsp;Let&rsquo;s use an example of homework scores. &nbsp;Pretend that you&rsquo;re a college professor and your teaching assistants entered the first set of homework scores for the semester. You want to make sure they entered everything correctly, so you go into the data set and sort by the column that contains the scores for the first homework, graded on a scale of 0-100. </p>
+<p>Range checks are a very straightforward procedure that we use on numeric fields to see if any values in the data set are above or below the most extreme acceptable values for that variable. &nbsp;Let&rsquo;s use an example of homework scores. &nbsp;Pretend that you&rsquo;re a college professor and your teaching assistants entered the first set of homework scores for the semester. You want to make sure they entered everything correctly, so you go into the data set and sort by the column that contains the scores for the first homework, graded on a scale of 0-100.  You see the first few rows. </p>
 
-<p>{Insert graphic with side by side unsorted Excel sheet, sorting dialogue box, and descending sorted Excel sheet}</p> 
+<p>
+<table>
+  <tbody>
+    <tr>
+      <th>Student ID</th>
+      <th>HW 1 Score</th>
+    </tr>
+    <tr>
+      <td>679372531</td>
+      <td>980</td>
+    </tr>
+    <tr>
+      <td>673540288</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <td>674082892</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <td>673923590</td>
+      <td>96</td>
+    </tr>
+  </tbody>
+</table>
+</p> 
 
-<p>You can see here that there is a score of 980, which indicates that one of the TAs probably accidentally typed an extra zero after a score that should have been 98. &nbsp;In this case, you would want to flag the record and ask the TAs what the actual score should have been. &nbsp;</p>
+<p>There is a score of 980, so one of the TAs probably accidentally typed a zero after a score that should have been 98. &nbsp;You would want to flag the record and ask the TAs what the actual score should have been. &nbsp;</p>
 
 <p>Visual scans of data during range checks can also reveal other potential problems even within the official bounds of the data. &nbsp;</p>
 
-<p>{Insert graphic of the same sorted test score data set, but the bottom of the data set with a hw score of 9, while the net lowest score is 74} </p>
+<p>
+<table>
+  <tbody>
+    <tr>
+      <th>Student ID</th>
+      <th>HW 1 Score</th>
+    </tr>
+    <tr>
+      <td>674472019</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td>679029425</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td>671822390</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td>671278927</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</p> 
 
-<p>Here, one score is notably lower than the others and has a strange score value. &nbsp;In this situation, it is possible that the score should have been entered as a 90 instead. &nbsp;This is another record that would make sense to flag and check with the source record. &nbsp;This is a good example of why it is important to be personally involved in the data checking process for variables that carry a lot of weight, like student grades or primary outcome variables for research projects. &nbsp;However, hand-checking all the variables in a data set can be very time-consuming, especially if the data set is large and for items that aren&rsquo;t as critical like name spellings, it may not be as important. &nbsp;It is up to you to decide which variables require involved personal attention. &nbsp;</p>
+<p>Here, one score is much lower than the others and has a strange score value. &nbsp;In this situation, it is possible that the score should have been entered as a 90 instead. &nbsp;This is another record that would make sense to flag and check with the source record. &nbsp;This is a good example of why it is important to be personally involved in the data checking process for variables that carry a lot of weight, like student grades or primary outcome variables for research projects. &nbsp;However, hand-checking all the variables in a data set can be very time-consuming, especially if the data set is large and for items that aren&rsquo;t as critical like name spellings, it may not be as important. &nbsp;It is up to you to decide which variables require involved personal attention. &nbsp;</p>
 
 <p>You may be in the fortunate position of having others to check your data set for you. &nbsp;In the example above, it is quite likely that the student who might have had a 90 on their paper but had it recorded as a 9 in the electronic gradebook would notice that and complain immediately upon seeing it. &nbsp;If you are in that sort of situation, you still want to pay attention to your data set, but should also request that the others with access to it check for discrepancies as well. &nbsp;</p>
 
 <p>Note that range checks will work no matter what your range is. &nbsp;Maybe you&rsquo;re expecting a decimal between 0 and 1, or your variable is normal body temperature in Fahrenheit, so you&rsquo;re expecting mostly values between 97.0 and 99.0, allowing for people that run cold and hot. &nbsp;You can always look and see if there are values stored in that variable group that are too low or high.</p>
+
+<p>You can also use "Filter" commands to check for all values that are outside the acceptable range of a variable.  However, it doesn't catch values that are inside your range but that look "off" based on the rest of your data.  Here, a a basic range filter would detect the "980" score but not the "9" score.  If you use filtering to do your range checks, it is a good idea to also use another method to look at the overall distribution of your data to catch any values that might seem "strange" in comparison to your other values.</p>
 
 <h2>Spell check</h2>
 
