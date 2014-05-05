@@ -304,7 +304,7 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 
 <p>Another important data preparation task is making sure that all the data in a single field are given in the same units. &nbsp;Ideally, you would have specified the unit type on the input form, but you may be working with someone else&rsquo;s data set or the data may have been collected directly from other sources where the information was gathered directly from machines that measure in particular units. &nbsp;For example, you might have details from medical records from multiple countries and the patients&rsquo; weights could be in pounds for some records but in kilograms for others. &nbsp;It is important to convert all the numbers to either pounds or kilograms so that they are all on the same scale, otherwise the records cannot be directly compared to each other and any visualization you do of the original data would look quite strange indeed!</p>
 
-<p><span style="line-height: 1.5em;">{insert bar graph of weight ranges, with some people measured in lbs and some in kilos; the people measured in kilos will seem to be extremely tiny!}</span></p>
+    <figure><img src="../images/sections/04/kilos-vs-pounds.png" alt="Kilos and pounds in the same chart" /></figure>
 
 <p>You should do a quick scan of the variables in your data set to identify any fields that could potentially have different units represented in them so you can figure out if these conversions are necessary. &nbsp;If they are, you might need to reference an additional field to identify what the original units are that you should be converting from so you know what records need to be changed. &nbsp;If there isn&rsquo;t a specific field that lists the units themselves, other fields like geographic location can be helpful. &nbsp;If you cannot find a field that lets you know what the units are but you suspect that a conversion is necessary, you should contact the original provider of the data to obtain that information. &nbsp;It may turn out that you actually don&rsquo;t need to convert and your data is just strange, but it&rsquo;s better to check and make sure than to ignore a potential conversion that needs to happen. &nbsp;</p>
 
@@ -314,11 +314,11 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 
 <p>One of the most work intensive of all data cleaning tasks is handling inconsistent information. &nbsp;For example, we see multiple languages popping up in a single data set more often now that the internet allows us to easily collect data from users all around the world. &nbsp;This can sometimes create problems when you&rsquo;re trying to group things up for visualization purposes, depending on how your data entry form is designed and what data from the set you&rsquo;re using. &nbsp;Perhaps you do a survey of college students and one of the text fields asks for their major. &nbsp;One student might enter &ldquo;Math&rdquo; while another enters &ldquo;Mathematics&rdquo; while still another types &ldquo;Applied Mathematics.&rdquo; &nbsp;You know that all these are considered the same major on your campus, but a computer or visualization software would not group these records together. &nbsp;You would need to create a single controlled vocabulary term (e.g. change them all to say &ldquo;Math&rdquo; or &ldquo;Mathematics&rdquo;) or create a separate coded field (see Chapter XXX, pg. YYY) if you wanted to have them treated as part of the same category.</p>
 
-<p><span style="line-height: 1.5em;">{Graphic of pie charts with majors without controlling and with controlling}</span></p>
+    <figure><img src="../images/sections/04/controlled-vocabulary.png" alt="Controlled vocabulary example" /></figure>
 
 <p>Although the computer can aid in changing values, problems with data inconsistency often have to be handled semi-manually. If you are looking through text fields, much like when you do data coding, find and replace is your best friend. As long as you know what the main variants are of the data that you want to control, you can quickly change them all to be the same value. &nbsp;</p>
 
-<p>{find and replace graphic from excel} &nbsp;&nbsp;</p>
+    <figure><img src="../images/sections/04/find-and-replace.png" alt="Find and replace" /></figure>
 
 <h4>Missing Values</h4>
 
