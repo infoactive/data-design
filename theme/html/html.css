@@ -172,21 +172,38 @@ nav[data-type="toc"] {
   nav[data-type="toc"] li[data-type="part"] {
     margin-top: 0px;
     border-right: 1px solid #cccccc;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     nav[data-type="toc"] li[data-type="part"]:before {
       content: "";
       width: 14px;
       height: 10px;
       position: absolute;
-      top: 0%;
-      left: 75%;
-      background: url("../../images/shared-icons/open-drawer.png") 90% 50% no-repeat; }
+      top: 24px;
+      left: 88%;
+      display: block;
+      opacity: 0.2;
+      background: url("../../images/shared-icons/open-drawer.png") 90% 50% no-repeat;
+      -webkit-transition-property: -webkit-transform;
+      -moz-transition-property: -moz-transform;
+      transition-property: transform;
+      -webkit-transition-duration: 0.3s;
+      -moz-transition-duration: 0.3s;
+      transition-duration: 0.3s; }
     nav[data-type="toc"] li[data-type="part"].open:before {
       -webkit-transform: rotate(180deg);
       -moz-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       -o-transform: rotate(180deg);
-      transform: rotate(180deg); }
+      transform: rotate(180deg);
+      -webkit-transition-property: -webkit-transform;
+      -moz-transition-property: -moz-transform;
+      transition-property: transform;
+      -webkit-transition-duration: 0.3s;
+      -moz-transition-duration: 0.3s;
+      transition-duration: 0.3s; }
+    nav[data-type="toc"] li[data-type="part"]:hover:before {
+      opacity: 0.5; }
     nav[data-type="toc"] li[data-type="part"] > a {
       border-bottom: none;
       width: auto; }
@@ -297,7 +314,8 @@ div[data-type="part"] {
   max-width: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   color: white; }
   div[data-type="part"] .content {
     padding: 4em 0 7em; }
@@ -313,17 +331,14 @@ div[data-type="part"] {
     text-align: justify;
     max-width: 700px;
     margin: 0 auto 1.5em; }
-  div[data-type="part"] img {
-    position: absolute;
-    opacity: 0.1;
-    right: 0px;
-    bottom: 0;
-    width: 40%; }
   div[data-type="part"] + .navigation ul {
     height: 3.5em;
     position: fixed;
     bottom: 0;
     width: 100%; }
+  div[data-type="part"] img {
+    float: left;
+    margin-right: 0.5em; }
 
 .blue blockquote, .blue [data-type="example"] {
   border-color: #41a2ba; }
@@ -343,7 +358,7 @@ div[data-type="part"].blue {
   div[data-type="part"].blue header {
     background: #41a2ba; }
   div[data-type="part"].blue + .navigation ul {
-    background: #54a3b6; }
+    background: #5fb0c4; }
 
 .yellow blockquote, .yellow [data-type="example"] {
   border-color: #eeb11e; }
@@ -363,7 +378,7 @@ div[data-type="part"].yellow {
   div[data-type="part"].yellow header {
     background: #eeb11e; }
   div[data-type="part"].yellow + .navigation ul {
-    background: #e6b235; }
+    background: #efbd46; }
 
 .green blockquote, .green [data-type="example"] {
   border-color: #6baf44; }
@@ -383,7 +398,7 @@ div[data-type="part"].green {
   div[data-type="part"].green header {
     background: #6baf44; }
   div[data-type="part"].green + .navigation ul {
-    background: #75ae54; }
+    background: #81bd5e; }
 
 .violet blockquote, .violet [data-type="example"] {
   border-color: #3e5084; }
@@ -403,7 +418,7 @@ div[data-type="part"].violet {
   div[data-type="part"].violet header {
     background: #3e5084; }
   div[data-type="part"].violet + .navigation ul {
-    background: #4b5a86; }
+    background: #4d629d; }
 
 .red blockquote, .red [data-type="example"] {
   border-color: #cf4627; }
@@ -423,7 +438,7 @@ div[data-type="part"].red {
   div[data-type="part"].red header {
     background: #cf4627; }
   div[data-type="part"].red + .navigation ul {
-    background: #ce5338; }
+    background: #d96145; }
 
 section[data-type="preface"],
 section[data-type="chapter"],
@@ -871,7 +886,9 @@ div.navbar {
     background: url("../../images/shared-icons/nav.png") no-repeat;
     z-index: 1; }
   .btn.close {
-    margin-top: 16px;
+    width: 24px;
+    height: 24px;
+    margin-top: 19px;
     float: right;
     margin-right: 20px;
     background: url("../../images/shared-icons/close.png") no-repeat; }
@@ -953,7 +970,14 @@ div.navbar p a {
   div[data-type="part"] + .navigation {
     position: absolute;
     background: transparent;
-    border: none; } }
+    border: none; }
+    div[data-type="part"] + .navigation ul li {
+      bottom: 18px;
+      position: fixed; }
+
+  div[data-type="part"] .content, div[data-type="part"] h1 {
+    padding-left: 30px;
+    padding-right: 30px; } }
 @media screen and (max-width: 480px) {
   body {
     width: 100%; }

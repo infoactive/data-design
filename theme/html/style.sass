@@ -197,16 +197,25 @@ nav[data-type="toc"]
     margin-top: 0px
     border-right: 1px solid #ccc
     position: relative
+    cursor: pointer
     &:before
       content: ""
       width: 14px
       height: 10px
       position: absolute
-      top: 0%
-      left: 75%
+      top: 24px
+      left: 88%
+      display: block
+      opacity: .2
       background: url('../../images/shared-icons/open-drawer.png') 90% 50% no-repeat
+      @include transition-property(transform)
+      @include transition-duration(.3s)
     &.open:before
       @include transform(rotate(180deg))
+      @include transition-property(transform)
+      @include transition-duration(.3s)
+    &:hover:before
+      opacity: .5
     > a
       border-bottom: none
       width: auto
@@ -308,7 +317,8 @@ div[data-type="part"]
   max-width: 100%
   margin: 0
   padding: 0
-  height: 100%
+  height: auto
+  min-height: 100%
   color: white
   .content
     padding: 4em 0 7em
@@ -324,17 +334,14 @@ div[data-type="part"]
     text-align: justify
     max-width: 700px
     margin: 0 auto 1.5em
-  img
-    position: absolute
-    opacity: .1
-    right: 0px
-    bottom: 0
-    width: 40%
   + .navigation ul
     height: 3.5em
     position: fixed
     bottom: 0
     width: 100%
+  img
+    float: left
+    margin-right: .5em
 
 $color-names: blue yellow green violet red
 
@@ -360,7 +367,7 @@ $color-names: blue yellow green violet red
     header
       background: $color
     + .navigation ul
-      background: lighten(desaturate($color, 8), 3)
+      background: lighten(desaturate($color, 2), 8)
 
 section[data-type="preface"], 
 section[data-type="chapter"], 
@@ -789,7 +796,9 @@ div.navbar
     background: url('../../images/shared-icons/nav.png') no-repeat
     z-index: 1
   &.close
-    margin-top: 16px
+    width: 24px
+    height: 24px
+    margin-top: 19px
     float: right
     margin-right: 20px
     background: url('../../images/shared-icons/close.png') no-repeat
@@ -868,6 +877,14 @@ div.navbar p a
     position: absolute
     background: transparent
     border: none
+    ul li
+      bottom: 18px
+      position: fixed
+
+  div[data-type="part"]
+    .content, h1
+      padding-left: 30px
+      padding-right: 30px
 
 // iPhone
 
