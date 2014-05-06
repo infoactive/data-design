@@ -1,3 +1,5 @@
+@import 'bourbon/bourbon'
+
 * 
   -moz-box-sizing: border-box 
   -webkit-box-sizing: border-box 
@@ -9,6 +11,9 @@ body
   font-size: 18px
   margin: 0
   padding-top: 0
+
+html, body
+  height: 100%
 
 @font-face
   font-family: 'source_sans_proregular'
@@ -90,6 +95,10 @@ p a
 em
   font-family: 'source_sans_proitalic', sans-serif
   font-style: normal
+
+hr
+  height: 20px
+  background: $light-gray
 
 section
   max-width: 700px
@@ -187,6 +196,17 @@ nav[data-type="toc"]
   li[data-type="part"] 
     margin-top: 0px
     border-right: 1px solid #ccc
+    position: relative
+    &:before
+      content: ""
+      width: 14px
+      height: 10px
+      position: absolute
+      top: 0%
+      left: 75%
+      background: url('../../images/shared-icons/open-drawer.png') 90% 50% no-repeat
+    &.open:before
+      @include transform(rotate(180deg))
     > a
       border-bottom: none
       width: auto
@@ -287,29 +307,34 @@ div[data-type="part"]
   width: 100%
   max-width: 100%
   margin: 0
-  padding: 100px 0
+  padding: 0
   height: 100%
-  border-bottom: 62px solid rgba(255,255,255,.1)
   color: white
+  .content
+    padding: 4em 0 7em
+  header
+    padding: 200px 0 1.5em
   h1
     text-transform: uppercase
-    font-size: 5em
+    font-size: 3em
     max-width: 700px
     margin: 0 auto
     top: 0px
   p
-    width: 600px
     text-align: justify
     max-width: 700px
-    margin: 0 auto
-    background: rgba(0,0,0,.1)
-    padding: 20px 30px
+    margin: 0 auto 1.5em
   img
     position: absolute
     opacity: .1
     right: 0px
     bottom: 0
     width: 40%
+  + .navigation ul
+    height: 3.5em
+    position: fixed
+    bottom: 0
+    width: 100%
 
 $color-names: blue yellow green violet red
 
@@ -320,14 +345,22 @@ $color-names: blue yellow green violet red
   .#{nth($color-names, $i)}
     blockquote, [data-type="example"]
       border-color: $color
-    a, .chapter-font-color, section[data-type="sect1"] > h1, blockquote:before
+    a, blockquote:before
       color: $color
-    .chapter-bg-color, .icon, th
+    .icon, th
       background: $color
     table:not(.custom) tr:nth-child(2n + 1), .highlight
       background: $light-color
+    tr.extra-highlight
+      background: darken($light-color, 10)
   div[data-type="part"].#{nth($color-names, $i)}
-    background: $color
+    background: darken($color, 5)
+    .content
+      background: darken($color, 5)
+    header
+      background: $color
+    + .navigation ul
+      background: lighten(desaturate($color, 8), 3)
 
 section[data-type="preface"], 
 section[data-type="chapter"], 
@@ -530,18 +563,20 @@ table.sections
     margin: 0
 
 figure 
-  margin: 40px 0
+  margin: 0
   display: block
-  border-top: 20px solid #efefef
   page-break-inside: avoid
-  border-radius: 2px
-
-figure img
-  padding: 60px 0
-  max-width: 100%
-  margin: 0 auto
-  display: block
-  border: none
+  &.separate
+    margin: 40px 0 50px
+    padding: 40px 0
+    border-top: 16px solid $light-gray
+    border-bottom: 16px solid $light-gray
+  img
+    padding: 30px 0 40px
+    max-width: 100%
+    margin: 0 auto
+    display: block
+    border: none
 
 figcaption
   font-family: 'source_sans_proregular', sans-serif
@@ -595,16 +630,16 @@ aside[data-type="footnotes"]
     height: 1.5em
     background: #bbb
     border-radius: 50%
-    margin: .1em .8em .5em 0
+    margin: 0 .8em .5em 0
     &:hover
       background: #aaa
     sup
-      margin-right: .5em
       height: 1em
       line-height: 0
       color: white
-      margin: .95em 0.7em
+      margin: .95em 0
       display: block
+      text-align: center
 
 a[data-type="noteref"]
   text-decoration: none

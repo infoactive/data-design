@@ -8,13 +8,14 @@ $( document ).ready(function() {
 
   $("nav[data-type='toc'] li[data-type='part']").on("click", function(e) {
     $(this).find('> ol').slideToggle();
+    $(this).toggleClass('open');
   });
 
   if (!$("div[data-type='part']")[0]) {
-    console.log('not a part')
     currentChapter = $("header h1").text();
     $("nav[data-type='toc'] li a:contains(" + currentChapter + ")").closest('ol').css("display", "block");
     $("nav[data-type='toc'] li a:contains(" + currentChapter + ")").closest('li').addClass("active");
+    $("nav[data-type='toc'] li a:contains(" + currentChapter + ")").closest('li[data-type="part"]').addClass("open");
   }
 
 });
