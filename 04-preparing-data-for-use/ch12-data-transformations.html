@@ -8,15 +8,13 @@
   </header>
 
   <section data-type="sect1">
+  <p>When you take a digital photo, sometimes the picture comes out in a way that makes certain features hard to see.  Maybe the colors are too dark or too light, the photo is blurry, or the objects in the image are really small and you want to zoom in on them.  You can pop the photo into something like Instagram or Photoshop, tweak it, apply a filter or two, and transform the picture so it’s much clearer and easier to understand.    
+Sometimes we need to transform data, too.  You might get a set of data where, if you graph it as is, will have parts that are difficult to see. Also, if you’re going to do statistical testing on your data, many common tests make specific assumptions about the distribution of the data (e.g. that the data are normally distributed).  In the real world, we often come across data that don’t meet these assumptions. Data transformations are one way to handle both these problems. Here, we’ll talk about what some of the common transformations are so when you encounter these terms in the future, you’ll have an idea what was done to the data. </p>
 
-  <blockquote>I feel the outputs from statistical tests run on a sample data are misleading. Problem is that the distribution of the data is not validating normality assumptions</blockquote>
-  <p>A friend told me this recently. I asked him if he had tried data transformations and got to see his puzzling face for a response. It’s not hard to understand his situation; in fact each one of us working with data will face this at one time or other. Generally, many of the common statistical tests make certain assumptions about the distribution of data and often in real time we come across data samples not validating these assumptions. Well, one way to deal with this problem is to implement data transformations to fit the assumptions better.</p>
-
-    <figure>Graphic 1 - Simple Illustration</figure>
-
-    <p>Data transformations are one of the common manipulation procedures which can reveal the features hidden in the data that are not observable in its original form. Using this technique, we can transform the distribution of data so that any required assumptions of statistical tests are met. As part of data transformations, one would typically replace a variable with a mathematical function of that variable: for example, replacing a variable x by the logarithm of x or by square root of x.</p>
-    <h2>Normal distribution and skewness in data</h2>
-    <p>One of the most frequently encountered assumptions of statistical tests is that data should be following a normal distribution pattern. If the sample of data being analyzed is skewed or deviating from normal pattern, then we can make use of data transformations to correct it. Typically a normal distribution tends to be in the shape a bell where the data spreads uniformly around a central value. These distributions are most commonly observed in real life and some of the data examples which follow normal distribution are related to human measurements such as height, weight, life span, as well as scores on IQ tests.</p>
+    <p>Data transformations are one of the common manipulation procedures which can reveal features hidden in the data that are not observable in its original form. We can transform the distribution of data to make it easier to see and so that any required assumptions of statistical tests are met.  We usually do this by replacing one variable with a mathematical function of that variable. For example, you could replace a variable x by the logarithm of x or by square root of x.</p>
+<blockquote data-type=”alert”>Never perform the transform directly on your original data!  Either create an additional column to hold the new values for each variable you’re transforming or make a copy of your data set to perform the transformations on.</blockquote>    
+<h2>Normal distribution and skewness in data</h2>
+    <p>One of the most frequently encountered assumptions of statistical tests is that data should be normally distributed.  You may have heard of the normal distribution referred to as a “bell curve” before; this is because a normal distribution takes the shape of a bell, with the data spread around a central value. Some of the data examples that commonly follow a normal distribution are related to human measurements such as height, weight, life span, and scores on IQ tests.</p>
 
     <h4>Normal distribution</h4>
     <figure><img alt="Normal distribution" src="../images/sections/04/normal-distribution.png" /></figure>
@@ -28,297 +26,77 @@
     <h4>Right skew</h4>
     <figure><img alt="Normal distribution" src="../images/sections/04/right-skew.png" /></figure>
 
-    <p>Unlike normal distribution which has a perfect symmetry around the mean value, skewed data tend to have more observations either to left side or to right side. Right skewed data have a long tail that extends to right whereas left skewed data will have a long tail extending to the left of the mean value. So when you notice that your data distribution is either right or left skewed, that should be your first clue to think of data transformations.</p>
+    <p>Unlike a normal distribution, which is symmetric around the mean value, skewed data tend to have more observations either to left side or to right side. Right skewed data have a long tail that extends to right whereas left skewed data will have a long tail extending to the left of the mean value. When data is <i>very</i> skewed, it can be hard to see the extreme values in a visualization.  If you notice that your data distribution is skewed, you might consider transforming it if you’re doing statistical testing or if the data is difficult to visualize in its original state.</p>
 
     <h2>Understanding transformations using sample data</h2>
 
-    <p>Now let us see how data transformations can be implemented on a sample data. We will use population data of all 51 US states as of 2012 with values ranging from 500K to 40 Million. The first step towards any data transformation is to evaluate the given distribution and then decide upon using appropriate transformations if needed. For this we can plot a histogram of the given values and understand the shape of the data better.</p>
+    <p>Let’s see how data transformations work using some sample data, the US state population data from 2012. The first step in data transformation is to evaluate the distribution of the data. Then you can decide what transformation is appropriate if one is needed. Let’s plot a histogram of the population data and a scatterplot of the population-area data to get a better sense of how they’re distributed.</p>
     
-    <table>
-      <tr>
-        <th>State</th>
-        <th>Population as of 2012</th>
-      </tr>
-      <tr>
-        <td>Wyoming</td>
-        <td>576412</td>
-      </tr>
-      <tr>
-        <td>Vermont</td>
-        <td>626011</td>
-      </tr>
-      <tr>
-        <td>DC</td>
-        <td>632323</td>
-      </tr>
-      <tr>
-        <td>North Dakota</td>
-        <td>699628</td>
-      </tr>
-      <tr>
-        <td>Alaska</td>
-        <td>731449</td>
-      </tr>
-      <tr>
-        <td>South Dakota</td>
-        <td>833354</td>
-      </tr>
-      <tr>
-        <td>Delaware</td>
-        <td>917092</td>
-      </tr>
-      <tr>
-        <td>Montana</td>
-        <td>1005141</td>
-      </tr>
-      <tr>
-        <td>Rhode Island</td>
-        <td>1050292</td>
-      </tr>
-      <tr>
-        <td>New Hampshire</td>
-        <td>1320718</td>
-      </tr>
-      <tr>
-        <td>Maine</td>
-        <td>1329192</td>
-      </tr>
-      <tr>
-        <td>Hawaii</td>
-        <td>1392313</td>
-      </tr>
-      <tr>
-        <td>Idaho</td>
-        <td>1595728</td>
-      </tr>
-      <tr>
-        <td>West Virginia</td>
-        <td>1855413</td>
-      </tr>
-      <tr>
-        <td>Nebraska</td>
-        <td>1855525</td>
-      </tr>
-      <tr>
-        <td>New Mexico</td>
-        <td>2085538</td>
-      </tr>
-      <tr>
-        <td>Nevada</td>
-        <td>2758931</td>
-      </tr>
-      <tr>
-        <td>Utah</td>
-        <td>2855287</td>
-      </tr>
-      <tr>
-        <td>Kansas</td>
-        <td>2885905</td>
-      </tr>
-      <tr>
-        <td>Arkansas</td>
-        <td>2949131</td>
-      </tr>
-      <tr>
-        <td>Mississippi</td>
-        <td>2984926</td>
-      </tr>
-      <tr>
-        <td>Iowa</td>
-        <td>3074186</td>
-      </tr>
-      <tr>
-        <td>Connecticut</td>
-        <td>3590347</td>
-      </tr>
-      <tr>
-        <td>Oklahoma</td>
-        <td>3814820</td>
-      </tr>
-      <tr>
-        <td>Oregon</td>
-        <td>3899353</td>
-      </tr>
-      <tr>
-        <td>Kentucky</td>
-        <td>4380415</td>
-      </tr>
-      <tr>
-        <td>Louisiana</td>
-        <td>4601893</td>
-      </tr>
-      <tr>
-        <td>South Carolina</td>
-        <td>4723723</td>
-      </tr>
-      <tr>
-        <td>Alabama</td>
-        <td>4822023</td>
-      </tr>
-      <tr>
-        <td>Colorado</td>
-        <td>5187582</td>
-      </tr>
-      <tr>
-        <td>Minnesota</td>
-        <td>5379139</td>
-      </tr>
-      <tr>
-        <td>Wisconsin</td>
-        <td>5726398</td>
-      </tr>
-      <tr>
-        <td>Maryland</td>
-        <td>5884563</td>
-      </tr>
-      <tr>
-        <td>Missouri</td>
-        <td>6021988</td>
-      </tr>
-      <tr>
-        <td>Tennessee</td>
-        <td>6456243</td>
-      </tr>
-      <tr>
-        <td>Indiana</td>
-        <td>6537334</td>
-      </tr>
-      <tr>
-        <td>Arizona</td>
-        <td>6553255</td>
-      </tr>
-      <tr>
-        <td>Massachusetts</td>
-        <td>6646144</td>
-      </tr>
-      <tr>
-        <td>Washington</td>
-        <td>6897012</td>
-      </tr>
-      <tr>
-        <td>Virginia</td>
-        <td>8185867</td>
-      </tr>
-      <tr>
-        <td>New Jersey</td>
-        <td>8864590</td>
-      </tr>
-      <tr>
-        <td>North Carolina</td>
-        <td>9752073</td>
-      </tr>
-      <tr>
-        <td>Michigan</td>
-        <td>9883360</td>
-      </tr>
-      <tr>
-        <td>Georgia</td>
-        <td>9919945</td>
-      </tr>
-      <tr>
-        <td>Ohio</td>
-        <td>11544225</td>
-      </tr>
-      <tr>
-        <td>Pennsylvania</td>
-        <td>12763536</td>
-      </tr>
-      <tr>
-        <td>Illinois</td>
-        <td>12875255</td>
-      </tr>
-      <tr>
-        <td>Florida</td>
-        <td>19317568</td>
-      </tr>
-      <tr>
-        <td>New York</td>
-        <td>19570261</td>
-      </tr>
-      <tr>
-        <td>Texas</td>
-        <td>26059203</td>
-      </tr>
-      <tr>
-        <td>California</td>
-        <td>38041430</td>
-      </tr>
-    </table>
-
-    <table>
-      <tr>
-        <th>Population Bin (in 1000s)</th>
-        <th>Frequency</th>
-      </tr>
-      <tr>
-        <td>0-5000</td>
-        <td>29</td>
-      </tr>
-      <tr>
-        <td>5001-10000</td>
-        <td>15</td>
-      </tr>
-      <tr>
-        <td>10001-15000</td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td>15001-20000</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>20001-25000</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>25001-30000</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td>30001-35000</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>35001-40000</td>
-        <td>1</td>
-      </tr>
-    </table>
-
-    <p>Given the population data, one needs to bin the range of values into various groups and identify the frequency of each group. Table above summarizes the data that is needed for the histogram. Population bin variable refers to range of population values and frequency represents the number of states falling under each bin respectively.</p>
-
-    <p>Figure 1 below clearly shows that the distribution of population values are right skewed and is as expected since majority of state’s population lies in the range of 1-10 Million. Clearly there is a need to transform this distribution if we want to run some statistical tests that need to satisfy normality assumption. Many transformation methods can be applied, but let us look at some of the common ones such as logarithmic or square-root transformations.</p>
 
     <figure><img alt="Untransformed population values" src="../images/sections/04/untransformed-population-values.png" /></figure>
+<p>Figure 1 above shows that the distribution of population values is right skewed.  This is reasonable to expect because the majority of states’ populations lie in the range of 1-10 Million.  If we want to do statistical testing that relies on a normal distribution assumption, this data will need to be transformed. </p>
+In Figure 2, most of the data points are clustered in the bottom left corner of the graph, making it hard to see how population and land area are related.  We can’t just scale the graph differently to “zoom in” on that corner because we’d knock California and Alaska off the chart.  We can, however, use transformations to help make the data easier to view.</p>
+ <p>There are many transformation methods that can be applied in either of these situations, but let’s look at a couple of the common ones to see how they can affect both a visualization and the shape of a distribution.</p>
+<h2>Log transform</h2>
+    <p>To do a logarithmic transformation, you calculate the log of each value and the data set and use those transformed values rather than your raw data.  Log transforms tend to have a major effect on distribution shape, and in visualizations can bring extreme outliers closer to the rest of the data so graphs aren’t stretched out as much. You can either use natural logs (ln) or logs with a base of 10.  Figure 3 below shows the histogram of population data after a natural log transformation is applied, and Figure 4 shows what the scatterplot looks like if you use a natural log transformation on both the population and land area variables.</p>
 
-    <p>The logarithmic transformation computes the log of each value and tends to have a major effect on distribution shape. One can use either natural logs or logs to the base of 10. In our example, the natural log of population values are computed and further the frequency values are taken for bins created using the newly computed values. Figure 2 below shows the histogram of population data after log transformation is applied.</p>
-
-    <figure><img alt="Log transformed population values" src="../images/sections/04/log-transformed.png" /></figure>
-
-    <p>The square-root transformation computes the square root of each value. Unlike log transformation, square-root transformation has a moderate effect on distribution shape. Similar to log transformation, square-root transformed values are computed from raw population values and further frequency bins are to be created. Figure 3 below shows the histogram of population data after square-root transformation is applied.</p>
+<figure><img alt="Log transformed population values" src="../images/sections/04/log-transformed.png" /></figure>
+    <figure><img alt="Log transformed population vs. land size graph" src="../images/sections/04/log-transformedscatter.png" /></figure>
+<h2>Square root transform</h2>
+    <p>The square-root transformation uses the square root of each value instead of the log, and has a more moderate effect on the distribution shape. Figure 5 below shows the histogram of population data and Figure 6 shows the scatterplot of population by land area, both after square-root transformation is applied .</p>
 
     <figure><img alt="Square root transformed population values" src="../images/sections/04/square-root.png" /></figure>
-
-    <p>Looking at the transformed graphs, Figure 2 definitely seems to be a much better fit to the normal distribution whereas Figure 3 seems to still carry the right skew. Clearly log transformation seems to be a better method in this example compared with square-root transformation.</p>
-
-    <p>So far we have successfully learned about how log transformation can help in fitting the distribution to a normal pattern. In this process, we have used the log transformed values instead of untransformed ones. Generally speaking, data transformation methods involve application of mathematical function to the raw values and these transformed values are further used for running statistical tests. However, one needs to be careful while reporting or interpreting any insights derived from the transformed data because a transformation changes the unit of the data. When we apply logarithmic function on actual population variable, the unit of measurement becomes the log of the population values. So when results are being shared you should be careful whether these are based on transformed values or raw values.</p>
-
-    <h2>Dealing with back transformation</h2>
-
-    <p>A better approach would be to back transform the final results and report them in their original units. Back transformation involves doing the opposite of the mathematical function being used in the first place. In the population example, once we apply the log transformation, remember that the relative scale of population unit changes. As you can see the mean value of the log transformed values is between 15 and 16 from Figure 2 whereas Figure 1 shows the mean value of untransformed values is in the range of 6 Million. For the natural log transformation, one would back-transform by raising e to the power of the respective transformed value.</p>
+    <figure><img alt="Square root transformed population values" src="../images/sections/04/square-rootscattergraph.png" /></figure>
 
     <h2>How to choose the right transformation method</h2>
-
-    <p>As we develop more understanding about various transformation methods, one would wonder how to go about choosing a particular method amongst many possible ones. The answer to this question is not straight forward and often we need to rely on either by trial and error method or by building knowledge of common techniques. As per the population example, we observed that log transformation tend to work better to deal with skewed data compared to square-root method. Likewise, depending on the problem you are trying to solve, needed output can be achieved by different transformation techniques. A general strategy would be applying some of the common techniques such as log, square-root, reciprocal, cube-root and square transformations and choosing the one with better results after observing the distributions of the transformed values.</p>
-
+<p>As you develop a better understanding of different transformation methods, you might wonder how to pick between them. The answer to this question is not straight forward and we often need to use trial-and-error combined with knowledge of common transformations. A general strategy is to apply some of the common techniques such as log, square-root, reciprocal, cube-root and square transformations and then choose the best one after observing the results.</p>
+    <p>Looking at the transformed graphs above, Figure 3 seems to be a much better fit to the normal distribution whereas Figure 5 seems to still carry the right skew. In this example, if you’re doing a statistical test that has an assumption that the data are normally distributed, the log transformation would be a better method to use than the square-root transformation. </p>
+<p>On the other hand, if your primary purpose in the example above is to visualize the relationship between state population and land area, the square-root transformation does a better job of spreading out the data and making it easier to view than the log transformation.</p>
     <h2>Common transformation methods</h2>
+<table>
+<tbody>
+	<tr>
+		<th>Method</th>
+      		<th>Math Operation</th>
+		<th>Good for:</th>
+		<th>Bad for:</th>
+	</tr>
+	<tr>
+		<td>Log</td>
+      		<td>ln(x)<br>log<sub>10</sub>(x)</td>
+		<td>info here</td>
+		<td>Zero values<br>Negative values</td>
+	</tr>
+	<tr>
+		<td>Square root</td>
+      		<td>ln(x)<br>log<sub>10</sub>(x)</td>
+		<td>Data are right skewed</td>
+		<td>Negative values</td>
+	</tr>
+	<tr>
+		<td>Square</td>
+      		<td>x<sup>2</sup>(x)</td>
+		<td>info here</td>
+		<td>Negative values</td>
+	</tr>
+	<tr>
+		<td>Cube-root</td>
+      		<td>x<sup>2</sup>(x)</td>
+		<td>Data that is right skewed<br>Negative values</td>
+		<td>info here</td>
+	</tr>
+	<tr>
+		<td>Reciprocal</td>
+      		<td>1/x</td>
+		<td>Making small values bigger and big values smaller</td>
+		<td>Zero values<br>Negative values</td>
+	</tr>
+</tbody>
+</table>
 
-    <p>Let us take a closer look at some of these transformation methods,</p>
-      <ul>
-        <li>Reciprocal: The reciprocal method involves computing inverse values of untransformed data and is known to have a drastic effect on distribution shape. When reciprocal method is implemented, small values would become larger and large values would become smaller. Also, the unit of measurement would become a ratio of 1 to the actual units of raw values.</li>
-        <li>Cube-root: Similar to square-root, cube-root method involves applying a mathematical function which raises the power of raw values to the power of 1/3. It also works well with skewed data and specifically good in dealing with right skew problem. One major advantage is that this method can be applied to negative values also which is not possible with square root or log transformation.</li>
-        <li>Square: This transformation method computes the squared values of untransformed data and generally will have a moderate effect on distribution shape. Unlike square-root or cube-root methods which deal with right skew problem, square method is good with left skew problem.</li>
-        <li>Time Series Data Transformations: A time series is a type of data which have a time element associated with it. These series of data is typically arranged in increasing order of the time to capture dependency between successive observations. Some of the common data series which follow time series pattern are daily values of stock data and periodical sales values reported by companies. Like many data distributions, even time series data is not devoid of noise and needs some data manipulation before using it for any meaningful analyses. Smoothing techniques are the most common ones to deal with time series data.</li>
-        <li>Smoothing: Smoothing techniques are mostly employed to deal with irregularities or random fluctuations in time series data. Often using untransformed data would not help us derive any meaningful results, and thus subjected to transformations. The most common type of smoothing technique is moving average smoothing which is the simple average of observations over a defined number of time periods. More advanced smoothing techniques which are widely used are Splines and LOESS (locally weighted regression). Generally, the choice of a particular smoothing technique depends more on the type of noise which exists in any time series data.</li>
-    </ul>
+<h2>Caveats about transformation</h2>
+    <p>Since data transformation methods involve the application of a mathematical function to your data, you need to be careful when reporting or interpreting any insights derived from the transformed data because a transformation changes the unit of the data. For example, when we apply a logarithmic function to a population variable, the unit of measurement becomes the log of the population. When you’re sharing results, your audience may assume that the calculated numbers or visualizations they’re seeing are based on raw data, so if the values have been transformed, you should clearly communicate what transformation was used, as well as what units the data are being displayed in.</p>
+    <p>If you’re using transformed data to calculate statistical values like means, a better approach would be to back transform the final results and report them in their original units. Back transformation involves doing the opposite of the mathematical function used in the first place. In the population example, you would back-transform by raising e to the power of the respective transformed value.</p>
+
   </section>
 </section>
