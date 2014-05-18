@@ -298,6 +298,73 @@ section[data-type="chapter"] header p {
   font-size: 1.1em;
   padding: 12px; }
 
+section[data-type="contributors"] * {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 100%; }
+section[data-type="contributors"] section {
+  float: left; }
+section[data-type="contributors"] .header {
+  display: table;
+  width: 100%;
+  background: white;
+  border-style: solid;
+  border-bottom: none;
+  border-width: 2px;
+  border-color: #d2d3d5; }
+  section[data-type="contributors"] .header p {
+    color: #969699; }
+  section[data-type="contributors"] .header h3 {
+    padding-top: 1%;
+    padding-bottom: 1%; }
+    section[data-type="contributors"] .header h3 a {
+      color: black; }
+section[data-type="contributors"] .contributor {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: 300px;
+  height: 400px;
+  background: #f4f4f4;
+  display: table;
+  float: left; }
+section[data-type="contributors"] img.profile {
+  height: 88px;
+  width: 88px;
+  float: left;
+  padding-right: 3%; }
+section[data-type="contributors"] .description {
+  float: left;
+  border-style: solid;
+  border-top: none;
+  border-width: 2px;
+  border-color: #d2d3d5; }
+  section[data-type="contributors"] .description p {
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  section[data-type="contributors"] .description .links {
+    background: #f4f4f4; }
+    section[data-type="contributors"] .description .links img.twitter {
+      width: 25px;
+      float: right;
+      margin: 2%;
+      margin-left: 1%; }
+section[data-type="contributors"] .role {
+  float: left;
+  width: 100%; }
+  section[data-type="contributors"] .role p {
+    padding: 5px;
+    padding-left: 2%;
+    color: white;
+    font-weight: bold; }
+  section[data-type="contributors"] .role .technicalEditor {
+    background: #41a1ba; }
+  section[data-type="contributors"] .role .author {
+    background: #3b4873; }
+
 .icon {
   width: 240px;
   height: 240px;

@@ -301,6 +301,97 @@ section[data-type="chapter"] header p
   font-size: 1.1em
   padding: 12px
 
+// section[data-type="contributors"] {
+//   // background: black
+//     img {
+//       width: 25%;
+//     }
+// }
+
+section[data-type="contributors"]
+  *
+    -webkit-margin-before: 0
+    -webkit-margin-after: 0
+    margin-top: 0
+    margin-bottom: 0
+    line-height: 100%
+  section
+    float: left
+
+  .header
+    display: table
+    width: 100%
+    background: white
+    border-style: solid
+    border-bottom: none
+    border-width: 2px
+    border-color: #D2D3D5
+    p 
+      color: #969699
+    h3
+      padding-top: 1%
+      padding-bottom: 1%
+      a
+        color: #000
+
+  .contributor
+    display: inline-block
+    margin-bottom: 20px
+    margin-right: 20px
+    // border-style: solid
+    // border-width: 2px
+    // border-color: #D2D3D5
+    width: 300px
+    height: 400px
+    background: #f4f4f4
+    display: table //Cant find another way to have text take up remaining height
+    float: left
+
+  *
+    // line-height: 100% //Remove this for text to take up remaining height
+
+  img.profile
+    height: 88px
+    width: 88px
+    float: left
+    padding-right: 3%
+  
+  .description
+    float: left
+    border-style: solid
+    border-top: none
+    border-width: 2px
+    border-color: #D2D3D5
+    // background: #F4F4F4
+    p 
+      // padding: 5px
+      padding-left: 15px
+      padding-top: 15px
+      padding-bottom: 15px
+    .links
+      background: #f4f4f4
+      a.twitter
+        // display: none
+      img.twitter
+        width: 25px
+        float: right
+        margin: 2%
+        margin-left: 1%
+
+  .role
+    float: left
+    width: 100%
+    p
+      padding: 5px
+      padding-left: 2%
+      color: #FFF 
+      font-weight: bold
+
+    .technicalEditor
+      background: #41A1BA
+    .author
+      background: #3B4873
+
 .icon
   width: 240px
   height: 240px
