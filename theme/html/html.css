@@ -1,4 +1,9 @@
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+* {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -298,72 +303,103 @@ section[data-type="chapter"] header p {
   font-size: 1.1em;
   padding: 12px; }
 
-section[data-type="contributors"] * {
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 100%; }
-section[data-type="contributors"] section {
-  float: left; }
-section[data-type="contributors"] .header {
-  display: table;
-  width: 100%;
-  background: white;
-  border-style: solid;
-  border-bottom: none;
-  border-width: 2px;
-  border-color: #d2d3d5; }
-  section[data-type="contributors"] .header p {
-    color: #969699; }
-  section[data-type="contributors"] .header h3 {
-    padding-top: 1%;
-    padding-bottom: 1%; }
-    section[data-type="contributors"] .header h3 a {
-      color: black; }
-section[data-type="contributors"] .contributor {
-  display: inline-block;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  width: 300px;
-  height: 400px;
-  background: #f4f4f4;
-  display: table;
-  float: left; }
-section[data-type="contributors"] img.profile {
-  height: 88px;
-  width: 88px;
-  float: left;
-  padding-right: 3%; }
-section[data-type="contributors"] .description {
-  float: left;
-  border-style: solid;
-  border-top: none;
-  border-width: 2px;
-  border-color: #d2d3d5; }
-  section[data-type="contributors"] .description p {
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px; }
-  section[data-type="contributors"] .description .links {
+section[data-type="acknowledgments"] {
+  padding: 0 30px;
+  max-width: 100%; }
+  section[data-type="acknowledgments"] section[data-type="sect1"] {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    section[data-type="acknowledgments"] section[data-type="sect1"]:after {
+      content: "";
+      display: table;
+      clear: both; }
+  section[data-type="acknowledgments"] * {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 100%; }
+  section[data-type="acknowledgments"] h1 {
+    margin-top: 3em;
+    margin-bottom: 1em; }
+  section[data-type="acknowledgments"] section {
+    float: left; }
+  section[data-type="acknowledgments"] .header {
+    display: table;
+    width: 100%;
+    background: white;
+    border-style: solid;
+    border-bottom: none;
+    border-width: 2px;
+    border-color: #d2d3d5; }
+    section[data-type="acknowledgments"] .header p {
+      color: #969699;
+      font-size: 0.8em;
+      line-height: 1.1em;
+      margin-right: 1em; }
+    section[data-type="acknowledgments"] .header h3 {
+      padding-top: 0.6em;
+      padding-bottom: 0.3em;
+      font-size: 1em;
+      font-family: "source_sans_prosemibold", sans-serif; }
+      section[data-type="acknowledgments"] .header h3 a {
+        color: black; }
+  section[data-type="acknowledgments"] .contributor {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    display: inline-block;
+    margin-bottom: 28px;
+    position: relative;
+    height: 400px;
     background: #f4f4f4; }
-    section[data-type="contributors"] .description .links img.twitter {
-      width: 25px;
-      float: right;
-      margin: 2%;
-      margin-left: 1%; }
-section[data-type="contributors"] .role {
-  float: left;
-  width: 100%; }
-  section[data-type="contributors"] .role p {
-    padding: 5px;
-    padding-left: 2%;
-    color: white;
-    font-weight: bold; }
-  section[data-type="contributors"] .role .technicalEditor {
-    background: #41a1ba; }
-  section[data-type="contributors"] .role .author {
-    background: #3b4873; }
+    section[data-type="acknowledgments"] .contributor:last-child {
+      margin-right: 0; }
+  section[data-type="acknowledgments"] img.profile {
+    height: 88px;
+    width: 88px;
+    float: left;
+    margin-right: 0.7em; }
+  section[data-type="acknowledgments"] .description {
+    float: left; }
+    section[data-type="acknowledgments"] .description p {
+      padding: 16px;
+      line-height: 1.2em;
+      font-size: 0.9em; }
+    section[data-type="acknowledgments"] .description .links {
+      background: #f4f4f4;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%; }
+      section[data-type="acknowledgments"] .description .links a {
+        margin: 0 10px 10px 0;
+        width: 28px;
+        height: 29px;
+        display: block;
+        float: right;
+        text-indent: -9999px;
+        background: url("../../images/contributors/icon-sprite.png"); }
+        section[data-type="acknowledgments"] .description .links a:hover {
+          background-position-x: -28px; }
+      section[data-type="acknowledgments"] .description .links .twitter {
+        background-position-x: -56px; }
+        section[data-type="acknowledgments"] .description .links .twitter:hover {
+          background-position-x: -84px; }
+  section[data-type="acknowledgments"] .role {
+    float: left;
+    width: 100%; }
+    section[data-type="acknowledgments"] .role p {
+      padding: 7px 36px 5px 16px;
+      color: white;
+      background: #6baf44;
+      text-transform: capitalize; }
+    section[data-type="acknowledgments"] .role .editor {
+      background: #41a2ba; }
+    section[data-type="acknowledgments"] .role .writer {
+      background: #3e5084; }
 
 .icon {
   width: 240px;
@@ -1014,6 +1050,11 @@ div.navbar p a {
 @media screen and (min-width: 480px) and (max-width: 1024px) {
   section[data-type="chapter"] {
     padding: 30px; } }
+@media screen and (min-width: 960px) {
+  section[data-type="acknowledgments"] .contributor:nth-child(3n) {
+    margin-right: 0; }
+  section[data-type="acknowledgments"] .contributor:nth-child(3n+1) {
+    clear: left; } }
 @media screen and (max-width: 960px) {
   .navigation {
     position: relative;
@@ -1026,7 +1067,7 @@ div.navbar p a {
     .navigation ul {
       padding: 0; }
       .navigation ul li {
-        bottom: 5px;
+        bottom: 5p 5;
         position: relative; }
         .navigation ul li:nth-child(1) {
           float: right;
@@ -1034,6 +1075,18 @@ div.navbar p a {
         .navigation ul li:nth-child(2) {
           float: left;
           left: 20px; }
+
+  section[data-type="acknowledgments"] .contributor {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    section[data-type="acknowledgments"] .contributor:last-child {
+      margin-right: 0; }
+    section[data-type="acknowledgments"] .contributor:nth-child(2n) {
+      margin-right: 0; }
+    section[data-type="acknowledgments"] .contributor:nth-child(2n+1) {
+      clear: left; }
 
   div[data-type="part"] + .navigation {
     position: absolute;
@@ -1077,4 +1130,7 @@ div.navbar p a {
     text-indent: 0; }
 
   .btn.open {
-    position: absolute; } }
+    position: absolute; }
+
+  section[data-type="acknowledgments"] .contributor {
+    width: 100%; } }

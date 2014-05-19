@@ -1,4 +1,5 @@
 @import 'bourbon/bourbon'
+@import 'neat/neat'
 
 * 
   -moz-box-sizing: border-box 
@@ -301,20 +302,24 @@ section[data-type="chapter"] header p
   font-size: 1.1em
   padding: 12px
 
-// section[data-type="contributors"] {
-//   // background: black
-//     img {
-//       width: 25%;
-//     }
-// }
-
 section[data-type="acknowledgments"]
+  padding: 0 30px
+  max-width: 100%
+
+  section[data-type="sect1"]
+    @include outer-container
+
   *
     -webkit-margin-before: 0
     -webkit-margin-after: 0
     margin-top: 0
     margin-bottom: 0
     line-height: 100%
+
+  h1
+    margin-top: 3em
+    margin-bottom: 1em
+
   section
     float: left
 
@@ -328,69 +333,70 @@ section[data-type="acknowledgments"]
     border-color: #D2D3D5
     p 
       color: #969699
+      font-size: .8em
+      line-height: 1.1em
+      margin-right: 1em
     h3
-      padding-top: 1%
-      padding-bottom: 1%
+      padding-top: .6em
+      padding-bottom: .3em
+      font-size: 1em
+      font-family: 'source_sans_prosemibold', sans-serif
       a
         color: #000
 
   .contributor
+    @include span-columns(4)
     display: inline-block
-    margin-bottom: 20px
-    margin-right: 20px
-    // border-style: solid
-    // border-width: 2px
-    // border-color: #D2D3D5
-    width: 300px
+    margin-bottom: 28px
+    position: relative
     height: 400px
     background: #f4f4f4
-    display: table //Cant find another way to have text take up remaining height
-    float: left
-
-  *
-    // line-height: 100% //Remove this for text to take up remaining height
 
   img.profile
     height: 88px
     width: 88px
     float: left
-    padding-right: 3%
+    margin-right: .7em
   
   .description
     float: left
-    border-style: solid
-    border-top: none
-    border-width: 2px
-    border-color: #D2D3D5
-    // background: #F4F4F4
     p 
-      // padding: 5px
-      padding-left: 15px
-      padding-top: 15px
-      padding-bottom: 15px
+      padding: 16px
+      line-height: 1.2em
+      font-size: .9em
     .links
       background: #f4f4f4
-      a.twitter
-        // display: none
-      img.twitter
-        width: 25px
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 100%
+      a
+        margin: 0 10px 10px 0
+        width: 28px
+        height: 29px
+        display: block
         float: right
-        margin: 2%
-        margin-left: 1%
+        text-indent: -9999px
+        background: url('../../images/contributors/icon-sprite.png')
+        &:hover
+          background-position-x: -28px
+      .twitter
+        background-position-x: -56px
+        &:hover
+          background-position-x: -84px
 
   .role
     float: left
     width: 100%
     p
-      padding: 5px
-      padding-left: 2%
+      padding: 7px 36px 5px 16px
       color: #FFF 
-      font-weight: bold
-
-    .technicalEditor
-      background: #41A1BA
-    .author
-      background: #3B4873
+      background: $green
+      text-transform: capitalize
+    .editor
+      background: $blue
+    .writer
+      background: $violet
 
 .icon
   width: 240px
@@ -944,6 +950,11 @@ div.navbar p a
   section[data-type="chapter"]
     padding: 30px
 
+@media screen and (min-width: 960px)
+  section[data-type="acknowledgments"]
+    .contributor
+      @include omega(3n)
+
 @media screen and (max-width: 960px)
   .navigation
     position: relative
@@ -956,7 +967,7 @@ div.navbar p a
     ul
       padding: 0
       li
-        bottom: 5px
+        bottom: 5p5
         position: relative
         &:nth-child(1)
           float: right
@@ -964,6 +975,10 @@ div.navbar p a
         &:nth-child(2)
           float: left
           left: 20px
+  section[data-type="acknowledgments"]
+    .contributor
+      @include span-columns(6)
+      @include omega(2n)
 
   div[data-type="part"] + .navigation
     position: absolute
@@ -1012,3 +1027,7 @@ div.navbar p a
 
   .btn.open
     position: absolute
+
+  section[data-type="acknowledgments"]
+    .contributor
+      @include fill-parent
