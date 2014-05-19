@@ -381,13 +381,12 @@ section[data-type="acknowledgments"] {
         display: block;
         float: right;
         text-indent: -9999px;
-        background: url("../../images/contributors/icon-sprite.png"); }
+        opacity: 0.4;
+        background: url("../../images/contributors/website.png"); }
         section[data-type="acknowledgments"] .description .links a:hover {
-          background-position-x: -28px; }
+          opacity: 1; }
       section[data-type="acknowledgments"] .description .links .twitter {
-        background-position-x: -56px; }
-        section[data-type="acknowledgments"] .description .links .twitter:hover {
-          background-position-x: -84px; }
+        background: url("../../images/contributors/twitter.png"); }
   section[data-type="acknowledgments"] .role {
     float: left;
     width: 100%; }
