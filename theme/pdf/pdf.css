@@ -46,6 +46,7 @@ span[data-type="footnote"] {
 	margin-bottom: 3pt;
 	text-align: left;
 	text-indent: 0;
+	display: none;
 }
 
 ::footnote-call,
