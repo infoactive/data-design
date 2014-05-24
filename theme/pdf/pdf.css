@@ -461,11 +461,11 @@ section[data-type="appendix"] > h1:before {
 }
 
 section[data-type="chapter"] > h1:before {
-  /*content: "Chapter " counter(ChapterNumber);*/
+  content: "Chapter " counter(ChapterNumber);
 }
 
 section[data-type="appendix"] > h1:before {
-  /*content: "Appendix " counter(AppendixNumber, upper-alpha);*/
+  content: "Appendix " counter(AppendixNumber, upper-alpha);
 }
 
 /* section headings */
@@ -616,7 +616,7 @@ div[data-type="part"] > h1:before {
 
 @page chapter:left {
   @bottom-left {
-    content: counter(page);
+    /*content: counter(page);*/
   }
   @bottom-right {
     content: "Chapter "counter(ChapterNumber)", "string(ChapterTitle);
