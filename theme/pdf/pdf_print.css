@@ -1,7 +1,0 @@
-@import url('pdf.css');
-
-@page {
-  bleed: 6pt;
-  marks: crop;
-  -ah-printer-marks-line-color: cmyk(0%, 0%, 0%, 100%);
-}
