@@ -8,14 +8,13 @@
 </header>
 
 <section data-type="sect1">
-<p>One aspect of data that is difficult to both learn and teach is how to get your data in shape so that it&rsquo;s useful. &nbsp;There are a few common preparation tasks that you might encounter when working with data, especially if you&rsquo;re handling data someone else collected. &nbsp;While we can use computers to perform many of the actions required for data preparation, there is a certain amount of manual involvement in figuring out exactly which tasks need to be done. For this reason, many people admittedly hate this part of working with data, but someone has to clean this stuff up!&nbsp;</p>
+<p>One aspect of data that is difficult to both learn and teach is how to get your data in shape so that it&rsquo;s useful. &nbsp;There are a few common preparation tasks that you might encounter when working with data, especially if you&rsquo;re handling data someone else collected. &nbsp;While we can use computers to perform many of the actions required for <a class="glossterm" data-type="xref" href="#preparation-data">data preparation</a>, there is a certain amount of manual involvement in figuring out exactly which tasks need to be done. For this reason, many people admittedly hate this part of working with data, but someone has to clean this stuff up!&nbsp;</p>
 
 <p>Whether you&rsquo;re a highly-paid data analyst with billions of records or a 1-person business with a 90-person contact list, you&rsquo;ll be faced with messy data at some point. &nbsp;Unfortunately, data preparation isn&rsquo;t a straightforward task and there&rsquo;s no one right way to go about doing it. &nbsp;Each data set is unique and some techniques may be used just once in a lifetime, as you&rsquo;ll see in the malls example below.&nbsp;</p>
 
 <h2>&nbsp;</h2>
 
 <h4>Separating Data</h4>
-
 
 <p>The first part of data preparation is separating data into the fields that will be most useful for you. &nbsp;</p>
 
@@ -81,75 +80,73 @@
 
 <p>A straightforward example that many people encounter is separating first names from last names. &nbsp;You may receive a data set where full names are contained in a single field and you need the first and last names to be separate, or there may already be separate fields for first and last names, but some of the entries have the full name in one of the fields.</p>
 
-<table><tbody><tr>
-<td>
-All in one field:
 <table>
 	<tbody>
 		<tr>
-			<th>Name</th>
-		</tr>
-		<tr>
-			<td>Keith Pallard</td>
-		</tr>
-		<tr>
-			<td>Fumi Takano</td>
-		</tr>
-		<tr>
-			<td>Rhonda Johnson</td>
-		</tr>
-		<tr>
-			<td>Warren Andersen</td>
-		</tr>
-		<tr>
-			<td>Juan Tyler</td>
-		</tr>
-		<tr>
-			<td>Cicely Pope</td>
+			<td>All in one field:
+			<table>
+				<tbody>
+					<tr>
+						<th>Name</th>
+					</tr>
+					<tr>
+						<td>Keith Pallard</td>
+					</tr>
+					<tr>
+						<td>Fumi Takano</td>
+					</tr>
+					<tr>
+						<td>Rhonda Johnson</td>
+					</tr>
+					<tr>
+						<td>Warren Andersen</td>
+					</tr>
+					<tr>
+						<td>Juan Tyler</td>
+					</tr>
+					<tr>
+						<td>Cicely Pope</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td>Have two fields, but not all info is in the correct place:
+			<table>
+				<tbody>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>Keith Pallard</td>
+					</tr>
+					<tr>
+						<td>Fumi Takano</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Rhonda</td>
+						<td>Johnson</td>
+					</tr>
+					<tr>
+						<td>Warren Andersen</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Juan</td>
+						<td>Tyler</td>
+					</tr>
+					<tr>
+						<td>Cicely</td>
+						<td>Pope</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
 		</tr>
 	</tbody>
 </table>
-</td>
-
-<td>
-Have two fields, but not all info is in the correct place:
-<table>
-	<tbody>
-		<tr>
-			<th>First Name</th>
-			<th>Last Name</th>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-			<td>Keith Pallard</td>
-		</tr>
-		<tr>
-			<td>Fumi Takano</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td>Rhonda</td>
-			<td>Johnson</td>
-		</tr>
-		<tr>
-			<td>Warren Andersen</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td>Juan</td>
-			<td>Tyler</td>
-		</tr>
-		<tr>
-			<td>Cicely</td>
-			<td>Pope</td>
-		</tr>
-	</tbody>
-</table>
-</td>
-
-</tr></tbody></table>
-
-
 
 <p>When data sets come to us this way, the challenge is seemingly fairly easy to resolve. &nbsp;There are common ways of pulling apart the first names and last names for Keith, Fumi, and Warren. &nbsp; The easiest way is to look for the space, break the name apart at the space, and voila!</p>
 
@@ -304,7 +301,7 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 
 <p>Another important data preparation task is making sure that all the data in a single field are given in the same units. &nbsp;Ideally, you would have specified the unit type on the input form, but you may be working with someone else&rsquo;s data set or the data may have been collected directly from other sources where the information was gathered directly from machines that measure in particular units. &nbsp;For example, you might have details from medical records from multiple countries and the patients&rsquo; weights could be in pounds for some records but in kilograms for others. &nbsp;It is important to convert all the numbers to either pounds or kilograms so that they are all on the same scale, otherwise the records cannot be directly compared to each other and any visualization you do of the original data would look quite strange indeed!</p>
 
-    <figure><img src="../images/sections/04/kilos-vs-pounds.png" alt="Kilos and pounds in the same chart" /></figure>
+<figure><img alt="Kilos and pounds in the same chart" src="../images/sections/04/kilos-vs-pounds.png" /></figure>
 
 <p>You should do a quick scan of the variables in your data set to identify any fields that could potentially have different units represented in them so you can figure out if these conversions are necessary. &nbsp;If they are, you might need to reference an additional field to identify what the original units are that you should be converting from so you know what records need to be changed. &nbsp;If there isn&rsquo;t a specific field that lists the units themselves, other fields like geographic location can be helpful. &nbsp;If you cannot find a field that lets you know what the units are but you suspect that a conversion is necessary, you should contact the original provider of the data to obtain that information. &nbsp;It may turn out that you actually don&rsquo;t need to convert and your data is just strange, but it&rsquo;s better to check and make sure than to ignore a potential conversion that needs to happen. &nbsp;</p>
 
@@ -314,15 +311,15 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 
 <p>One of the most work intensive of all data cleaning tasks is handling inconsistent information. &nbsp;For example, we see multiple languages popping up in a single data set more often now that the internet allows us to easily collect data from users all around the world. &nbsp;This can sometimes create problems when you&rsquo;re trying to group things up for visualization purposes, depending on how your data entry form is designed and what data from the set you&rsquo;re using. &nbsp;Perhaps you do a survey of college students and one of the text fields asks for their major. &nbsp;One student might enter &ldquo;Math&rdquo; while another enters &ldquo;Mathematics&rdquo; while still another types &ldquo;Applied Mathematics.&rdquo; &nbsp;You know that all these are considered the same major on your campus, but a computer or visualization software would not group these records together. &nbsp;You would need to create a single controlled vocabulary term (e.g. change them all to say &ldquo;Math&rdquo; or &ldquo;Mathematics&rdquo;) or create a separate coded field (see Chapter XXX, pg. YYY) if you wanted to have them treated as part of the same category.</p>
 
-    <figure><img src="../images/sections/04/controlled-vocabulary.png" alt="Controlled vocabulary example" /></figure>
+<figure><img alt="Controlled vocabulary example" src="../images/sections/04/controlled-vocabulary.png" /></figure>
 
 <p>Although the computer can aid in changing values, problems with data inconsistency often have to be handled semi-manually. If you are looking through text fields, much like when you do data coding, find and replace is your best friend. As long as you know what the main variants are of the data that you want to control, you can quickly change them all to be the same value. &nbsp;</p>
 
-    <figure><img src="../images/sections/04/find-and-replace.png" alt="Find and replace" /></figure>
+<figure><img alt="Find and replace" src="../images/sections/04/find-and-replace.png" /></figure>
 
 <h4>Missing Values</h4>
 
-<p>One of the most frustrating problems is when data fields are simply blank or are incomplete. If data have not been collected, you may be able to return to the source to fill in what is missing, but you may also no longer have access to the source. &nbsp;It may also be possible that you do not know who the source was, for example, in the case of an anonymous survey. &nbsp;If you are not able to obtain the data, it is important to handle the missing values correctly. &nbsp;You should set pre-defined values that you can enter in where the missing values would be so when someone looks at your data set, they know that the data for that field is actually missing and you didn&rsquo;t just forget to type it in. &nbsp;</p>
+<p>One of the most frustrating problems is when data fields are simply blank or are incomplete. If data have not been collected, you may be able to return to the source to fill in what is missing, but you may also no longer have access to the source. &nbsp;It may also be possible that you do not know who the source was, for example, in the case of an anonymous survey. &nbsp;If you are not able to obtain the data, it is important to handle the <a class="glossterm" data-type="xref" href="#data-missing">missing values</a> correctly. &nbsp;You should set pre-defined values that you can enter in where the missing values would be so when someone looks at your data set, they know that the data for that field is actually missing and you didn&rsquo;t just forget to type it in. &nbsp;</p>
 
 <p>These values should fall well outside the range of your reasonable data so that they clearly stand for &ldquo;missing data and not possibly anything else&rdquo;. For data sets that do not deal with negative numbers, &ldquo;-9&rdquo; is often used as this default value, at least in the numeric fields. &nbsp;&ldquo;999&rdquo; is another popular choice for data sets that do not use large numbers, and a single period (.) is used by some statistical software programs that may be used with data sets with both negative and large numbers. &nbsp;For text fields, a single dash (-) is commonly used as the indicator for a missing value. &nbsp;</p>
 
@@ -330,7 +327,7 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 
 <p>It is important to note that for purposes of basic descriptive visualization, missing values are described by including a non-responder category or by noting a change in the sample size. &nbsp;However, in inferential statistics, missing values may be dealt with in a variety of other ways, from exclusion to imputation to full analysis methods like use of EM algorithms. &nbsp;Check out pg. YYY for more resources on missing values in inferential statistics. &nbsp;</p>
 
-    <figure><img src="../images/sections/04/do-you-like-pies.png" alt="Pie chart comparisons" /></figure>
+<figure><img alt="Pie chart comparisons" src="../images/sections/04/do-you-like-pies.png" /></figure>
 
 <h4>Minimizing the burden of data preparation tasks</h4>
 
