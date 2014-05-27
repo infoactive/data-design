@@ -1,63 +1,64 @@
-<section data-type="chapter" class="blue">
-  <header>
-    <div class="icon">
-      <img src="../images/sections/03/translate.png" />
-    </div>
-    <p>Chapter 6</p>
-    <h1>Codebooks</h1>
-  </header>
-  <section data-type="sect1">
-  <p>So what is a codebook and why do you care? A codebook is exactly that - a book of codes. It serves as a crosswalk between a set of codes and their actual meanings. If you have a codebook, you can use codes in your dataset instead of having to store the complete piece of data itself. For example, you could use the number 9 to represent every time someone responded "I don't know". Why would you want to do this?</p>
+<section class="blue" data-type="chapter">
+<header>
+<div class="icon"><img src="../images/sections/03/translate.png" /></div>
 
-  <p>There are a few reasons why you should care about how codebooks work.</p>
+<p>Chapter 6</p>
 
-  <h2>1. You might want to to code your data.</h2>
+<h1>Codebooks</h1>
+</header>
 
-  <p>If you happen to gather your data on a paper survey, it will take quite a bit of time to enter, no matter what the data is. Now imagine you have to type "don't know" or "no response" over and over. That's a lot of keystrokes and a lot of potential misspellings/data entry errors. However, if you have a codebook that defines 9="don't know" your data entry burden is decreased dramatically. This will also give your dataset a smaller filesize. If you're only handling a few hundred records, this might not make that big of a difference in processing time, but it can beceom noticeable with the more records you create. </p>
+<section data-type="sect1">
+<p>So what is a <a href="#codebook" class="glossterm" data-type="xref">codebook</a> and why do you care? A codebook is exactly that - a book of codes. It serves as a crosswalk between a set of codes and their actual meanings. If you have a codebook, you can use codes in your dataset instead of having to store the complete piece of data itself. For example, you could use the number 9 to represent every time someone responded &quot;I don't know&quot;. Why would you want to do this?</p>
 
-  <h2>2. You might have to use someone else's codebook.</h2>
+<p>There are a few reasons why you should care about how codebooks work.</p>
 
-  <p>If you're using someone else's data set, there is a good chance it may be at least partially coded. If so, you'll need to know how to read their and how to decode the data in their file with it. Otherwise you run the risk of incorrectly interpreting the graphs and/or analysis that you generate from their information. </p>
+<h2>1. You might want to to code your data.</h2>
 
-  <h2>3. You intend to use the data for statistical analysis.</h2>
-  <p>Calculations can't be performed directly on words, so if the data set is going to be used for inferential statistical analysis, it needs to be coded properly. Depending on the complexity of the analysis, you may need a statistician to do the full coding for you. However, it is always appreciated if at least your dichotomous variables already have correct corresponding 0/1 variables in the data set (see below) when you turn it over for analysis.  </p>
+<p>If you happen to gather your data on a paper survey, it will take quite a bit of time to enter, no matter what the data is. Now imagine you have to type &quot;don't know&quot; or &quot;no response&quot; over and over. That's a lot of keystrokes and a lot of potential misspellings/data entry errors. However, if you have a codebook that defines 9=&quot;don't know&quot; your data entry burden is decreased dramatically. This will also give your dataset a smaller filesize. If you're only handling a few hundred records, this might not make that big of a difference in processing time, but it can beceom noticeable with the more records you create.</p>
 
-  <h1>What you should code</h1>
+<h2>2. You might have to use someone else's codebook.</h2>
 
-  <h2>Yes/No, other dichotomous responses</h2>
+<p>If you're using someone else's data set, there is a good chance it may be at least partially coded. If so, you'll need to know how to read their and how to decode the data in their file with it. Otherwise you run the risk of incorrectly interpreting the graphs and/or analysis that you generate from their information.</p>
 
-  <p>Yes/No questions and other dichotomous responses are typically coded as a series of ones (1) and zeroes (0). The common convention is that No (or any absence of a trait, e.g. non-Hispanic) is represented by 0 and Yes is represented by 1. In other dichotomous questions where neither response represents the absence of a trait, either answer may be represented by either number. For example, if you have data on a large group of household pets, all of whom are cats and dogs, you might have a variable to indicate "Cat or dog?" In this case, you could code cats as 0 and dogs as 1; you could also code dogs as 0 and cats as 1. Just be very clear in your codebook about which number goes with which group, as this will change the way you or a statistician analyze the data later. </p>
-   
-  <h2>Radio Responses</h2>
+<h2>3. You intend to use the data for statistical analysis.</h2>
 
-  <p>Let's take another look at household pets data, except now let's say the group also includes rabbits and reptiles. Each pet would only be one type of animal; that is, you wouldn't have a single pet that was both a dog and a lizard! Since it is only possible to give one answer, we can code this variable by assigning a different number to each group. {graphic: 1=cat, 2=dog, 3=rabbit, 4=reptile, 9=no response/unknown} Alternatively, we can create a different variable for each possible answer (cat, dog, rabbit, reptile) and then use the Yes/No coding indicated above, assigning a 1 if the pet is that type of animal and a 0 if the pet is not that type of animal. {0 and 1 graphic} This type of coding is necessary for certain kinds of statistical analyses and is important in checkbox responses.</p>
- 
-  <h2>Checkbox Responses</h2>
+<p>Calculations can't be performed directly on words, so if the data set is going to be used for inferential statistical analysis, it needs to be coded properly. Depending on the complexity of the analysis, you may need a statistician to do the full coding for you. However, it is always appreciated if at least your dichotomous variables already have correct corresponding 0/1 variables in the data set (see below) when you turn it over for analysis.</p>
 
-  <p>Since each responder could select all or none of the options in a checkbox response question, the first type of radio response coding above won't work. We need to know about the selection status of each individual option given. </p>
+<h1>What you should code</h1>
 
-  <p>Let's say that the question about pets didn't ask about what type of animal a particular pet was but rather asked what types of pets a person had in their household. In that case, a person might own only cats, both cats and dogs, or might even have a mini-zoo of cats, dogs, rabbits, and reptiles. If we assigned the group numbers {1=cat, 2=dog, 3=rabbit, 4=reptile, 9=no response/unknown}, we would need to store multiple numbers in a single variable in order to have all the information available. This can be messy if we just want to find out, for instance, which people have rabbits, since we'll have to search to see who has a "3" anywhere within their "ownedpets" field. It makes more sense to follow the second choice from the Radio Responses coding and create a separate variable for each answer option to the question. If a person selects that option, it is coded as 1 and if a person does not select that option, it is coded as 0. That way, it serves sort of like a set of switches, where you can easily see which were selected and which were not. </p>
+<h2>Yes/No, other dichotomous responses</h2>
 
-  <h1>What you shouldn't code</h1>
+<p>Yes/No questions and other dichotomous responses are typically coded as a series of ones (1) and zeroes (0). The common convention is that No (or any absence of a trait, e.g. non-Hispanic) is represented by 0 and Yes is represented by 1. In other dichotomous questions where neither response represents the absence of a trait, either answer may be represented by either number. For example, if you have data on a large group of household pets, all of whom are cats and dogs, you might have a variable to indicate &quot;Cat or dog?&quot; In this case, you could code cats as 0 and dogs as 1; you could also code dogs as 0 and cats as 1. Just be very clear in your codebook about which number goes with which group, as this will change the way you or a statistician analyze the data later.</p>
 
-  <p>It generally doesn't make sense to code plain text or continuous numeric responses if they are variables where we intend to use the direct values. Since many of the values will be unique or at least are not intended to be clustered (e.g. there may be multiple women named Mary in a dataset but that is likely not of interest to the research question), coding does not provide any particular benefit. </p>
+<h2>Radio Responses</h2>
 
-  <p>There is one major exception to not coding plain text or numeric responses - when you're using the code itself as a separate variable for purposes of grouping the text or number variable into categories. You might encounter this if age or income is captured on a continuous scale. Say you have everyone's age recorded in your dataset (e.g. 46, 27, 33, etc.) but for your particular research question, you decide it is more helpful to group them into categories: 18-24, 25-34, 35-44, and so on. You could use a coded grouping variable to accomplish this by assigning every person with an age between 18-24 a 1, between 25-34 a 2, and so on. As another example, perhaps you have the BMI information for all the patients in a study you're doing. Although BMI itself is a continuous variable, you could use a coded field to indicate if a patient's BMI was in the low, average, or high range. </p>
+<p>Let's take another look at household pets data, except now let's say the group also includes rabbits and reptiles. Each pet would only be one type of animal; that is, you wouldn't have a single pet that was both a dog and a lizard! Since it is only possible to give <a href="#response-radio" class="glossterm" data-type="xref">one response</a>, we can code this variable by assigning a different number to each group. {graphic: 1=cat, 2=dog, 3=rabbit, 4=reptile, 9=no response/unknown} Alternatively, we can create a different variable for each possible answer (cat, dog, rabbit, reptile) and then use the Yes/No coding indicated above, assigning a 1 if the pet is that type of animal and a 0 if the pet is not that type of animal. {0 and 1 graphic} This type of coding is necessary for certain kinds of statistical analyses and is important in checkbox responses.</p>
 
-  <h1>Some tips for coding data</h1>
-  <p>Decide on your coding scheme and create your codebook *before* coding your actual data</p>
+<h2>Checkbox Responses</h2>
 
-  <p>Don't just go into your data file and start haphazardly assigning codes directly inside the data! Write out your full coding scheme in a separate document (your codebook) prior to doing any coding inside the data file. This will allow you to identify possible problems with your coding setup and also make sure that you have all necessary kjlkjsd;lfgj.</p>
+<p>Since each responder could select all or none of the options in a <a href="#response-checkbox" class="glossterm" data-type="xref">checkbox response</a> question, the first type of radio response coding above won't work. We need to know about the selection status of each individual option given.</p>
 
-  <h2>Don't change the original data!</h2>
+<p>Let's say that the question about pets didn't ask about what type of animal a particular pet was but rather asked what types of pets a person had in their household. In that case, a person might own only cats, both cats and dogs, or might even have a mini-zoo of cats, dogs, rabbits, and reptiles. If we assigned the group numbers {1=cat, 2=dog, 3=rabbit, 4=reptile, 9=no response/unknown}, we would need to store multiple numbers in a single variable in order to have all the information available. This can be messy if we just want to find out, for instance, which people have rabbits, since we'll have to search to see who has a &quot;3&quot; anywhere within their &quot;ownedpets&quot; field. It makes more sense to follow the second choice from the Radio Responses coding and create a separate variable for each answer option to the question. If a person selects that option, it is coded as 1 and if a person does not select that option, it is coded as 0. That way, it serves sort of like a set of switches, where you can easily see which were selected and which were not.</p>
 
-  <p>When you're coding data, it is always possible to make mistakes in the process. You don't want to mess up or lose your original data, so it is a good idea to make a copy of the field that you're coding and make changes to that copy. </p>
+<h1>What you shouldn't code</h1>
 
-  {insert do and don't graphics here}
+<p>It generally doesn't make sense to code plain text or continuous numeric responses if they are variables where we intend to use the direct values. Since many of the values will be unique or at least are not intended to be clustered (e.g. there may be multiple women named Mary in a dataset but that is likely not of interest to the research question), coding does not provide any particular benefit.</p>
 
-<h2>"Find and replace" is your Best Friend</h2>
+<p>There is one major exception to not coding plain text or numeric responses - when you're using the code itself as a separate variable for purposes of grouping the text or number variable into categories. You might encounter this if age or income is captured on a continuous scale. Say you have everyone's age recorded in your dataset (e.g. 46, 27, 33, etc.) but for your particular research question, you decide it is more helpful to group them into categories: 18-24, 25-34, 35-44, and so on. You could use a coded grouping variable to accomplish this by assigning every person with an age between 18-24 a 1, between 25-34 a 2, and so on. As another example, perhaps you have the BMI information for all the patients in a study you're doing. Although BMI itself is a continuous variable, you could use a coded field to indicate if a patient's BMI was in the low, average, or high range.</p>
 
-<p>Almost all spreadsheet and database software programs have a "find and replace" function that will allow you to swap one value for another. This can be an extremely useful tool for coding when used correctly! {Include steps for doing the find and replace here} It is important to remember to limit your replacement to the field that you are coding so you don't change the value across the entire dataset.</p>
-  
-  </section>
+<h1>Some tips for coding data</h1>
+
+<p>Decide on your coding scheme and create your codebook *before* coding your actual data</p>
+
+<p>Don't just go into your data file and start haphazardly assigning codes directly inside the data! Write out your full coding scheme in a separate document (your codebook) prior to doing any coding inside the data file. This will allow you to identify possible problems with your coding setup and also make sure that you have all necessary kjlkjsd;lfgj.</p>
+
+<h2>Don't change the original data!</h2>
+
+<p>When you're coding data, it is always possible to make mistakes in the process. You don't want to mess up or lose your original data, so it is a good idea to make a copy of the field that you're coding and make changes to that copy.</p>
+{insert do and don't graphics here}
+
+<h2>&quot;Find and replace&quot; is your Best Friend</h2>
+
+<p>Almost all spreadsheet and database software programs have a &quot;find and replace&quot; function that will allow you to swap one value for another. This can be an extremely useful tool for coding when used correctly! {Include steps for doing the find and replace here} It is important to remember to limit your replacement to the field that you are coding so you don't change the value across the entire dataset.</p>
+</section>
 </section>
