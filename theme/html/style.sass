@@ -1,6 +1,8 @@
 @import 'bourbon/bourbon'
 @import 'neat/neat'
 
+$retina-suffix: '@2x'
+
 * 
   -moz-box-sizing: border-box 
   -webkit-box-sizing: border-box 
@@ -209,6 +211,7 @@ nav[data-type="toc"]
       display: block
       opacity: .2
       background: url('../../images/shared-icons/open-drawer.png') 90% 50% no-repeat
+      @retina-image('../../images/shared-icons/open-drawer', 14px 10px)
       @include transition-property(transform)
       @include transition-duration(.3s)
     &.open:before
@@ -379,10 +382,12 @@ section[data-type="acknowledgments"]
         text-indent: -9999px
         opacity: .4
         background: url('../../images/contributors/website.png')
+        @retina-image('../../images/contributors/website', 29px 29px)
         &:hover
           opacity: 1
       .twitter
         background: url('../../images/contributors/twitter.png')
+        @retina-image('../../images/contributors/twitter', 29px 29px)
 
   .role
     float: left
@@ -621,8 +626,10 @@ table.sections
 table.question-and-answer
   th:nth-child(1)
     background: url('../../images/shared-icons/search.png') 1.2em no-repeat #444
+    @retina-image('../../images/shared-icons/search', 24px 24px)
   th:nth-child(2)
     background: url('../../images/shared-icons/arrow.png') 1.2em no-repeat $blue
+    @retina-image('../../images/shared-icons/arrow', 24px 24px)
   td
     width: 50%
     padding: 1.5em
@@ -641,14 +648,18 @@ table.question-and-answer
 table.good-and-bad
   th:nth-child(1)
     background: url('../../images/shared-icons/good.png') 1.2em no-repeat $green
+    @retina-image('../../images/shared-icons/good', 24px 24px)
   th:nth-child(2)
     background: url('../../images/shared-icons/bad.png') 1.2em no-repeat darken($gray, 15)
+    @retina-image('../../images/shared-icons/bad', 24px 24px)
 
 table.yes-and-no
   th:nth-child(1)
     background: url('../../images/shared-icons/check.png') 1.2em no-repeat $green
+    @retina-image('../../images/shared-icons/check', 24px 24px)
   th:nth-child(2)
     background: url('../../images/shared-icons/no.png') 1.2em no-repeat darken($gray, 15)
+    @retina-image('../../images/shared-icons/no', 24px 24px)
   td
     width: 50%
   td:nth-child(2)
@@ -657,8 +668,10 @@ table.yes-and-no
 table.sections
   th:nth-child(1)
     background: url('../../images/shared-icons/sections.png') 1.2em no-repeat #444
+    @retina-image('../../images/shared-icons/sections', 24px 24px)
   th:nth-child(2)
     background: url('../../images/shared-icons/add.png') 1.2em no-repeat $blue
+    @retina-image('../../images/shared-icons/add', 24px 24px)
   h2
     font-family: 'source_sans_prosemibold', sans-serif
     color: $blue
@@ -763,6 +776,7 @@ div[data-type="warning"]
 
 div[data-type="warning"]
   background: url("../../images/shared-icons/warning.png") 1.6em 2em no-repeat $light-gray
+  @retina-image('../../images/shared-icons/warning', 50px 50px)
   border-top: 12px solid $red      
   padding-left: 110px
 
@@ -857,6 +871,7 @@ div.navbar
     background: #666
     position: fixed
     width: 320px
+    z-index: 12
   h1
     font-family: 'source_sans_prosemibold'
     text-transform: uppercase
@@ -891,6 +906,7 @@ div.navbar
     left: 30px
     top: 24px
     background: url('../../images/shared-icons/nav.png') no-repeat
+    @retina-image('../../images/shared-icons/nav', 30px 30px)
     z-index: 1
   &.close
     width: 24px
@@ -899,6 +915,7 @@ div.navbar
     float: right
     margin-right: 20px
     background: url('../../images/shared-icons/close.png') no-repeat
+    @retina-image('../../images/shared-icons/close', 24px 24px)
 
 div.navbar p
   float: right
@@ -937,11 +954,13 @@ div.navbar p a
       a
         padding-right: 30px
         background: url('../../images/shared-icons/next.png') right no-repeat 
+        @retina-image('../../images/shared-icons/next', 18px 24px)
     li:nth-child(2)
       left: 30px
       a
         padding-left: 30px
         background: url('../../images/shared-icons/prev.png') left no-repeat 
+        @retina-image('../../images/shared-icons/prev', 18px 24px)
 
 // iPad
 
