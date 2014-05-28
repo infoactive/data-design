@@ -10,7 +10,7 @@
 <section data-type="sect1">
 <p>Now that you have a prepped data set, you&rsquo;re ready to get it clean. &nbsp;What does that mean though? &nbsp;What exactly is clean data and what do we have to do get it that way?</p>
 
-<p>Well, when we clean data, we&rsquo;re going through it and identifying incorrect information &ndash; wrong numbers, misspellings, etc. &ndash; and deciding whether to correct them (if they are correctable) or to remove them altogether. &nbsp;Like data preparation, many data cleaning tasks are a combination of computerized tasks and manual work, since it is important for you to review the potential errors the computer identifies to see if they are, in fact, errors. &nbsp;Some of the items your computer flags as problems may turn out to just be extreme observations so it&rsquo;s critical that you be involved in the process. &nbsp;Don&rsquo;t just automate it all or you risk the possibility of deleting valid data! &nbsp;</p>
+<p>Well, when we clean data, we&rsquo;re going through it and identifying incorrect information &ndash; wrong numbers, misspellings, etc. &ndash; and deciding whether to correct them (if they are correctable) or to remove them altogether. &nbsp;Like data preparation, many <a class="glossterm" data-type="xref" href="#cleaning-data">data cleaning</a> tasks are a combination of computerized tasks and manual work, since it is important for you to review the potential errors the computer identifies to see if they are, in fact, errors. &nbsp;Some of the items your computer flags as problems may turn out to just be extreme observations so it&rsquo;s critical that you be involved in the process. &nbsp;Don&rsquo;t just automate it all or you risk the possibility of deleting valid data! &nbsp;</p>
 
 <h2>So what do we do?</h2>
 
@@ -18,71 +18,75 @@
 
 <h2>Range checks</h2>
 
-<p>Range checks are a very straightforward procedure that we use on numeric fields to see if any values in the data set are above or below the most extreme acceptable values for that variable. &nbsp;Let&rsquo;s use an example of homework scores. &nbsp;Pretend that you&rsquo;re a college professor and your teaching assistants entered the first set of homework scores for the semester. You want to make sure they entered everything correctly, so you go into the data set and sort by the column that contains the scores for the first homework, graded on a scale of 0-100.  You see the first few rows. </p>
+<p><a class="glossterm" data-type="xref" href="#check-range">Range checks</a> are a very straightforward procedure that we use on numeric fields to see if any values in the data set are above or below the most extreme acceptable values for that variable. &nbsp;Let&rsquo;s use an example of homework scores. &nbsp;Pretend that you&rsquo;re a college professor and your teaching assistants entered the first set of homework scores for the semester. You want to make sure they entered everything correctly, so you go into the data set and sort by the column that contains the scores for the first homework, graded on a scale of 0-100. You see the first few rows.</p>
 
-<p>
+<p>&nbsp;</p>
+
 <table>
-  <tbody>
-    <tr>
-      <th>Student ID</th>
-      <th>HW 1 Score</th>
-    </tr>
-    <tr>
-      <td>679372531</td>
-      <td>980</td>
-    </tr>
-    <tr>
-      <td>673540288</td>
-      <td>99</td>
-    </tr>
-    <tr>
-      <td>674082892</td>
-      <td>97</td>
-    </tr>
-    <tr>
-      <td>673923590</td>
-      <td>96</td>
-    </tr>
-  </tbody>
+	<tbody>
+		<tr>
+			<th>Student ID</th>
+			<th>HW 1 Score</th>
+		</tr>
+		<tr>
+			<td>679372531</td>
+			<td>980</td>
+		</tr>
+		<tr>
+			<td>673540288</td>
+			<td>99</td>
+		</tr>
+		<tr>
+			<td>674082892</td>
+			<td>97</td>
+		</tr>
+		<tr>
+			<td>673923590</td>
+			<td>96</td>
+		</tr>
+	</tbody>
 </table>
-</p> 
+
+<p>&nbsp;</p>
 
 <p>There is a score of 980, so one of the TAs probably accidentally typed a zero after a score that should have been 98. &nbsp;You would want to flag the record and ask the TAs what the actual score should have been. &nbsp;</p>
 
 <p>Visual scans of data during range checks can also reveal other potential problems even within the official bounds of the data. &nbsp;</p>
 
-<p>
+<p>&nbsp;</p>
+
 <table>
-  <tbody>
-    <tr>
-      <th>Student ID</th>
-      <th>HW 1 Score</th>
-    </tr>
-    <tr>
-      <td>674472019</td>
-      <td>78</td>
-    </tr>
-    <tr>
-      <td>679029425</td>
-      <td>75</td>
-    </tr>
-    <tr>
-      <td>671822390</td>
-      <td>74</td>
-    </tr>
-    <tr>
-      <td>671278927</td>
-      <td>9</td>
-    </tr>
-  </tbody>
+	<tbody>
+		<tr>
+			<th>Student ID</th>
+			<th>HW 1 Score</th>
+		</tr>
+		<tr>
+			<td>674472019</td>
+			<td>78</td>
+		</tr>
+		<tr>
+			<td>679029425</td>
+			<td>75</td>
+		</tr>
+		<tr>
+			<td>671822390</td>
+			<td>74</td>
+		</tr>
+		<tr>
+			<td>671278927</td>
+			<td>9</td>
+		</tr>
+	</tbody>
 </table>
-</p> 
+
+<p>&nbsp;</p>
 
 <p>Here, one score is much lower than the others and has a strange score value. &nbsp;In this situation, it is possible that the score should have been entered as a 90 instead. &nbsp;This is another record that would make sense to flag and check with the source record. &nbsp;This is a good example of why it is important to be personally involved in the data checking process for variables that carry a lot of weight, like student grades or primary outcome variables for research projects. &nbsp;However, hand-checking all the variables in a data set can be very time-consuming, especially if the data set is large and for items that aren&rsquo;t as critical like name spellings, it may not be as important. &nbsp;It is up to you to decide which variables require involved personal attention. &nbsp;</p>
 
 <div data-type="warning">Range checks will work no matter what your range is. &nbsp;Maybe you&rsquo;re expecting a decimal between 0 and 1, or your variable is normal body temperature in Fahrenheit, so you&rsquo;re expecting mostly values between 97.0 and 99.0, allowing for people that run cold and hot. &nbsp;You can always look and see if there are values stored in that variable group that are too low or high.</div>
 
-<p>You can also use "Filter" commands to check for all values that are outside the acceptable range of a variable.  However, it doesn't catch values that are inside your range but that look "off" based on the rest of your data.  Here, a a basic range filter would detect the "980" score but not the "9" score.  If you use filtering to do your range checks, it is a good idea to also use another method to look at the overall distribution of your data to catch any values that might seem "strange" in comparison to your other values.</p>
+<p>You can also use &quot;Filter&quot; commands to check for all values that are outside the acceptable range of a variable. However, it doesn't catch values that are inside your range but that look &quot;off&quot; based on the rest of your data. Here, a a basic range <a class="glossterm" data-type="xref" href="#filter ">filter</a> would detect the &quot;980&quot; score but not the &quot;9&quot; score. If you use filtering to do your range checks, it is a good idea to also use another method to look at the overall distribution of your data to catch any values that might seem &quot;strange&quot; in comparison to your other values.</p>
 
 <h2>Spell check</h2>
 
@@ -90,7 +94,7 @@
 
 <h2>Pattern matching/Regular expressions</h2>
 
-<p>Another slightly more advanced type of data check involves pattern matching. &nbsp;This is the sort of check that you can use, for example, to make sure all the entries in a field are an email address. &nbsp;This involves something called regular expressions (often shortened to regex), which give you a way of telling the computer, &ldquo;I only want things that look like {this} to be stored in that variable. &nbsp;Tell me if something in there doesn&rsquo;t look like {this}.&rdquo; &nbsp;The way that you indicate what {this} should be varies from program to program and can look a little complicated if you&rsquo;ve never worked with it before, but it&rsquo;s not bad once you get used to it. &nbsp;If you have ever used an asterisk (*) as a wildcard for searching, that&rsquo;s actually part of regex, so you already know a piece of it! &nbsp;There are some regular expressions resources on page YYY if you want to learn the syntax for it.</p>
+<p>Another slightly more advanced type of data check involves <a class="glossterm" data-type="xref" href="#matching-pattern">pattern matching</a>. &nbsp;This is the sort of check that you can use, for example, to make sure all the entries in a field are an email address. &nbsp;This involves something called regular expressions (often shortened to regex), which give you a way of telling the computer, &ldquo;I only want things that look like {this} to be stored in that variable. &nbsp;Tell me if something in there doesn&rsquo;t look like {this}.&rdquo; &nbsp;The way that you indicate what {this} should be varies from program to program and can look a little complicated if you&rsquo;ve never worked with it before, but it&rsquo;s not bad once you get used to it. &nbsp;If you have ever used an asterisk (*) as a wildcard for searching, that&rsquo;s actually part of regex, so you already know a piece of it! &nbsp;There are some regular expressions resources on page YYY if you want to learn the syntax for it.</p>
 
 <p>There are also pattern matching options in Excel and some advanced filter options that sometimes work even better. &nbsp;We have some resources of our own for this off the eBook site at {insert link here, I&rsquo;ll record this so we can add the link for this before the 10th, it&rsquo;s easy to show peeps how do but is just way too long and weird to explain in text.}&nbsp;</p>
 
@@ -104,7 +108,7 @@
 
 <h2>What happens if we don&rsquo;t clean our data?</h2>
 
-<p>Many of these procedures can be time-intensive so you have to decide which to employ and which variables it is important to scrub clean. So what if we just skip the data cleaning process altogether and leave the data dirty? &nbsp;The answer to that isn&rsquo;t easy because it all depends how dirty your data is in the first place. At best, you&rsquo;ll get lucky and your data will be minimally dirty and you won&rsquo;t have any real impact on your end report. At worst, your results will be incorrect due to errors in your data set that you could have potentially corrected if you had gone through data cleaning procedures. </p>
+<p>Many of these procedures can be time-intensive so you have to decide which to employ and which variables it is important to scrub clean. So what if we just skip the data cleaning process altogether and leave the data dirty? &nbsp;The answer to that isn&rsquo;t easy because it all depends how dirty your data is in the first place. At best, you&rsquo;ll get lucky and your data will be minimally dirty and you won&rsquo;t have any real impact on your end report. At worst, your results will be incorrect due to errors in your data set that you could have potentially corrected if you had gone through data cleaning procedures.</p>
 
 <p>If you got your data from another source and their programmers were overly intense about their data checking, your data might already be reasonably clean to start with. If that&rsquo;s the case, you might be able to ignore the cleaning process with little impact on your end product. However, until you at least go through the basic checks involved in data cleaning, there&rsquo;s no real way or you to know how clean or dirty your data is unless you get a report from the people you got the data from. If you collected the data yourself, the only way to know is to do the data checking. That said...</p>
 
