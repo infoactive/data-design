@@ -80,15 +80,22 @@ section {
 
 section[data-type="titlepage"] h1 {
   font-family: "source_sans_prosemibold", sans-serif;
-  border-bottom: 1px solid #333333;
+  color: white;
   margin-top: 100px;
   padding-bottom: 10px;
-  font-size: 2em;
+  font-size: 65px;
   line-height: 120%; }
+section[data-type="titlepage"] h1 img {
+  height: 65px;
+  position: relative;
+  top: 10px; }
 section[data-type="titlepage"] h2 {
   font-size: 1.2em;
   line-height: 120%;
-  margin-top: 20px; }
+  margin: auto;
+  color: white;
+  font-size: 25px;
+  width: 500px; }
 section[data-type="titlepage"] p {
   font-family: "source_sans_proregular", sans-serif;
   font-size: 13pt;
@@ -106,8 +113,12 @@ section[data-type="halftitlepage"] {
   display: none; }
 
 section[data-type="titlepage"] {
-  text-align: left;
-  page-break-after: always; }
+  background-image: url("../../images/title_background.png");
+  background-color: #409fb8;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  height: 900px;
+  text-align: center; }
 
 section[data-type="titlepage"] p:first-of-type {
   margin-top: 82pt; }
