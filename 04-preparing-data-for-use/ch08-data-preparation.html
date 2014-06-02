@@ -188,11 +188,11 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 			<td>Ray Anne Lipscomb</td>
 		</tr>
 		<tr>
-			<td>Aw, c&rsquo;mon!</td>
+			<td>Prefixes/Suffixes</td>
 			<td>Rev Rhonda-Lee St. Andrews-Fernandez, DD, MSW</td>
 		</tr>
 		<tr>
-			<td>Are you kidding me?</td>
+			<td>Other fields incorrectly included</td>
 			<td>Murray Wilkins 993 E Plymouth Blvd</td>
 		</tr>
 		<tr>
@@ -249,6 +249,7 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 <p>There are so many techniques, we could write an entire book on this subject alone. &nbsp;You can break apart the data in Excel, or if you have programming skills, you can use Python, SQL, or any number of other languages. &nbsp;There&rsquo;s too much for us to cover in this chapter, but for some good references, check out Appendix YYY. &nbsp;For right now, we&rsquo;ll cover some basic starting strategies so you&rsquo;ll be better equipped to take on those references when you&rsquo;re ready.&nbsp;</p>
 
 <h3>Strategy Tips</h3>
+<div data-type="warning">You should <i>always</i>make a copy of your data set before doing any data prep or cleaning in case a change you make is incorrect and you need to refer to the original.</div>
 
 <h4>Start by looking for the low-hanging fruit</h4>
 
@@ -313,9 +314,11 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 
 <figure><img alt="Controlled vocabulary example" src="../images/sections/04/controlled-vocabulary.png" /></figure>
 
-<p>Although the computer can aid in changing values, problems with data inconsistency often have to be handled semi-manually. If you are looking through text fields, much like when you do data coding, find and replace is your best friend. As long as you know what the main variants are of the data that you want to control, you can quickly change them all to be the same value. &nbsp;</p>
+<p>Although the computer can aid in changing values, problems with data inconsistency often have to be handled semi-manually. If you are looking through text fields, much like when you do data coding, find and replace is your best friend. As long as you know what the main variants are of the data that you want to control, you can quickly change them all to be the same value.</p>
 
 <figure><img alt="Find and replace" src="../images/sections/04/find-and-replace.png" /></figure>
+
+<div data-type="warning">As noted above, don't make changes to your original data. When modifying individual pieces of data, like when you're doing unit conversions, controlling for inconsistencies, or setting values for missing data, you should make these changes on a copy of your original data set or create a copy of each column that you're modifying and make the changes on the duplicate column.</div>
 
 <h4>Missing Values</h4>
 
@@ -328,6 +331,9 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 <p>It is important to note that for purposes of basic descriptive visualization, missing values are described by including a non-responder category or by noting a change in the sample size. &nbsp;However, in inferential statistics, missing values may be dealt with in a variety of other ways, from exclusion to imputation to full analysis methods like use of EM algorithms. &nbsp;Check out pg. YYY for more resources on missing values in inferential statistics. &nbsp;</p>
 
 <figure><img alt="Pie chart comparisons" src="../images/sections/04/do-you-like-pies.png" /></figure>
+
+
+
 
 <h4>Minimizing the burden of data preparation tasks</h4>
 
