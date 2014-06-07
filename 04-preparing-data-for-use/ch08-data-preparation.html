@@ -240,9 +240,9 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 
 <p>These questions should be answered before you start working with your data. If you just dive in, you can create a larger mess, and these decisions can actually make the process much easier. For example, if you decide that the professional designations don&rsquo;t matter, there might be an easy way to get rid of them and simplify other parts of the project.</p>
 
-<p>Say you&rsquo;re working with a list of 20,000 stores, 19,400 in the US and 600 in Canada. &nbsp;They have different phone number and address formatting than the US stores. You&rsquo;re trying to figure out if you need separate fields for the Canadian data or another data set altogether, so you ask the client what their preference is.</p>
+<p>Say you&rsquo;re working with a list of 20,000 names, 19,400 from the US and 600 from Turkey. The honorific titles in the US come <em>before</em> the name (e.g. <strong>Mr.</strong> John Smith), whereas Turkish honorific titles come <em>after</em> the name (e.g. Jon Smith <strong>Bey</strong>). You&rsquo;re trying to figure out if you need separate fields for the Turkish data or another data set altogether, so you ask the client what their preference is.</p>
 
-<p>Their answer is simple. They aren&rsquo;t conducting business in Canada and they don&rsquo;t care if you delete those records. GREAT! Just 19,400 records left. &nbsp;</p>
+<p>Their answer is simple. They aren&rsquo;t conducting business in Turkey and they don&rsquo;t care if you delete those records. GREAT! Just 19,400 records left.</p>
 
 <h2>Now, how do we break up this data?</h2>
 
@@ -265,18 +265,12 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 
 <p>We put the 2-part last names and other remaining types into their own groups.</p>
 
-<h3>Start by separating the names</h3>
-
-<p>Of the 260 remaining names, maybe 60 are complicated by professional alphabet soup after their names. Whether you&rsquo;re deleting these professional designations or putting the designations in their own field separate from the name, work with them all at once. &nbsp;Now the designations are separate (or deleted) and you have a field with just names. &nbsp;For those that have only a first and last name, add those to the 300 that were set aside at the beginning.</p>
-
-<p>We put the 2-part last names and other remaining types into their own groups.</p>
-
 <h3>Just plain manual effort</h3>
 
 <p>The 40 oddities you identified at the start may come down to just re-typing manually, depending what is odd about them.</p>
 
 <div data-type="note">
-<p>NOTE: Sometimes, when we&rsquo;re handling data in real life, records take care of themselves. For example, maybe a non-name record turns out to be a duplicate of a record that&rsquo;s complete. &nbsp;In that case, we can just delete the incorrect record and move on.</p>
+<p>Sometimes, when we&rsquo;re handling data in real life, records take care of themselves. For example, maybe a non-name record turns out to be a duplicate of a record that&rsquo;s complete. &nbsp;In that case, we can just delete the incorrect record and move on.</p>
 </div>
 
 <h2>Other common fields that need to be split</h2>
