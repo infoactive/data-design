@@ -459,7 +459,7 @@ $color-names: blue yellow green violet red
       background: $color
     table:not(.custom) tr:nth-child(2n + 1), .highlight
       background: $light-color
-    tr.extra-highlight
+    tr.custom.extra-highlight
       background: darken($light-color, 10)
   div[data-type="part"].#{nth($color-names, $i)}
     background: darken($color, 5)
@@ -767,7 +767,8 @@ a[data-type="noteref"]
     outline: none
 
 div[data-type="note"], 
-div[data-type="warning"]
+div[data-type="warning"],
+div[data-type="sidebar"]
   margin: 50px 0 40px
   page-break-inside: avoid
   background: #efefef

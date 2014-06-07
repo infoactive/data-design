@@ -453,7 +453,7 @@ div[data-type="part"] {
   background: #41a2ba; }
 .blue table:not(.custom) tr:nth-child(2n + 1), .blue .highlight {
   background: #f4fafb; }
-.blue tr.extra-highlight {
+.blue tr.custom.extra-highlight {
   background: #cfe8ee; }
 
 div[data-type="part"].blue {
@@ -473,7 +473,7 @@ div[data-type="part"].blue {
   background: #eeb11e; }
 .yellow table:not(.custom) tr:nth-child(2n + 1), .yellow .highlight {
   background: #fef9ef; }
-.yellow tr.extra-highlight {
+.yellow tr.custom.extra-highlight {
   background: #fae9bf; }
 
 div[data-type="part"].yellow {
@@ -493,7 +493,7 @@ div[data-type="part"].yellow {
   background: #6baf44; }
 .green table:not(.custom) tr:nth-child(2n + 1), .green .highlight {
   background: #f8fcf6; }
-.green tr.extra-highlight {
+.green tr.custom.extra-highlight {
   background: #dcedd2; }
 
 div[data-type="part"].green {
@@ -513,7 +513,7 @@ div[data-type="part"].green {
   background: #3e5084; }
 .violet table:not(.custom) tr:nth-child(2n + 1), .violet .highlight {
   background: #f8f9fc; }
-.violet tr.extra-highlight {
+.violet tr.custom.extra-highlight {
   background: #d5dbec; }
 
 div[data-type="part"].violet {
@@ -533,7 +533,7 @@ div[data-type="part"].violet {
   background: #cf4627; }
 .red table:not(.custom) tr:nth-child(2n + 1), .red .highlight {
   background: #fef9f7; }
-.red tr.extra-highlight {
+.red tr.custom.extra-highlight {
   background: #f5d4cd; }
 
 div[data-type="part"].red {
@@ -853,7 +853,8 @@ a[data-type="noteref"] {
     outline: none; }
 
 div[data-type="note"],
-div[data-type="warning"] {
+div[data-type="warning"],
+div[data-type="sidebar"] {
   margin: 50px 0 40px;
   page-break-inside: avoid;
   background: #efefef;
