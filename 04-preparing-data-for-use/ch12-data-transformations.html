@@ -41,9 +41,10 @@
 
 <figure><img alt="Untransformed population values" src="../images/sections/04/untransformed-population-values.png" /></figure>
 
-<figure><img alt="Population scatter plot" src="../images/sections/04/population-scatter.png" /></figure>
+<p>The histogram above shows that the distribution of population values is left skewed. This is reasonable to expect because the majority of states&rsquo; populations lie in the range of 1-10 million. If we want to do statistical testing that relies on a normal distribution assumption, this data will need to be transformed.</p>
 
-<p>The two graphs above shows that the distribution of population values is left skewed. This is reasonable to expect because the majority of states&rsquo; populations lie in the range of 1-10 million. If we want to do statistical testing that relies on a normal distribution assumption, this data will need to be transformed.</p>
+
+<figure><img alt="Population scatter plot" src="../images/sections/04/population-scatter.png" /></figure>
 
 <p>In the scatter plot above, you can see that most of the data points are clustered in the bottom left corner of the graph, making it hard to see how population and land area are related. We can&rsquo;t just scale the graph differently to &ldquo;zoom in&rdquo; on that corner because we&rsquo;d knock California and Alaska off the chart. We can, however, use transformations to help make the data easier to view.</p>
 
@@ -51,7 +52,7 @@
 
 <h3>Log transform</h3>
 
-<p>To do a <a class="glossterm" target="_blank" href="glossary01.html#transformation-log">logarithmic transformation</a>, you calculate the log of each value and the data set and use those transformed values rather than your raw data. Log transforms tend to have a major effect on distribution shape, and in visualizations can bring extreme outliers closer to the rest of the data so graphs aren&rsquo;t stretched out as much. You can either use natural logs (ln) or logs with a base of 10. Figure 3 below shows the histogram of population data after a natural log transformation is applied, and Figure 4 shows what the scatterplot looks like if you use a natural log transformation on both the population and land area variables.</p>
+<p>To do a <a class="glossterm" target="_blank" href="glossary01.html#transformation-log">logarithmic transformation</a>, you calculate the log of each value and the data set and use those transformed values rather than your raw data. Log transforms tend to have a major effect on distribution shape, and in visualizations can bring extreme outliers closer to the rest of the data so graphs aren&rsquo;t stretched out as much. You can either use natural logs (ln) or logs with a base of 10. The graphs below show the histogram of population data after a natural log transformation is applied and what the scatterplot looks like if you use a natural log transformation on both the population and land area variables.</p>
 
 <figure><img alt="Log transformed population values" src="../images/sections/04/log-transformed.png" /></figure>
 
@@ -59,7 +60,7 @@
 
 <h3>Square root transform</h3>
 
-<p>The <a class="glossterm" target="_blank" href="glossary01.html#transformation-square">square-root transformation</a> uses the square root of each value instead of the log, and has a more moderate effect on the distribution shape. Figure 5 below shows the histogram of population data and Figure 6 shows the scatterplot of population by land area, both after square-root transformation is applied .</p>
+<p>The <a class="glossterm" target="_blank" href="glossary01.html#transformation-square">square root transformation</a> uses the square root of each value instead of the log, and has a more moderate effect on the distribution shape. The two graphs below show the histogram of population data and the scatterplot of population by land area, both after square root transformation is applied .</p>
 
 <figure><img alt="Square root transformed population values" src="../images/sections/04/square-root.png" /></figure>
 
@@ -67,11 +68,11 @@
 
 <h2>How to choose the right transformation method</h2>
 
-<p>As you develop a better understanding of different transformation methods, you might wonder how to pick between them. The answer to this question is not straight forward and we often need to use trial-and-error combined with knowledge of common transformations. A general strategy is to apply some of the common techniques such as log, square-root, reciprocal, cube-root and square transformations and then choose the best one after observing the results.</p>
+<p>As you develop a better understanding of different transformation methods, you might wonder how to pick between them. The answer to this question is not straight forward and we often need to use trial-and-error combined with knowledge of common transformations. A general strategy is to apply some of the common techniques such as log, square root, reciprocal, cube root and square transformations and then choose the best one after observing the results.</p>
 
-<p>Looking at the transformed graphs above, Figure 3 seems to be a better fit to the normal distribution while Figure 5 still carries the right skew. In this example, if you&rsquo;re doing a statistical test that has assumes the data are normally distributed, the log transformation would be a better method to use than the square-root transformation.</p>
+<p>Looking at the transformed histograms above, the log transformed data seems to be a better fit to the normal distribution while the square root transformed data still carries the right skew. In this example, if you&rsquo;re doing a statistical test that has assumes the data are normally distributed, the log transformation would be a better method to use than the square root transformation.</p>
 
-<p>On the other hand, if your primary purpose in the example above is to visualize the relationship between state population and land area, the square-root transformation does a better job of spreading out the data and making it easier to view than the log transformation.</p>
+<p>On the other hand, if your primary purpose in the example above is to visualize the relationship between state population and land area, the square root transformation does a better job of spreading out the data and making it easier to view than the log transformation.</p>
 
 <h2>Common transformation methods</h2>
 
@@ -91,19 +92,19 @@
 		</tr>
 		<tr>
 			<td>Square root</td>
-			<td>ln(x). log<sub>10</sub>(x)</td>
+			<td>&radic;<span style="text-decoration:overline;">x</span></td>
 			<td>Data are right skewed</td>
 			<td>Negative values</td>
 		</tr>
 		<tr>
 			<td>Square</td>
-			<td>x<sup>2</sup>(x)</td>
+			<td>x<sup>2</sup></td>
 			<td>info here</td>
 			<td>Negative values</td>
 		</tr>
 		<tr>
-			<td>Cube-root</td>
-			<td>x<sup>2</sup>(x)</td>
+			<td>Cube root</td>
+			<td>&radic;<span style="text-decoration:overline;">x</span></td>
 			<td>Data that is right skewed. Negative values</td>
 			<td>info here</td>
 		</tr>
