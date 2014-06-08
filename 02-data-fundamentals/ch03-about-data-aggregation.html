@@ -664,7 +664,7 @@
 </table>
 
 <aside data-type="sidebar">
-<h5>Revealing the underlying variance: scatterplots and histograms</h5>
+<h5>Using visualization to reveal underlying variance</h5>
 
 <p>When you have summary records or raw data, it's common to aggregate it in order to display it well. By showing the total coffee consumed (summing up the raw information) or the average number of cups per patron (the mean of the raw information) we make the data easier to understand.</p>
 </aside>
@@ -748,11 +748,7 @@
 
 <p>But averages hide things. Perhaps some people have a single cup of a particular type, and others have many. There are ways to visualize the spread, or variance, of data that indicate the underlying shape of the information, including heat charts, <a class="glossterm" target="_blank" href="glossary01.html#histogram">histograms</a>, and scatterplots. But when keeping the underlying data, you can wind up with more than one <em>dependent</em> variable for each <em>independent</em> variable.</p>
 
-<p>For example, here's a scatterplot from <em>Freakonomics<span class="footnote " data-type="footnote"><a href="http://freakonomics.com/2011/04/01/graph-fight-more-on-taylor%E2%80%99s-scatterplot/" target="_blank">http://freakonomics.com/2011/04/01/graph-fight-more-on-taylor%E2%80%99s-scatterplot/</a></span></em> that compares unemployment data to investment. There isn't a one-to-one ratio here, at least not at this level, because a particular level of investment (the independent metric) may produce different levels of unemployment (the presumed dependent metric) in different years.</p>
-
-<figure><img alt="Freakonomics scatterplot" src="../images/sections/02/freakonomics.png" /></figure>
-
-<p>This is a good example of why scatterplots are good: They show <a class="glossterm" target="_blank" href="glossary01.html#outlier">outliers</a>. In our coffee data, a better visualization (such as a histogram, which counts how many people fit into each bucket that made up an average) might reveal that a few people are drinking a lot of coffee, and a large number of people are drinking a small amount.</p>
+<p>A better visualization (such as a histogram, which counts how many people fit into each bucket that made up an average) might reveal that a few people are drinking a lot of coffee, and a large number of people are drinking a small amount.</p>
 
 <p>Consider this histogram of the number of cups per patron. All we did was tally up how many people had one cup, how many had two, how many had three, and so on. Then we plotted how <em>frequently</em> each number occurred, which is why this is called a <a class="glossterm" target="_blank" href="glossary01.html#frequency-histogram">frequency histogram</a>.</p>
 
@@ -867,19 +863,8 @@
 
 <p>These transactions can be aggregated by any column. They can be cross-referenced by those columns. The timestamps can also be aggregated into buckets (hourly, daily, or annually). Ultimately, the initial data set we saw of coffee consumption per year results from this raw data, summarized significantly.</p>
 
-<h1>The subjective nature of data storytelling</h1>
 
-<p>Even when captured and analyzed with great care, data is always subjective. Analysts editorialize, whether they like it or not, because of the practicalities of using data for storytelling. These editorial decisions in data come from three places.</p>
-
-<h2>1. Deciding what to collect</h2>
-
-<p>We have chosen to collect gender, name, and coffee type by cup. We didn't collect data on cups of tea consumed, or shoe type, or eye color. This is ultimately an editorial decision, and it's one reason that no data is ever entirely honest.</p>
-
-<div data-type="example">
-  <p><strong>Can we fix it?</strong> As technology improves, we may overcome this limitation. For example, a camera might have a machine learning system that can extract dimensions of data from the raw footage years later. But for the foreseeable future, simply choosing what to record is subjective. It's a decision that is strongly influenced by our biases, including the stories we hope to tell and the arguments we hope to justify.</p>
-</div>
-
-<h2>2. Deciding how to aggregate</h2>
+<h1>Deciding how to aggregate</h1>
 
 <p>When we roll up data into buckets, or transform it somehow, we take away the raw history. For example, when we turned raw transactions into annual totals:</p>
 
@@ -894,14 +879,5 @@
   <p><strong>Can we fix it?</strong> The big data movement is going to address some of this. Once, it was too computationally intensive to store all the raw transactions. We had to decide how to aggregate things at the moment of collection, and throw out the raw information. But advances in storage efficiency, parallel processing, and cloud computing are making on-the-fly aggregation of massive data sets a reality, which should overcome some amount of <a class="glossterm" target="_blank" href="glossary01.html#bias-aggregation">aggregation bias</a>.</p>
 </div>
 
-<h2>3. Deciding how to communicate</h2>
-
-<p>Humans can't consume large amounts of raw data. When we tell stories, we select the narrative, and choose where to shine the spotlight. At the start of this, we said that 36.7% of coffee in 2000 was consumed by women. That's an editorial decision, which has broad impact.</p>
-
-<p>It's easy to communicate a factoid, but does it somehow bias people? What if 2000 were an exception, and in other years women consumed significantly more? Do we have an obligation to present it in context?</p>
-
-<div data-type="example">
-  <p><strong>Can we fix it?</strong> This is one of the things that interactive, exploratory infographics fix. Because they partly hand the decision about how to communicate over to the audience, they encourage discovery and transparency. The key is to include the source information in the visualization, and to turn a display into an interactive interface that encourages users to click, segment, drill down, and query in new and unexpected ways that even the author of the source material didn't anticipate.</p>
-</div>
 </section>
 </section>
