@@ -240,9 +240,9 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 
 <p>These questions should be answered before you start working with your data. If you just dive in, you can create a larger mess, and these decisions can actually make the process much easier. For example, if you decide that the professional designations don&rsquo;t matter, there might be an easy way to get rid of them and simplify other parts of the project.</p>
 
-<p>Say you&rsquo;re working with a list of 20,000 stores, 19,400 in the US and 600 in Canada. &nbsp;They have different phone number and address formatting than the US stores. You&rsquo;re trying to figure out if you need separate fields for the Canadian data or another data set altogether, so you ask the client what their preference is.</p>
+<p>Say you&rsquo;re working with a list of 20,000 names, 19,400 from the US and 600 from Turkey. The honorific titles in the US come <em>before</em> the name (e.g. <strong>Mr.</strong> John Smith), whereas Turkish honorific titles come <em>after</em> the name (e.g. Jon Smith <strong>Bey</strong>). You&rsquo;re trying to figure out if you need separate fields for the Turkish data or another data set altogether, so you ask the client what their preference is.</p>
 
-<p>Their answer is simple. They aren&rsquo;t conducting business in Canada and they don&rsquo;t care if you delete those records. GREAT! Just 19,400 records left. &nbsp;</p>
+<p>Their answer is simple. They aren&rsquo;t conducting business in Turkey and they don&rsquo;t care if you delete those records. GREAT! Just 19,400 records left.</p>
 
 <h2>Now, how do we break up this data?</h2>
 
@@ -250,6 +250,8 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 
 <h2>Strategy Tips</h2>
 <div data-type="warning"><p>You should <em>always</em> make a copy of your data set before doing any data prep or cleaning in case a change you make is incorrect and you need to refer to the original.</p></div>
+
+<figure><img alt="Strategy tips" src="../images/sections/04/strategy-tips-flow.png" /></figure>
 
 <h3>Start by looking for the low-hanging fruit</h3>
 
@@ -265,19 +267,15 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 
 <p>We put the 2-part last names and other remaining types into their own groups.</p>
 
-<h3>Start by separating the names</h3>
-
-<p>Of the 260 remaining names, maybe 60 are complicated by professional alphabet soup after their names. Whether you&rsquo;re deleting these professional designations or putting the designations in their own field separate from the name, work with them all at once. &nbsp;Now the designations are separate (or deleted) and you have a field with just names. &nbsp;For those that have only a first and last name, add those to the 300 that were set aside at the beginning.</p>
-
-<p>We put the 2-part last names and other remaining types into their own groups.</p>
-
 <h3>Just plain manual effort</h3>
 
 <p>The 40 oddities you identified at the start may come down to just re-typing manually, depending what is odd about them.</p>
 
 <div data-type="note">
-<p>NOTE: Sometimes, when we&rsquo;re handling data in real life, records take care of themselves. For example, maybe a non-name record turns out to be a duplicate of a record that&rsquo;s complete. &nbsp;In that case, we can just delete the incorrect record and move on.</p>
+<p>Sometimes, when we&rsquo;re handling data in real life, records take care of themselves. For example, maybe a non-name record turns out to be a duplicate of a record that&rsquo;s complete. &nbsp;In that case, we can just delete the incorrect record and move on.</p>
 </div>
+
+<figure><img alt="Separating data workflow" src="../images/sections/04/separating-data-flow.png" /></figure>
 
 <h2>Other common fields that need to be split</h2>
 
@@ -317,8 +315,6 @@ What if your data set has thousands of records? &nbsp;You&rsquo;ll be spending a
 <p>Although the computer can aid in changing values, problems with data inconsistency often have to be handled semi-manually. If you are looking through text fields, much like when you do data coding, find and replace is your best friend. As long as you know what the main variants are of the data that you want to control, you can quickly change them all to be the same value.</p>
 
 <figure><img alt="Find and replace" src="../images/sections/04/find-and-replace.png" /></figure>
-
-<div data-type="warning">As noted above, don't make changes to your original data. When modifying individual pieces of data, like when you're doing unit conversions, controlling for inconsistencies, or setting values for missing data, you should make these changes on a copy of your original data set or create a copy of each column that you're modifying and make the changes on the duplicate column.</div>
 
 <h3>Missing Values</h3>
 

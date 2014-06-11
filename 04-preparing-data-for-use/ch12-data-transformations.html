@@ -8,6 +8,8 @@
 </header>
 
 <section data-type="sect1">
+<div data-type="warning"><p>This chapter covers more advanced statistical concepts than some of the others but we wanted to include a brief introduction to data transformations in case you encounter them. If you need to do your own transformation, check out the resources in Appendix YYY for additional tips.</p></div>
+
 <p>When you take a digital photo, sometimes the picture comes out in a way that makes certain features hard to see. Maybe the colors are too dark or too light, the photo is blurry, or the objects in the image are really small and you want to zoom in on them. You can pop the photo into something like Instagram or Photoshop, tweak it, apply a filter or two, and transform the picture so it&rsquo;s much clearer and easier to understand.</p>
 
 <p>Sometimes we need to transform data, too. You might get a set of data where, if you graph it as is, will have parts that are difficult to see. Also, if you&rsquo;re going to do statistical testing on your data, many common tests make specific assumptions about the distribution of the data (e.g. that the data are normally distributed). In the real world, we often come across data that don&rsquo;t meet these assumptions. Data transformations are one way to handle both these problems. Here, we&rsquo;ll talk about what some of the common transformations are so when you encounter these terms in the future, you&rsquo;ll have an idea what was done to the data.</p>
@@ -18,6 +20,8 @@
 <h2>Normal distribution and skewness in data</h2>
 
 <p>One of the most frequently encountered assumptions of statistical tests is that data should be <a class="glossterm" target="_blank" href="glossary01.html#distribution-normal">normally distributed</a>. You may have heard of the normal distribution referred to as a &ldquo;bell curve&rdquo; before; this is because a normal distribution takes the shape of a bell, with the data spread around a central value. Some of the data examples that commonly follow a normal distribution are related to human measurements such as height, weight, life span, and scores on IQ tests.</p>
+
+<p>Unlike a normal distribution, which is symmetric around the mean value, <a class="glossterm" target="_blank" href="glossary01.html#data-skewed">skewed data</a> tend to have more observations either to left side or to right side. Right skewed data have a long tail that extends to right whereas left skewed data will have a long tail extending to the left of the mean value. When data is <i>very</i> skewed, it can be hard to see the extreme values in a visualization. If you notice that your data distribution is skewed, you might consider transforming it if you&rsquo;re doing statistical testing or if the data is difficult to visualize in its original state.</p>
 
 <h4>Normal distribution</h4>
 
@@ -31,7 +35,6 @@
 
 <figure><img alt="Normal distribution" src="../images/sections/04/right-skew.png" /></figure>
 
-<p>Unlike a normal distribution, which is symmetric around the mean value, <a class="glossterm" target="_blank" href="glossary01.html#data-skewed">skewed data</a> tend to have more observations either to left side or to right side. Right skewed data have a long tail that extends to right whereas left skewed data will have a long tail extending to the left of the mean value. When data is <i>very</i> skewed, it can be hard to see the extreme values in a visualization. If you notice that your data distribution is skewed, you might consider transforming it if you&rsquo;re doing statistical testing or if the data is difficult to visualize in its original state.</p>
 
 <h2>Understanding transformations using sample data</h2>
 
@@ -39,9 +42,10 @@
 
 <figure><img alt="Untransformed population values" src="../images/sections/04/untransformed-population-values.png" /></figure>
 
-<figure><img alt="Population scatter plot" src="../images/sections/04/population-scatter.png" /></figure>
+<p>The histogram above shows that the distribution of population values is left skewed. This is reasonable to expect because the majority of states&rsquo; populations lie in the range of 1-10 million. If we want to do statistical testing that relies on a normal distribution assumption, this data will need to be transformed.</p>
 
-<p>The two graphs above shows that the distribution of population values is left skewed. This is reasonable to expect because the majority of states&rsquo; populations lie in the range of 1-10 million. If we want to do statistical testing that relies on a normal distribution assumption, this data will need to be transformed.</p>
+
+<figure><img alt="Population scatter plot" src="../images/sections/04/population-scatter.png" /></figure>
 
 <p>In the scatter plot above, you can see that most of the data points are clustered in the bottom left corner of the graph, making it hard to see how population and land area are related. We can&rsquo;t just scale the graph differently to &ldquo;zoom in&rdquo; on that corner because we&rsquo;d knock California and Alaska off the chart. We can, however, use transformations to help make the data easier to view.</p>
 
@@ -49,7 +53,7 @@
 
 <h3>Log transform</h3>
 
-<p>To do a <a class="glossterm" target="_blank" href="glossary01.html#transformation-log">logarithmic transformation</a>, you calculate the log of each value and the data set and use those transformed values rather than your raw data. Log transforms tend to have a major effect on distribution shape, and in visualizations can bring extreme outliers closer to the rest of the data so graphs aren&rsquo;t stretched out as much. You can either use natural logs (ln) or logs with a base of 10. Figure 3 below shows the histogram of population data after a natural log transformation is applied, and Figure 4 shows what the scatterplot looks like if you use a natural log transformation on both the population and land area variables.</p>
+<p>To do a <a class="glossterm" target="_blank" href="glossary01.html#transformation-log">logarithmic transformation</a>, you calculate the log of each value and the data set and use those transformed values rather than your raw data. Log transforms tend to have a major effect on distribution shape, and in visualizations can bring extreme outliers closer to the rest of the data so graphs aren&rsquo;t stretched out as much. You can either use natural logs (ln) or logs with a base of 10. The graphs below show the histogram of population data after a natural log transformation is applied and what the scatterplot looks like if you use a natural log transformation on both the population and land area variables.</p>
 
 <figure><img alt="Log transformed population values" src="../images/sections/04/log-transformed.png" /></figure>
 
@@ -57,7 +61,7 @@
 
 <h3>Square root transform</h3>
 
-<p>The <a class="glossterm" target="_blank" href="glossary01.html#transformation-square">square-root transformation</a> uses the square root of each value instead of the log, and has a more moderate effect on the distribution shape. Figure 5 below shows the histogram of population data and Figure 6 shows the scatterplot of population by land area, both after square-root transformation is applied .</p>
+<p>The <a class="glossterm" target="_blank" href="glossary01.html#transformation-square">square root transformation</a> uses the square root of each value instead of the log, and has a more moderate effect on the distribution shape. The two graphs below show the histogram of population data and the scatterplot of population by land area, both after square root transformation is applied .</p>
 
 <figure><img alt="Square root transformed population values" src="../images/sections/04/square-root.png" /></figure>
 
@@ -65,13 +69,13 @@
 
 <h2>How to choose the right transformation method</h2>
 
-<p>As you develop a better understanding of different transformation methods, you might wonder how to pick between them. The answer to this question is not straight forward and we often need to use trial-and-error combined with knowledge of common transformations. A general strategy is to apply some of the common techniques such as log, square-root, reciprocal, cube-root and square transformations and then choose the best one after observing the results.</p>
+<p>As you develop a better understanding of different transformation methods, you might wonder how to pick between them. The answer to this question is not straightforward and we often need to use trial-and-error combined with knowledge of different transformations. A general strategy is to apply some of the most frequently used transforms such as log, square root, square, reciprocal, and cube root, and then choose the best one after observing the results.</p>
 
-<p>Looking at the transformed graphs above, Figure 3 seems to be a better fit to the normal distribution while Figure 5 still carries the right skew. In this example, if you&rsquo;re doing a statistical test that has assumes the data are normally distributed, the log transformation would be a better method to use than the square-root transformation.</p>
+<p>Looking at the transformed histograms above, the log transformed data seems to be a better fit to the normal distribution while the square root transformed data still carries the right skew. In this example, if you&rsquo;re doing a statistical test that has assumes the data are normally distributed, the log transformation would be a better method to use than the square root transformation.</p>
 
-<p>On the other hand, if your primary purpose in the example above is to visualize the relationship between state population and land area, the square-root transformation does a better job of spreading out the data and making it easier to view than the log transformation.</p>
+<p>On the other hand, if your primary purpose in the example above is to visualize the relationship between state population and land area, the square root transformation does a better job of spreading out the data and making it easier to view than the log transformation.</p>
 
-<h2>Common transformation methods</h2>
+<h2>Frequently used transformation methods</h2>
 
 <table>
 	<tbody>
@@ -89,19 +93,19 @@
 		</tr>
 		<tr>
 			<td>Square root</td>
-			<td>ln(x). log<sub>10</sub>(x)</td>
+			<td>&radic;<span style="text-decoration:overline;">x</span></td>
 			<td>Data are right skewed</td>
 			<td>Negative values</td>
 		</tr>
 		<tr>
 			<td>Square</td>
-			<td>x<sup>2</sup>(x)</td>
+			<td>x<sup>2</sup></td>
 			<td>info here</td>
 			<td>Negative values</td>
 		</tr>
 		<tr>
-			<td>Cube-root</td>
-			<td>x<sup>2</sup>(x)</td>
+			<td>Cube root</td>
+			<td>&radic;<span style="text-decoration:overline;">x</span></td>
 			<td>Data that is right skewed. Negative values</td>
 			<td>info here</td>
 		</tr>
@@ -118,6 +122,9 @@
 
 <p>Since data transformation methods involve the application of a mathematical function to your data, you need to be careful when reporting or interpreting any insights derived from the transformed data because a transformation changes the unit of the data. For example, when we apply a logarithmic function to a population variable, the unit of measurement becomes the log of the population. When you&rsquo;re sharing results, your audience may assume that the calculated numbers or visualizations they&rsquo;re seeing are based on raw data, so if the values have been transformed, you should clearly communicate what transformation was used, as well as what units the data are being displayed in.</p>
 
-<p>If you&rsquo;re using transformed data to calculate statistical values like means, a better approach would be to back transform the final results and report them in their original units. Back transformation involves doing the opposite of the mathematical function used in the first place. In the population example, you would <a class="glossterm" target="_blank" href="glossary01.html#transformation-back">back-</a><a class="glossterm" target="_blank" href="glossary01.html#transformation-back">transform</a> by raising e to the power of the respective transformed value.</p>
+<div data-type="warning"><p>If you use transformed data to calculate statistical values like means, you should back-transform the final results and report them in their original units. To back-transform, you just do the <i>opposite</i> of the mathematical function you used in the first place. For example, if you did a square root transformation, you would <a class="glossterm" target="_blank" href="glossary01.html#transformation-back">back-</a><a class="glossterm" target="_blank" href="glossary01.html#transformation-back">transform</a> by squaring your end result.</p></div>
+
+<p>You may not see transforms every day, but when you do, it's helpful to know why they were used and how they affect your data. It's important to be able to see different parts of the picture when working with data, and transformations give you another tool to help you do just that!</p>	
+	
 </section>
 </section>
