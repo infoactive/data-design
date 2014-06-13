@@ -640,14 +640,14 @@ table caption {
 
 tr {
   border-width: 0px; }
+  tr:first-child {
+    border-top: 1px solid #d1d2d4; }
 
 th {
   font-family: "source_sans_proregular", sans-serif;
   line-height: 120%;
   text-align: left;
   margin-top: 0;
-  border-top: 1px solid #d1d2d4;
-  border-bottom: 1px solid #d1d2d4;
   border-left: 1px solid #d1d2d4;
   font-size: 1em;
   color: white; }
