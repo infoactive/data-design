@@ -42,7 +42,7 @@
 
 <figure><img alt="Untransformed population values" src="../images/sections/04/untransformed-population-values.png" /></figure>
 
-<p>The histogram above shows that the distribution of population values is left skewed. This is reasonable to expect because the majority of states&rsquo; populations lie in the range of 1-10 million. If we want to do statistical testing that relies on a normal distribution assumption, this data will need to be transformed.</p>
+<p>The histogram above shows that the distribution of population values is right skewed. This is reasonable to expect because the majority of states&rsquo; populations lie in the range of 1-10 million. If we want to do statistical testing that relies on a normal distribution assumption, this data will need to be transformed.</p>
 
 
 <figure><img alt="Population scatter plot" src="../images/sections/04/population-scatter.png" /></figure>
@@ -53,7 +53,7 @@
 
 <h3>Log transform</h3>
 
-<p>To do a <a class="glossterm" target="_blank" href="glossary01.html#transformation-log">logarithmic transformation</a>, you calculate the log of each value and the data set and use those transformed values rather than your raw data. Log transforms tend to have a major effect on distribution shape, and in visualizations can bring extreme outliers closer to the rest of the data so graphs aren&rsquo;t stretched out as much. You can either use natural logs (ln) or logs with a base of 10. The graphs below show the histogram of population data after a natural log transformation is applied and what the scatterplot looks like if you use a natural log transformation on both the population and land area variables.</p>
+<p>To do a <a class="glossterm" target="_blank" href="glossary01.html#transformation-log">logarithmic transformation</a>, you calculate the log of each value in the data set and use those transformed values rather than your raw data. Log transforms tend to have a major effect on distribution shape, and in visualizations can bring extreme outliers closer to the rest of the data so graphs aren&rsquo;t stretched out as much. You can either use natural logs (ln) or logs with a base of 10. The graphs below show the histogram of population data after a natural log transformation is applied and what the scatterplot looks like if you use a natural log transformation on both the population and land area variables.</p>
 
 <figure><img alt="Log transformed population values" src="../images/sections/04/log-transformed.png" /></figure>
 
@@ -87,33 +87,37 @@
 		</tr>
 		<tr>
 			<td>Log</td>
-			<td>ln(x). log<sub>10</sub>(x)</td>
-			<td>info here</td>
-			<td>Zero values. Negative values</td>
+			<td>ln(x)<br /> 
+			log<sub>10</sub>(x)</td>
+			<td>Right skewed data<br /> 
+			log<sub>10</sub>(x) is especially good at handling higher order 
+			powers of 10 (e.g. 1000, 100000)</td>
+			<td>Zero values<br /> Negative values</td>
 		</tr>
 		<tr>
 			<td>Square root</td>
 			<td>&radic;<span style="text-decoration:overline;">x</span></td>
-			<td>Data are right skewed</td>
+			<td>Right skewed data</td>
 			<td>Negative values</td>
 		</tr>
 		<tr>
 			<td>Square</td>
 			<td>x<sup>2</sup></td>
-			<td>info here</td>
+			<td>Left skewed data</td>
 			<td>Negative values</td>
 		</tr>
 		<tr>
 			<td>Cube root</td>
-			<td>&radic;<span style="text-decoration:overline;">x</span></td>
-			<td>Data that is right skewed. Negative values</td>
-			<td>info here</td>
+			<td>&#x221b;<span style="text-decoration:overline;">x</span></td>
+			<td>Right skewed data<br /> 
+			Negative values</td>
+			<td>Not as effective at normalizing as log transform</td>
 		</tr>
 		<tr>
 			<td>Reciprocal</td>
 			<td>1/x</td>
 			<td>Making small values bigger and big values smaller</td>
-			<td>Zero values. Negative values</td>
+			<td>Zero values<br /> Negative values</td>
 		</tr>
 	</tbody>
 </table>
