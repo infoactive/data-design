@@ -8,15 +8,13 @@
 </header>
 
 <section data-type="sect1">
-<p>Whether you&rsquo;re designing graphics for static environments or for interactive ones, it&rsquo;s important to assess a few key things up front. First of all, what do we mean by static and interactive?</p>
-
-<figure>Graphic 1</figure>
+<p>Whether you&rsquo;re designing graphics for static environments or for interactive ones, it&rsquo;s important to address a few key things up front. First of all, what do we mean by static and interactive?</p>
 
 <h2>Defining print vs. web, static vs. interactive</h2>
 
-<p>You can design <a class="glossterm" target="_blank" href="glossary01.html#graphic-static">static graphics</a> for print or the web, or both. With static graphics, you&rsquo;ll provide everything you want your viewers to see without requiring any input from them. The most a static image demands from a viewer is to turn a page or scroll, or perhaps enlarge an image. Typically, static graphics display information that isn&rsquo;t changing.</p>
+<p>You can design <a class="glossterm" href="glossary01.html#graphic-static" target="_blank">static graphics</a> for print or the web, or both. With static graphics, you&rsquo;ll provide everything you want your viewers to see without requiring any input from them. The most a static image demands from a viewer is to turn a page or scroll, or perhaps enlarge an image. Typically, static graphics display information that isn&rsquo;t changing.</p>
 
-<p>You can also design interactive graphics for print or the web, or both. <a class="glossterm" target="_blank" href="glossary01.html#graphic-interactive">Interactive graphics</a> provide viewers the option to dive deeper into the information, often requiring some degree of input. Now, you may be thinking, &ldquo;Interactive print?&rdquo; Actually, yes, though of course it&rsquo;s not as common as interactive graphics on the web. Some examples:</p>
+<p>You can also design interactive graphics for print or the web, or both. <a class="glossterm" href="glossary01.html#graphic-interactive" target="_blank">Interactive graphics</a>&nbsp;typically provide viewers with the option to dive deeper into the information, often requiring some degree of input. Now, you may be thinking, &ldquo;Interactive print?&rdquo; Actually, yes, though of course it&rsquo;s not as common as interactive graphics on the web. Some examples:</p>
 
 <ul>
 	<li><a class="link " href="http://civic.mit.edu/postmarked" target="_blank">Postmarked</a>, a project that invited neighbors and frequent passersby to send postcards to the property owners of an empty building for the purpose of encouraging dialogue about unused spaces. The postcards invited interaction--draw or write, then mail, and respond--and communicated unique pieces of information about the space.</li>
@@ -27,11 +25,9 @@
 
 <p>So, static isn&rsquo;t a stand-in for print, nor is interactive a stand-in for web.</p>
 
-<p>One more thing: the antonym to static isn&rsquo;t interactive. It&rsquo;s changing, moving, or dynamic. <a class="glossterm" target="_blank" href="glossary01.html#graphic-motion">Motion graphics</a> don&rsquo;t require viewer interaction, but they&rsquo;re not static, either. Any given cable news network will give you examples of these. Do they display necessary information? Not usually. Putting motion on information graphics can keep viewers&rsquo; attention, at least at first. But over the course of a segment or a show, viewer fatigue sets in. Motion graphics often look impressive, but always ask whether motion is necessary for conveying the information, and be wary of overusing it.</p>
+<p>One more thing: the antonym to static isn&rsquo;t interactive. It&rsquo;s changing, moving, or dynamic. <a class="glossterm" href="glossary01.html#graphic-motion" target="_blank">Motion graphics</a> don&rsquo;t require viewer interaction, but they&rsquo;re not static, either. Any given cable news network will give you examples of these. Do they display necessary information? Not usually. Putting motion on information graphics can keep viewers&rsquo; attention, at least at first. But over the course of a segment or a show, viewer fatigue sets in. Motion graphics often look impressive, but always ask whether motion is necessary for conveying the information, and be wary of overusing it.</p>
 
-<p>For more details on interactive web graphics, see the &ldquo;Interactivity and staticness&rdquo; section below.</p>
-
-<h2>Basic concepts: color, size, layout, interactivity</h2>
+<h2>Color, Size, Layout, and Interactivity</h2>
 
 <h3>Color</h3>
 
@@ -43,9 +39,29 @@
 
 <h3>Size</h3>
 
-<p>Step back and take a look at the space you&rsquo;re working with. You have to consider size for both print and the web, but print demands more defined physical constraints.</p>
+<p>Step back and take a look at the space you&rsquo;re working with. You have to consider size for both print and the web.</p>
 
-<p>On the web, even if the space allotted for your graphic is small, you can often include image-enlarging functionality, or ensure viewers can open a larger version of the graphic in a separate tab or window. This frees you up to include more information in the graphic without worrying as much about the frame or font size. In instances where you need the full-size graphic on the original webpage, though, you&rsquo;ll be under the same constraints as with print.</p>
+<p>With print, you have the constraint of a fixed size for graphics, but that can also be a blessing because you only need to design for a single width and height.</p>
+
+<p>On the web, you can often include image-zooming functionality or allow viewers to open a larger version of a graphic in a separate browser tab, but you should consider the effects that zooming and scrolling can have on a user&rsquo;s experience. A well-designed graphic should provide key information in a clear and elegant manner, with minimum effort required by the user.</p>
+
+<p>Mobile devices are also a concern. More and more people are using phones and tablets to browse the web, and it&rsquo;s hard to see a lot of detail on a tiny touchscreen. You&rsquo;ll want to minimize the amount of squinting necessary to understand your graphic. Maybe this means building a responsive graphic &mdash; one that automatically changes its layout according to the dimensions of the viewer&rsquo;s screen size. Or maybe you design a completely different graphic to be shown on small mobile devices. Given the state of mobile web browsing trends, it&rsquo;s something you should consider when publishing a visualization on the web.</p>
+
+<p>[Graphics showing pie chart with extra width vs small screen, bar chart vs. column chart]</p>
+
+<p>Many mobile displays (and increasingly, laptop and desktop monitors) have high-resolution displays, often referred to as retina displays. A static image designed at the standard web resolution of 72 dpi (dots per inch) will usually look blurry when viewed on a retina display. You&rsquo;ll need to make double-resolution retina versions of your image-based graphics if you want them to look sharp on, say, a modern iPad. Or you can create them using web fonts and SVGs, and they will always look crisp, no matter what the screen resolution. One downside to this is that some older browsers (notably Internet Explorer 8 and below) do not support SVG format.</p>
+
+<div data-type="sidebar">
+<h3>What is an SVG?</h3>
+
+<p>SVG stands for Scalable Vector Graphic, and it&rsquo;s a web-friendly format for displaying vector images, which are images that can scale to any dimension by using mathematical expressions to draw paths. Vector images will look crisp even when blown up to very large sizes, unlike bitmap images (also known as raster graphics), which use bits of specific colors which are mapped to certain regions in the image. Bitmap images will look blurry when viewed at a high resolution, but they are often necessary when the color combinations are complex. A photograph is a great example of a bitmap image, and a simple circle is a great example of an image that can easily be drawn as a vector image.</p>
+
+<p>[graphic showing bitmap circle vs svg]</p>
+
+<p>Many of the tools for building web-based interactive charts and graphs (such as D3.js) use SVGs to render visualizations, especially interactive ones. Most of the static infographics, however, are published in bitmap image formats, such as JPEG or PNG.</p>
+</div>
+
+<div data-type="note"><p>Size doesn't just refer to how big an image appears. Pay attention to the size of your file as well. Increasingly, people around the world are using mobile devices to browse the web, and they&rsquo;re paying handsome prices for data plans from cell phone companies. Not only can it take a long time to download a large image from the web, but in some parts of the world, each megabyte of data is a costly endeavor. Be nice to your readers and work to reduce your final image size.</p></div>
 
 <h3>Layout</h3>
 
