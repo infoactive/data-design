@@ -8,7 +8,7 @@
 </header>
 
 <section class="id" data-type="sect1">
-<p>When trying to turn data into information, the data you start with matters a lot. Data can be simple factoids&mdash;in which someone else has done all of the analysis&mdash;or raw transactions, where the exploration is left entirely to the user.</p>
+<p>When trying to turn data into information, the data you start with matter a lot. Data can be simple factoids&mdash;of which someone else has done all of the analysis&mdash;or raw transactions, where the exploration is left entirely to the user.</p>
 
 <figure><img alt="Raw vs. Aggregated Data" src="../images/sections/02/raw-vs-aggregated.png" /></figure>
 
@@ -16,47 +16,47 @@
 	<tbody>
 		<tr>
 			<th>Level of Aggregation</th>
-      <th>Number of metrics</th>
+			<th>Number of metrics</th>
 			<th>Description</th>
 		</tr>
 		<tr>
 			<td>Factoid</td>
-      <td>Maximum context</td>
-      <td>Single data point; No drill-down</td>
+			<td>Maximum context</td>
+			<td>Single data point; No drill-down</td>
 		</tr>
 		<tr>
 			<td>Series</td>
-      <td>One metric, across an axis</td>
+			<td>One metric, across an axis</td>
 			<td>Can compare rate of change</td>
 		</tr>
 		<tr>
 			<td>Multiseries</td>
-      <td>Several metrics, common axis</td>
+			<td>Several metrics, common axis</td>
 			<td>Can compare rate of change, correlation between metrics</td>
 		</tr>
 		<tr>
 			<td>Summable multiseries</td>
-      <td>Several metrics, common axis</td>
+			<td>Several metrics, common axis</td>
 			<td>Can compare rate of change, correlation between metrics; Can compare percentages to whole</td>
 		</tr>
 		<tr>
 			<td>Summary records</td>
-      <td>One record for each item in a series. Metrics in other series have been aggregated somehow.</td>
+			<td>One record for each item in a series; Metrics in other series have been aggregated somehow</td>
 			<td>Items can be compared</td>
 		</tr>
 		<tr>
 			<td>Individual transactions</td>
-      <td>One record per instance</td>
+			<td>One record per instance</td>
 			<td>No aggregation or combination; Maximum drill-down</td>
 		</tr>
 	</tbody>
 </table>
 
-<p>Most data sets fall somewhere in the middle. If we know what kind of <a class="glossterm" target="_blank" href="glossary01.html#data">data</a> we have to begin with, we can greatly simplify the task of correctly visualizing it the first time. Getting a communicator to describe the information in the first place, either through a wizard or simply by having them use one of several templates filled with sample data, makes this far easier.</p>
+<p>Most data sets fall somewhere in the middle of these levels of aggregation. If we know what kind of <a class="glossterm" href="glossary01.html#data" target="_blank">data</a> we have to begin with, we can greatly simplify the task of correctly visualizing them the first time around. Getting a communicator to describe the information, either through a wizard or simply by having them use one of several templates filled with sample data, makes this far easier.</p>
 
-<p>Let's look at these types of aggregation one by one, using the example of coffee consumption. Let's assume a caf&eacute; tracks each cup of coffee sold, and records two pieces of information about the sale: the gender of the buyer, and the kind of coffee (regular, decaf, or mocha).</p>
+<p>Let's look at these types of aggregation one by one, using the example of coffee consumption. Let's assume a caf&eacute; tracks each cup of coffee sold and records two pieces of information about the sale: the gender of the buyer and the kind of coffee (regular, decaf, or mocha).</p>
 
-<p>The basic table of this data, by year, looks like this<span class="footnote " data-type="footnote">This is completely made up coffee data, BTW.</span>:</p>
+<p>The basic table of these data, by year, looks like this<span data-type="footnote">These are completely made up coffee data, BTW.</span>:</p>
 
 <table class="custom">
 	<tbody>
@@ -173,7 +173,7 @@
 
 <h2>Factoid</h2>
 
-<p>A <a class="glossterm" target="_blank" href="glossary01.html#factoid">factoid</a> is a piece of trivia. It is calculated from source data, but chosen to emphasize a particular point.</p>
+<p>A <a class="glossterm" href="glossary01.html#factoid" target="_blank">factoid</a> is a piece of trivia. It is calculated from source data, but chosen to emphasize a particular point.</p>
 
 <div data-type="example">
 <p><strong>Example:</strong> 36.7% of coffee in 2000 was consumed by women.</p>
@@ -181,7 +181,7 @@
 
 <h2>Series</h2>
 
-<p>This is one type of information (the <a class="glossterm" target="_blank" href="glossary01.html#variable-dependent">dependent variable</a>) compared to another (the <a class="glossterm" target="_blank" href="glossary01.html#variable-independent">independent variable</a>). Often, the independent variable is time.</p>
+<p>This is one type of information (the <a class="glossterm " href="glossary01.html#variable-dependent" target="_blank">dependent variable</a>) compared to another (the <a class="glossterm" href="glossary01.html#variable-independent" target="_blank">independent variable</a>). Often, the independent variable is time.</p>
 
 <table>
 	<tbody>
@@ -204,7 +204,7 @@
 
 <p>In this example, the total sales of coffee <em>depends</em> on the year. That is, the year is independent (&quot;pick a year, any year&quot;) and the sales is dependent (&quot;based on that year, the consumption is 23,005 cups&quot;).</p>
 
-<p>It can also be some other set of continuous data, such as temperature. Consider this table that shows how long it takes for an adult to sustain a first-degree burn from hot water. Here, water temperature is the independent variable<span class="footnote" contenteditable="false" data-type="footnote">US Government Memorandum, Consumer Product Safety Commission, Peter L. Armstrong, Sept. 15, 1978.</span>:</p>
+<p>A series can also be some other set of continuous data, such as temperature. Consider this table that shows how long it takes for an adult to sustain a first-degree burn from hot water. Here, water temperature is the independent variable<span class="footnote" contenteditable="false" data-type="footnote">US Government Memorandum, Consumer Product Safety Commission, Peter L. Armstrong, Sept. 15, 1978.</span>:</p>
 
 <table>
 	<tbody>
@@ -239,13 +239,13 @@
 	</tbody>
 </table>
 
-<p>And it can be a <a class="glossterm" target="_blank" href="glossary01.html#series">series</a> of non-contiguous, but related, information in a category, such as major car brands, types of dog, vegetables, or the mass of planets in the solar system<span contenteditable="false" data-type="footnote">National Space Science Data Center, NASA: http://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html</span>:</p>
+<p>And it can be a <a class="glossterm " href="glossary01.html#series" target="_blank">series</a> of non-contiguous, but related, information in a category, such as major car brands, types of dog, vegetables, or the mass of planets in the solar system<span contenteditable="false" data-type="footnote">National Space Science Data Center, NASA: http://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html</span>:</p>
 
 <table>
 	<tbody>
 		<tr>
 			<th>Planet</th>
-			<th>Relative to earth</th>
+			<th>Mass relative to earth</th>
 		</tr>
 		<tr>
 			<td>Mercury</td>
@@ -282,15 +282,15 @@
 	</tbody>
 </table>
 
-<p>In many cases, series data has one and only one dependent variable for each independent variable. In other words, there is only one number for coffee consumption for each year on record. This is usually displayed as a <a class="glossterm" target="_blank" href="glossary01.html#graph-bar">bar</a>, <a class="glossterm" target="_blank" href="glossary01.html#graph-series">series</a>, or column graph.</p>
+<p>In many cases, series data have&nbsp;one and only one dependent variable for each independent variable. In other words, there is only one number for coffee consumption for each year on record. This is usually displayed as a <a class="glossterm " href="glossary01.html#graph-bar" target="_blank">bar</a>, <a class="glossterm " href="glossary01.html#graph-series" target="_blank">time series</a>, or column graph.</p>
 
 <figure><img alt="Total sales" src="../images/sections/02/total-sales.png" /></figure>
 
-<p>In cases where there are several dependent variables for each independent one, we often show the information as a <a class="glossterm" target="_blank" href="glossary01.html#plot-scatter">scatterplot</a> or <a class="glossterm" target="_blank" href="glossary01.html#map-heat">heat map</a>, or do some kind of processing (such as an average) to simplify what's shown. We'll come back to this in the Summary Records section below.</p>
+<p>In cases where there are several dependent variables for each independent one, we often show the information as a <a class="glossterm" href="glossary01.html#plot-scatter" target="_blank">scatterplot</a> or <a class="glossterm " href="glossary01.html#map-heat" target="_blank">heat map</a>, or do some kind of processing (such as an average) to simplify what's shown. We'll come back to this in the Summary Records section below.</p>
 
 <h2>Multiseries</h2>
 
-<p>A <a class="glossterm" target="_blank" href="glossary01.html#series-multiseries">multiseries</a> data set has several pieces of dependent information and one piece of independent information. Here's the data about exposure to hot water from before, with additional data<span contenteditable="false" data-type="footnote">US Government Memorandum, Consumer Product Safety Commission, Peter L. Armstrong, Sept. 15, 1978.</span>:</p>
+<p>A <a class="glossterm " href="glossary01.html#series-multiseries" target="_blank">multiseries</a> data set has several pieces of dependent information and one piece of independent information. Here are&nbsp;the data about exposure to hot water from before, with additional data<span contenteditable="false" data-type="footnote">US Government Memorandum, Consumer Product Safety Commission, Peter L. Armstrong, Sept. 15, 1978.</span>:</p>
 
 <table>
 	<tbody>
@@ -366,17 +366,17 @@
 	</tbody>
 </table>
 
-<p>With this data set, we know several things about 2001. We know that 16,452 cups were served to men; and that 14,021 cups served were regular (with caffeine, cream or milk, and sugar).</p>
+<p>With this data set, we know several things about 2001. We know that 16,452 cups were served to men&nbsp;and that 14,021 cups served were regular coffee (with caffeine, cream or milk, and sugar).</p>
 
-<p>We don't, however, know how to combine these in useful ways. They aren't related. We can't say what percentage of regular was sold to men; or how many cups were served to women.</p>
+<p>We don't, however, know how to combine these in useful ways: they aren't related. We can't tell what percentage of regular coffee was sold to men&nbsp;or how many cups were served to women.</p>
 
-<p>In other words, multiseries is simply several series on one chart. We can show them together, but we can't stack or combine them.</p>
+<p>In other words, multiseries data are&nbsp;simply several series on one chart or table. We can show them together, but we can't meaningfully stack or combine them.</p>
 
 <figure><img alt="Line chart, Male and Regular Coffee" src="../images/sections/02/regular-male.png" /></figure>
 
 <h2>Summable Multiseries</h2>
 
-<p>As the name suggests, a <a class="glossterm" target="_blank" href="glossary01.html#series-summable-multiseries">summable multiseries</a> is a particular fact (gender, type of coffee) segmented into subgroups.</p>
+<p>As the name suggests, a <a class="glossterm " href="glossary01.html#series-summable-multiseries" target="_blank">summable multiseries</a> is a particular statistic (gender, type of coffee) segmented into subgroups.</p>
 
 <table>
 	<tbody>
@@ -482,29 +482,29 @@
 	</tbody>
 </table>
 
-<p>There is nothing inherent in this data that tells us how we can combine information. It takes human understanding of data categories to know that <em>Male + Female = a complete set</em> and <em>Regular + Decaf + Mocha = a complete set</em>. Without this knowledge, we can't combine the data, or worse, we might combine it wrongly.</p>
+<p>There is nothing inherent in this data that tells us how we can combine information. It takes human understanding of data categories to know that <em>Male + Female = a complete set</em> and <em>Regular + Decaf + Mocha = a complete set</em>. Without this knowledge, we can't combine the data, or worse, we might combine it incorrectly.</p>
 
 <div data-type="warning">
-  <h3>It's hard to explore summarized data</h3>
+<h3>It's hard to explore summarized data</h3>
 
-  <p>Even if we know the meaning of this data, and realize it is two separate multiseries tables (one on gender and one on coffee type) we can't explore it deeply. For example, we can't find out how many women drank regular coffee in 2000.</p>
+<p>Even if we know the meaning of these&nbsp;data&nbsp;and realize they are&nbsp;two separate multiseries tables (one on gender and one on coffee type) we can't explore them&nbsp;deeply. For example, we can't find out how many women drank regular coffee in 2000.</p>
 
-  <p>This is a common, and important, mistake. Many people are tempted to say:</p>
+<p>This is a common (and important)&nbsp;mistake. Many people are tempted to say:</p>
 
-  <ul>
-    <li>36.7% of cups sold in 2000 were sold to women.</li>
-    <li>And there were 9,929 cups of regular sold in 2000.</li>
-    <li>Therefore, 3,642.5 cups of regular were sold to women.</li>
-  </ul>
+<ul>
+	<li>36.7% of cups sold in 2000 were sold to women.</li>
+	<li>And there were 9,929 cups of regular sold in 2000.</li>
+	<li>Therefore, 3,642.5 cups of regular were sold to women.</li>
+</ul>
 
-  <p>This is wrong. It can only be done when you know that one category of information (coffee type) is evenly distributed across another (gender). The fact that the result isn't even a whole number reminds us not to do this, as nobody was served a half cup.</p>
+<p>But this is wrong. This type of inference&nbsp;can only be made&nbsp;when you know that one category (coffee type) is evenly distributed across another (gender). The fact that the result isn't even a whole number reminds us not to do this, as nobody was served a half cup.</p>
 
-  <p>The only way to truly explore the data and ask new questions of it (such as &quot;How many cups of regular were sold to women in 2000?&quot;) is to have the raw data. And then it's a matter of knowing how to aggregate it.</p>
+<p>The only way to truly explore the data and ask new questions&nbsp;(such as &quot;How many cups of regular were sold to women in 2000?&quot;) is to have the raw data. And then it's a matter of knowing how to aggregate them appropriately.</p>
 </div>
 
 <h2>Summary records</h2>
 
-<p>The following table of <a class="glossterm" target="_blank" href="glossary01.html#record-summary">summary records</a> looks like the kind of data a point-of-sale system at a caf&eacute; might generate. It includes a column of categorical information (gender, where there are two possible types) and subtotals for each type of coffee. It also includes the totals by the cup for those types.</p>
+<p>The following table of <a class="glossterm" href="glossary01.html#record-summary" target="_blank">summary records</a> looks like the kind of data a point-of-sale system at a caf&eacute; might generate. It includes a column of categorical information (gender, where there are two possible types) and subtotals for each type of coffee. It also includes the totals by the cup for those types.</p>
 
 <table>
 	<tbody>
@@ -632,15 +632,15 @@
 	</tbody>
 </table>
 
-<p>Looking at this table, we can see a pretty clear trend: Women like regular; men seem evenly split across all three types of coffee<span class="footnote " data-type="footnote">This isn't enough data to make a statistically reliable statement like this. But it's made up data anyway, so stop thinking so much about coffee consumption.</span>.</p>
+<p>Looking at this table, we can see a pretty clear trend: Women like regular; men seem evenly split across all three types of coffee<span data-type="footnote">There aren't enough data to make a statistically reliable statement like this. But this is all made-up data anyway, so stop thinking so much about coffee consumption.</span>.</p>
 
-<p>The thing about this data, however, is that it's still been <a class="glossterm" target="_blank" href="glossary01.html#aggregation">aggregated</a> somehow. We summarized the data along several dimensions, gender and coffee type, by aggregating them by the name of the patron. While this isn't <a class="glossterm" target="_blank" href="glossary01.html#data-raw">raw data</a>, it's close.</p>
+<p>The thing about these&nbsp;data, however, is they have&nbsp;still been <a class="glossterm" href="glossary01.html#aggregation" target="_blank">aggregated</a> somehow. We summarized the data along several dimensions&mdash;gender and coffee type&mdash;by aggregating them by the name of the patron. While this isn't the&nbsp;<a class="glossterm" href="glossary01.html#data-raw" target="_blank">raw data</a>, it's close.</p>
 
-<p>One good thing about this summarization is that it keeps the data set fairly small. It also suggests ways in which the data might be explored. It is pretty common to find survey data that looks like this; for example, a Google Form might output this kind of data to a survey that says:</p>
+<p>One good thing about this summarization is that it keeps the data set fairly small. It also suggests ways in which the data might be explored. It is pretty common to find survey data that looks like this:&nbsp;for example, a Google Form might output this kind of data from&nbsp;a survey that says:</p>
 
 <figure><img alt="Google form" src="../images/sections/02/google-form.png" /></figure>
 
-<p>Produces the following data in the Google spreadsheet:</p>
+<p>Producing the following data in the Google spreadsheet:</p>
 
 <table>
 	<tbody>
@@ -666,7 +666,7 @@
 <aside data-type="sidebar">
 <h5>Using visualization to reveal underlying variance</h5>
 
-<p>When you have summary records or raw data, it's common to aggregate it in order to display it well. By showing the total coffee consumed (summing up the raw information) or the average number of cups per patron (the mean of the raw information) we make the data easier to understand.</p>
+<p>When you have summary records or raw data, it's common to aggregate&nbsp;in order to display them&nbsp;well. By showing the total coffee consumed (summing up the raw information) or the average number of cups per patron (the mean of the raw information) we make the data easier to understand.</p>
 </aside>
 
 <p>Consider the following transactions:</p>
@@ -742,29 +742,29 @@
 	</tbody>
 </table>
 
-<p>We can show the average of each coffee type consumed by cup as a summary.</p>
+<p>We can show the average of each coffee type consumed by cup as a summary graphic:</p>
 
 <figure><img alt="Average cups consumed" src="../images/sections/02/average-cups-consumed.png" /></figure>
 
-<p>But averages hide things. Perhaps some people have a single cup of a particular type, and others have many. There are ways to visualize the spread, or variance, of data that indicate the underlying shape of the information, including heat charts, <a class="glossterm" target="_blank" href="glossary01.html#histogram">histograms</a>, and scatterplots. But when keeping the underlying data, you can wind up with more than one <em>dependent</em> variable for each <em>independent</em> variable.</p>
+<p>But averages hide things. Perhaps some people have a single cup of a particular type, and others have many. There are ways to visualize the spread, or variance, of data that indicate the underlying shape of the information, including heat charts, <a class="glossterm" href="glossary01.html#histogram" target="_blank">histograms</a>, and scatterplots. But when keeping the underlying data, you can wind up with more than one <em>dependent</em> variable for each <em>independent</em> variable.</p>
 
-<p>A better visualization (such as a histogram, which counts how many people fit into each bucket that made up an average) might reveal that a few people are drinking a lot of coffee, and a large number of people are drinking a small amount.</p>
+<p>A better visualization (such as a histogram, which counts how many people fit into each bucket&nbsp;or range of values&nbsp;that made up an average) might reveal that a few people are drinking a lot of coffee, and a large number of people are drinking a small amount.</p>
 
-<p>Consider this histogram of the number of cups per patron. All we did was tally up how many people had one cup, how many had two, how many had three, and so on. Then we plotted how <em>frequently</em> each number occurred, which is why this is called a <a class="glossterm" target="_blank" href="glossary01.html#frequency-histogram">frequency histogram</a>.</p>
+<p>Consider this histogram of the number of cups per patron. All we did was tally up how many people had one cup, how many had two, how many had three, and so on. Then we plotted how <em>frequently</em> each number occurred, which is why this is called a <a class="glossterm" href="glossary01.html#frequency-histogram" target="_blank">frequency histogram</a>.</p>
 
 <figure><img alt="Mean vs. Mode" src="../images/sections/02/mean-vs-mode.png" /></figure>
 
-<p>The <em>average</em> number of cups in this data set is roughly 3. And the <a class="glossterm" target="_blank" href="glossary01.html#mode">mode</a>, or most common number, is 2 cups. But as the histogram shows, there are three heavy coffee drinkers, who've each consumed 7 cups, pushing up the average.</p>
+<p>The <em>average</em> number of cups in this data set is roughly 3. And the <a class="glossterm" href="glossary01.html#mode" target="_blank">mode</a>, or most common number, is 2 cups. But as the histogram shows, there are three heavy coffee drinkers&nbsp;who've each consumed 7 cups, pushing up the average.</p>
 
 <p>In other words, when you have raw data, you can see the exceptions and outliers, and tell a more accurate story.</p>
 
-<p>Even this data, verbose and informative as it is, isn't the raw information. It's still aggregated.</p>
+<p>Even these&nbsp;data, verbose and informative as they are, aren't the raw information: they're&nbsp;still aggregated.</p>
 
 <p>Aggregation happens in many ways. For example, a restaurant receipt usually aggregates orders by table. There's no way to find out what an individual person at the table had for dinner, just the food that was served and what it cost. To get to really specific exploration, however, we need data at the transaction level.</p>
 
 <h2>Individual transactions</h2>
 
-<p><a class="glossterm" target="_blank" href="glossary01.html#record-transactional">Transactional records</a> capture things about a specific event. There's no aggregation of the data along a dimension like someone's name (though their name may be captured). It's not rolled up over time. It's instantaneous.</p>
+<p><a class="glossterm" href="glossary01.html#record-transactional" target="_blank">Transactional records</a> capture things about a specific event. There's no aggregation of the data along any dimension like someone's name (though their name may be captured). It's not rolled up over time; it's instantaneous.</p>
 
 <table>
 	<tbody>
@@ -861,8 +861,7 @@
 	</tbody>
 </table>
 
-<p>These transactions can be aggregated by any column. They can be cross-referenced by those columns. The timestamps can also be aggregated into buckets (hourly, daily, or annually). Ultimately, the initial data set we saw of coffee consumption per year results from this raw data, summarized significantly.</p>
-
+<p>These transactions can be aggregated by any column. They can be cross-referenced by those columns. The timestamps can also be aggregated into buckets (hourly, daily, or annually). Ultimately, the initial data set we saw of coffee consumption per year results from these&nbsp;raw data, although summarized significantly.</p>
 
 <h1>Deciding how to aggregate</h1>
 
@@ -873,11 +872,10 @@
 	<li>We bucketed timestamps, summarizing by year.</li>
 </ul>
 
-<p>Either of these pieces of data could have shown us that someone was a heavy coffee drinker (based on total coffee consumed by one person, or based on the rate of consumption from timestamps). While we might not think about the implications of our data on coffee consumption, what if the data pertained instead to alcohol consumption? Would we have a moral obligation to warn someone if we saw that a particular person habitually drank a lot of <em>alcohol</em>? What if this person killed someone while drunk? Is data about alcohol consumption subject to legal discovery in a way that data about coffee consumption needn't be? Are we <em>allowed</em> to aggregate some kinds of data but not others?</p>
+<p>Either of these pieces of data could have shown us that someone was a heavy coffee drinker (based on total coffee consumed by one person, or based on the rate of consumption from timestamps). While we might not think about the implications of our data on coffee consumption, what if the data pertained instead to alcohol consumption? Would we have a moral obligation to warn someone if we saw that a particular person habitually drank a lot of <em>alcohol</em>? What if this person killed someone while driving drunk? Are&nbsp;data about alcohol consumption subject to legal discovery in a way that data about coffee consumption needn't be? Are we <em>allowed</em> to aggregate some kinds of data but not others?</p>
 
 <div data-type="example">
-  <p><strong>Can we fix it?</strong> The big data movement is going to address some of this. Once, it was too computationally intensive to store all the raw transactions. We had to decide how to aggregate things at the moment of collection, and throw out the raw information. But advances in storage efficiency, parallel processing, and cloud computing are making on-the-fly aggregation of massive data sets a reality, which should overcome some amount of <a class="glossterm" target="_blank" href="glossary01.html#bias-aggregation">aggregation bias</a>.</p>
+<p><strong>Can we fix it?</strong> The big data movement is going to address some of this. Once, it was too computationally intensive to store all the raw transactions. We had to decide how to aggregate things at the moment of collection, and throw out the raw information. But advances in storage efficiency, parallel processing, and cloud computing are making on-the-fly aggregation of massive data sets a reality, which should overcome some amount of <a class="glossterm" href="glossary01.html#bias-aggregation" target="_blank">aggregation bias</a>.</p>
 </div>
-
 </section>
 </section>
