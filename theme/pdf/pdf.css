@@ -1,49 +1,8 @@
-@font-face {
-  font-family: "source_sans_proregular";
-  src: url("../fonts/sourcesanspro-regular-webfont.eot");
-  src: url("../fonts/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-regular-webfont.woff") format("woff"), url("../fonts/sourcesanspro-regular-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  }
-
-@font-face {
-  font-family: "source_sans_prosemibold";
-  src: url("../fonts/sourcesanspro-semibold-webfont.eot");
-  src: url("../fonts/sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-semibold-webfont.woff") format("woff"), url("../fonts/sourcesanspro-semibold-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  }
-  
-@font-face {
-  font-family: "source_sans_probold";
-  src: url("../fonts/sourcesanspro-bold-webfont.eot");
-  src: url("../fonts/sourcesanspro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-bold-webfont.woff") format("woff"), url("../fonts/sourcesanspro-bold-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-bold-webfont.svg#source_sans_probold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  }
-  
-@font-face {
-  font-family: "source_sans_prolight";
-  src: url("../fonts/sourcesanspro-light-webfont.eot");
-  src: url("../fonts/sourcesanspro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-light-webfont.woff") format("woff"), url("../fonts/sourcesanspro-light-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-light-webfont.svg#source_sans_prolight") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  }
-  
-@font-face {
-  font-family: "source_sans_proitalic";
-  src: url("../fonts/sourcesanspro-italic-webfont.eot");
-  src: url("../fonts/sourcesanspro-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-italic-webfont.woff") format("woff"), url("../fonts/sourcesanspro-italic-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-italic-webfont.svg#source_sans_proitalic") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  }
-  
-
 @page { /* defining overall trim size and page layout */
   size: 5.5in 8.5in; /* width, heigth */
   margin: 54pt 0.75in 54pt 0.75in; /* white space around the page */
   @bottom-left { /* left footer area */
-    font-family: 'source_sans_proregular', sans-serif;
+    font-family: 'OpenSans-Regular', sans-serif;
     font-size: 8pt;
     text-align: left;
     padding-top: 17pt;
@@ -51,7 +10,7 @@
     vertical-align: top;
   }
   @bottom-right { /* right footer area */
-    font-family: 'source_sans_proregular', sans-serif;
+    font-family: 'OpenSans-Regular', sans-serif;
     font-size: 8pt;
     text-align: right;
     padding-top: 17pt;
@@ -114,7 +73,7 @@ h1 + p, h2 + p, h3 + P {
 }
 
 p, dd { /* general text styles */
-  font-family: 'source_sans_proregular', serif;
+  font-family: 'Crimson-Regular', serif;
   text-indent: 0.167in;
   font-size: 11pt;
   line-height: 14pt;
@@ -208,7 +167,7 @@ section[data-type="titlepage"] {
 
 section[data-type="halftitlepage"] h1, 
 section[data-type="titlepage"] h1 {
-  font-family: 'source_sans_prosemibold', sans-serif;
+  font-family: 'OpenSans-CondBold', sans-serif;
   border-bottom: 0.5pt solid cmyk(0%,0%,0%,100%);
   margin-top: 96pt;
   padding-bottom: 4pt;
@@ -225,7 +184,7 @@ section[data-type="titlepage"] h1 {
 }
 
 section[data-type="titlepage"] h2 { /* book subtitle */
-  font-family: 'source_sans_proitalic', sans-serif;
+  font-family: 'OpenSans-SemiboldItalic', sans-serif;
   font-size: 12pt;
   line-height: 15pt;
   padding-left: 1.7in;
@@ -239,7 +198,7 @@ section[data-type="titlepage"] p:first-of-type {
 }
 
 section[data-type="titlepage"] p {
-  font-family: 'source_sans_proregular', serif;
+  font-family: 'Crimson-Roman', serif;
   font-size: 13pt;
   line-height: 16pt;
   margin-top: 0pt;
@@ -256,12 +215,12 @@ section[data-type="copyright-page"] {
 }
 
 section[data-type="copyright-page"] h1 { /* book title */
-  font-family: 'source_sans_prosemibold', sans-serif;
+  font-family: 'OpenSans-CondBold', sans-serif;
   font-size: 10pt;
 }
 
 section[data-type="copyright-page"] p {
-  font-family: 'source_sans_proregular', serif;
+  font-family: 'Crimson-Roman', serif;
   font-size: 10pt;
   margin: 6pt 0 6pt 0;
   text-indent: 0;
@@ -270,7 +229,7 @@ section[data-type="copyright-page"] p {
 /* dedication */
 
 section[data-type="dedication"] {
-  font-family: 'source_sans_proitalic', serif;
+  font-family: 'Crimson-Italic', serif;
   font-style: italic;
   page: blank;
   page-break-after: always;
@@ -320,7 +279,7 @@ section[data-type="dedication"] {
 
 nav[data-type="toc"] li[data-type="preface"] a:after, 
 nav[data-type="toc"] li[data-type="foreword"] a:after {
-  font-family: 'source_sans_proregular', serif;
+  font-family: 'Crimson-Semibold', serif;
   font-style: normal;
   content: leader(" ") target-counter(attr(href, url), page, lower-roman);
 }
@@ -360,21 +319,21 @@ nav[data-type="toc"] li[data-type="part"],
 nav[data-type="toc"] li[data-type="appendix"], 
 nav[data-type="toc"] li[data-type="chapter"] > a:after, 
 nav[data-type="toc"] li[data-type="appendix"] > a:after {
-  font-family: 'source_sans_prosemibold', sans-serif;
+  font-family: 'OpenSans-CondBold', sans-serif;
 }
 
 nav[data-type="toc"] li[data-type="preface"] a, 
 nav[data-type="toc"] li[data-type="foreword"] a, 
 nav[data-type="toc"] li[data-type="glossary"] a, 
 nav[data-type="toc"] li[data-type="index"] a {
-  font-family: 'source_sans_proitalic', serif;
+  font-family: 'Crimson-SemiboldItalic', serif;
   font-style: italic;
 }
 
 nav[data-type="toc"] li[data-type="chapter"] li a:after, 
 nav[data-type="toc"] li[data-type="appendix"] li a:after, 
 nav[data-type="toc"] li[data-type="chapter"] ol {
-  font-family: 'source_sans_proregular', serif;
+  font-family: 'Crimson-Roman', serif;
 }
 
 nav[data-type="toc"] li[data-type="chapter"], 
@@ -464,7 +423,7 @@ section[data-type="preface"] > h1,
 section[data-type="foreword"] > h1,
 section[data-type="chapter"] > h1, 
 section[data-type="appendix"] > h1 {
-  font-family: 'source_sans_probold', sans-serif;
+  font-family: 'OpenSans-CondBold', sans-serif;
   font-size: 18pt;
   line-height: 22pt;
   margin-bottom: 28pt;
@@ -492,7 +451,7 @@ section[data-type="appendix"] > h1 {
 /* chapter and appendix headings include auto-numbered labels */
 section[data-type="chapter"] > h1:before, 
 section[data-type="appendix"] > h1:before {
-  font-family: 'source_sans_prosemibold', sans-serif;
+  font-family: 'OpenSans-Semibold', sans-serif;
   font-size: 9pt;
   text-transform: uppercase;
   display: block;
@@ -512,7 +471,7 @@ section[data-type="appendix"] > h1:before {
 /* section headings */
 
 section[data-type="sect1"] > h1 { /* A-level headings */
-  font-family: 'source_sans_prosemibold', sans-serif;
+  font-family: 'OpenSans-CondBold', sans-serif;
   font-size: 12pt;
   line-height: 14pt;
   margin-top: 18pt;
@@ -521,7 +480,7 @@ section[data-type="sect1"] > h1 { /* A-level headings */
 }
 
 section[data-type="sect2"] > h2 { /* B-level headings */
-  font-family: 'source_sans_prosemibold', sans-serif;
+  font-family: 'OpenSans-Bold', sans-serif;
   font-size: 8.5pt;
   line-height: 12pt;
   margin-top: 12pt;
@@ -530,7 +489,7 @@ section[data-type="sect2"] > h2 { /* B-level headings */
 }
 
 section[data-type="sect3"] > h3 { /* C-level headings */
-  font-family: 'source_sans_prosemibold', sans-serif;
+  font-family: 'OpenSans-SemiBold', sans-serif;
   font-size: 9pt;
   line-height: 14pt;
   margin-top: 9pt;
@@ -632,7 +591,7 @@ section[data-type="acknowledgments"] .header h3 {
     padding-top: 6pt;
     padding-bottom: 3pt;
     font-size: 11pt;
-    font-family: "source_sans_prosemibold", sans-serif;
+    font-family: "OpenSans-CondBold", sans-serif;
 }
 
 section[data-type="acknowledgments"] .header h3 a { color: black }
@@ -724,7 +683,7 @@ div[data-type="part"] {
 }
 
 div[data-type="part"] > h1 {
-  font-family: 'source_sans_prosemibold', sans-serif;
+  font-family: 'OpenSans-CondBold', sans-serif;
   font-size: 18pt;
   line-height: 22pt;
   text-align: center;
@@ -734,7 +693,7 @@ div[data-type="part"] > h1 {
 }
 
 div[data-type="part"] > h1:before {
-  font-family: 'source_sans_prosemibold', sans-serif;
+  font-family: 'OpenSans-Semibold', sans-serif;
   font-size: 11pt;
   text-transform: uppercase;
   content: "Part " counter(PartNumber);
@@ -1126,7 +1085,7 @@ ul, ol { /* bulleted and numbered lists */
 }
 
 ul li, ol li {
-  font-family: 'source_sans_proregular', sans-serif;
+  font-family: 'Crimson-Roman', serif;
   font-size: 11pt;
   line-height: 14pt;
   margin-top: 3pt;
@@ -1137,7 +1096,7 @@ dl { /* definition lists */
 }
 
 dt { /* definition list terms */
-  font-family: 'source_sans_proregular', sans-serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 8.5pt;
   line-height: 14pt;
   margin-top: 7pt;
@@ -1158,7 +1117,7 @@ table {
 }
 
 table caption {
-  font-family: 'source_sans_proregular', sans-serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 8.5pt;
   line-height: 14pt;
   text-align: left;
@@ -1169,7 +1128,7 @@ table caption {
 table caption:before { /* table captions are auto-numbered via the following */
   counter-increment: TableNumber;
   content: "Table " counter(ChapterNumber)"-"counter(TableNumber)". ";
-  font-family: 'source_sans_prosemibold', sans-serif;
+  font-family: 'OpenSans-Semibold', sans-serif;
 }
 
 tr {
@@ -1177,7 +1136,7 @@ tr {
 }
 
 th { /* table heading rows */
-  font-family: 'source_sans_probold', sans-serif;
+  font-family: 'OpenSans-CondBold', sans-serif;
   font-size: 8pt;
   line-height: 10pt;
   text-align: left;
@@ -1191,7 +1150,7 @@ th, td {
 }
 
 td, table p { /* table body text */
-  font-family: 'source_sans_proregular', sans-serif;
+  font-family: 'OpenSans-CondLight', sans-serif;
   font-size: 9pt;
   line-height: 10pt;
 }
@@ -1252,7 +1211,7 @@ table.question-and-answer td {
 }
 table.question-and-answer td:nth-child(2) p { color: #999999 }
 table.question-and-answer td:nth-child(2) h2 {
-    font-family: "source_sans_prosemibold", sans-serif;
+    font-family: "OpenSans-CondBold", sans-serif;
     color: #41a2ba;
     font-size: 1em;
     margin: 0;
@@ -1279,7 +1238,7 @@ table.sections th:nth-child(2) {
     background: url("../../images/shared-icons/add.png") 1.2em no-repeat #41a2ba;
 }
 table.sections h2 {
-    font-family: "source_sans_prosemibold", sans-serif;
+    font-family: "OpenSans-CondBold", sans-serif;
     color: #41a2ba;
     font-size: 0.95em;
     margin: 0;
@@ -1301,7 +1260,7 @@ figure img { /* figure images */
 }
 
 figure figcaption { /* figure captions */
-  font-family: 'source_sans_proregular', sans-serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 8.5pt;
   line-height: 11pt;
   display: block;
@@ -1320,7 +1279,7 @@ figure img + figcaption { /* figure captions after image */
 }
 
 figcaption:before { /* figure captions are auto-numbered via the following */
-  font-family: 'source_sans_prosemibold', sans-serif;
+  font-family: 'OpenSans-SemiBold', sans-serif;
   counter-increment: FigureNumber;
   content: "Figure " counter(ChapterNumber) "-" counter(FigureNumber) ". ";
 }
@@ -1357,7 +1316,7 @@ aside { /* sidebar containers */
 }
 
 aside h5 { /* sidebar titles */
-  font-family: 'source_sans_probold', sans-serif;
+  font-family: 'OpenSans-CondBold', sans-serif;
   font-size: 11pt;
   line-height: 13pt;
   text-align: center;
@@ -1391,7 +1350,7 @@ div[data-type="warning"] { /* admonition containers */
 
 div[data-type="note"] h1, 
 div[data-type="warning"] h1 { /* admonition titles */
-  font-family: 'source_sans_probold', sans-serif;
+  font-family: 'OpenSans-ExtraBold', sans-serif;
   font-size: 7pt;
   text-transform: uppercase;
   text-align: center;
@@ -1401,7 +1360,7 @@ div[data-type="warning"] h1 { /* admonition titles */
 
 div[data-type="note"] p, 
 div[data-type="warning"] p { /* admonition text */
-  font-family: 'source_sans_proregular', sans-serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 8pt;
   line-height: 11pt;
   text-indent: 0in;
@@ -1437,7 +1396,7 @@ table code { /* inline code within notes, sidebars and tables */
 }
 
 div[data-type="example"] h5 { /* titles for formal code examples */
-  font-family: 'source_sans_proregular', sans-serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 8.5pt;
   line-height: 11pt;
   border-bottom: 0.5pt solid cmyk(0%,0%,0%,100%);
@@ -1446,7 +1405,7 @@ div[data-type="example"] h5 { /* titles for formal code examples */
 }
 
 div[data-type="example"] h5:before { /* figure captions are auto-numbered via the following */
-  font-family: 'source_sans_prosemibold', sans-serif;
+  font-family: 'OpenSans-CondBold', sans-serif;
   counter-increment: ExampleNumber;
   content: "Example " counter(ChapterNumber) "-" counter(ExampleNumber) ". ";
 }
@@ -1454,7 +1413,7 @@ div[data-type="example"] h5:before { /* figure captions are auto-numbered via th
 /* ------------------- BLOCKQUOTES ------------------- */
 
 blockquote, blockquote[data-type="epigraph"] {
-  font-family: 'source_sans_proregular', sans-serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 7.5pt;
   line-height: 11pt;
   margin: 10pt 0.1667in 10pt 0.1667in;
@@ -1462,7 +1421,7 @@ blockquote, blockquote[data-type="epigraph"] {
 
 blockquote p {
   text-indent: 0;
-  font-family: 'source_sans_proregular', sans-serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 7.5pt;
   line-height: 11pt;
 }
