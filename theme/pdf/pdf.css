@@ -680,14 +680,12 @@ section[data-type="acknowledgments"] .description .links a {
     text-indent: -9999px;
     opacity: 0.4;
     background: url("../../images/contributors/website.png");
-    @retina-image('../../images/contributors/website', 29px 29px): ;
 }
 
 section[data-type="acknowledgments"] .description .links a:hover { opacity: 1 }
 
 section[data-type="acknowledgments"] .description .links .twitter {
     background: url("../../images/contributors/twitter.png");
-    @retina-image('../../images/contributors/twitter', 29px 29px): ;
 }
 
 section[data-type="acknowledgments"] .role {
