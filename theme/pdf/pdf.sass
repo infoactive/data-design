@@ -57,8 +57,6 @@ $light-colors: $light-blue $light-yellow $light-green $light-violet $light-red
 
 $color-names: blue yellow green violet red
 
-// add colors
-
 @for $i from 1 through 5
   $color: nth($colors, $i)
   $light-color: nth($light-colors, $i)
@@ -98,14 +96,13 @@ $color-names: blue yellow green violet red
   /* defining overall trim size and page layout
   size: 7in 9.1875in
   /* width, height
-  margin-top: 0.75in
+  margin-top: 0in
   /* white space around the page
-  margin-bottom: 0.75in
+  margin-bottom: 0in
   @sidenote
     float: outside
     width: 1.1in
     clear: both
-
 
 head title
   display: none
@@ -122,9 +119,8 @@ figure[data-type="cover"]
   margin: 0
   padding: 0
 
-
 @page :left
-  margin-left: 1.625in
+  margin-left: 1in
   margin-right: 1in
   @bottom-left-corner
     font-family: "source_sans_proregular", sans-serif
@@ -143,9 +139,8 @@ figure[data-type="cover"]
   @sidenote
     margin-left: -1.25in
 
-
 @page :right
-  margin-right: 1.625in
+  margin-right: 1in
   margin-left: 1in
   @bottom-right-corner
     font-family: "source_sans_proregular", sans-serif
@@ -164,7 +159,6 @@ figure[data-type="cover"]
   @sidenote
     margin-right: -1.25in
 
-
 @page :blank
   /* defining a truly blank master page
   @bottom-left-corner
@@ -178,7 +172,6 @@ figure[data-type="cover"]
 
   @top-left
     content: none
-
 
 /* general blocks
 
