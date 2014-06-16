@@ -1191,7 +1191,7 @@ th, td {
 }
 
 td, table p { /* table body text */
-  font-family: 'source_sans_prolight', sans-serif;
+  font-family: 'source_sans_proregular', sans-serif;
   font-size: 9pt;
   line-height: 10pt;
 }
