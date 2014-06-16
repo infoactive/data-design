@@ -1,6 +1,6 @@
 <section class="violet" data-type="chapter">
 <header>
-<div class="icon"><img src="../images/sections/02/coffee.png" /></div>
+<div class="icon">f<img src="../images/sections/02/coffee.png" /></div>
 
 <p>Chapter 3</p>
 
@@ -52,7 +52,7 @@
 	</tbody>
 </table>
 
-<p>Most data sets fall somewhere in the middle of these levels of aggregation. If we know what kind of <a class="glossterm" href="glossary01.html#data" target="_blank">data</a> we have to begin with, we can greatly simplify the task of correctly visualizing them the first time around. Getting a communicator to describe the information, either through a wizard or simply by having them use one of several templates filled with sample data, makes this far easier.</p>
+<p>Most data sets fall somewhere in the middle of these levels of aggregation. If we know what kind of <a class="glossterm" href="glossary01.html#data" target="_blank">data</a> we have to begin with, we can greatly simplify the task of correctly visualizing them the first time around.</p>
 
 <p>Let's look at these types of aggregation one by one, using the example of coffee consumption. Let's assume a caf&eacute; tracks each cup of coffee sold and records two pieces of information about the sale: the gender of the buyer and the kind of coffee (regular, decaf, or mocha).</p>
 
@@ -286,7 +286,7 @@
 
 <figure><img alt="Total sales" src="../images/sections/02/total-sales.png" /></figure>
 
-<p>In cases where there are several dependent variables for each independent one, we often show the information as a <a class="glossterm" href="glossary01.html#plot-scatter" target="_blank">scatterplot</a> or <a class="glossterm " href="glossary01.html#map-heat" target="_blank">heat map</a>, or do some kind of processing (such as an average) to simplify what's shown. We'll come back to this in the Summary Records section below.</p>
+<p>In cases where there are several dependent variables for each independent one, we often show the information as a <a class="glossterm" href="glossary01.html#plot-scatter" target="_blank">scatterplot</a> or <a class="glossterm " href="glossary01.html#map-heat" target="_blank">heat map</a>, or do some kind of processing (such as an average) to simplify what's shown. We'll come back to this in the section below, Using Visualization to reveal underlying variance.</p>
 
 <h2>Multiseries</h2>
 
@@ -663,11 +663,9 @@
 	</tbody>
 </table>
 
-<aside data-type="sidebar">
-<h5>Using visualization to reveal underlying variance</h5>
+<h3>Using visualization to reveal underlying variance</h3>
 
 <p>When you have summary records or raw data, it's common to aggregate&nbsp;in order to display them&nbsp;well. By showing the total coffee consumed (summing up the raw information) or the average number of cups per patron (the mean of the raw information) we make the data easier to understand.</p>
-</aside>
 
 <p>Consider the following transactions:</p>
 
@@ -746,7 +744,7 @@
 
 <figure><img alt="Average cups consumed" src="../images/sections/02/average-cups-consumed.png" /></figure>
 
-<p>But averages hide things. Perhaps some people have a single cup of a particular type, and others have many. There are ways to visualize the spread, or variance, of data that indicate the underlying shape of the information, including heat charts, <a class="glossterm" href="glossary01.html#histogram" target="_blank">histograms</a>, and scatterplots. But when keeping the underlying data, you can wind up with more than one <em>dependent</em> variable for each <em>independent</em> variable.</p>
+<p>But averages hide things. Perhaps some people have a single cup of a particular type, and others have many. There are ways to visualize the spread, or variance, of data that indicate the underlying shape of the information, including heat charts, <a class="glossterm" href="glossary01.html#histogram" target="_blank">histograms</a>, and scatterplots. When keeping the underlying data, you can wind up with more than one <em>dependent</em> variable for each <em>independent</em> variable.</p>
 
 <p>A better visualization (such as a histogram, which counts how many people fit into each bucket&nbsp;or range of values&nbsp;that made up an average) might reveal that a few people are drinking a lot of coffee, and a large number of people are drinking a small amount.</p>
 
@@ -875,7 +873,7 @@
 <p>Either of these pieces of data could have shown us that someone was a heavy coffee drinker (based on total coffee consumed by one person, or based on the rate of consumption from timestamps). While we might not think about the implications of our data on coffee consumption, what if the data pertained instead to alcohol consumption? Would we have a moral obligation to warn someone if we saw that a particular person habitually drank a lot of <em>alcohol</em>? What if this person killed someone while driving drunk? Are&nbsp;data about alcohol consumption subject to legal discovery in a way that data about coffee consumption needn't be? Are we <em>allowed</em> to aggregate some kinds of data but not others?</p>
 
 <div data-type="example">
-<p><strong>Can we fix it?</strong> The big data movement is going to address some of this. Once, it was too computationally intensive to store all the raw transactions. We had to decide how to aggregate things at the moment of collection, and throw out the raw information. But advances in storage efficiency, parallel processing, and cloud computing are making on-the-fly aggregation of massive data sets a reality, which should overcome some amount of <a class="glossterm" href="glossary01.html#bias-aggregation" target="_blank">aggregation bias</a>.</p>
+<p><strong>Can we address the inherent biases that result from choosing how we aggregate data before presenting it?</strong> The big data movement is going to address some of this. Once, it was too computationally intensive to store all the raw transactions. We had to decide how to aggregate things at the moment of collection, and throw out the raw information. But advances in storage efficiency, parallel processing, and cloud computing are making on-the-fly aggregation of massive data sets a reality, which should overcome some amount of <a class="glossterm" href="glossary01.html#bias-aggregation" target="_blank">aggregation bias</a>.</p>
 </div>
 </section>
 </section>
