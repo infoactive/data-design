@@ -1,3 +1,6 @@
+@import '../html/bourbon/bourbon'
+@import '../html/neat/neat'
+
 @charset "UTF-8"
 
 @font-face
@@ -7,14 +10,12 @@
   font-weight: normal
   font-style: normal
 
-
 @font-face
   font-family: "source_sans_prosemibold"
   src: url("../fonts/sourcesanspro-semibold-webfont.eot")
   src: url("../fonts/sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-semibold-webfont.woff") format("woff"), url("../fonts/sourcesanspro-semibold-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg")
   font-weight: normal
   font-style: normal
-
 
 @font-face
   font-family: "source_sans_probold"
@@ -23,14 +24,12 @@
   font-weight: normal
   font-style: normal
 
-
 @font-face
   font-family: "source_sans_prolight"
   src: url("../fonts/sourcesanspro-light-webfont.eot")
   src: url("../fonts/sourcesanspro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-light-webfont.woff") format("woff"), url("../fonts/sourcesanspro-light-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-light-webfont.svg#source_sans_prolight") format("svg")
   font-weight: normal
   font-style: normal
-
 
 @font-face
   font-family: "source_sans_proitalic"
@@ -39,111 +38,59 @@
   font-weight: normal
   font-style: normal
 
+$yellow: #eeb11e
+$red: #cf4627
+$blue: #41a2ba
+$violet: #3e5084
+$green: #6baf44
+$light-gray: #efefef
+$gray: #d1d2d4
 
-.blue
-  blockquote, [data-type="example"]
-    border-color: #41a2ba
-  a, blockquote:before
-    color: #41a2ba
-  .icon, th
-    background: #41a2ba
-  table:not(.custom) tr:nth-child(2n + 1), .highlight
-    background: #f4fafb
-  tr.custom.extra-highlight
-    background: #cfe8ee
+$light-yellow: lighten($yellow, 44)
+$light-red: lighten($red, 50)
+$light-blue: lighten($blue, 48)
+$light-violet: lighten($violet, 60)
+$light-green: lighten($green, 50)
 
-div[data-type="part"].blue
-  background: #3a92a7
-  .content
-    background: #3a92a7
-  header
-    background: #41a2ba
-  + .navigation ul
-    background: #5fb0c4
+$colors: $blue $yellow $green $violet $red
+$light-colors: $light-blue $light-yellow $light-green $light-violet $light-red
 
-.yellow
-  blockquote, [data-type="example"]
-    border-color: #eeb11e
-  a, blockquote:before
-    color: #eeb11e
-  .icon, th
-    background: #eeb11e
-  table:not(.custom) tr:nth-child(2n + 1), .highlight
-    background: #fef9ef
-  tr.custom.extra-highlight
-    background: #fae9bf
+$color-names: blue yellow green violet red
 
-div[data-type="part"].yellow
-  background: #e1a411
-  .content
-    background: #e1a411
-  header
-    background: #eeb11e
-  + .navigation ul
-    background: #efbd46
+@for $i from 1 through 5
+  $color: nth($colors, $i)
+  $light-color: nth($light-colors, $i)
+  $color-name: nth($color-names, $i)
+  .#{nth($color-names, $i)}
+    blockquote, [data-type="example"]
+      border-color: $color
+    a, blockquote:before
+      color: $color
+    .icon, th
+      background: $color
+    table:not(.custom) tr:nth-child(2n + 1), .highlight
+      background: $light-color
+    tr.custom.extra-highlight
+      background: darken($light-color, 10)
+  div[data-type="part"].#{nth($color-names, $i)}
+    background: darken($color, 5)
+    .content
+      background: darken($color, 5)
+    header
+      background: $color
+    + .navigation ul
+      background: lighten(desaturate($color, 2), 8)
 
-.green
-  blockquote, [data-type="example"]
-    border-color: #6baf44
-  a, blockquote:before
-    color: #6baf44
-  .icon, th
-    background: #6baf44
-  table:not(.custom) tr:nth-child(2n + 1), .highlight
-    background: #f8fcf6
-  tr.custom.extra-highlight
-    background: #dcedd2
+.icon
+  width: 240px
+  height: 240px
+  border-radius: 50%
+  margin: 5em auto 3.5em
 
-div[data-type="part"].green
-  background: #609d3d
-  .content
-    background: #609d3d
-  header
-    background: #6baf44
-  + .navigation ul
-    background: #81bd5e
-
-.violet
-  blockquote, [data-type="example"]
-    border-color: #3e5084
-  a, blockquote:before
-    color: #3e5084
-  .icon, th
-    background: #3e5084
-  table:not(.custom) tr:nth-child(2n + 1), .highlight
-    background: #f8f9fc
-  tr.custom.extra-highlight
-    background: #d5dbec
-
-div[data-type="part"].violet
-  background: #364573
-  .content
-    background: #364573
-  header
-    background: #3e5084
-  + .navigation ul
-    background: #4d629d
-
-.red
-  blockquote, [data-type="example"]
-    border-color: #cf4627
-  a, blockquote:before
-    color: #cf4627
-  .icon, th
-    background: #cf4627
-  table:not(.custom) tr:nth-child(2n + 1), .highlight
-    background: #fef9f7
-  tr.custom.extra-highlight
-    background: #f5d4cd
-
-div[data-type="part"].red
-  background: #ba3f23
-  .content
-    background: #ba3f23
-  header
-    background: #cf4627
-  + .navigation ul
-    background: #d96145
+.icon img
+  width: 150px
+  height: 150px
+  margin: 45px
 
 @page
   /* defining overall trim size and page layout
@@ -810,6 +757,128 @@ dd
   margin-left: 0.1667in
 
 /* tables
+table
+  margin-top: 30px
+  margin-bottom: 30px
+  border-collapse: collapse
+  font-size: .9em
+  display: block
+  overflow: auto
+  border-bottom: none
+
+table caption
+  font-family: 'source_sans_proregular', sans-serif
+  line-height: 120%
+  text-align: left
+  margin: 0 0 20px 0
+  padding: 0
+
+tr
+  border-width: 0px
+  &:first-child
+    border-top: 1px solid $gray
+
+th
+  font-family: 'source_sans_proregular', sans-serif
+  line-height: 120%
+  text-align: left
+  margin-top: 0
+  border-left: 1px solid $gray
+  font-size: 1em
+  color: white
+
+th, td
+  border-bottom: 1px solid $gray
+  border-left: 1px solid $gray
+  padding: .7em 1.3em
+  &:last-child
+    border-right: 1px solid $gray
+
+.nowrap th, .nowrap td
+  white-space: nowrap
+
+td
+  vertical-align: top
+  font-size: 1em
+
+td, table p
+  font-family: 'source_sans_proregular', sans-serif
+  line-height: 120%
+
+table p
+  text-indent: 0
+
+table ul
+  padding: 0 1.5em
+  li
+    margin-bottom: 1em
+
+td pre.programlisting, td pre.screen, td pre.literallayout, td code
+  white-space: pre-wrap
+  word-wrap: break-word
+
+table.question-and-answer,
+table.yes-and-no,
+table.good-and-bad,
+table.sections
+  th
+    font-size: 1.3em
+    padding: .5em 1.5em .5em 3em
+  tr
+    background: transparent
+  td, th
+    white-space: normal
+    p
+      font-size: 1em
+  td
+    padding: 1.3em 1.5em
+
+table.question-and-answer
+  th:nth-child(1)
+    background: url('../../images/shared-icons/search.png') 1.2em no-repeat #444
+  th:nth-child(2)
+    background: url('../../images/shared-icons/arrow.png') 1.2em no-repeat $blue
+  td
+    width: 50%
+    padding: 1.5em
+    padding-bottom: 1em
+  td:nth-child(2)
+    p
+      color: #999
+    h2
+      font-family: 'source_sans_prosemibold', sans-serif
+      color: $blue
+      font-size: 1em
+      margin: 0
+      + p
+        margin-top: 0
+
+table.good-and-bad
+  th:nth-child(1)
+    background: url('../../images/shared-icons/good.png') 1.2em no-repeat $green
+  th:nth-child(2)
+    background: url('../../images/shared-icons/bad.png') 1.2em no-repeat darken($gray, 15)
+
+table.yes-and-no
+  th:nth-child(1)
+    background: url('../../images/shared-icons/check.png') 1.2em no-repeat $green
+  th:nth-child(2)
+    background: url('../../images/shared-icons/no.png') 1.2em no-repeat darken($gray, 15)
+  td
+    width: 50%
+  td:nth-child(2)
+    background: $light-gray
+
+table.sections
+  th:nth-child(1)
+    background: url('../../images/shared-icons/sections.png') 1.2em no-repeat #444
+  th:nth-child(2)
+    background: url('../../images/shared-icons/add.png') 1.2em no-repeat $blue
+  h2
+    font-family: 'source_sans_prosemibold', sans-serif
+    color: $blue
+    font-size: .95em
+    margin: 0
 
 table
   margin: 12pt 0
