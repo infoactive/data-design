@@ -706,7 +706,6 @@ section[data-type="acknowledgments"] .role .writer { background: #3e5084 }
 .icon {
     width: 240px;
     height: 240px;
-    border-radius: 50%;
     margin: 5em auto 3.5em;
 }
 
@@ -1242,11 +1241,9 @@ table.good-and-bad td,
 table.sections td { padding: 1.3em 1.5em }
 table.question-and-answer th:nth-child(1) {
     background: url("../../images/shared-icons/search.png") 1.2em no-repeat #444444;
-    @retina-image('../../images/shared-icons/search', 24px 24px): ;
 }
 table.question-and-answer th:nth-child(2) {
     background: url("../../images/shared-icons/arrow.png") 1.2em no-repeat #41a2ba;
-    @retina-image('../../images/shared-icons/arrow', 24px 24px): ;
 }
 table.question-and-answer td {
     width: 50%;
@@ -1263,29 +1260,23 @@ table.question-and-answer td:nth-child(2) h2 {
 table.question-and-answer td:nth-child(2) h2 + p { margin-top: 0 }
 table.good-and-bad th:nth-child(1) {
     background: url("../../images/shared-icons/good.png") 1.2em no-repeat #6baf44;
-    @retina-image('../../images/shared-icons/good', 24px 24px): ;
 }
 table.good-and-bad th:nth-child(2) {
     background: url("../../images/shared-icons/bad.png") 1.2em no-repeat #a9abaf;
-    @retina-image('../../images/shared-icons/bad', 24px 24px): ;
 }
 table.yes-and-no th:nth-child(1) {
     background: url("../../images/shared-icons/check.png") 1.2em no-repeat #6baf44;
-    @retina-image('../../images/shared-icons/check', 24px 24px): ;
 }
 table.yes-and-no th:nth-child(2) {
     background: url("../../images/shared-icons/no.png") 1.2em no-repeat #a9abaf;
-    @retina-image('../../images/shared-icons/no', 24px 24px): ;
 }
 table.yes-and-no td { width: 50% }
 table.yes-and-no td:nth-child(2) { background: #efefef }
 table.sections th:nth-child(1) {
     background: url("../../images/shared-icons/sections.png") 1.2em no-repeat #444444;
-    @retina-image('../../images/shared-icons/sections', 24px 24px): ;
 }
 table.sections th:nth-child(2) {
     background: url("../../images/shared-icons/add.png") 1.2em no-repeat #41a2ba;
-    @retina-image('../../images/shared-icons/add', 24px 24px): ;
 }
 table.sections h2 {
     font-family: "source_sans_prosemibold", sans-serif;
