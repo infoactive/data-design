@@ -1085,7 +1085,7 @@ ul, ol { /* bulleted and numbered lists */
 }
 
 ul li, ol li {
-  font-family: 'Crimson-Roman', serif;
+  font-family: 'Times', serif;
   font-size: 11pt;
   line-height: 14pt;
   margin-top: 3pt;
