@@ -16,15 +16,60 @@
 
 <p>Let's say you're doing a survey and you're interested in what multimedia devices your respondents have used over the last 6 months. You would use a checkbox response question if you wanted to find out what all the devices were that people used over the six-month period. A radio button only allows respondents to select a single answer, so you could only use it to find out, for example, which one device a person used most often during the six-month period. Each type of question has merit, it just depends on what the purpose of your question is and how you are going to use the results. </p>
 
+<h2>What a checkbox question really is</h2>
+<p>So here's the most important thing to know about checkbox questions, and it's why you have to consider how you graph the results of checkbox questions differently than you do the results of other types of questions. Checkbox questions aren't really their own question type! They're actually just a shorthand way to write a <em>series</em> of yes/no questions. A respondent checks a box if an answer choice applies and leaves it blank if it doesn't. </p>
+<p>We have the checkbox format because it makes surveys more streamlined and easier to understand. In the example below, we asked, &ldquo;Which of the following electronic devices have you used in the past 6 months? Please select all that apply.&rdquo; The premise behind the question is that it&rsquo;s likely that a respondent could use more than one electronic device over a 6-month period, such as a cell phone and a tablet.</p>
+
+<p>If we were to pose this as a series of yes/no questions, it would read something like this:</p>
+<table>
+	<tr>
+		<td colspan="2">In the last 6 months, have you used a/an:</td>
+	</tr>
+	<tr>
+		<td>
+			Desktop PC?
+		</td>
+		<td>
+			Y / N
+		</td>
+		<td>
+			Desktop Mac?
+		</td>
+		<td>
+			Y / N
+		</td>	<td>
+			iPad?
+		</td>
+		<td>
+			Y / N
+		</td>	<td>
+			Tablet (other than an iPad)?
+		</td>
+		<td>
+			Y / N
+		</td>	<td>
+			Laptop (Mac or PC)?
+		</td>
+		<td>
+			Y / N
+		</td>	<td>
+			Cell phone?
+		</td>
+		<td>
+			Y / N
+		</td>		
+	</tr>
+</table>
+
+<p>With the checkbox question, survey respondents only need to check the answers that apply to them, while in a series of yes/no questions, they would need to respond to every question, even if all their answers were "No". With a checkbox question, you can simply provide a "None" option at the bottom of your choice list to handle this situation. When several yes/no questions are related, checkbox questions also prevent repetition of instructions, since all the questions are grouped into one.</p>
+
+<p>These changes can help improve survey readability, flow, length, and overall response rates, so checkboxes are a helpful tool in survey design. However, if you want to handle the resulting data correctly, it is very important for you to remember that the underlying structure of a checkbox is actually a series of dichotmous questions.</p>
+
 
 <h2>How checkbox answers are received</h2>
 
-<p>In the example below, we asked, &ldquo;Which of the following electronic devices have you used in the past 6 months? Please select all that apply.&rdquo; The premise behind the question is that it&rsquo;s likely that a respondent could use more than one electronic device over a 6-month period, such as a cell phone and a tablet.</p>
+<p>How your results or raw data are compiled will, of course, depend on the program you are using to program your survey. One of the more common formats is shown in the table below; this particular data structure reflects how a checkbox question serves as a quick way to represent a series of yes/no questions. A &ldquo;1&rdquo; is shown when a device was selected and a &ldquo;0&rdquo; if a device was not selected.</p>
 
-<p>How your results or raw data are compiled will, of course, depend on the program you are using to program your survey. One of the more common formats is what you would see in an Excel spreadsheet.</p>
-
-
-<p>An example of how the results to our question on electronic devices could be displayed is shown in the table below. A &ldquo;1&rdquo; is shown when a device is selected and a &ldquo;0&rdquo; if a device is not selected.</p>
 
 <table>
 	<tbody>
@@ -191,7 +236,7 @@
 	</tbody>
 </table>
 
-<p>You may notice that the total number of responses (1,841) is greater than the number of people that did the survey (N=500)! Why? Well, when you ask a checkbox question, you're not really asking just one thing; you're asking a <em>series</em> of yes/no questions. A respondent checks a box if an answer choice applies and leaves it blank if it doesn't. The total possible number of checked boxes?  (# of "real" answer options) X (# of respondents)  (Here, a "real" answer option means one that isn't "None," "N/A" or "Prefer not to Answer," since selecting one of those options would prevent a person from choosing any other answers in additional to that.)</p>
+<p>You may notice that the total number of responses (1,841) is greater than the number of people that did the survey (N=500)! Why? It's because of the whole "a checkbox is really a bunch of yes/no questions rolled into one" thing. The total possible number of checked boxes in a checkbox question?  It's the (# of "real" answer options) X (# of respondents)  (Here, a "real" answer option means one that isn't "None," "N/A" or "Prefer not to Answer," since selecting one of those options would prevent a person from choosing any other answers in additional to that.) For this survey, there were 6 device options (aside from "None") that a person could select and there were 500 people that answered the survey. So the total number of boxes that had the potential to get checked during the survey was 3000, not just 500.</p>
 
 <h2>How to display the results</h2>
 <p>Since the total number of responses is greater than the number of respondents, you need to use some caution when creating graphs based on this data. There are a few different ways to illustrate your results, depending on what your overall question of interest is.</p> 
