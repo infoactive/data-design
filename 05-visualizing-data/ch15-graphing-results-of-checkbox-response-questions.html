@@ -10,8 +10,199 @@
 <section data-type="sect1">
 <h1>Checkbox responses</h1>
 
-<p>This chapter focuses on checkbox responses or multiple response questions, where a question can be answered with more than one answer, if applicable. In the example below, we asked, &ldquo;Which of the following electronic devices have you used in the past 6 months? Please select all that apply.&rdquo; The premise behind the question is that it&rsquo;s likely that a respondent could use more than one electronic device over a 6-month period, such as a cell phone and a tablet.</p>
+<p>This chapter focuses on checkbox responses or multiple response questions, where a question can be answered with more than one answer, if applicable. </p>
 
+<h2>Refresher on the difference between checkboxes and radio buttons</h2>
+
+<p>Let's say you're doing a survey and you're interested in what multimedia devices your respondents have used over the last 6 months. You would use a checkbox response question if you wanted to find out what all the devices were that people used over the six-month period. A radio button only allows respondents to select a single answer, so you could only use it to find out, for example, which one device a person used most often during the six-month period. Each type of question has merit, it just depends on what the purpose of your question is and how you are going to use the results. </p>
+
+<h2>What a checkbox question really is</h2>
+<p>So here's the most important thing to know about checkbox questions, and it's why you have to consider how you graph the results of checkbox questions differently than you do the results of other types of questions. Checkbox questions aren't really their own question type! They're actually just a shorthand way to write a <em>series</em> of yes/no questions. A respondent checks a box if an answer choice applies and leaves it blank if it doesn't. </p>
+<p>We have the checkbox format because it makes surveys more streamlined and easier to understand. In the example below, we asked, &ldquo;Which of the following electronic devices have you used in the past 6 months? Please select all that apply.&rdquo; The premise behind the question is that it&rsquo;s likely that a respondent could use more than one electronic device over a 6-month period, such as a cell phone and a tablet.</p>
+
+<p>If we were to pose this as a series of yes/no questions, it would read something like this:</p>
+<table>
+	<tr>
+		<td colspan="2">In the last 6 months, have you used a/an:</td>
+	</tr>
+	<tr>
+		<td>
+			Desktop PC?
+		</td>
+		<td>
+			Y / N
+		</td>
+		<td>
+			Desktop Mac?
+		</td>
+		<td>
+			Y / N
+		</td>	<td>
+			iPad?
+		</td>
+		<td>
+			Y / N
+		</td>	<td>
+			Tablet (other than an iPad)?
+		</td>
+		<td>
+			Y / N
+		</td>	<td>
+			Laptop (Mac or PC)?
+		</td>
+		<td>
+			Y / N
+		</td>	<td>
+			Cell phone?
+		</td>
+		<td>
+			Y / N
+		</td>		
+	</tr>
+</table>
+
+<p>With the checkbox question, survey respondents only need to check the answers that apply to them, while in a series of yes/no questions, they would need to respond to every question, even if all their answers were "No". With a checkbox question, you can simply provide a "None" option at the bottom of your choice list to handle this situation. When several yes/no questions are related, checkbox questions also prevent repetition of instructions, since all the questions are grouped into one.</p>
+
+<p>These changes can help improve survey readability, flow, length, and overall response rates, so checkboxes are a helpful tool in survey design. However, if you want to handle the resulting data correctly, it is very important for you to remember that the underlying structure of a checkbox is actually a series of dichotmous questions.</p>
+
+
+<h2>How checkbox answers are received</h2>
+
+<p>How your results or raw data are compiled will, of course, depend on the program you are using to program your survey. One of the more common formats is shown in the table below; this particular data structure reflects how a checkbox question serves as a quick way to represent a series of yes/no questions. A &ldquo;1&rdquo; is shown when a device was selected and a &ldquo;0&rdquo; if a device was not selected.</p>
+
+
+<table>
+	<tbody>
+		<tr>
+			<th>Date</th>
+			<th>Q1_PC</th>
+			<th>Q1_Mac</th>
+			<th>Q1_Tablet</th>
+			<th>Q1_iPad</th>
+			<th>Q1_Laptop</th>
+			<th>Q1_Cellphone</th>
+			<th>Q1_None</th>
+		</tr>
+		<tr>
+			<td>10/02/2013</td>
+			<td>1</td>
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>10/01/2013</td>
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+			<td>1</td>
+			<td>1</td>
+			<td>1</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>1</td>
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>1</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>0</td>
+			<td>1</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>1</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>09/27/2013</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>1</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>09/26/2013</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>1</td>
+			<td>0</td>
+		</tr>
+
+		<tr>
+			<td>09/26/2013</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>6</td>
+			<td>3</td>
+			<td>3</td>
+			<td>2</td>
+			<td>5</td>
+			<td>9</td>
+			<td>1</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>You might also receive results like this: {TRINA PUT SOME STUFF HERE!}</p>
+
+
+<h2>How results of checkbox questions are special</h2>
+
+<p>Let's take a look at a summary of possible responses to the checkbox question posed above.</p>
 <table class="tableizer-table">
 	<tbody>
 		<tr class="tableizer-firstrow">
@@ -45,249 +236,45 @@
 	</tbody>
 </table>
 
-<p>You will also notice that the total to all the answers above (1,841) equal more than the 500 respondents.</p>
+<p>You may notice that the total number of responses (1,841) is greater than the number of people that did the survey (N=500)! Why? It's because of the whole "a checkbox is really a bunch of yes/no questions rolled into one" thing. The total possible number of checked boxes in a checkbox question?  It's the (# of "real" answer options) X (# of respondents)  (Here, a "real" answer option means one that isn't "None," "N/A" or "Prefer not to Answer," since selecting one of those options would prevent a person from choosing any other answers in additional to that.) For this survey, there were 6 device options (aside from "None") that a person could select and there were 500 people that answered the survey. So the total number of boxes that had the potential to get checked during the survey was 3000, not just 500.</p>
 
-<p>There are a couple of ways to illustrate these findings.</p>
+<h2>How to display the results</h2>
+<p>Since the total number of responses is greater than the number of respondents, you need to use some caution when creating graphs based on this data. There are a few different ways to illustrate your results, depending on what your overall question of interest is.</p> 
 
-<p>One way is to show the data as reported (Graph 1A below). Clearly, cellphones (90%) and PCs (84%) are the most commonly-cited electronic devices used in the past six months (Note: These results are purely fictional). Another thing to note is that the order of the devices has been changed so they are in descending order, beginning with the largest. This is important in communicating the results in an easy-to-understand manner.</p>
+
+<h3>Bar charts</h3>
+<p>One way is to do a bar graph and base the percentages on the number of respondents that selected each answer choice, like in the graph below. Clearly, cellphones (90%) and PCs (84%) are the most commonly-cited electronic devices used in the past six months. </p>
 
 <figure><img alt="Electronic devices used" src="../images/sections/05/electronic-devices-used-1a.png" /></figure>
 
-<p>But the fact that the total adds to more than 100% can be unsettling for some. An alternative way to illustrate the results is to base the percentages on the total mentions (1,841).</p>
+<p>However, the fact that the total adds to more than 100% can be unsettling for some. An alternative way to illustrate the results is to base the percentages on the total mentions (1,841).</p>
 
 <figure><img alt="Electronic devices used" src="../images/sections/05/electronic-devices-used-1b.png" /></figure>
 
-<p>A drawback to this way of displaying data is one must always keep in mind that it is based on mentions not people, so one can&rsquo;t say, for example, &lsquo;24% of consumers used a cellphone in the past six months&rsquo;.</p>
+<p>A drawback to this way of displaying data is one must always keep in mind that it is based on mentions not people, so one can&rsquo;t say, for example, &lsquo;24% of consumers used a cellphone in the past six months&rsquo;. {we need a better example here of when this could be an advantage, a case where mentions might be okay to use and not just confusing}</p>
 
-<h2>Comparison of Checkbox Responses and Single-Choice Questions</h2>
+<p>Insert paragraph about grouping data (more than one device, etc)</p>
 
-<p>So, you can use a checkbox response question if you want to find, in our example, all the devices one could use over a six-month period. In contrast, a single-choice question would see to find out which one device a person uses most often in a six-month period. Each type of question has merit, it just depends on what you want to find out (what are your objectives) and how you are going to use the results. The graphs below compare results from a checkbox response question and a single-choice question.</p>
+<div class="warning"><b>Warning about pie charts and checkbox questions</b>
+<p>Don't use pie charts if you're basing your percentages on the number of respondents that selected each answer choice! Pie charts are used to represent part-to-whole relationships and the total percentage of all the groups has to equal 100%. Since the possible sum of the percentages is greater than 100% when you base these calculations on the number of respondents, pie charts are a very bad choice for displaying these results.</p></div>
 
-<figure><img alt="Comparing checkbox and radio responses" src="../images/sections/05/checkbox-vs-radio.png" /></figure>
-
-<p>Another difference between single choice and checkbox responses is that in the former type of question, if you want to change your answer you just select another answer and your first answer is automatically de-selected. For checkbox responses, you must select your incorrect answer again in order to de-select it.</p>
-
-<h2>Other Ways of Using Checkbox Responses</h2>
-
-<p>So far, we&rsquo;ve been looking at simple measurement attributes (e.g. electronic devices used). Checkbox responses can also be based on <a class="glossterm" target="_blank" href="glossary01.html#statement-attitudinal">attitudinal statements</a>. The graph below shows attitudes of homeowners towards owning their home. In this case, you probably want to keep it as is, where the total exceeds 100%. It&rsquo;s a quasi-qualitative question and you want to see the full range of attitudes.</p>
-
-<figure><img alt="Home ownership bar graph" src="../images/sections/05/home-ownership.png" /></figure>
-
-<h2>Writing checkbox response questions</h2>
-
-<p>Here are a few tips for writing this type of question:</p>
-
-<ul>
-	<li>
-	<p>Randomize answer options to help prevent <a class="glossterm" target="_blank" href="glossary01.html#bias-order">order bias</a></p>
-
-	</li>
-	<li>If there is any change that a respondent won&rsquo;t be able to answer the question (&ldquo;Can&rsquo;t say&rdquo; or &ldquo;don&rsquo;t know&rdquo;), might not want to answer the question (&ldquo;prefer not to say&rdquo;) or might have an answer different from any of the answers provided (&ldquo;other&rdquo;) ut this option at the bottom of the list and anchor it or make sure it always appears as the last option.</li>
-	<li>If you have a &ldquo;none&rdquo; option, make sure it is exclusive, that is, if it is selected, all other options are automatically de-selected.</li>
-</ul>
-
-<figure><img alt="Randomized order of checkboxes in survey" src="../images/sections/05/randomize-checkboxes.png" /></figure>
-
-<h2>How checkbox answers are received</h2>
-
-<p>How your results or raw data are compiled will, of course, depend on the program you are using to program your survey. One of the more common formats is what you would see in an Excel spreadsheet.</p>
-
-<p>So going back to our question on electronic devices:</p>
-
-<blockquote>Which of the following electronic devices have you used in the past 6 months? Select all that apply.</blockquote>
-
-<p>An example of how the results to our question on electronic devices could be displayed is shown in the table below. A &ldquo;1&rdquo; is shown when a device is selected and a &ldquo;0&rdquo; if a device is not selected.</p>
-
-<table>
-	<tbody>
-		<tr>
-			<th>StartDate</th>
-			<th>EndDate</th>
-			<th>Q1_PC</th>
-			<th>Q1_Mac</th>
-			<th>Q1_Tablet</th>
-			<th>Q1_iPad</th>
-			<th>Q1_Laptop</th>
-			<th>Q1_Cellphone</th>
-			<th>Q1_None</th>
-		</tr>
-		<tr>
-			<td>10/02/2013</td>
-			<td>10/02/2013</td>
-			<td>1</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>10/01/2013</td>
-			<td>10/01/2013</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>09/30/2013</td>
-			<td>09/30/2013</td>
-			<td>1</td>
-			<td>0</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>09/30/2013</td>
-			<td>09/30/2013</td>
-			<td>1</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>09/30/2013</td>
-			<td>09/30/2013</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-			<td>0</td>
-			<td>1</td>
-			<td>1</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>09/30/2013</td>
-			<td>09/30/2013</td>
-			<td>0</td>
-			<td>1</td>
-			<td>1</td>
-			<td>0</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>09/30/2013</td>
-			<td>09/30/2013</td>
-			<td>1</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>1</td>
-			<td>1</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>09/27/2013</td>
-			<td>09/27/2013</td>
-			<td>1</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>09/27/2013</td>
-			<td>09/27/2013</td>
-			<td>1</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>1</td>
-			<td>1</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>09/27/2013</td>
-			<td>09/27/2013</td>
-			<td>0</td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>09/26/2013</td>
-			<td>09/26/2013</td>
-			<td>1</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>1</td>
-			<td>1</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>09/26/2013</td>
-			<td>09/26/2013</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>1</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>09/26/2013</td>
-			<td>09/26/2013</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>1</td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>7</td>
-			<td>4</td>
-			<td>4</td>
-			<td>3</td>
-			<td>5</td>
-			<td>12</td>
-			<td>1</td>
-		</tr>
-	</tbody>
-</table>
-
-<p>When the results are displayed like this, it makes it easy to see which devices are used most. It also makes it easy to see how many respondents are not connect (selected &ldquo;none&rsquo;), an interesting finding in itself.</p>
-
-<h2>Order of mentions</h2>
-
-<p>When programing your question, you may want to consider which device was selected first, second, third, etc. This information os often used in marketing to help determine which devices are &ldquo;top of mind&rdquo;.</p>
-
-<h2>How to display the results</h2>
-
-<p>So far we&rsquo;ve been displaying the results for checkbox responses in bar graphs for one point in time.</p>
-
-<h3>Point in time</h3>
-
-<p>Other ways of displaying the results for a specific point in time include:</p>
-
-<figure><img alt="Column chart for checkboxes" src="../images/sections/05/checkbox-column.png" /></figure>
 
 <h3>Over time</h3>
 
-<p>If your checkbox responses have been collected over a period of time, say 2009, 2010, 2011, 2012, 2013, you could display the responses as shown below.</p>
+<p>So far we&rsquo;ve been displaying the results for checkbox responses in bar graphs for one point in time. If your checkbox responses have been collected over a period of time, say 2009 - 2013, you could display the responses in a line chart as shown below.</p>
 
 <figure><img alt="Line chart for checkboxes" src="../images/sections/05/checkbox-line.png" /></figure>
+
+
+
+<h2>Attitudinal Measurements</h2>
+
+<p>So far, we&rsquo;ve been looking at the use of checkbox questions to gather data on basic counts (e.g. electronic devices used). Checkbox responses can also be used to assess agreement with <a class="glossterm" target="_blank" href="glossary01.html#statement-attitudinal">attitudinal statements</a>. The graph below shows attitudes of homeowners towards owning their home. In this case, since the statistic of interest is what percentage of homeowners agree with each statement, it is probably best to keep the graph as is, with the total exceeding 100%.</p>
+
+<figure><img alt="Home ownership bar graph" src="../images/sections/05/home-ownership.png" /></figure>
+
+	
+	
+	
 </section>
 </section>
