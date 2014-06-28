@@ -8,13 +8,12 @@
 </header>
 
 <section data-type="sect1">
-<h1>Checkbox responses</h1>
 
-<p>This chapter focuses on checkbox responses or multiple response questions, where a question can be answered with more than one answer, if applicable. </p>
+<p>This chapter focuses on checkbox responses or multiple response questions, where a question can be answered with more than one answer, if applicable.</p>
 
-<h2>Refresher on the difference between checkboxes and radio buttons</h2>
+<h2>Checkboxes vs. radio buttons</h2>
 
-<p>Let's say you're doing a survey and you're interested in what multimedia devices your respondents have used over the last 6 months. You would use a checkbox response question if you wanted to find out what all the devices were that people used over the six-month period. A radio button only allows respondents to select a single answer, so you could only use it to find out, for example, which one device a person used most often during the six-month period. Each type of question has merit, it just depends on what the purpose of your question is and how you are going to use the results. </p>
+<p>Let's say you're doing a survey and you're interested in what multimedia devices your respondents have used over the last six months. You would use a checkbox response question if you wanted to find out what all the devices were that people used over the six-month period. A radio button only allows respondents to select a single answer, so you could only use it to find out, for example, which one device a person used most often during the six-month period. Each type of question has merit, it just depends on what the purpose of your question is and how you are going to use the results. </p>
 
 <h2>What a checkbox question really is</h2>
 <p>So here's the most important thing to know about checkbox questions, and it's why you have to consider how you graph the results of checkbox questions differently than you do the results of other types of questions. Checkbox questions aren't really their own question type! They're actually just a shorthand way to write a <em>series</em> of yes/no questions. A respondent checks a box if an answer choice applies and leaves it blank if it doesn't. </p>
@@ -69,7 +68,6 @@
 <h2>How checkbox answers are received</h2>
 
 <p>How your results or raw data are compiled will, of course, depend on the program you are using to program your survey. One of the more common formats is shown in the table below; this particular data structure reflects how a checkbox question serves as a quick way to represent a series of yes/no questions. A &ldquo;1&rdquo; is shown when a device was selected and a &ldquo;0&rdquo; if a device was not selected.</p>
-
 
 <table>
 	<tbody>
@@ -199,8 +197,175 @@
 
 <p>You might also receive results like this: {TRINA PUT SOME STUFF HERE!}</p>
 
+<table>
+	<tbody>
+		<tr>
+			<th>Date</th>
+			<th>Response</th>
+    </tr>
+    <tr>
+			<td>10/02/2013</td>
+			<td>PC, Tablet, Cellphone</td>
+		</tr>
+		<tr>
+			<td>10/01/2013</td>
+			<td>Mac, iPad, Tablet, Cellphone</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>PC, iPad, Cellphone</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>PC, Tablet, Cellphone</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>Mac, Laptop, Cellphone</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>Mac, Tablet, Cellphone</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>PC, Laptop, Cellphone</td>
+		</tr>
+		<tr>
+			<td>09/27/2013</td>
+			<td>PC, Laptop, Cellphone</td>
+		</tr>
+		<tr>
+			<td>09/26/2013</td>
+			<td>PC, Laptop, Cellphone</td>
+		</tr>
+		<tr>
+			<td>09/26/2013</td>
+			<td>None</td>
+		</tr>
+  </tbody>
+</table>
 
-<h2>How results of checkbox questions are special</h2>
+<p>Or like this:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Date</th>
+			<th>Q1_PC</th>
+			<th>Q1_Mac</th>
+			<th>Q1_Tablet</th>
+			<th>Q1_iPad</th>
+			<th>Q1_Laptop</th>
+			<th>Q1_Cellphone</th>
+			<th>Q1_None</th>
+		</tr>
+		<tr>
+			<td>10/02/2013</td>
+			<td>Q1_PC</td>
+			<td>&nbsp;</td>
+			<td>Q1_Tablet</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>Q1_Cellphone</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>10/01/2013</td>
+			<td>&nbsp;</td>
+			<td>Q1_Mac</td>
+			<td>&nbsp;</td>
+			<td>Q1_iPad</td>
+			<td>Q1_Laptop</td>
+			<td>Q1_Cellphone</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>Q1_PC</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>Q1_iPad</td>
+			<td>&nbsp;</td>
+			<td>Q1_Cellphone</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>Q1_PC</td>
+			<td>&nbsp;</td>
+			<td>Q1_Tablet</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>Q1_Cellphone</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>&nbsp;</td>
+			<td>Q1_Mac</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>Q1_Laptop</td>
+			<td>Q1_Cellphone</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>&nbsp;</td>
+			<td>Q1_Mac</td>
+			<td>Q1_Tablet</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>Q1_Cellphone</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>09/30/2013</td>
+			<td>Q1_PC</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>Q1_Laptop</td>
+			<td>Q1_Cellphone</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>09/27/2013</td>
+			<td>Q1_PC</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>Q1_Laptop</td>
+			<td>Q1_Cellphone</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>09/26/2013</td>
+			<td>Q1_PC</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>Q1_Laptop</td>
+			<td>Q1_Cellphone</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>09/26/2013</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>Q1_None</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>All three of the above examples represent the same answers, but they're formatted in different ways. Since different survey collection tools format checkbox responses in different ways, you may need to reformat your data to match the specific format required by the visualization software you are using.</p>
+
+<h2>How checkbox question results are special</h2>
 
 <p>Let's take a look at a summary of possible responses to the checkbox question posed above.</p>
 <table class="tableizer-table">
@@ -255,9 +420,8 @@
 
 <p>Insert paragraph about grouping data (more than one device, etc)</p>
 
-<div class="warning"><b>Warning about pie charts and checkbox questions</b>
-<p>Don't use pie charts if you're basing your percentages on the number of respondents that selected each answer choice! Pie charts are used to represent part-to-whole relationships and the total percentage of all the groups has to equal 100%. Since the possible sum of the percentages is greater than 100% when you base these calculations on the number of respondents, pie charts are a very bad choice for displaying these results.</p></div>
-
+<div data-type="warning"><b>Warning about pie charts and checkbox questions</b>
+<p>Don't use pie charts if you're basing your percentages on the number of respondents that selected each answer choice! Pie charts are used to represent part-to-whole relationships and the total percentage of all the groups has to equal 100%. Since the possible sum of the percentages is greater than 100% when you base these calculations on the number of respondents, pie charts are an incorrect choice for displaying these results.</p></div>
 
 <h3>Over time</h3>
 
