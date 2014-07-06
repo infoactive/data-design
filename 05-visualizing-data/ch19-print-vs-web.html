@@ -47,7 +47,9 @@
 
 <p>Mobile devices are also a concern, as a growing number of people are using phones and tablets to browse the web. It&rsquo;s hard to see a lot of detail on a tiny touchscreen, but you don't want users to have to squint to understand your graphic! You could build a responsive graphic &mdash; one that automatically changes its layout according to the dimensions of the viewer&rsquo;s screen size &mdash; or you could design a completely different graphic specifically for display on small mobile devices. Given the state of mobile web browsing trends, it&rsquo;s something you should consider when publishing a visualization on the web.</p>
 
-<p>[Graphics showing pie chart with extra width vs small screen, bar chart vs. column chart]</p>
+<figure><img alt="Pie chart on different width screens" src="../images/sections/05/ch19-01-pie-on-mobile.png" /></figure>
+
+<figure><img alt="Bar chart on mobile device" src="../images/sections/05/ch19-02-column-chart-on-mobile.png" /></figure>
 
 <p>Many mobile devices (and increasingly, laptop and desktop monitors) have high-resolution displays, often referred to as <em>retina</em> displays. A static image designed at the standard web resolution of 72 dpi (dots per inch) will usually look blurry when viewed on a retina display. You&rsquo;ll need to make double-resolution retina versions of your image-based graphics if you want them to look sharp on, say, a modern iPad. You can also create them using web fonts and SVGs, and they will always look crisp, no matter what the screen resolution. One downside to this is that some older browsers (notably Internet Explorer 8 and below) do not support SVG format.</p>
 
@@ -56,7 +58,7 @@
 
 <p>SVG stands for Scalable Vector Graphic, and it&rsquo;s a web-friendly format for displaying vector images, which are images that can scale to any dimension by using mathematical expressions to draw paths. Vector images will look crisp even when blown up to very large sizes, unlike bitmap images (also known as raster graphics), which use bits of specific colors which are mapped to certain regions in the image. Bitmap images will look blurry when viewed at a high resolution, but they are often necessary when the color combinations are complex. A photograph is a great example of a bitmap image, and a simple circle is a great example of an image that can easily be drawn as a vector image.</p>
 
-<p>[graphic showing bitmap circle vs svg]</p>
+<figure><img alt="Bitmap vs. vector images" src="../images/sections/05/ch19-03-raster-vector.png" /></figure>
 
 <p>Many of the tools for building web-based interactive charts and graphs (such as D3.js) use SVGs to render visualizations, especially interactive ones. Most of the static infographics, however, are published in bitmap image formats, such as JPEG or PNG.</p>
 </div>
@@ -75,19 +77,14 @@
 
 <p>They aren&rsquo;t necessarily interactive, except that viewers can enlarge them, as mentioned above. Because the graphic itself doesn&rsquo;t change, the main considerations of layout still apply. But just by being on the web, static graphics give us more interactivity than print. For example, they can be linked to their data source, another related graph, or a different web page. Mobile screen sizes still remain a challenge for static graphics specifically because their layout doesn&rsquo;t change to accommodate smaller amounts of screen real estate or different width-to-height ratios.</p>
 
-<p>[ graphic of big chart, then viewed on a mobile phone ]</p>
-
-<p>[caption] Text labels that were clear on a larger screen can be difficult or impossible to read on a mobile device.&nbsp;</p>
+<figure>
+  <img alt="Complex map on mobile device" src="../images/sections/05/ch19-04-map-on-mobile.png" />
+  <figcaption>Text labels and visual details that are clear on a larger screen can sometimes be difficult or impossible to read on a mobile device.</figcaption>
+</figure>
 
 <p>While URLs displayed as part of a static image can&rsquo;t be directly clicked on, it&rsquo;s common for thoughtful publishers to paste reference links just below the graphic so that readers can easily access the source data.</p>
 
-<p>[ example of bad &amp; good ways to paste links along with static graphics ]</p>
-
-<p>Good examples of static graphics on the web:</p>
-
-<p>Extremely simple graphs can give us some insight into complicated topics, like chronobiology. Or they can help visualize clear points on not-so-complicated topics, such as how much Hollywood earns. They can also point out indications based on a collection of data, such as whether a drought seems likely based on average rainfall in a given area over decades.</p>
-
-<p>[ add simple graphic of average rainfall ]</p>
+<figure><img alt="Citing sources" src="../images/sections/05/ch19-05-link-position.png" /></figure>
 
 <h3>Interactivity and staticness</h3>
 
@@ -97,17 +94,17 @@
 
 <p>For example, consider the following bar chart:</p>
 
-<p>[ graphic showing coffee sales labels applied only on hover, vs without hover ]</p>
+<figure><img alt="Pointless hover" src="../images/sections/05/ch19-06-pointless-hover.png" /></figure>
 
-<p>In the figure above, the interactive labels aren&rsquo;t necessary for the viewer&rsquo;s comprehension. The labels can be added to the chart <em>before</em> hovering, which makes the chart easier to understand and requires less effort from the viewer. When you&rsquo;re presenting a small, simple chart with a single variable, it often makes more sense to use a static chart.&nbsp;</p>
+<p>In the figure above, the interactive labels (e.g. the hover effects) aren&rsquo;t necessary for the viewer&rsquo;s comprehension. The labels can be added to the chart <em>before</em> hovering, which makes the chart easier to understand and requires less effort from the viewer. When you&rsquo;re presenting a small, simple chart with a single variable, interactivity can actually detract from your message.</p>
 
 <div data-type="note">
-<p>There are plenty of amazing use cases where interactivity adds value to a visualization, but you shouldn't make yours interactive just because it looks cool. Make sure you're actually improving the user's information experience. &nbsp;For example, interactivity can help greatly enhance any graphic that illustrates a rich data set you want the user to explore. Let&rsquo;s say you want to show how different groups of consumers drink coffee. An interactive visualization might allow your user to filter by demographic groups and explore coffee consumption patterns.</p>
+<p>There are plenty of amazing use cases where interactivity adds value to a visualization, but you shouldn't make yours interactive just because it looks cool. Make sure you're actually improving the user's information experience. For example, interactivity can help greatly enhance any graphic that illustrates a rich data set you want the user to explore. Let&rsquo;s say you want to show how different groups of consumers drink coffee. An interactive visualization might allow your user to filter by demographic groups and explore coffee consumption patterns.</p>
 </div>
 
 <p>Interactive graphics can add a lot of value when you have a rich dataset that you want the user to explore. For example, let&rsquo;s say that you want to know how different groups of consumers drink coffee. An interactive visualization might allow you to filter by demographic groups and explore coffee consumption patterns.</p>
 
-<p>[ Graphic of a line chart, with filter options showing age, gender, income, level of education. Popup showing what the line represents ]</p>
+<figure><img alt="Interactive exploration" src="../images/sections/05/ch19-07-interactive-exploration.png" /></figure>
 
 <p>In static graphics, you can&rsquo;t rely on visual effects like movement or color changes to make your point. On the other hand, while interactive graphics can incorporate visual effects to show trends across time, they do introduce room for technical difficulties. Be mindful of compatibility in computer systems and across browsers. Some of the more complex interactive visualizations require a lot of computational power and can be slow on less-powerful machines, such as smart phones. Visualizations made using Flash won&rsquo;t render on iPhones or iPads, and those made using SVGs won&rsquo;t work in Internet Explorer 8 or below. Interactive visualizations built for a computer with a mouse may be difficult or impossible to use on touchscreen devices if the creator forgets to test and optimize the graphics for touch-based interactions.&nbsp;</p>
 
