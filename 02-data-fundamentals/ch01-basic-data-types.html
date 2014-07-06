@@ -56,8 +56,86 @@
 <h5>For simplicity in presentation, we often round continuous data to a certain number of digits. This data is still continuous, not discrete.</h5>
 </aside>
 
-<p>To review the nominal, ordinal, interval, and ratio data types, let&rsquo;s take a look at a receipt from the store.</p>
-[[table goes here]]
+<p>To review, let&rsquo;s take a look at a receipt from the store. Can you identify which pieces of information are measured at each level (nominal, ordinal, interval, and ratio)?</p>
+<table>
+  <tr>
+    <th colspan=5>
+      Date: 06/01/2014	Time: 11:32am
+    </th>
+  </tr>
+  <tr>
+    <td>Item</td>
+    <td>Section</td>
+    <td>Aisle</td>
+    <td>Quantity</td>
+    <td>Cost (US$)</td>
+  </tr>
+    <tr>
+    <td>Oranges - Lbs</td>
+    <td>Produce</td>
+    <td>4</td>
+    <td>2</td>
+    <td>2.58</td>
+  </tr>
+      <tr>
+    <td>Apples - Lbs</td>
+    <td>Produce</td>
+    <td>4</td>
+    <td>1</td>
+    <td>1.29</td>
+  </tr>
+      <tr>
+    <td>Mozzarella - Lbs</td>
+    <td>Dairy</td>
+    <td>7</td>
+    <td>1</td>
+    <td>3.49</td>
+  </tr>
+      <tr>
+    <td>Milk - Skim - Gallon</td>
+    <td>Dairy</td>
+    <td>8</td>
+    <td>1</td>
+    <td>4.29</td>
+  </tr>
+      <tr>
+    <td>Peas - Bag</td>
+    <td>Frozen</td>
+    <td>15</td>
+    <td>1</td>
+    <td>0.99</td>
+  </tr>
+      <tr>
+    <td>Green Beans - Bag</td>
+    <td>Frozen</td>
+    <td>15</td>
+    <td>3</td>
+    <td>1.77</td>
+  </tr>
+      <tr>
+    <td>Tomatoes</td>
+    <td>Canned</td>
+    <td>2</td>
+    <td>4</td>
+    <td>3.92</td>
+  </tr>
+      <tr>
+    <td>Potatoes</td>
+    <td>Canned</td>
+    <td>3</td>
+    <td>2</td>
+    <td>2.38</td>
+  </tr>
+        <tr>
+    <td>Mushrooms</td>
+    <td>Canned</td>
+    <td>2</td>
+    <td>5</td>
+    <td>2.95</td>
+  </tr>
+</table>			
+				
+				
 
 <h1>Variable type vs. data type</h1>
 
@@ -65,8 +143,32 @@
 
 <p>Consider the variable age. Age is frequently collected as ratio data, but can also be collected as ordinal data. This happens on surveys when they ask, &ldquo;What age group do you fall in?&rdquo; There, you wouldn&rsquo;t have data on your respondent&rsquo;s individual ages &ndash; you&rsquo;d only know how many were between 18-24, 25-34, etc. You might collect actual cholesterol measurements from participants for a health study, or you may simply ask if their cholesterol is high. Again, this is a single variable with two different data collection methods and two different data types.</p>
 
-<p>There general rule is that you can go down in level of measurement but not up. If it&rsquo;s possible to collect the variable as interval or ratio data, you can also collect it as nominal or ordinal data, but if the variable is inherently only nominal in nature, like grocery store section, you can&rsquo;t capture it as ordinal, interval or ratio data. Variables that are naturally ordinal can&rsquo;t be captured as interval or ratio data, but can be captured as nominal. However, most all variables that get captured as ordinal have a similar variable that can be captured as interval or ratio data, if you so choose.</p>
-[[table of typically ordinal data - interval/ratio counterparts]]
+<p>There general rule is that you can go down in level of measurement but not up. If it&rsquo;s possible to collect the variable as interval or ratio data, you can also collect it as nominal or ordinal data, but if the variable is inherently only nominal in nature, like grocery store section, you can&rsquo;t capture it as ordinal, interval or ratio data. Variables that are naturally ordinal can&rsquo;t be captured as interval or ratio data, but can be captured as nominal. However, many variables that get captured as ordinal have a similar variable that can be captured as interval or ratio data, if you so choose.</p>
+
+<table>
+	<tr>
+		<th>Ordinal Level Type</th>
+		<th>Corresponding Interval/Ratio Level Measure</th>
+		<th>Example</th>
+	</tr>
+	<tr>
+		<td>Ranking</td>
+		<td>Measurement that ranking is based on</td>
+		<td>Record runners' marathon times instead of what place they finish</td>
+	</tr>
+	<tr>
+		<td>Grouped scale</td>
+		<td>Measurement itself</td>
+		<td>Record exact age instead of age category</td>
+	</tr>
+	<tr>
+		<td>Substitute scale</td>
+		<td>Original measurement the scale was created from</td>
+		<td>Record exact test score instead of letter grade</td>
+	</tr>
+
+</table>
+
 
 <p>It&rsquo;s important to remember that the general rule of &ldquo;you can go down, but not up&rdquo; also applies during analysis and visualization of your data. If you collect a variable as ratio data, you can always decide later to group the data for display if that makes sense for your work. If you collect it as a lower level of measurement, you can&rsquo;t go back up later on without collecting more data. For example, if you do decide to collect age as ordinal data, you can&rsquo;t calculate the average age later on and your visualization will be limited to displaying age by groups; you won&rsquo;t have the option to display it as continuous data.</p>
 
