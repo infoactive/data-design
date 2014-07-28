@@ -1,0 +1,247 @@
+<section class="violet" data-type="chapter">
+<header>
+  <div class="icon"><img src="../images/sections/06/mistakes.png" /></div>
+  <p>Chapter 18</p>
+  <h1>Common Visualization Mistakes</h1>
+  <p data-type="author">By Kathy Chang, Kate Eyler-Werve, and Alberto Cairo</p>
+</header>
+
+<p>Welcome to the last (but certainly not least) chapter of the book! We hope you&rsquo;ve learned enough to appreciate how much good data and good design can help you communicate your message. Professional data visualizers get excited by the stories they want to tell as well, but sometimes they forget to follow some best practices while doing so. It happens to the best of us. So in this chapter, we&rsquo;re going to cover what those best practices are.</p>
+
+<h2>Don&rsquo;t truncate your axes.</h2>
+
+<p>One of the ways a graph can be distorted is by truncating an axis. This happens when an axis is shortened because one or both of its ends gets cut off.</p>
+
+<p>Sometimes a distortion like this is really obvious. For example, let&rsquo;s say there are two allergy medicines called Happajoy and Pollaway<sup><a href="#cmnt1" name="cmnt_ref1">[a]</a></sup>. The bar graph below compares how effective these two medicines are at reducing the tearful, congested misery known as allergy symptoms. If you quickly glance at the bars, you may think that Happajoy is twice as effective as Pollaway is because its bar is twice as tall. But if you examine the graph more closely, you&rsquo;ll see that the y-axis is truncated, starting from 30.2 and going up to only 30.7 percent. The truncated y-axis makes the difference between the two bars look artificially high. In reality, Happajoy&rsquo;s effectiveness is only 0.2% higher than Pollaway&rsquo;s, which is not as impressive as the results implied by the bar graph. </p>
+
+<figure><img alt="Effectiveness of allergy medications" src="../images/sections/06/21-01_truncated-y-axis.png" /></figure>
+
+<p>Sometimes a truncated axis and the resulting distortion can be more subtle. For example, the next graph shows the quantity of Happajoy sold from January through April 2014. </p>
+
+<figure><img alt="Truncated x-axis" src="../images/sections/06/21-02_truncated-x-axis.png" /></figure>
+
+<p><br />
+At first glance, there doesn&rsquo;t appear to be a truncation issue here. The y-axis starts at zero, so that's not a problem.  The critical thing to understand is that it&rsquo;s the x-axis that&rsquo;s been truncated this time: we&rsquo;re seeing sales from less than half the year. Truncating a time period like this can give the wrong impression, especially for things that go through cycles. And - you guessed it - the sale of allergy medicine goes through a seasonal cycle since allergy symptoms are typically higher in the spring and lower in the winter.</p>
+
+<p>What would be a better way to show sales of Happajoy? Something like the graph below:</p>
+
+<figure><img alt="Proportional axes" src="../images/sections/06/21-03_proportional-axes.png" /></figure>
+
+<p>This graph shows the same dataset of Happajoy sales, except this time the y-axis is proportional and the x-axis covers two full years instead of just a few months. We can clearly see that sales of Happajoy went down in the winter and up in the spring, but that the rate of sales didn&rsquo;t change much from year to year. In fact, sales were a little lower in 2014 than in 2013.</p>
+
+<p>When you compare the last two graphs of Happajoy sales, do you see how different their stories are? If you were an investor in Happajoy&rsquo;s company and you saw the graph with truncated axes, you might dance happily through the streets because it seems like the company is doing really well. On the other hand, if you saw the graph with proportional axes, you might reach for some aspirin instead of Happajoy because of the headache you&rsquo;d get worrying about the overall decrease in sales. </p>
+
+<p>So&nbsp;watch out for truncated axes. Sometimes these distortions are done on purpose to mislead readers, but other times they&rsquo;re the unintentional consequence of not knowing how truncated axes can skew data.&nbsp;</p>
+
+<h2>Don&rsquo;t leave out key variables.</h2>
+
+<blockquote>The first principle is that you must not fool yourself &mdash; and you are the easiest person to fool.
+<p data-type="attribution">&nbsp;- Richard Feynman, 1974 Caltech Graduation Address</p>
+</blockquote>
+
+<p>You know how famous people are sometimes criticized for something they said, and they often reply that they were quoted out of context? Context is important, especially when it comes to data. It&rsquo;s very easy to fool yourself by leaving out variables that could affect how you interpret the data. So whenever you&rsquo;re examining a variable and its relationships, carefully consider the ecosystem in which that variable exists and deliberately seek out other variables that could affect the one you&rsquo;re studying. </p>
+
+<p>This is easier said than done. For example, the map below shows each state&rsquo;s market leader in allergy medicine: Happajoy is the leader in dark blue states, while Pollaway is the leader in light blue states. On the surface, it might seem like Happajoy is the market leader nationally, ahead of Pollaway. <sup><a href="#cmnt7" name="cmnt_ref7">[g]</a></sup>But to get the complete picture you have to pay attention to other variables.</p>
+
+<figure><img alt="State leader" src="../images/sections/06/21-04_state-leader.png" /></figure>
+
+<p>For example, the bar graph below shows a breakdown of market share in each state. (We&rsquo;re only going to look at the western continental states for now.) &nbsp;The margins by which Happajoy leads are significantly less than the margins by which Pollaway leads.</p>
+
+<figure><img alt="Market share" src="../images/sections/06/21-05_market-share.png" /></figure>
+
+<p>Combine the information from the bar graph with the table below. The total sales in states where Happajoy is the leader is also significantly less than the total sales in states where Pollaway is the leader. When you add up the numbers, Pollaway&rsquo;s total sales are more than twice that of Happajoy&rsquo;s. Assuming that a similar pattern holds for the rest of the country, would it still be accurate to say that Happajoy is the national market leader in allergy medicine?</p>
+
+  <table>
+    <tr>
+      <th>States</th>
+      <th>Happajoy</th>
+      <th>Pollaway</th>
+    </tr>
+    <tr>
+      <td>Wyoming (WY)</td>
+      <td>299,734</td>
+      <td>219,037</td>
+    </tr>
+    <tr>
+      <td>North Dakota (ND)</td>
+      <td>349,814</td>
+      <td>279,851</td>
+    </tr>
+    <tr>
+      <td>South Dakota (SD)</td>
+      <td>408,343</td>
+      <td>341,675</td>
+    </tr>
+    <tr>
+      <td>Montana (MT)</td>
+      <td>482,400</td>
+      <td>422,100</td>
+    </tr>
+    <tr>
+      <td>Idaho (ID)</td>
+      <td>782,040</td>
+      <td>654,360</td>
+    </tr>
+    <tr>
+      <td>Nebraska (NE)</td>
+      <td>872,320</td>
+      <td>798,080</td>
+    </tr>
+    <tr>
+      <td>New Mexico (NM)</td>
+      <td>1,043,000</td>
+      <td>834,400</td>
+    </tr>
+    <tr>
+      <td>Nevada (NV)</td>
+      <td>1,489,860</td>
+      <td>993,240</td>
+    </tr>
+    <tr>
+      <td>Utah (UT)</td>
+      <td>1,313,300</td>
+      <td>1,256,200</td>
+    </tr>
+    <tr>
+      <td>Kansas (KS)</td>
+      <td>1,414,140</td>
+      <td>1,183,260</td>
+    </tr>
+    <tr>
+      <td>Oklahoma (OK)</td>
+      <td>1,907,500</td>
+      <td>1,526,000</td>
+    </tr>
+    <tr>
+      <td>Oregon (OR)</td>
+      <td>2,027,480</td>
+      <td>1,481,620</td>
+    </tr>
+    <tr>
+      <td>Arizona (AZ)</td>
+      <td>3,014,380</td>
+      <td>2,883,320</td>
+    </tr>
+    <tr>
+      <td>Colorado (CO)</td>
+      <td>1,297,000</td>
+      <td>3,372,200</td>
+    </tr>
+    <tr>
+      <td>Washington (WA)</td>
+      <td>2,069,100</td>
+      <td>4,138,200</td>
+    </tr>
+    <tr>
+      <td>Texas (TX)</td>
+      <td>5,733,200</td>
+      <td>17,720,800</td>
+    </tr>
+    <tr>
+      <td>California (CA)</td>
+      <td>7,608,000</td>
+      <td>26,628,000</td>
+    </tr>
+    <tr>
+      <td>Sales Totals</td>
+      <td>32,111,611</td>
+      <td>64,732,343</td>
+    </tr>
+  </table>
+
+<p>The lesson here is that if you want to provide a fair picture of what&rsquo;s going on, you have to expand your scope to show the variables that put things in their proper context. That way, you can provide your readers with a more complete and nuanced picture of the story you&rsquo;re trying to tell.</p>
+
+<h2>Don&rsquo;t oversimplify.</h2>
+
+<p>Life is complicated, right? Data can be complicated, too. Complicated is hard to communicate, so it&rsquo;s only natural to want to simplify what your data are saying. But there is such a thing as simplifying too much. Oversimplifying is related to the previous point about not expanding the scope enough to provide a clear picture of what&rsquo;s going on.</p>
+
+<p>For example, let&rsquo;s say you&rsquo;re an investor of RediMedico, the maker of Happajoy, and you attend the annual sales meeting. The CEO of RediMedico starts off the presentation with the following graphic:</p>
+
+<figure><img alt="Oversimplify arrow" src="../images/sections/06/21-07_oversimplify-arrow.png" /></figure>
+
+<p>Now the investor in you might look at that graphic and start daydreaming about all the wonderful things you&rsquo;ll do with such a great return on your investment. But then the data pro in you kicks in, and you start wondering about what that 18% increase means. You ask yourself:</p>
+
+<ul>
+	<li>Compared to what?</li>
+	<li>Compared to when?</li>
+	<li>Compared to whom?</li>
+</ul>
+
+<p>These are all worthwhile questions to answer with a visualization! Thankfully, the CEO of RediMedico agrees and presents the next graphic, which compares the revenues from the five top-selling medicines RediMedico makes:</p>
+
+<figure><img alt="Oversimplify compare" src="../images/sections/06/21-08_oversimplify-compare.png" /></figure>
+
+<p>If we do some number-crunching, we&nbsp;see that the average increase in revenue between 2013 and 2014 is indeed 18%. However, we also see that this increase is primarily due to a whopping 225% increase in revenue from a single medicine, Exoalgio. Revenue from 3 out of 5 medicines actually dropped. So RediMedico&rsquo;s first graphic tells part of the truth, while the second graphic tells the whole truth by presenting the details behind the single number.&nbsp;</p>
+
+<p>Using a graphic with a single number and no breakdowns is like writing a news headline without the news story. Keep the headline - that revenue improved by 18% - and then provide the context and the background to flesh out the full story. Try to be true to the underlying complexity by digging deeper into the data and providing readers with a better understanding of the numbers you’re presenting.</p>
+
+<h2>Don&rsquo;t choose the wrong form.</h2>
+
+<p>Creating a data visualization is a balancing act between form and function. When choosing a graphic format for your data, you&rsquo;ll have to figure out how to effectively communicate to your audience in an aesthetically pleasing way. This may seem like a daunting task, but fear not! There&rsquo;s actually a lot of research that can help us with this. In fact, you&rsquo;ve already been introduced to some of this research in the previous chapter: Cleveland and McGill&rsquo;s &ldquo;Graphical Perception&rdquo; paper, in which they rank how well different graphic forms help people make accurate estimates.&nbsp;</p>
+
+<p>You can use this scale to help you choose the best graphic representation of your data. Area and shading are good at giving readers a general overview that helps them understand the big picture. Graphs with a common baseline (such as bar graphs) are good at helping readers make accurate comparisons.</p>
+
+<p>Since we&rsquo;ve already looked at examples of bar graphs and line graphs in this chapter, let&rsquo;s take a look at a couple graphics that use area and shading.</p>
+
+<figure><img alt="Bubbles" src="../images/sections/06/21-09_bubbles.png" /></figure>
+
+<p>The bubble graphic uses area to display the units sold of the top selling allergy medicine in some states. Based on bubble size, you can generally tell that more Happajoy was sold in Arizona than in New Mexico. But can you tell by how much? Is the Arizona bubble three times bigger than the New Mexico bubble? Four times? It&rsquo;s hard to tell. It&rsquo;s even harder to tell when the bubble sizes are closer together: Did Utah or Kansas sell more Happajoy?</p>
+
+<p>We run into the same problem with the next graphic, which uses shading to represent Happajoy sales: California is definitely darker than Texas, but how much darker? Two times? Three times? Who knows? This is why area and shading are better for giving an overall picture instead of making precise comparisons.</p>
+
+<figure><img alt="Shading" src="../images/sections/06/21-10_shading.png" /></figure>
+
+<p>In addition to area and shading, angles also give us a tough time when it comes to making accurate estimates. This is why it&rsquo;s so hard to compare two pie charts, as in the example below.</p>
+
+<figure><img alt="Pie charts" src="../images/sections/06/21-11_pie-charts.png" /></figure>
+
+<p>It&rsquo;s already hard to precisely compare the slices within the <em>same</em> pie chart. It&rsquo;s even harder to compare slices across different pie charts. If the goal of this graphic is to help readers compare revenues from one year to the next, then something like a bar chart would have been a better choice.</p>
+
+<p>That&rsquo;s the key thing: think about which graphic forms will best facilitate the tasks you want your readers to do.</p>
+
+<h2>Do present data in multiple ways.</h2>
+
+<p>We just covered how different graphic forms are good at doing different things. So what do you do when you have a lot of data and you want to show different aspects of those data, but you also don&rsquo;t want to overwhelm your audience with an overly complicated graphic? One way to deal with this challenge is to present your data in multiple ways. You can individually show multiple graphics, each one showing a different aspect of the data, so that taken together your audience gets a more accurate picture of the data as a whole.</p>
+
+<p>For example, let&rsquo;s say the CEO of RediMedico wants to show investors how Happajoy has been selling in the United States since it was first introduced to the market ten years ago. The available data consists of Happajoy sales in every state for every year since 2004. You&rsquo;re the lucky data pro who gets to figure out how to present both the big picture and the small picture inside this data. </p>
+
+<p>Let&rsquo;s start with the big picture. Remember how graphic forms that use area or shading are best at giving a general overview? For every year that Happajoy has been on the market, a map that uses shading to represent sales can give people a general sense of how sales have changed across time and location:</p>
+
+<figure><img alt="Shade animation" src="../images/sections/06/21-12_shade-animation.gif" /></figure>
+
+<p>Now let&rsquo;s move on the small picture. Let&rsquo;s say RediMedico started to advertise heavily in California and New York a few years ago, and the investors are wondering how sales in those states are doing. Using the same dataset, you can give a more detailed picture of the sales in one state:</p>
+
+<figure><img alt="Single line" src="../images/sections/06/21-13_single-line.png" /></figure>
+
+<p>Or you can compare the sales between different states:</p>
+
+<figure><img alt="Double line" src="../images/sections/06/21-14_double-line.png" /></figure>
+
+<p>See? Same data, different presentations. So if you want to show your readers different sides of the same story, give them multiple graphic forms.</p>
+
+<h2>Do add text to annotate.</h2>
+
+<p>They say that a picture is worth a thousand words, but that doesn&rsquo;t mean you should forget about words entirely! Even your most beautiful and elegant visualizations can use text to highlight or explain things to your audience. This is especially useful when you&rsquo;re presenting multiple layers of information because your annotations can help readers connect the various pieces into an understandable whole. And obviously, you&rsquo;re not reading this book in order to make boring visualizations, right? Good visualizations engage an audience, so adding text is a great way to address questions that may come up as curious readers examine your graphic.</p>
+
+<p>For example, let&rsquo;s go back Happajoy sales. If you see a graphic like the following:</p>
+
+<figure><img alt="Unannotated" src="../images/sections/06/21-16_unannotated.png" /></figure>
+
+<p>Then you might be wondering what happened between 2009 and 2010. Why was there such a sharp drop in revenue? In this case, it would be helpful to add some text:</p>
+
+<figure><img alt="Annotated" src="../images/sections/06/21-17_annotated.png" /></figure>
+
+<p>So whenever you create a visualization, think about the &ldquo;So what?&rdquo; of your graphic: Why should people care about the information you&rsquo;re presenting? Add annotations to help them understand why they should care. Write a good headline that catches their attention, a good introduction that highlights interesting data points, and a good narrative that structures your visualization logically. Good writing is an important part of good visualizations.</p>
+
+<h2>Case Study of an Awesome Infographic</h2>
+
+<p>To close out this chapter, let&rsquo;s take a look at all of these pro tips in action by going through a visualization made by real data pros: <a class="c5" href="http://www.nytimes.com/2013/10/16/health/uganda-fights-stigma-and-poverty-to-take-on-breast-cancer.html?_r=0#g-graphic">an infographic by The New York Times about breast cancer</a>. The designers organized the information as a narrative with a step-by-step structure. This is an interactive graphic, so it&rsquo;s best if you click through the link to get the full experience.</p>
+
+<p>On the first screen, you see a bubble graphic that gives you a general sense of which countries have the most new cases of breast cancer . After clicking &ldquo;Begin&rdquo;, you see a scatterplot with proportional axes. The scatterplot shows that there is an inverse correlation between breast cancer detection and mortality: as more women are detected with breast cancer, fewer women die from it. A scatterplot is a good way to show correlations between variables, and a bubble graphic is a good way to show a general overview, so the designers chose graphic forms that matched well with what they wanted to show.</p>
+
+<p>Notice how the designers use text to write a good headline that grabs the reader&rsquo;s attention (&ldquo;Where Does Breast Cancer Kill?&rdquo;) and to highlight another aspect of this scatterplot - that highly developed countries have higher diagnosis rates (and lower mortality rates) while the opposite is true for the developing world. As you keep clicking &ldquo;Next&rdquo;, the designers guide you deeper into the scatterplot by highlighting a cluster of countries and providing an annotation that gives you further insight into that cluster. Without these notes, we would be left with a relatively straightforward scatterplot that leaves little room for us to explore the data further. By providing useful and well-placed annotations, the designers help us see relationships that we otherwise may have missed.</p>
+
+<p>The designers also present the data in multiple ways. They use color to add another layer of detail: the development status of various countries. In addition, if you&rsquo;re curious about the statistics for a specific country, you can mouse over that country&rsquo;s dot to get those numbers.</p>
+
+<p>Finally, by adding useful annotations and showing the data in multiple ways, the designers present the data within a context that doesn&rsquo;t leave out important variables or oversimplify. By following through on some good data visualization practices, the designers created a clear, balanced, and engaging infographic.</p>
+</section>
