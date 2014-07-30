@@ -19,7 +19,7 @@
 
 <ul>
   <li>PhoneNumberType mixes codes and text</li>
-  <li>Age field has 0 meaning unknown - not good for averages, and is 112 a genuine age?</li>
+  <li>Age field has 0 meaning unknown&mdash;not good for averages, and is 112 a genuine age?</li>
 </ul>
 
 <table>
@@ -94,7 +94,7 @@
 
 <h2>Trust no one</h2>
 
-<p>No matter how well you have designed your form and how much validation you have put into your front-end checks, an important rule of thumb is never trust user data. If it has been entered by a person, then somewhere along the line there will be mistakes. Even if there are client side checks, there should always be server side or <a class="glossterm" target="_blank" href="glossary01.html#check-back-end">back-end checks</a>, too - these are the checks that happen after the data are submitted. There are many good reasons for this. You might not have designed the data gathering tools and if not, you could have different front end applications providing data. While some may have excellent client side checks, others might not. Unclean or unchecked data may arrive in your system through integration with other data services or applications. The example telecom database had too many owners with little oversight between them, resulting in a messy dataset. A small amount of extra effort up front saves us time and frustration down the road by giving us a cleaner dataset.</p>
+<p>No matter how well you have designed your form and how much validation you have put into your front-end checks, an important rule of thumb is never trust user data. If it has been entered by a person, then somewhere along the line there will be mistakes. Even if there are client side checks, there should always be server side or <a class="glossterm" target="_blank" href="glossary01.html#check-back-end">back-end checks</a>, too&mdash;these are the checks that happen after the data are submitted. There are many good reasons for this. You might not have designed the data gathering tools and if not, you could have different front end applications providing data. While some may have excellent client side checks, others might not. Unclean or unchecked data may arrive in your system through integration with other data services or applications. The example telecom database had too many owners with little oversight between them, resulting in a messy dataset. A small amount of extra effort up front saves us time and frustration down the road by giving us a cleaner dataset.</p>
 
 <p>A second golden rule is to only use text fields where necessary. For instance, in some countries it&rsquo;s normal to gather address data as multiple fields, such as Line1, Line2, City, State, Country, postcode, but in the UK it&rsquo;s very common to just ask for the postcode and the street number as those two pieces of information can be then be used to find the exact address. In this way the postcode is validated automatically and the address data are clean since they aren&rsquo;t not entered by the user. In other countries, we have to use text fields, and in that case lots of checking should occur.</p>
 
