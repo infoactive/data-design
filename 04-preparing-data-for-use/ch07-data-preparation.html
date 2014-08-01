@@ -11,7 +11,6 @@
 
 <p>Whether you&rsquo;re a highly-paid data analyst with billions of records or a 1-person business with a 90-person contact list, you&rsquo;ll be faced with messy data at some point. Unfortunately, data preparation isn&rsquo;t a straightforward task and there&rsquo;s no one right way to go about doing it. Each dataset is unique and some techniques may be used just once in a lifetime, as you&rsquo;ll see in the examples below.</p>
 
-<h2></h2>
 
 <h2>Separating Data</h2>
 
@@ -75,7 +74,7 @@
 
 <p>We can&rsquo;t teach you everything about how to split data in this chapter since every situation is unique. However, there are some strategies that are useful in many cases. We&rsquo;ll go through a few of these, as well as some common challenges and their sources, to help get you started.</p>
 
-<h2>Let&rsquo;s begin</h2>
+<h2>Let&rsquo;s Begin</h2>
 
 <p>A straightforward example that many people encounter is separating first names from last names. You may receive a dataset where full names are contained in a single field and you need the first and last names to be separate, or there may already be separate fields for first and last names, but some of the entries have the full name in one of the fields.</p>
 
@@ -216,7 +215,7 @@
 	</tbody>
 </table>
 
-<h2>Now what? Let&rsquo;s make some decisions</h2>
+<h2>Now what? Let&rsquo;s Make Some Decisions</h2>
 
 <p>Let&rsquo;s say we&rsquo;re faced with separating the names so that you can sort by last name and that our list has 500 names (too large to consider reformatting by hand).</p>
 
@@ -246,26 +245,25 @@
 
 <p>There are so many techniques, we could write an entire book on this subject alone. You can break apart the data in Excel, or if you have programming skills, you can use Python, SQL, or any number of other languages. There&rsquo;s too much for us to cover in this chapter, but for some good references, check out Appendix YYY. For right now, we&rsquo;ll cover some basic starting strategies so you&rsquo;ll be better equipped to take on those references when you&rsquo;re ready.</p>
 
-<h2>Strategy Tips</h2>
 <div data-type="warning"><p>You should <em>always</em> make a copy of your dataset before doing any data preparation or cleaning in case a change you make is incorrect and you need to refer to the original.</p></div>
 
 <figure><img alt="Strategy tips" src="../images/sections/04/strategy-tips-flow.png" /></figure>
 
-<h3>Start by looking for the low-hanging fruit</h3>
+<h3>Look for Low-Hanging Fruit</h3>
 
 <p>In many instances, most of the data that need to be separated are fairly simple. Out of 500 names, you may discover that 200 have just a first and last name. Set these aside. Leave them alone. Then look at the remaining 300 names.</p>
 
-<h3>Identify the oddities</h3>
+<h3>Identify the Oddities</h3>
 
 <p>Look through your dataset for the no-names, complicated names, incomplete names, non-person names and any entries you don&rsquo;t know what to do with. Set these aside. We&rsquo;ll say these comprise 40 more names.</p>
 
-<h3>Look for similarities and work in chunks</h3>
+<h3>Look for Similarities</h3>
 
 <p>Of the 260 remaining names, maybe 60 are complicated by professional alphabet soup after their names. Whether you&rsquo;re deleting these professional designations or putting the designations in their own field separate from the name, work with them all at once. Now the designations are separate (or deleted) and you have a field with just names. For those that have only a first and last name, add those to the 300 that were set aside at the beginning.</p>
 
 <p>We put the 2-part last names and other remaining types into their own groups.</p>
 
-<h3>Just plain manual effort</h3>
+<h3>Manual Effort</h3>
 
 <p>The 40 oddities you identified at the start may come down to just re-typing manually, depending what is odd about them.</p>
 
@@ -275,7 +273,7 @@
 
 <figure><img alt="Separating data workflow" src="../images/sections/04/separating-data-flow.png" /></figure>
 
-<h2>Other common fields that need to be split</h2>
+<h2>Commonly Problematic Fields</h2>
 
 <p>Depending on how data are collected, there are other fields you may be interested in splitting up besides names. Some of the most common are:</p>
 
@@ -294,7 +292,7 @@
 	</li>
 </ul>
 
-<h3>Unit and type conversion</h3>
+<h3>Units and Unit Conversion</h3>
 
 <p>Another important data preparation task is making sure that all the data in a single field are given in the same units. Ideally, you would have specified the unit type on the input form, but you may be working with someone else&rsquo;s dataset or the data may have been collected directly from other sources where the information was compiled by machines that measure in particular units. For example, you might have details from medical records from multiple countries and the patients&rsquo; weights could be in pounds for some records but in kilograms for others. It is important to convert all the numbers to either pounds or kilograms so that they are all on the same scale, otherwise the records cannot be directly compared to each other and any visualization you do of the original data would look quite strange indeed!</p>
 
@@ -304,7 +302,7 @@
 
 <p>Another type of conversion that is sometimes less obvious is data type conversion. It is important to make sure that all of the data in a single field is being stored as the same type or your visualization might not appear correctly, depending on how your software interprets the information. For example, &ldquo;80&rdquo; might look like a number to you, but the computer might actually be storing it as a string of text rather than in a numeric form. Some visualization software will go ahead and treat any text that looks like a number as a number, but other software will not. It is a good idea to check that each of your fields (or variables) is stored as a single, specific data type, such as text or numeric. This will ensure that anything that is captured in that field is being treated as the data type that you mean for it to be.</p>
 
-<h3>Controlling for inconsistencies</h3>
+<h3>Controlling for Inconsistencies</h3>
 
 <p>One of the most work-intensive tasks in cleaning data is handling inconsistent information. For example, we see multiple languages popping up in a single dataset more often now that the internet allows us to easily collect data from users all around the world. This can sometimes create problems when you&rsquo;re trying to group things up for visualization purposes, depending on how your data entry form is designed and what data from the set you&rsquo;re using. Perhaps you do a survey of college students and one of the text fields asks for their major. One student might enter &ldquo;Math&rdquo; while another enters &ldquo;Mathematics&rdquo; and another types &ldquo;Applied Mathematics.&rdquo; You know that all these are considered the same major on your campus, but a computer or visualization software would not group these records together. You would need to create a single controlled vocabulary term (e.g. change them all to say &ldquo;Math&rdquo; or &ldquo;Mathematics&rdquo;) or create a separate coded field if you wanted to have them treated as part of the same category.</p>
 
@@ -314,7 +312,7 @@
 
 <figure><img alt="Find and replace" src="../images/sections/04/find-and-replace.png" /></figure>
 
-<h3>Missing values</h3>
+<h3>Missing Values</h3>
 
 <p>One of the most frustrating problems is when data fields are simply blank or are incomplete. If data have not been collected, you may be able to return to the source to fill in what is missing, but you may also no longer have access to the source. It may also be possible that you do not know who the source was, for example, in the case of an anonymous survey. If you are not able to obtain the data, it is important to handle the <a class="glossterm" target="_blank" href="glossary01.html#data-missing">missing values</a> correctly. You should set pre-defined values that you can enter in where the missing values would be so when someone looks at your dataset, they know that the data for that field are actually missing and you didn&rsquo;t just forget to type them in.</p>
 
@@ -326,7 +324,7 @@
 
 <figure><img alt="Pie chart comparisons" src="../images/sections/04/do-you-like-pies.png" /></figure>
 
-<h3>Minimizing the burden of data preparation tasks</h3>
+<h3>Minimizing the Burden of Data Preparation</h3>
 
 <p>The best solutions are preventive. If you are the one creating the form for user input, do whatever you can to prevent receiving data that will require intensive handling during the data preparation stages. In the Types of Data Checking chapter (pg. YYY), we&rsquo;ll talk about different strategies for minimizing the number of data preparation tasks that need to be performed.</p>
 

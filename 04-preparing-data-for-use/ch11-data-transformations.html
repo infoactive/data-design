@@ -21,25 +21,25 @@
 <p>Never perform the transform directly on your original data! Either create an additional column to hold the new values for each variable you&rsquo;re transforming or make a copy of your entire dataset.</p>
 </div>
 
-<h2>Normal distribution and skewness in data</h2>
+<h2>Normal Distribution and Skewness in Data</h2>
 
 <p>One of the most frequently-encountered assumptions of statistical tests is that data should be <a class="glossterm" href="glossary01.html#distribution-normal" target="_blank">normally distributed</a>. You may have heard of the normal distribution referred to as a &ldquo;bell curve&rdquo; before; this is because a normal distribution takes the shape of a bell, with the data spread around a central value. Some of the data examples that commonly follow a normal distribution are related to human measurements such as height, weight, life span, and scores on IQ tests.</p>
 
 <p>Unlike a normal distribution, which is symmetric around the mean value, <a class="glossterm" href="glossary01.html#data-skewed" target="_blank">skewed data</a> tend to have more observations either to left side or to right side. Right skewed data have a long tail that extends to right whereas left skewed data will have a long tail extending to the left of the mean value. When data are <i>very</i> skewed, it can be hard to see the extreme values in a visualization. If you notice that your data distribution is skewed, you might consider transforming it if you&rsquo;re doing statistical testing or if the data are difficult to visualize in their original state.</p>
 
-<h4>Normal distribution</h4>
+<h3>Normal Distribution</h3>
 
 <figure><img alt="Normal distribution" src="../images/sections/04/normal-distribution.png" /></figure>
 
-<h4>Left skew</h4>
+<h3>Left Skew</h3>
 
 <figure><img alt="Left skew" src="../images/sections/04/left-skew.png" /></figure>
 
-<h4>Right skew</h4>
+<h3>Right Skew</h3>
 
 <figure><img alt="Normal distribution" src="../images/sections/04/right-skew.png" /></figure>
 
-<h2>Understanding transformations using sample data</h2>
+<h2>Understanding Transformations Using Sample Data</h2>
 
 <p>Let&rsquo;s use the population and land area of the 50 US states from 2012 to see how transformations work on actual data. The first step in transformation is to evaluate the distribution of the data. Then you can decide what transformation is appropriate (if one is needed). We can start by constructing a histogram of the population data and a scatterplot of the population-area data to get a better sense of how they&rsquo;re distributed.</p>
 
@@ -53,7 +53,7 @@
 
 <p>There are many transformation methods that can be applied in either of these situations, but let&rsquo;s look at a couple of the common ones to see how they can affect both a visualization and the shape of a distribution.</p>
 
-<h3>Log transform</h3>
+<h3>Log Transform</h3>
 
 <p>To do a <a class="glossterm" href="glossary01.html#transformation-log" target="_blank">logarithmic transformation</a>, you calculate the log of each value in the dataset and use those transformed values rather than your raw data. Log transforms tend to have a major effect on distribution shape, and in visualizations can bring extreme outliers closer to the rest of the data so graphs aren&rsquo;t stretched out as much. You can either use natural logs (<em>ln</em>) or logs with base 10. The graphs below show the histogram of population data after a natural log transformation is applied and what the scatterplot looks like if you use a natural log transformation on both the population and land area variables.</p>
 
@@ -61,7 +61,7 @@
 
 <figure><img alt="Log transformed scatter plot" src="../images/sections/04/log-scatter.png" /></figure>
 
-<h3>Square root transform</h3>
+<h3>Square Root Transform</h3>
 
 <p>The <a class="glossterm" href="glossary01.html#transformation-square" target="_blank">square root transformation</a> uses the square root of each value instead of the log, and has a more moderate effect on the distribution shape. The two graphs below show the histogram of population data and the scatterplot of population by land area, both after square root transformation is applied .</p>
 
@@ -69,7 +69,7 @@
 
 <figure><img alt="Square root transformed population values" src="../images/sections/04/sqrt-scatter.png" /></figure>
 
-<h2>How to choose the right transformation method</h2>
+<h2>Choosing the Right Transform</h2>
 
 <p>As you develop a better understanding of different transformation methods, you might wonder how to pick between them. The answer to this question is not straightforward and although there are formal statistical methods for selecting a transformation, we often need to use trial-and-error combined with knowledge of different transformations. A general strategy is to apply some of the most frequently used transforms such as log, square root, square, reciprocal, and cube root, and then choose the best one after observing the results.</p>
 
@@ -77,7 +77,7 @@
 
 <p>On the other hand, if your primary purpose in the example above is to visualize the relationship between state population and land area, the square root transformation does a better job of spreading out the data and making it easier to view than the log transformation.</p>
 
-<h2>Frequently used transformation methods</h2>
+<h2>Common Transformations</h2>
 
 <table>
 	<tbody>
@@ -125,7 +125,7 @@
 	</tbody>
 </table>
 
-<h2>Caveats about transformation</h2>
+<h2>Caveats about Transformation</h2>
 
 <p>Since data transformation methods involve the application of a mathematical function to your data, you need to be careful when reporting or interpreting any insights derived from the transformed data because a transformation changes the unit of the data. For example, when we apply a logarithmic function to a population variable, the unit of measurement becomes the log of the population. When you&rsquo;re sharing results, your audience may assume that the calculated numbers or visualizations they&rsquo;re seeing are based on raw data, so if the values have been transformed, you should clearly communicate what transformation was used, as well as what units the data are being displayed in.</p>
 

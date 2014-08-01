@@ -484,7 +484,7 @@
 <p>There is nothing inherent in these data that tells us how we can combine information. It takes human understanding of data categories to know that <em>Male + Female = a complete set</em> and <em>Regular + Decaf + Mocha = a complete set</em>. Without this knowledge, we can&rsquo;t combine the data, or worse, we might combine it incorrectly.</p>
 
 <div data-type="warning">
-<h3>It&rsquo;s hard to explore summarized data</h3>
+<h3>It&rsquo;s Hard to Explore Summarized Data</h3>
 
 <p>Even if we know the meaning of these data and realize they are two separate multiseries tables (one on gender and one on coffee type) we can&rsquo;t explore them deeply. For example, we can&rsquo;t find out how many women drank regular coffee in 2000.</p>
 
@@ -501,7 +501,7 @@
 <p>The only way to truly explore the data and ask new questions (such as &ldquo;How many cups of regular were sold to women in 2000?&rdquo;) is to have the raw data. And then it&rsquo;s a matter of knowing how to aggregate them appropriately.</p>
 </div>
 
-<h2>Summary records</h2>
+<h2>Summary Records</h2>
 
 <p>The following table of <a class="glossterm" href="glossary01.html#record-summary" target="_blank">summary records</a> looks like the kind of data a point-of-sale system at a caf&eacute; might generate. It includes a column of categorical information (gender, where there are two possible types) and subtotals for each type of coffee. It also includes the totals by the cup for those types.</p>
 
@@ -662,7 +662,7 @@
 	</tbody>
 </table>
 
-<h3>Using visualization to reveal underlying variance</h3>
+<h3>Using Visualization to Reveal Underlying Variance</h3>
 
 <p>When you have summary records or raw data, it&rsquo;s common to aggregate in order to display them easily. By showing the total coffee consumed (summing up the raw information) or the average number of cups per patron (the mean of the raw information) we make the data easier to understand.</p>
 
@@ -759,7 +759,7 @@
 
 <p>Aggregation happens in many ways. For example, a restaurant receipt usually aggregates orders by table. There&rsquo;s no way to find out what an individual person at the table had for dinner, just the food that was served and what it cost. To get to really specific exploration, however, we need data at the transaction level.</p>
 
-<h2>Individual transactions</h2>
+<h2>Individual Transactions</h2>
 
 <p><a class="glossterm" href="glossary01.html#record-transactional" target="_blank">Transactional records</a> capture things about a specific event. There&rsquo;s no aggregation of the data along any dimension like someone&rsquo;s name (though their name may be captured). It&rsquo;s not rolled up over time; it&rsquo;s instantaneous.</p>
 
@@ -860,7 +860,7 @@
 
 <p>These transactions can be aggregated by any column. They can be cross-referenced by those columns. The timestamps can also be aggregated into buckets (hourly, daily, or annually). Ultimately, the initial dataset we saw of coffee consumption per year results from these raw data, although summarized significantly.</p>
 
-<h1>Deciding how to aggregate</h1>
+<h2>Deciding How to Aggregate</h2>
 
 <p>When we roll up data into buckets, or transform it somehow, we take away the raw history. For example, when we turned raw transactions into annual totals:</p>
 
