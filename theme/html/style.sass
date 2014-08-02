@@ -284,13 +284,13 @@ nav[data-type="toc"] li[data-type="foreword"] ol
   display: none
 section[data-type="chapter"] header
   border-bottom: 18px solid #eeeeee
-  margin-bottom: 5em
+  margin-bottom: 4em
 
 section[data-type="chapter"] header h1
   font-family: 'source_sans_probold', sans-serif
   font-size: 2.4em
-  margin-top: 0em
-  margin-bottom: 1.5em
+  margin-top: 0
+  margin-bottom: 0
   text-align: center
   text-transform: uppercase
   color: #444
@@ -302,8 +302,12 @@ section[data-type="chapter"] header p
   text-transform: uppercase
   margin: 0 .5em
   letter-spacing: 2px
-  font-size: 1.1em
+  font-size: 1.2em
   padding: 12px
+  &[data-type="author"]
+    color: #aaa
+    font-size: .9em
+    margin-bottom: 3em
 
 section[data-type="acknowledgments"]
   padding: 0 30px
@@ -406,7 +410,7 @@ section[data-type="acknowledgments"]
   width: 240px
   height: 240px
   border-radius: 50%
-  margin: 5em auto 3.5em
+  margin: 5.5em auto 3.5em
 
 .icon img
   width: 150px
