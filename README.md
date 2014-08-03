@@ -2,7 +2,7 @@
 
 *Data. Design.* is licensed under the terms of a [Creative Commons BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode). The full legal code is at the link, but here's a quick human-readable breakdown for you as well. (Note: This is a human-readable summary of, and not a substitute for, the license.)
 
-## By Attribution
+### By Attribution
 
 If you use this book yourself, credit us! Basically, you just need to include a little snippet saying:
 
@@ -12,29 +12,29 @@ If you use this book yourself, credit us! Basically, you just need to include a 
 
 Basically all you're saying is, "Hey, this was originally made by these peeps, go check it out. Any edits to this were made by me, not them." Pretty reasonable, right?
 
-## Non-Commercial
+### Non-Commercial
 
 If you fork and make edits to this book, you can't do it for monetary gain. The purpose of this book is to help people make better-informed decisions in collecting, analyzing, and presenting their data. And to do that free availability of this book is kind of a big deal. So don't sell it, mmkay?
 
-## Share Alike
+### Share Alike
 
 Finally, your version has to be licensed under the same terms as this one is. No telling people they can sell their derivatives, no telling people they don't have to attribute back to the original. Basically, just keep everything free and open.
 
-## Well, What If...
+### Well, What If...
 
-Of course there are edge cases. There are times when you're just not going to be sure if doing `X` of `Y` will be kosher with the license or not. That's fine! Just [open an issue on GitHub](https://github.com/infoactive/data-design/issues) and let us know what's up. We'll talk it over and help you figure out if what you want to do is cool beans or if you should tweak your plans a little bit. It never hurts to ask!
+Of course there are edge cases. There are times when you're just not going to be sure if doing `X` or `Y` will be kosher with the license or not. That's fine! Just [open an issue on GitHub](https://github.com/infoactive/data-design/issues) and let us know what's up. We'll talk it over and help you figure out if what you want to do is cool beans or if you should tweak your plans a little bit. It never hurts to ask!
 
 # Can I Make Edits?
 
 Of course you can! That's part of the reason we're making this book totally openly sourced. We love when the community takes the time and effort to contribute to things like this. There are two different routes we recommend, depending on what you want to do.
 
-## Fork Us!
+### Fork Us!
 
 This is the best option if you want to go off in your own direction, or just want your own copy of the source for reference, or generally just don't think that you're in the mood to add a new chapter. For most people, this is the best option.
 
 What's even better? This is super easy to do. Just go [to the repository](https://github.com/infoactive/data-design) and click `Fork` in the upper right corner. Voila! You're now the proud owner of a brand spanking new Data. Design. repository.
 
-## Fork Us! (Redux)
+### Fork Us! (Redux)
 
 Hey, wait a minute! What's up with this, didn't you say there were *two* routes? This is just the same thing all over again!
 
@@ -48,6 +48,18 @@ But alright, let's say you've got a great idea for a new chapter. What's the pro
 4. Get reviewers. Go back to your GitHub issue, check with the commenters there, and see who would be willing to review your chapter for content, grammar, and style. Add them as contributors on your fork, let them make edits, etc.
 5. Once you all think that the chapter's in a good place, create a pull request back to the main repository. That's when we'll go through and do an 'official' edit and suggest any changes we'd like to see before accepting your chapter.
 6. Publish! We'll accept your pull request and you'll offically have a chapter in *Data. Design.* Congratulate yourself on a job well done and make sure that we didn't forget to add your information to our page of contributors.
+
+### Rejecting Submissions
+
+Let's say you go through the whole process of proposing, authoring, editing, and submitting a new chapter and we reject it. What happens next?
+
+Well, that'll depend on your exact situation. It might be that we don't think the chapter is written to the standards of the rest of the book. If that's the case, revising and resubmitting is nearly always going to be an option. See if you can get input from someone whose chapter *has* been accepted; get another couple rounds of edits. And then edit it some more for good measure. Then go ahead and resubmit and see what happens!
+
+Alternately, it might end up that the chapter that was proposed and the chapter that was delivered are significantly different&mdash;to the point that your delivered chapter isn't a great fit for the book. If that's the case, don't despair: you've still written a great chapter and can publish it on your forked repo. We're sorry that it didn't work out, but ask for feedback, see what needs to be changed for it to be accepted as an official edition.
+
+Or for some entirely other reason that we can't predict, we might reject your chapter. If and when this happens, we're sorry. (Legitimately, we don't get any sick joy out of this!) We try to put quality checks in place to prevent this from happening in the first place, but we can't catch everything. Regardless, you're always encouraged to make whatever edits you would like to your forked repository: after all, that sort of personalization and community involvement is why we open sourced this in the first place.
+
+That said, the best strategy is to just be proactive about your submission: get feedback early and get feedback often. This book was written by so many incredibly dedicated individuals, you shouldn't have any difficulty getting good, constructive feedback at every stage of the writing process. Take advantage of this. Even if we don't end up accepting your chapter, it'll still be something to be proud of having written.
 
 # Building with Atlas
 
