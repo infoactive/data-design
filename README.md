@@ -34,7 +34,7 @@ Of course you can! That's part of the reason we're making this book totally open
 
 This is the best option if you want to go off in your own direction, or just want your own copy of the source for reference, or generally just don't think that you're in the mood to add a new chapter. For most people, this is the best option.
 
-What's even better? This is super easy to do. Just go [to the repository](https://github.com/infoactive/data-design) and click `Fork` in the upper right corner. Voila! You're now the proud owner of a brand spanking new Data. Design. repository.
+What's even better? This is super easy to do. Just go [to the repository](https://github.com/infoactive/data-design) and click `Fork` in the upper right corner. Voila! You're now the proud owner of a brand spanking new *Data. Design.* repository.
 
 ### Fork Us! (Redux)
 
@@ -77,6 +77,6 @@ That said, the best strategy is to just be proactive about your submission: get 
 
 [[In Progress]]
 
-Although, yes, we already have an HTML structure for the book, we still use an external platform to publish it. O'Reilley's [Atlas](https://atlas.oreilly.com/) allows us to take our book and publish it to a finalized (and slightly prettied-up) HTML version as well as to PDF, MOBI, and EPUB formats.
+Although, yes, we already have an HTML structure for the book, we still use an external platform to publish it. O'Reilly's [Atlas](https://atlas.oreilly.com/) allows us to take our book and publish it to a finalized (and slightly prettied-up) HTML version as well as to PDF, MOBI, and EPUB formats.
 
-Now, if you're making an official contribution to our repository, this probably isn't too important to you since we'll be handling the actual releases. However, if you're striking it out on your own, you might want an easy way to publish your book to multiple print and web platforms. Once you've finalized the edits to your forked repo, sign up for a free trial at the link above and you'll have the option to import your repository. As long as you've kept everything to [HTMLbook spec](http://oreillymedia.github.io/HTMLBook/), Atlas should be able to process everything without a hitch when you build the project.
+Now, if you're making an official contribution to our repository, this probably isn't too important to you since we'll be handling the actual releases. However, if you're striking it out on your own, you might want an easy way to publish your book to multiple print and web platforms. Once you've finalized the edits to your forked repo, sign up for a free trial at the link above and you'll have the option to import your repository. As long as you've kept everything to [HTMLbook spec](http://oreillymedia.github.io/HTMLBook/), Atlas should be able to process the book without a hitch when you go to build a final release.
