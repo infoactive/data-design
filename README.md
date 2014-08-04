@@ -1,3 +1,5 @@
+Quick links: [Our License](https://github.com/infoactive/data-design#how-were-licensed) &bull; [Making Contributions](https://github.com/infoactive/data-design#can-i-make-edits) &bull; [Atlas Builds](https://github.com/infoactive/data-design#building-with-atlas)
+
 # How We're Licensed
 
 *Data. Design.* is licensed under the terms of a [Creative Commons BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode). The full legal code is at the link, but here's a quick human-readable breakdown for you as well. (Note: This is a human-readable summary of, and not a substitute for, the license.)
@@ -26,7 +28,7 @@ Of course there are edge cases. There are times when you're just not going to be
 
 # Can I Make Edits?
 
-Of course you can! That's part of the reason we're making this book totally openly sourced. We love when the community takes the time and effort to contribute to things like this. There are two different routes we recommend, depending on what you want to do.
+Of course you can! That's part of the reason we're making this book totally openly sourced. We love when the community takes the time and effort to contribute to things like this. There are three different routes we recommend, depending on what you want to do.
 
 ### Fork Us!
 
@@ -36,7 +38,7 @@ What's even better? This is super easy to do. Just go [to the repository](https:
 
 ### Fork Us! (Redux)
 
-Hey, wait a minute! What's up with this, didn't you say there were *two* routes? This is just the same thing all over again!
+Hey, wait a minute! What's up with this? It's just the same thing all over again!
 
 Whoops. You got us there. As it turns out, the first step is the same for both people who want to contribute back to our repo and those who don't: you just gotta fork it.
 
@@ -48,6 +50,16 @@ But alright, let's say you've got a great idea for a new chapter. What's the pro
 4. Get reviewers. Go back to your GitHub issue, check with the commenters there, and see who would be willing to review your chapter for content, grammar, and style. Add them as contributors on your fork, let them make edits, etc.
 5. Once you all think that the chapter's in a good place, create a pull request back to the main repository. That's when we'll go through and do an 'official' edit and suggest any changes we'd like to see before accepting your chapter.
 6. Publish! We'll accept your pull request and you'll offically have a chapter in *Data. Design.* Congratulate yourself on a job well done and make sure that we didn't forget to add your information to our page of contributors.
+
+### Use Google Docs
+
+We realize that not everyone knows how to use GitHub or wants to learn how to. And that's fine! If you don't want to worry about HTMLbook specifications and forks and pull requests and all that jazz, we've got your back. The process is conceptually similar to Option #2:
+
+1. Open an [issue with us](https://github.com/infoactive/data-design/issues) and label it as a question. Let everyone know what you're thinking. Even if you have a great chapter idea, we can't guarantee that there's a good spot in the book to put it and we don't want you spending hours of your time writing something that we'll end up rejecting. Get feedback on the idea and make sure that it'll be a chapter we can use.
+2. Make a [Google Doc](https://drive.google.com) and start authoring! If you don't have a Google account, we're sorry, but you'll just have to bite the bullet and create one. We'd like to cover every major email provider in the world, but that's not terribly practical.
+3. Get reviewers. Share your document with [ebook@infoactive.co](mailto:ebook@infoactive.co) and we'll get you in contact with some editors who are currently available. Make sure that you give us full editing rights so that we can add editors for you!
+4. Once you all think that the chapter's in a good place, drop us a line at [ebook@infoactive.co](mailto:ebook@infoactive.co). We'll go through and do an 'official' edit and suggest any changes we'd like to see before accepting your chapter.
+5. Publish! We'll handle all the behind-the-scenes stuff to convert your chapter to HTML and add it to the published book. Congratulate yourself on a job well done and make sure that we didn't forget to add your information to our page of contributors.
 
 ### Rejecting Submissions
 
