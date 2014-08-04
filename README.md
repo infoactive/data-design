@@ -64,3 +64,7 @@ That said, the best strategy is to just be proactive about your submission: get 
 # Building with Atlas
 
 [[In Progress]]
+
+Although, yes, we already have an HTML structure for the book, we still use an external platform to publish it. O'Reilley's [Atlas](https://atlas.oreilly.com/) allows us to take our book and publish it to a finalized (and slightly prettied-up) HTML version as well as to PDF, MOBI, and EPUB formats.
+
+Now, if you're making an official contribution to our repository, this probably isn't too important to you since we'll be handling the actual releases. However, if you're striking it out on your own, you might want an easy way to publish your book to multiple print and web platforms. Once you've finalized the edits to your forked repo, sign up for a free trial at the link above and you'll have the option to import your repository. As long as you've kept everything to [HTMLbook spec](http://oreillymedia.github.io/HTMLBook/), Atlas should be able to process everything without a hitch when you build the project.
