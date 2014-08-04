@@ -2,7 +2,7 @@ Quick links: [Our License](https://github.com/infoactive/data-design#how-were-li
 
 # How We're Licensed
 
-*Data. Design.* is licensed under the terms of a [Creative Commons BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode). The full legal code is at the link, but here's a quick human-readable breakdown for you as well. (Note: This is a human-readable summary of, and not a substitute for, the license.)
+*Data. Design.* is licensed under the terms of a [Creative Commons BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode). The full legal code is at the link, but here's a quick human-readable breakdown for you as well. (Note: This is only a human-readable summary of, and not a substitute for or supplement to, the license.)
 
 ### By Attribution
 
@@ -80,3 +80,5 @@ That said, the best strategy is to just be proactive about your submission: get 
 Although, yes, we already have an HTML structure for the book, we still use an external platform to publish it. O'Reilly's [Atlas](https://atlas.oreilly.com/) allows us to take our book and publish it to a finalized (and slightly prettied-up) HTML version as well as to PDF, MOBI, and EPUB formats.
 
 Now, if you're making an official contribution to our repository, this probably isn't too important to you since we'll be handling the actual releases. However, if you're striking it out on your own, you might want an easy way to publish your book to multiple print and web platforms. Once you've finalized the edits to your forked repo, sign up for a free trial at the link above and you'll have the option to import your repository. As long as you've kept everything to [HTMLbook spec](http://oreillymedia.github.io/HTMLBook/), Atlas should be able to process the book without a hitch when you go to build a final release.
+
+> Note: You can also author directly *in* Atlas using a nice, friendly GUI (much like authoring in Google Docs or using Microsoft Word). You'll still need to import the pre-existing book, but once that's done it's super easy to add your content using Atlas's visual editor.
