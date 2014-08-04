@@ -1,4 +1,4 @@
-Quick links: [Our License](https://github.com/infoactive/data-design#how-were-licensed) &bull; [Making Contributions](https://github.com/infoactive/data-design#can-i-make-edits) &bull; [Atlas Builds](https://github.com/infoactive/data-design#building-with-atlas)
+> Quick links: [Our License](https://github.com/infoactive/data-design#how-were-licensed) &bull; [Making Contributions](https://github.com/infoactive/data-design#can-i-make-edits) &bull; [Atlas Builds](https://github.com/infoactive/data-design#building-with-atlas)
 
 # How We're Licensed
 
@@ -25,6 +25,8 @@ Finally, your version has to be licensed under the same terms as this one is. No
 ### Well, What If...
 
 Of course there are edge cases. There are times when you're just not going to be sure if doing `X` or `Y` will be kosher with the license or not. That's fine! Just [open an issue on GitHub](https://github.com/infoactive/data-design/issues) and let us know what's up. We'll talk it over and help you figure out if what you want to do is cool beans or if you should tweak your plans a little bit. It never hurts to ask!
+
+> Quick links: [Our License](https://github.com/infoactive/data-design#how-were-licensed) &bull; [Making Contributions](https://github.com/infoactive/data-design#can-i-make-edits) &bull; [Atlas Builds](https://github.com/infoactive/data-design#building-with-atlas)
 
 # Can I Make Edits?
 
@@ -72,6 +74,8 @@ Alternately, it might end up that the chapter that was proposed and the chapter 
 Or for some entirely other reason that we can't predict, we might reject your chapter without the chance to revise and resubmit. If and when this happens, we're sorry. (Legitimately, we don't get any sick joy out of this!) We try to put quality checks in place to prevent this from happening at all, but we can't catch everything. Regardless, you're always encouraged to make whatever edits you would like to your forked repository: after all, that sort of personalization and community involvement is why we open sourced this in the first place.
 
 That said, the best strategy is to just be proactive about your submission: get feedback early and get feedback often. This book was written by so many incredibly dedicated individuals, you shouldn't have any difficulty getting good, constructive feedback at every stage of the writing process. Take advantage of this. Even if we don't end up accepting your chapter, it'll still be something to be proud of having written.
+
+> Quick links: [Our License](https://github.com/infoactive/data-design#how-were-licensed) &bull; [Making Contributions](https://github.com/infoactive/data-design#can-i-make-edits) &bull; [Atlas Builds](https://github.com/infoactive/data-design#building-with-atlas)
 
 # Building with Atlas
 
