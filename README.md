@@ -10,7 +10,7 @@ If you use this book yourself, credit us! Basically, you just need to include a 
 > Licensed under a Creative Commons BY-NC-SA 4.0 license. This work is not affiliated with or endorsed
 > by the original authors.
 
-Basically all you're saying is, "Hey, this was originally made by these peeps, go check it out. Any edits to this were made by me, not them." Pretty reasonable, right?
+About all you're saying is, "Hey, this was originally made by these peeps, go check it out. Any edits to this were made by me, not them." Pretty reasonable, right?
 
 ### Non-Commercial
 
@@ -55,9 +55,9 @@ Let's say you go through the whole process of proposing, authoring, editing, and
 
 Well, that'll depend on your exact situation. It might be that we don't think the chapter is written to the standards of the rest of the book. If that's the case, revising and resubmitting is nearly always going to be an option. See if you can get input from someone whose chapter *has* been accepted; get another couple rounds of edits. And then edit it some more for good measure. Then go ahead and resubmit and see what happens!
 
-Alternately, it might end up that the chapter that was proposed and the chapter that was delivered are significantly different&mdash;to the point that your delivered chapter isn't a great fit for the book. If that's the case, don't despair: you've still written a great chapter and can publish it on your forked repo. We're sorry that it didn't work out, but ask for feedback, see what needs to be changed for it to be accepted as an official edition.
+Alternately, it might end up that the chapter that was proposed and the chapter that was delivered are significantly different&mdash;to the point that your delivered chapter isn't a great fit for the book. If that's the case, don't despair: you've still written a great chapter and can publish it on your forked repo. We're sorry that it didn't work out, but ask for feedback and see what needs to be changed for it to be accepted as an official edition.
 
-Or for some entirely other reason that we can't predict, we might reject your chapter. If and when this happens, we're sorry. (Legitimately, we don't get any sick joy out of this!) We try to put quality checks in place to prevent this from happening in the first place, but we can't catch everything. Regardless, you're always encouraged to make whatever edits you would like to your forked repository: after all, that sort of personalization and community involvement is why we open sourced this in the first place.
+Or for some entirely other reason that we can't predict, we might reject your chapter without the chance to revise and resubmit. If and when this happens, we're sorry. (Legitimately, we don't get any sick joy out of this!) We try to put quality checks in place to prevent this from happening at all, but we can't catch everything. Regardless, you're always encouraged to make whatever edits you would like to your forked repository: after all, that sort of personalization and community involvement is why we open sourced this in the first place.
 
 That said, the best strategy is to just be proactive about your submission: get feedback early and get feedback often. This book was written by so many incredibly dedicated individuals, you shouldn't have any difficulty getting good, constructive feedback at every stage of the writing process. Take advantage of this. Even if we don't end up accepting your chapter, it'll still be something to be proud of having written.
 
