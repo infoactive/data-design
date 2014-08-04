@@ -82,6 +82,7 @@ p, dd
   font-size: 1em
   line-height: 150%
   text-indent: 0
+  margin: 1.4em 0 0
 
 section[data-type="preface"] > h1 + p, 
 div[data-type="part"] > h1 + p, 
@@ -94,6 +95,9 @@ section[data-type="sect3"] > h3 + p
 
 p a
   display: inline
+  color: $blue
+  &:hover 
+    color: darken($blue, 5)
 
 em
   font-family: 'source_sans_proitalic', sans-serif
@@ -309,6 +313,12 @@ section[data-type="chapter"] header p
     font-size: .9em
     margin-bottom: 3em
 
+p[data-type="author"]
+  color: #aaa
+  font-size: .9em
+  margin-bottom: 3em
+  text-transform: uppercase
+
 section[data-type="acknowledgments"]
   padding: 0 30px
   max-width: 100%
@@ -475,6 +485,7 @@ $color-names: blue yellow green violet red
       background: lighten(desaturate($color, 2), 8)
 
 section[data-type="preface"], 
+section[data-type="foreword"], 
 section[data-type="chapter"], 
 section[data-type="appendix"]
   page-break-after: always 
@@ -483,6 +494,7 @@ section[data-type="appendix"]
 nav[data-type="toc"] > h1, 
 div[data-type="part"] > h1, 
 section[data-type="preface"] > h1, 
+section[data-type="foreword"] > h1, 
 section[data-type="chapter"] > h1, 
 section[data-type="appendix"] > h1, 
 section[data-type="sect1"] h1
@@ -495,6 +507,7 @@ section[data-type="sect3"] h3
   line-height: 120%
 
 section[data-type="preface"] > h1, 
+section[data-type="foreword"] > h1, 
 section[data-type="chapter"] > h1, 
 section[data-type="appendix"] > h1
   font-size: 1.8em
@@ -841,7 +854,7 @@ div[data-type="example"] h5
 
 blockquote
   font-family: 'source_sans_proitalic', sans-serif
-  font-size: 1.1em
+  font-size: 1em
   line-height: 130%
   margin: 30px
   padding: 20px
@@ -852,12 +865,19 @@ blockquote:before
   content: "\201C"
   font-size: 4em
   line-height: 0em
-  margin-right: 0.2em
+  margin-right: 0.15em
+  margin-left: -0.2em
   vertical-align: -0.4em
+  opacity: 0.2
 
 blockquote p
   text-indent: 0
   font-family: 'source_sans_proitalic', sans-serif
+
+blockquote p[data-type="attribution"]
+  text-align: right
+  font-size: .85em
+  margin-top: 1em
 
 div.navbar
   font-family: 'source_sans_proregular', sans-serif
