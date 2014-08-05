@@ -2,13 +2,13 @@
 
 # How We're Licensed
 
-*Data. Design.* is licensed under the terms of a [Creative Commons BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode). The full legal code is at the link, but here's a quick human-readable breakdown for you as well. (Note: This is only a human-readable summary of, and not a substitute for or supplement to, the license.)
+*Data + Design* is licensed under the terms of a [Creative Commons BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode). The full legal code is at the link, but here's a quick human-readable breakdown for you as well. (Note: This is only a human-readable summary of, and not a substitute for or supplement to, the license.)
 
 ### By Attribution
 
 If you use this book yourself, credit us! Basically, you just need to include a little snippet saying:
 
-> Adapted from [Data. Design.](https://infoactive.co/data-design) by Trina Chiasson and Dyanna Gregory.
+> Adapted from [Data + Design](https://infoactive.co/data-design) by Trina Chiasson and Dyanna Gregory.
 > Licensed under a Creative Commons BY-NC-SA 4.0 license. This work is not affiliated with or endorsed
 > by the original authors.
 
@@ -36,7 +36,7 @@ Of course you can! That's part of the reason we're making this book totally open
 
 This is the best option if you want to go off in your own direction, or just want your own copy of the source for reference, or generally just don't think that you're in the mood to add a new chapter. For most people, this is the best option.
 
-What's even better? This is super easy to do. Just go [to the repository](https://github.com/infoactive/data-design) and click `Fork` in the upper right corner. Voila! You're now the proud owner of a brand spanking new *Data. Design.* repository.
+What's even better? This is super easy to do. Just go [to the repository](https://github.com/infoactive/data-design) and click `Fork` in the upper right corner. Voila! You're now the proud owner of a brand spanking new *Data + Design* repository.
 
 ### Fork Us! (Redux)
 
@@ -51,7 +51,7 @@ But alright, let's say you've got a great idea for a new chapter. What's the pro
 3. Start authoring! Here's where your fork comes in handy: you'll be making all chapter edits there.
 4. Get reviewers. Go back to your GitHub issue, check with the commenters there, and see who would be willing to review your chapter for content, grammar, and style. Add them as contributors on your fork, let them make edits, etc.
 5. Once you all think that the chapter's in a good place, create a pull request back to the main repository. That's when we'll go through and do an 'official' edit and suggest any changes we'd like to see before accepting your chapter.
-6. Publish! We'll accept your pull request and you'll offically have a chapter in *Data. Design.* Congratulate yourself on a job well done and make sure that we didn't forget to add your information to our page of contributors.
+6. Publish! We'll accept your pull request and you'll offically have a chapter in *Data + Design* Congratulate yourself on a job well done and make sure that we didn't forget to add your information to our page of contributors.
 
 ### Use Google Docs
 
