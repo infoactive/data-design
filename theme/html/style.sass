@@ -644,10 +644,7 @@ td pre.programlisting, td pre.screen, td pre.literallayout, td code
   white-space: pre-wrap
   word-wrap: break-word
 
-table.question-and-answer,
-table.yes-and-no,
-table.good-and-bad,
-table.sections
+table.with-icons
   th
     font-size: 1.3em
     padding: .5em 1.5em .5em 3em
@@ -660,11 +657,11 @@ table.sections
   td
     padding: 1.3em 1.5em
 
-table.question-and-answer
-  th:nth-child(1)
+table
+  th.question
     background: url('../../images/shared-icons/search.png') 1.2em no-repeat #444
     @retina-image('../../images/shared-icons/search', 24px 24px)
-  th:nth-child(2)
+  th.answer
     background: url('../../images/shared-icons/arrow.png') 1.2em no-repeat $blue
     @retina-image('../../images/shared-icons/arrow', 24px 24px)
   td
@@ -682,19 +679,19 @@ table.question-and-answer
       + p
         margin-top: 0
 
-table.good-and-bad
-  th:nth-child(1)
+table
+  th.good
     background: url('../../images/shared-icons/good.png') 1.2em no-repeat $green
     @retina-image('../../images/shared-icons/good', 24px 24px)
-  th:nth-child(2)
+  th.bad
     background: url('../../images/shared-icons/bad.png') 1.2em no-repeat darken($gray, 15)
     @retina-image('../../images/shared-icons/bad', 24px 24px)
 
-table.yes-and-no
-  th:nth-child(1)
+table
+  th.yes
     background: url('../../images/shared-icons/check.png') 1.2em no-repeat $green
     @retina-image('../../images/shared-icons/check', 24px 24px)
-  th:nth-child(2)
+  th.no
     background: url('../../images/shared-icons/no.png') 1.2em no-repeat darken($gray, 15)
     @retina-image('../../images/shared-icons/no', 24px 24px)
   td

@@ -719,75 +719,54 @@ td pre.programlisting, td pre.screen, td pre.literallayout, td code {
   white-space: pre-wrap;
   word-wrap: break-word; }
 
-table.question-and-answer th,
-table.yes-and-no th,
-table.good-and-bad th,
-table.sections th {
+table.with-icons th {
   font-size: 1.3em;
   padding: 0.5em 1.5em 0.5em 3em; }
-table.question-and-answer tr,
-table.yes-and-no tr,
-table.good-and-bad tr,
-table.sections tr {
+table.with-icons tr {
   background: transparent; }
-table.question-and-answer td, table.question-and-answer th,
-table.yes-and-no td,
-table.yes-and-no th,
-table.good-and-bad td,
-table.good-and-bad th,
-table.sections td,
-table.sections th {
+table.with-icons td, table.with-icons th {
   white-space: normal; }
-  table.question-and-answer td p, table.question-and-answer th p,
-  table.yes-and-no td p,
-  table.yes-and-no th p,
-  table.good-and-bad td p,
-  table.good-and-bad th p,
-  table.sections td p,
-  table.sections th p {
+  table.with-icons td p, table.with-icons th p {
     font-size: 1em; }
-table.question-and-answer td,
-table.yes-and-no td,
-table.good-and-bad td,
-table.sections td {
+table.with-icons td {
   padding: 1.3em 1.5em; }
 
-table.question-and-answer th:nth-child(1) {
+table th.question {
   background: url("../../images/shared-icons/search.png") 1.2em no-repeat #444444;
   @retina-image('../../images/shared-icons/search', 24px 24px); }
-table.question-and-answer th:nth-child(2) {
+table th.answer {
   background: url("../../images/shared-icons/arrow.png") 1.2em no-repeat #41a2ba;
   @retina-image('../../images/shared-icons/arrow', 24px 24px); }
-table.question-and-answer td {
+table td {
   width: 50%;
   padding: 1.5em;
   padding-bottom: 1em; }
-table.question-and-answer td:nth-child(2) p {
+table td:nth-child(2) p {
   color: #999999; }
-table.question-and-answer td:nth-child(2) h2 {
+table td:nth-child(2) h2 {
   font-family: "source_sans_prosemibold", sans-serif;
   color: #41a2ba;
   font-size: 1em;
   margin: 0; }
-  table.question-and-answer td:nth-child(2) h2 + p {
+  table td:nth-child(2) h2 + p {
     margin-top: 0; }
 
-table.good-and-bad th:nth-child(1) {
+table th.good {
   background: url("../../images/shared-icons/good.png") 1.2em no-repeat #6baf44;
   @retina-image('../../images/shared-icons/good', 24px 24px); }
-table.good-and-bad th:nth-child(2) {
+table th.bad {
   background: url("../../images/shared-icons/bad.png") 1.2em no-repeat #a9abaf;
   @retina-image('../../images/shared-icons/bad', 24px 24px); }
 
-table.yes-and-no th:nth-child(1) {
+table th.yes {
   background: url("../../images/shared-icons/check.png") 1.2em no-repeat #6baf44;
   @retina-image('../../images/shared-icons/check', 24px 24px); }
-table.yes-and-no th:nth-child(2) {
+table th.no {
   background: url("../../images/shared-icons/no.png") 1.2em no-repeat #a9abaf;
   @retina-image('../../images/shared-icons/no', 24px 24px); }
-table.yes-and-no td {
+table td {
   width: 50%; }
-table.yes-and-no td:nth-child(2) {
+table td:nth-child(2) {
   background: #efefef; }
 
 table.sections th:nth-child(1) {
