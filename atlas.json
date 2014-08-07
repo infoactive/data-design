@@ -16,7 +16,24 @@
     "03-collecting-data/ch06-finding-external-data.html",
     "04-preparing-data/04-section-cover.html",
     "04-preparing-data/ch07-getting-data-ready-for-cleaning.html",
-    "04-preparing-data/ch08-data-cleaning.html"
+    "04-preparing-data/ch08-data-cleaning.html",
+    "04-preparing-data/ch09-types-of-data-checks.html",
+    "04-preparing-data/ch11-data-transformations.html",
+    "05-visualizing-data/05-section-cover.html",
+    "05-visualizing-data/ch12-deciding-which-and-how-much-data-to-illustrate.html",
+    "05-visualizing-data/ch13-graphing-the-results-of-checkbox-responses.html",
+    "05-visualizing-data/ch14-anatomy-of-a-graphic.html",
+    "05-visualizing-data/ch15-importance-of-color-font-and-icons.html",
+    "05-visualizing-data/ch16-print-vs-web.html",
+    "06-dont-be-shady/06-section-cover.html",
+    "06-dont-be-shady/ch17-perception-deception.html",
+    "06-dont-be-shady/ch18-common-visualization-mistakes.html",
+    "07-conclusion/07-section-cover.html",
+    "07-conclusion/appendix-a.html",
+    "07-conclusion/appendix-b.html",
+    "07-conclusion/glossary.html",
+    "07-conclusion/contributors.html",
+    "07-conclusion/acknowledgments.html"
   ],
   "formats": {
     "pdf": {
