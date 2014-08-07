@@ -133,29 +133,19 @@ section[data-type="halftitlepage"] {
 section[data-type="titlepage"] {
   text-align: left;
   page-break-after: always; }
-
-section[data-type="titlepage"] p:first-of-type {
-  margin-top: 82pt; }
+  section[data-type="titlepage"] p:first-of-type {
+    margin-top: 82pt; }
 
 section[data-type="copyright-page"] {
   margin-top: 100px;
   page-break-after: always; }
-
-section[data-type="copyright-page"] h1 {
-  font-size: 0.8em; }
-
-section[data-type="copyright-page"] p {
-  font-family: "source_sans_proregular", sans-serif;
-  font-size: 0.8em;
-  margin: 0;
-  text-indent: 0; }
-
-section[data-type="dedication"] {
-  font-family: "source_sans_proregular", sans-serif;
-  font-style: italic;
-  page-break-after: always;
-  text-align: center;
-  padding-top: 100px; }
+  section[data-type="copyright-page"] h1 {
+    font-size: 0.8em; }
+  section[data-type="copyright-page"] p {
+    font-family: "source_sans_proregular", sans-serif;
+    font-size: 0.8em;
+    margin: 0;
+    text-indent: 0; }
 
 nav[data-type="toc"] {
   margin-top: 132px; }
@@ -309,29 +299,27 @@ nav[data-type="toc"] li[data-type="foreword"] ol {
 section[data-type="chapter"] header {
   border-bottom: 18px solid #eeeeee;
   margin-bottom: 4em; }
-
-section[data-type="chapter"] header h1 {
-  font-family: "source_sans_probold", sans-serif;
-  font-size: 2.4em;
-  margin-top: 0;
-  margin-bottom: 0;
-  text-align: center;
-  text-transform: uppercase;
-  color: #444444;
-  -webkit-font-smoothing: antialiased; }
-
-section[data-type="chapter"] header p {
-  font-family: "source_sans_prolight", sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0 0.5em;
-  letter-spacing: 2px;
-  font-size: 1.2em;
-  padding: 12px; }
-  section[data-type="chapter"] header p[data-type="author"] {
-    color: #aaaaaa;
-    font-size: 0.9em;
-    margin-bottom: 3em; }
+  section[data-type="chapter"] header h1 {
+    font-family: "source_sans_probold", sans-serif;
+    font-size: 2.4em;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #444444;
+    -webkit-font-smoothing: antialiased; }
+  section[data-type="chapter"] header p {
+    font-family: "source_sans_prolight", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0.5em;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    padding: 12px; }
+    section[data-type="chapter"] header p[data-type="author"] {
+      color: #aaaaaa;
+      font-size: 0.9em;
+      margin-bottom: 3em; }
 
 p[data-type="author"] {
   color: #aaaaaa;
