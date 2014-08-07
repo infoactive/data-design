@@ -70,13 +70,6 @@ $light-green: lighten($green, 50)
 $colors: $blue $yellow $green $violet $red
 $light-colors: $light-blue $light-yellow $light-green $light-violet $light-red
 
-@mixin transition($transition-property, $transition-time, $method)
-  -webkit-transition: $transition-property $transition-time $method
-  -moz-transition: $transition-property $transition-time $method
-  -ms-transition: $transition-property $transition-time $method
-  -o-transition: $transition-property $transition-time $method
-  transition: $transition-property $transition-time $method
-
 p, dd
   font-family: 'source_sans_proregular', sans-serif
   font-size: 1em
@@ -330,8 +323,27 @@ p[data-type="author"]
   text-transform: uppercase
 
 section[data-type="acknowledgments"]
-  padding: 0 30px
+  padding: 0 90px
   max-width: 100%
+  + .navigation
+    clear: both
+    position: relative
+    bottom: 0
+    width: 100%
+    height: 3em
+    background: #efefef
+    border: 1px solid #d1d2d4
+    ul
+      padding: 0
+      li
+        position: relative
+        bottom: -5px
+      li:nth-child(1)
+        float: right
+        right: 22px
+      li:nth-child(2)
+        float: left
+        left: 20px
 
   section[data-type="sect1"]
     @include outer-container
@@ -344,8 +356,11 @@ section[data-type="acknowledgments"]
     line-height: 100%
 
   h1
-    margin-top: 3em
-    margin-bottom: 1em
+    margin-top: 2em
+    margin-bottom: .5em
+    color: #ccc
+    text-transform: uppercase
+    font-size: 3em
 
   section
     float: left
@@ -369,7 +384,11 @@ section[data-type="acknowledgments"]
       font-size: 1em
       font-family: 'source_sans_prosemibold', sans-serif
       a
-        color: #000
+        color: #aaa
+        @include transition(color, .2s, ease-in-out)
+        &:hover
+          color: #333
+          @include transition(color, .2s, ease-in-out)
 
   .contributor
     @include span-columns(4)
@@ -387,12 +406,13 @@ section[data-type="acknowledgments"]
   
   .description
     float: left
+    max-height: 250px
+    overflow: hidden
     p 
       padding: 16px
       line-height: 1.2em
-      font-size: .9em
+      font-size: .8em
     .links
-      background: #f4f4f4
       position: absolute
       bottom: 0
       right: 0
@@ -1012,6 +1032,11 @@ div.navbar p a
       @include omega(3n)
 
 @media screen and (max-width: 960px)
+  section[data-type="acknowledgments"]
+    padding: 0 30px
+    .contributor
+      height: 350px
+
   .navigation
     position: relative
     bottom: 0
@@ -1019,11 +1044,10 @@ div.navbar p a
     height: 3em
     background: $light-gray
     border: 1px solid $gray
-    border-radius: 2px
     ul
       padding: 0
       li
-        bottom: 5p5
+        bottom: -5px
         position: relative
         &:nth-child(1)
           float: right
@@ -1031,6 +1055,7 @@ div.navbar p a
         &:nth-child(2)
           float: left
           left: 20px
+
   section[data-type="acknowledgments"]
     .contributor
       @include span-columns(6)
@@ -1044,10 +1069,20 @@ div.navbar p a
       bottom: 18px
       position: fixed
 
+  .btn.open
+    position: absolute
+
   div[data-type="part"]
     .content, h1
       padding-left: 30px
       padding-right: 30px
+
+@media screen and (max-width: 568px)
+  section[data-type="acknowledgments"]
+    .contributor
+      height: 300px
+      @include fill-parent
+      
 
 // iPhone
 
@@ -1081,9 +1116,6 @@ div.navbar p a
     float: none
     text-indent: 0
 
-  .btn.open
-    position: absolute
-
   section[data-type="acknowledgments"]
     .contributor
-      @include fill-parent
+      height: 400px

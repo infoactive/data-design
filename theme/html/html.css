@@ -167,19 +167,15 @@ nav[data-type="toc"] {
     margin-top: 0;
     padding: 20px 0 0px;
     border-bottom: 1px solid #cccccc;
-    -webkit-transition: background 0.2s ease-in-out;
-    -moz-transition: background 0.2s ease-in-out;
-    -ms-transition: background 0.2s ease-in-out;
-    -o-transition: background 0.2s ease-in-out;
-    transition: background 0.2s ease-in-out; }
+    -webkit-transition: background, 0.2s, ease-in-out;
+    -moz-transition: background, 0.2s, ease-in-out;
+    transition: background, 0.2s, ease-in-out; }
     nav[data-type="toc"] li:hover {
       color: #222222;
       background: #94c2cd;
-      -webkit-transition: background 0.2s ease-in-out;
-      -moz-transition: background 0.2s ease-in-out;
-      -ms-transition: background 0.2s ease-in-out;
-      -o-transition: background 0.2s ease-in-out;
-      transition: background 0.2s ease-in-out; }
+      -webkit-transition: background, 0.2s, ease-in-out;
+      -moz-transition: background, 0.2s, ease-in-out;
+      transition: background, 0.2s, ease-in-out; }
   nav[data-type="toc"] > h1 {
     font-size: 1.5em;
     line-height: 120%;
@@ -253,19 +249,15 @@ nav[data-type="toc"] {
           text-indent: -10px; }
         nav[data-type="toc"] li[data-type="part"] ol li a {
           background: #efefef;
-          -webkit-transition: background 0.2s ease-in-out;
-          -moz-transition: background 0.2s ease-in-out;
-          -ms-transition: background 0.2s ease-in-out;
-          -o-transition: background 0.2s ease-in-out;
-          transition: background 0.2s ease-in-out; }
+          -webkit-transition: background, 0.2s, ease-in-out;
+          -moz-transition: background, 0.2s, ease-in-out;
+          transition: background, 0.2s, ease-in-out; }
           nav[data-type="toc"] li[data-type="part"] ol li a:hover {
             background: white;
             text-decoration: none;
-            -webkit-transition: background 0.2s ease-in-out;
-            -moz-transition: background 0.2s ease-in-out;
-            -ms-transition: background 0.2s ease-in-out;
-            -o-transition: background 0.2s ease-in-out;
-            transition: background 0.2s ease-in-out; }
+            -webkit-transition: background, 0.2s, ease-in-out;
+            -moz-transition: background, 0.2s, ease-in-out;
+            transition: background, 0.2s, ease-in-out; }
         nav[data-type="toc"] li[data-type="part"] ol li:first-child a {
           border-top: 1px solid #cccccc; }
 
@@ -328,8 +320,27 @@ p[data-type="author"] {
   text-transform: uppercase; }
 
 section[data-type="acknowledgments"] {
-  padding: 0 30px;
+  padding: 0 90px;
   max-width: 100%; }
+  section[data-type="acknowledgments"] + .navigation {
+    clear: both;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 3em;
+    background: #efefef;
+    border: 1px solid #d1d2d4; }
+    section[data-type="acknowledgments"] + .navigation ul {
+      padding: 0; }
+      section[data-type="acknowledgments"] + .navigation ul li {
+        position: relative;
+        bottom: -5px; }
+      section[data-type="acknowledgments"] + .navigation ul li:nth-child(1) {
+        float: right;
+        right: 22px; }
+      section[data-type="acknowledgments"] + .navigation ul li:nth-child(2) {
+        float: left;
+        left: 20px; }
   section[data-type="acknowledgments"] section[data-type="sect1"] {
     max-width: 68em;
     margin-left: auto;
@@ -345,8 +356,11 @@ section[data-type="acknowledgments"] {
     margin-bottom: 0;
     line-height: 100%; }
   section[data-type="acknowledgments"] h1 {
-    margin-top: 3em;
-    margin-bottom: 1em; }
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    color: #cccccc;
+    text-transform: uppercase;
+    font-size: 3em; }
   section[data-type="acknowledgments"] section {
     float: left; }
   section[data-type="acknowledgments"] .header {
@@ -368,7 +382,15 @@ section[data-type="acknowledgments"] {
       font-size: 1em;
       font-family: "source_sans_prosemibold", sans-serif; }
       section[data-type="acknowledgments"] .header h3 a {
-        color: black; }
+        color: #aaaaaa;
+        -webkit-transition: color, 0.2s, ease-in-out;
+        -moz-transition: color, 0.2s, ease-in-out;
+        transition: color, 0.2s, ease-in-out; }
+        section[data-type="acknowledgments"] .header h3 a:hover {
+          color: #333333;
+          -webkit-transition: color, 0.2s, ease-in-out;
+          -moz-transition: color, 0.2s, ease-in-out;
+          transition: color, 0.2s, ease-in-out; }
   section[data-type="acknowledgments"] .contributor {
     float: left;
     display: block;
@@ -387,13 +409,14 @@ section[data-type="acknowledgments"] {
     float: left;
     margin-right: 0.7em; }
   section[data-type="acknowledgments"] .description {
-    float: left; }
+    float: left;
+    max-height: 250px;
+    overflow: hidden; }
     section[data-type="acknowledgments"] .description p {
       padding: 16px;
       line-height: 1.2em;
-      font-size: 0.9em; }
+      font-size: 0.8em; }
     section[data-type="acknowledgments"] .description .links {
-      background: #f4f4f4;
       position: absolute;
       bottom: 0;
       right: 0;
@@ -1013,19 +1036,15 @@ div.navbar {
   height: 30px;
   text-indent: -9999px;
   opacity: 0.3;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  -moz-transition: opacity 0.2s ease-in-out;
-  -ms-transition: opacity 0.2s ease-in-out;
-  -o-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out; }
+  -webkit-transition: opacity, 0.2s, ease-in-out;
+  -moz-transition: opacity, 0.2s, ease-in-out;
+  transition: opacity, 0.2s, ease-in-out; }
   .btn:hover {
     cursor: pointer;
     opacity: 1;
-    -webkit-transition: opacity 0.2s ease-in-out;
-    -moz-transition: opacity 0.2s ease-in-out;
-    -ms-transition: opacity 0.2s ease-in-out;
-    -o-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out; }
+    -webkit-transition: opacity, 0.2s, ease-in-out;
+    -moz-transition: opacity, 0.2s, ease-in-out;
+    transition: opacity, 0.2s, ease-in-out; }
   .btn.open {
     position: fixed;
     left: 30px;
@@ -1069,18 +1088,14 @@ div.navbar p a {
       width: 66px;
       height: 26px;
       display: block;
-      -webkit-transition: opacity 0.3s ease-in-out;
-      -moz-transition: opacity 0.3s ease-in-out;
-      -ms-transition: opacity 0.3s ease-in-out;
-      -o-transition: opacity 0.3s ease-in-out;
-      transition: opacity 0.3s ease-in-out; }
+      -webkit-transition: opacity, 0.3s, ease-in-out;
+      -moz-transition: opacity, 0.3s, ease-in-out;
+      transition: opacity, 0.3s, ease-in-out; }
       .navigation ul li a:hover {
         opacity: 0.8;
-        -webkit-transition: opacity 0.3s ease-in-out;
-        -moz-transition: opacity 0.3s ease-in-out;
-        -ms-transition: opacity 0.3s ease-in-out;
-        -o-transition: opacity 0.3s ease-in-out;
-        transition: opacity 0.3s ease-in-out; }
+        -webkit-transition: opacity, 0.3s, ease-in-out;
+        -moz-transition: opacity, 0.3s, ease-in-out;
+        transition: opacity, 0.3s, ease-in-out; }
   .navigation ul li:nth-child(1) {
     right: 30px; }
     .navigation ul li:nth-child(1) a {
@@ -1103,18 +1118,22 @@ div.navbar p a {
   section[data-type="acknowledgments"] .contributor:nth-child(3n+1) {
     clear: left; } }
 @media screen and (max-width: 960px) {
+  section[data-type="acknowledgments"] {
+    padding: 0 30px; }
+    section[data-type="acknowledgments"] .contributor {
+      height: 350px; }
+
   .navigation {
     position: relative;
     bottom: 0;
     width: 100%;
     height: 3em;
     background: #efefef;
-    border: 1px solid #d1d2d4;
-    border-radius: 2px; }
+    border: 1px solid #d1d2d4; }
     .navigation ul {
       padding: 0; }
       .navigation ul li {
-        bottom: 5p 5;
+        bottom: -5px;
         position: relative; }
         .navigation ul li:nth-child(1) {
           float: right;
@@ -1143,9 +1162,16 @@ div.navbar p a {
       bottom: 18px;
       position: fixed; }
 
+  .btn.open {
+    position: absolute; }
+
   div[data-type="part"] .content, div[data-type="part"] h1 {
     padding-left: 30px;
     padding-right: 30px; } }
+@media screen and (max-width: 568px) {
+  section[data-type="acknowledgments"] .contributor {
+    height: 300px;
+    width: 100%; } }
 @media screen and (max-width: 480px) {
   body {
     width: 100%; }
@@ -1176,8 +1202,5 @@ div.navbar p a {
     float: none;
     text-indent: 0; }
 
-  .btn.open {
-    position: absolute; }
-
   section[data-type="acknowledgments"] .contributor {
-    width: 100%; } }
+    height: 400px; } }
