@@ -12,11 +12,12 @@ body {
   max-width: 100%;
   font-family: "source_sans_proregular", sans-serif;
   font-size: 18px;
-  margin: 0;
+  margin: 0 0 3em;
   padding-top: 0; }
 
-html, body {
-  height: 100%; }
+html {
+  min-height: 100%;
+  position: relative; }
 
 @font-face {
   font-family: "source_sans_proregular";
@@ -135,17 +136,6 @@ section[data-type="titlepage"] {
   page-break-after: always; }
   section[data-type="titlepage"] p:first-of-type {
     margin-top: 82pt; }
-
-section[data-type="copyright-page"] {
-  margin-top: 100px;
-  page-break-after: always; }
-  section[data-type="copyright-page"] h1 {
-    font-size: 0.8em; }
-  section[data-type="copyright-page"] p {
-    font-family: "source_sans_proregular", sans-serif;
-    font-size: 0.8em;
-    margin: 0;
-    text-indent: 0; }
 
 nav[data-type="toc"] {
   margin-top: 132px; }
@@ -318,136 +308,130 @@ p[data-type="author"] {
   font-size: 0.9em;
   margin-bottom: 3em;
   text-transform: uppercase; }
+  p[data-type="author"] em {
+    font-family: "source_sans_prolight", sans-serif;
+    color: #cccccc; }
 
-section[data-type="acknowledgments"] {
-  padding: 0 90px;
-  max-width: 100%; }
-  section[data-type="acknowledgments"] + .navigation {
-    clear: both;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 3em;
-    background: #efefef;
-    border: 1px solid #d1d2d4; }
-    section[data-type="acknowledgments"] + .navigation ul {
-      padding: 0; }
-      section[data-type="acknowledgments"] + .navigation ul li {
-        position: relative;
-        bottom: -5px; }
-      section[data-type="acknowledgments"] + .navigation ul li:nth-child(1) {
-        float: right;
-        right: 22px; }
-      section[data-type="acknowledgments"] + .navigation ul li:nth-child(2) {
-        float: left;
-        left: 20px; }
-  section[data-type="acknowledgments"] section[data-type="sect1"] {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto; }
-    section[data-type="acknowledgments"] section[data-type="sect1"]:after {
-      content: "";
-      display: table;
-      clear: both; }
-  section[data-type="acknowledgments"] * {
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 100%; }
-  section[data-type="acknowledgments"] h1 {
-    margin-top: 2em;
-    margin-bottom: 0.5em;
-    color: #cccccc;
-    text-transform: uppercase;
-    font-size: 3em; }
-  section[data-type="acknowledgments"] section {
-    float: left; }
-  section[data-type="acknowledgments"] .header {
+section[data-type="acknowledgments"] + .navigation {
+  clear: both;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 3em;
+  background: #efefef;
+  border: 1px solid #d1d2d4; }
+  section[data-type="acknowledgments"] + .navigation ul {
+    padding: 0; }
+    section[data-type="acknowledgments"] + .navigation ul li {
+      position: relative;
+      bottom: -5px; }
+    section[data-type="acknowledgments"] + .navigation ul li:nth-child(1) {
+      float: right;
+      right: 22px; }
+    section[data-type="acknowledgments"] + .navigation ul li:nth-child(2) {
+      float: left;
+      left: 20px; }
+section[data-type="acknowledgments"] section[data-type="sect1"] {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  section[data-type="acknowledgments"] section[data-type="sect1"]:after {
+    content: "";
     display: table;
-    width: 100%;
-    background: white;
-    border-style: solid;
-    border-bottom: none;
-    border-width: 2px;
-    border-color: #d2d3d5; }
-    section[data-type="acknowledgments"] .header p {
-      color: #969699;
-      font-size: 0.8em;
-      line-height: 1.1em;
-      margin-right: 1em; }
-    section[data-type="acknowledgments"] .header h3 {
-      padding-top: 0.6em;
-      padding-bottom: 0.3em;
-      font-size: 1em;
-      font-family: "source_sans_prosemibold", sans-serif; }
-      section[data-type="acknowledgments"] .header h3 a {
-        color: #aaaaaa;
+    clear: both; }
+section[data-type="acknowledgments"] * {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 100%; }
+section[data-type="acknowledgments"] section {
+  float: left; }
+section[data-type="acknowledgments"] .header {
+  display: table;
+  width: 100%;
+  background: white;
+  border-style: solid;
+  border-bottom: none;
+  border-width: 2px;
+  border-color: #d2d3d5; }
+  section[data-type="acknowledgments"] .header p {
+    color: #969699;
+    font-size: 0.8em;
+    line-height: 1.1em;
+    margin-right: 1em; }
+  section[data-type="acknowledgments"] .header h3 {
+    padding-top: 0.6em;
+    padding-bottom: 0.3em;
+    font-size: 1em;
+    font-family: "source_sans_prosemibold", sans-serif; }
+    section[data-type="acknowledgments"] .header h3 a {
+      color: #aaaaaa;
+      -webkit-transition: color, 0.2s, ease-in-out;
+      -moz-transition: color, 0.2s, ease-in-out;
+      transition: color, 0.2s, ease-in-out; }
+      section[data-type="acknowledgments"] .header h3 a:hover {
+        color: #333333;
         -webkit-transition: color, 0.2s, ease-in-out;
         -moz-transition: color, 0.2s, ease-in-out;
         transition: color, 0.2s, ease-in-out; }
-        section[data-type="acknowledgments"] .header h3 a:hover {
-          color: #333333;
-          -webkit-transition: color, 0.2s, ease-in-out;
-          -moz-transition: color, 0.2s, ease-in-out;
-          transition: color, 0.2s, ease-in-out; }
-  section[data-type="acknowledgments"] .contributor {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
-    display: inline-block;
-    margin-bottom: 28px;
-    position: relative;
-    height: 400px;
-    background: #f4f4f4; }
-    section[data-type="acknowledgments"] .contributor:last-child {
-      margin-right: 0; }
-  section[data-type="acknowledgments"] img.profile {
-    height: 88px;
-    width: 88px;
-    float: left;
-    margin-right: 0.7em; }
-  section[data-type="acknowledgments"] .description {
-    float: left;
-    max-height: 250px;
-    overflow: hidden; }
-    section[data-type="acknowledgments"] .description p {
-      padding: 16px;
-      line-height: 1.2em;
-      font-size: 0.8em; }
-    section[data-type="acknowledgments"] .description .links {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%; }
-      section[data-type="acknowledgments"] .description .links a {
-        margin: 0 10px 10px 0;
-        width: 28px;
-        height: 29px;
-        display: block;
-        float: right;
-        text-indent: -9999px;
-        opacity: 0.4;
-        background: url("../../images/contributors/website.png");
-        @retina-image('../../images/contributors/website', 29px 29px); }
-        section[data-type="acknowledgments"] .description .links a:hover {
-          opacity: 1; }
-      section[data-type="acknowledgments"] .description .links .twitter {
-        background: url("../../images/contributors/twitter.png");
-        @retina-image('../../images/contributors/twitter', 29px 29px); }
-  section[data-type="acknowledgments"] .role {
-    float: left;
+section[data-type="acknowledgments"] .contributor {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  display: inline-block;
+  margin-bottom: 28px;
+  position: relative;
+  height: 400px;
+  background: #f4f4f4; }
+  section[data-type="acknowledgments"] .contributor:last-child {
+    margin-right: 0; }
+section[data-type="acknowledgments"] img.profile {
+  height: 88px;
+  width: 88px;
+  float: left;
+  margin-right: 0.7em; }
+section[data-type="acknowledgments"] .description {
+  float: left;
+  max-height: 250px;
+  overflow: hidden; }
+  section[data-type="acknowledgments"] .description p {
+    padding: 16px;
+    line-height: 1.2em;
+    font-size: 0.8em; }
+  section[data-type="acknowledgments"] .description .links {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     width: 100%; }
-    section[data-type="acknowledgments"] .role p {
-      padding: 7px 36px 5px 16px;
-      color: white;
-      background: #6baf44;
-      text-transform: capitalize; }
-    section[data-type="acknowledgments"] .role .editor {
-      background: #41a2ba; }
-    section[data-type="acknowledgments"] .role .writer {
-      background: #3e5084; }
+    section[data-type="acknowledgments"] .description .links a {
+      margin: 0 10px 10px 0;
+      width: 28px;
+      height: 29px;
+      display: block;
+      float: right;
+      text-indent: -9999px;
+      opacity: 0.4;
+      background: url("../../images/contributors/website.png");
+      @retina-image('../../images/contributors/website', 29px 29px); }
+      section[data-type="acknowledgments"] .description .links a:hover {
+        opacity: 1; }
+    section[data-type="acknowledgments"] .description .links .twitter {
+      background: url("../../images/contributors/twitter.png");
+      @retina-image('../../images/contributors/twitter', 29px 29px); }
+section[data-type="acknowledgments"] .role {
+  float: left;
+  width: 100%; }
+  section[data-type="acknowledgments"] .role p {
+    padding: 7px 36px 5px 16px;
+    color: white;
+    background: #6baf44;
+    text-transform: capitalize; }
+  section[data-type="acknowledgments"] .role .editor {
+    background: #41a2ba; }
+  section[data-type="acknowledgments"] .role .writer {
+    background: #3e5084; }
 
 .icon {
   width: 240px;
@@ -600,22 +584,38 @@ section[data-type="appendix"] {
 
 nav[data-type="toc"] > h1,
 div[data-type="part"] > h1,
-section[data-type="preface"] > h1,
-section[data-type="foreword"] > h1,
 section[data-type="chapter"] > h1,
-section[data-type="appendix"] > h1,
 section[data-type="sect1"] h1 {
   font-family: "source_sans_prosemibold", sans-serif;
   line-height: 120%; }
+
+section[data-type="appendix"] > h1,
+section[data-type="preface"] > h1,
+section[data-type="foreword"] > h1,
+section[data-type="introduction"] > h1,
+section[data-type="copyright-page"] > h1,
+section[data-type="acknowledgments"] > h1 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  color: #cccccc;
+  text-transform: uppercase;
+  font-size: 3em; }
+
+section[data-type="acknowledgments"] {
+  max-width: 100%;
+  padding: 0 90px 50px; }
 
 section[data-type="sect2"] h2 {
   font-family: "source_sans_prosemibold", sans-serif;
   line-height: 120%; }
 
-section[data-type="preface"] > h1,
-section[data-type="foreword"] > h1,
-section[data-type="chapter"] > h1,
-section[data-type="appendix"] > h1 {
+section[data-type="copyright-page"] h1 {
+  margin-bottom: 0; }
+section[data-type="copyright-page"] h2 {
+  margin: 0 0 1.5em;
+  color: #cccccc; }
+
+section[data-type="chapter"] > h1 {
   font-size: 1.8em;
   margin-top: 70px;
   margin-bottom: 40px;
@@ -1118,14 +1118,21 @@ div.navbar p a {
   section[data-type="acknowledgments"] .contributor:nth-child(3n+1) {
     clear: left; } }
 @media screen and (max-width: 960px) {
+  section[data-type="appendix"],
+  section[data-type="preface"],
+  section[data-type="foreword"],
+  section[data-type="introduction"],
+  section[data-type="copyright-page"],
   section[data-type="acknowledgments"] {
-    padding: 0 30px; }
-    section[data-type="acknowledgments"] .contributor {
-      height: 350px; }
+    padding: 0 30px 50px; }
+
+  section[data-type="acknowledgments"] .contributor {
+    height: 350px; }
 
   .navigation {
-    position: relative;
+    position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: 3em;
     background: #efefef;

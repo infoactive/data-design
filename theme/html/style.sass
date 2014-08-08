@@ -12,11 +12,12 @@ body
   max-width: 100%
   font-family: 'source_sans_proregular', sans-serif
   font-size: 18px
-  margin: 0
+  margin: 0 0 3em
   padding-top: 0
 
-html, body
-  height: 100%
+html
+  min-height: 100%
+  position: relative
 
 @font-face
   font-family: 'source_sans_proregular'
@@ -158,17 +159,6 @@ section[data-type="titlepage"]
   page-break-after: always
   p:first-of-type
     margin-top: 82pt
-
-section[data-type="copyright-page"]
-  margin-top: 100px
-  page-break-after: always
-  h1
-    font-size: 0.8em
-  p
-    font-family: 'source_sans_proregular', sans-serif
-    font-size: 0.8em
-    margin: 0
-    text-indent: 0
 
 nav[data-type="toc"]
   margin-top: 132px
@@ -321,10 +311,11 @@ p[data-type="author"]
   font-size: .9em
   margin-bottom: 3em
   text-transform: uppercase
+  em
+    font-family: "source_sans_prolight", sans-serif
+    color: #ccc
 
 section[data-type="acknowledgments"]
-  padding: 0 90px
-  max-width: 100%
   + .navigation
     clear: both
     position: relative
@@ -354,13 +345,6 @@ section[data-type="acknowledgments"]
     margin-top: 0
     margin-bottom: 0
     line-height: 100%
-
-  h1
-    margin-top: 2em
-    margin-bottom: .5em
-    color: #ccc
-    text-transform: uppercase
-    font-size: 3em
 
   section
     float: left
@@ -523,22 +507,40 @@ section[data-type="appendix"]
 
 nav[data-type="toc"] > h1, 
 div[data-type="part"] > h1, 
-section[data-type="preface"] > h1, 
-section[data-type="foreword"] > h1, 
 section[data-type="chapter"] > h1, 
-section[data-type="appendix"] > h1, 
 section[data-type="sect1"] h1
   font-family: 'source_sans_prosemibold', sans-serif
   line-height: 120%
+
+section[data-type="appendix"], 
+section[data-type="preface"], 
+section[data-type="foreword"], 
+section[data-type="introduction"], 
+section[data-type="copyright-page"], 
+section[data-type="acknowledgments"] 
+  > h1
+    margin-top: 2em
+    margin-bottom: .5em
+    color: #ccc
+    text-transform: uppercase
+    font-size: 3em
+
+section[data-type="acknowledgments"] 
+  max-width: 100%
+  padding: 0 90px 50px
 
 section[data-type="sect2"] h2 
   font-family: 'source_sans_prosemibold', sans-serif
   line-height: 120%
 
-section[data-type="preface"] > h1, 
-section[data-type="foreword"] > h1, 
-section[data-type="chapter"] > h1, 
-section[data-type="appendix"] > h1
+section[data-type="copyright-page"]
+  h1
+    margin-bottom: 0
+  h2
+    margin: 0 0 1.5em
+    color: #ccc
+
+section[data-type="chapter"] > h1 
   font-size: 1.8em
   margin-top: 70px
   margin-bottom: 40px
@@ -1032,14 +1034,21 @@ div.navbar p a
       @include omega(3n)
 
 @media screen and (max-width: 960px)
+  section[data-type="appendix"], 
+  section[data-type="preface"], 
+  section[data-type="foreword"], 
+  section[data-type="introduction"], 
+  section[data-type="copyright-page"], 
   section[data-type="acknowledgments"]
-    padding: 0 30px
-    .contributor
-      height: 350px
+    padding: 0 30px 50px
+
+  section[data-type="acknowledgments"] .contributor
+    height: 350px
 
   .navigation
-    position: relative
+    position: absolute
     bottom: 0
+    left: 0
     width: 100%
     height: 3em
     background: $light-gray
