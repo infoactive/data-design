@@ -1,6 +1,6 @@
 <section data-type="acknowledgments">
 <h1>Contributors</h1>
-
+<div id="filterContainer"></div>
 <section data-type="sect1">
 <div class="contributor">
 <div class="header"><img alt="Mihai Badescu" class="profile" src="../images/contributors/avatar.png" />
@@ -992,5 +992,53 @@
 <div class="links"><a class="twitter" href="https://twitter.com/drgbz" target="_blank">@drgbz</a> <a class="website" href="http://www.drgbz.com/" target="_blank">website</a></div>
 </div>
 </div>
+<script type="text/javascript">
+	var filters = {},
+		classes = ["editor", "writer", "marketing", "organizer", "research", "technical editor", "project manager", "other", "contributor"];
+		displayNames = ["Editors", "Writers", "Marketers", "Organizers", "Researchers", "Technical Editors", "Project Managers", "Other", "No Filter"],
+		filterContainer = document.getElementById("filterContainer");
+		classes.forEach(function(classElem, i){
+			var filterButton = document.createElement("div"),
+				_class = classElem,
+				_name = displayNames[i],
+				_text = document.createTextNode(_name);
+				filterButton.setAttribute("class", "filter");
+				filterButton.setAttribute("value", _class);
+				filterButton.appendChild(_text);
+				filterContainer.appendChild(filterButton);
+
+				filterButton.onclick = filterClickHandler;
+		});
+
+   function filterClickHandler(e)
+   {
+		e = e||window.event;
+		var elem = e.target||e.srcElement,
+			filterClass = elem.getAttribute("value"),
+			defaultContributorClass = "contributor",
+			allContributors = document.getElementsByClassName(defaultContributorClass),
+			visibleContributors = document.getElementsByClassName(filterClass);
+
+		//Check if we're actually filtering or unfiltering elements
+		if(filterClass !== defaultContributorClass) {
+			//First hide all elements
+			for ( var i = 0; i < allContributors.length; ++i ) {
+				var contributor = allContributors[i];
+				contributor.style.display = "none";
+			}
+			//Display filter results
+			for ( var i = 0; i < visibleContributors.length; ++i ) {
+				var contributor = visibleContributors[i].parentElement.parentElement;
+				contributor.style.display = "block";
+			}
+		} else {// Clicked no filter
+			//Display all contributors
+			for ( var i = 0; i < allContributors.length; ++i ) {
+				var contributor = allContributors[i];
+				contributor.style.display = "block";
+			}
+		}
+   }
+</script>
 </section>
 </section>
