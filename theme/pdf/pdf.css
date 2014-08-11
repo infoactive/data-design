@@ -313,6 +313,31 @@ section[data-type="dedication"] {
 /* copyright page */
 /* dedication */
 /* table of contents */
+section[data-type="chapter"] header {
+  border-bottom: 18px solid #eeeeee;
+  margin-bottom: 4em; }
+  section[data-type="chapter"] header h1 {
+    font-family: "source_sans_probold", sans-serif;
+    font-size: 30pt;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #444444;
+    -webkit-font-smoothing: antialiased; }
+  section[data-type="chapter"] header p {
+    font-family: "source_sans_prolight", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0pt 16pt;
+    letter-spacing: 1pt;
+    font-size: 16pt;
+    padding: 0.3in; }
+    section[data-type="chapter"] header p[data-type="author"] {
+      color: #aaaaaa;
+      font-size: 12pt;
+      margin-bottom: 0.5in; }
+
 /* paged media */
 @page toc:first {
   @bottom-right-corner {
