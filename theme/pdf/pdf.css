@@ -1,31 +1,31 @@
 @font-face {
   font-family: "source_sans_proregular";
-  src: url("fonts/sourcesanspro-regular-webfont.eot");
-  src: url("fonts/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sourcesanspro-regular-webfont.woff") format("woff"), url("fonts/sourcesanspro-regular-webfont.ttf") format("truetype"), url("fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular") format("svg");
+  src: url("../fonts/sourcesanspro-regular-webfont.eot");
+  src: url("../fonts/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-regular-webfont.woff") format("woff"), url("../fonts/sourcesanspro-regular-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "source_sans_prosemibold";
-  src: url("fonts/sourcesanspro-semibold-webfont.eot");
-  src: url("fonts/sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sourcesanspro-semibold-webfont.woff") format("woff"), url("fonts/sourcesanspro-semibold-webfont.ttf") format("truetype"), url("fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg");
+  src: url("../fonts/sourcesanspro-semibold-webfont.eot");
+  src: url("../fonts/sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-semibold-webfont.woff") format("woff"), url("../fonts/sourcesanspro-semibold-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "source_sans_probold";
-  src: url("fonts/sourcesanspro-bold-webfont.eot");
-  src: url("fonts/sourcesanspro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sourcesanspro-bold-webfont.woff") format("woff"), url("fonts/sourcesanspro-bold-webfont.ttf") format("truetype"), url("fonts/sourcesanspro-bold-webfont.svg#source_sans_probold") format("svg");
+  src: url("../fonts/sourcesanspro-bold-webfont.eot");
+  src: url("../fonts/sourcesanspro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-bold-webfont.woff") format("woff"), url("../fonts/sourcesanspro-bold-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-bold-webfont.svg#source_sans_probold") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "source_sans_prolight";
-  src: url("fonts/sourcesanspro-light-webfont.eot");
-  src: url("fonts/sourcesanspro-light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sourcesanspro-light-webfont.woff") format("woff"), url("fonts/sourcesanspro-light-webfont.ttf") format("truetype"), url("fonts/sourcesanspro-light-webfont.svg#source_sans_prolight") format("svg");
+  src: url("../fonts/sourcesanspro-light-webfont.eot");
+  src: url("../fonts/sourcesanspro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-light-webfont.woff") format("woff"), url("../fonts/sourcesanspro-light-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-light-webfont.svg#source_sans_prolight") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "source_sans_proitalic";
-  src: url("fonts/sourcesanspro-italic-webfont.eot");
-  src: url("fonts/sourcesanspro-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sourcesanspro-italic-webfont.woff") format("woff"), url("fonts/sourcesanspro-italic-webfont.ttf") format("truetype"), url("fonts/sourcesanspro-italic-webfont.svg#source_sans_proitalic") format("svg");
+  src: url("../fonts/sourcesanspro-italic-webfont.eot");
+  src: url("../fonts/sourcesanspro-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-italic-webfont.woff") format("woff"), url("../fonts/sourcesanspro-italic-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-italic-webfont.svg#source_sans_proitalic") format("svg");
   font-weight: normal;
   font-style: normal; }
 .blue blockquote, .blue [data-type="example"] {
@@ -593,9 +593,12 @@ div[data-type="part"] {
     font-size: 18pt;
     line-height: 22pt;
     text-align: center;
+    margin-left: 1in;
+    margin-right: 1in;
     margin-top: 0;
     margin-bottom: 28pt;
-    counter-increment: PartNumber; }
+    counter-increment: PartNumber;
+    color: white; }
     div[data-type="part"] > h1:before {
       font-family: "OpenSans-Semibold", sans-serif;
       font-size: 11pt;
@@ -605,6 +608,8 @@ div[data-type="part"] {
       text-align: center;
       margin-top: 72pt;
       margin-bottom: 34pt; }
+    div[data-type="part"] > h1 p {
+      color: white; }
 
 /* chapters */
 @page chapter:first {
