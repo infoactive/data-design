@@ -311,7 +311,6 @@ section
     /* titlepages always start on a right-hand page
     page-break-after: always
   &[data-type="halftitlepage"] h1, &[data-type="titlepage"] h1
-    font-family: Merriweather, serif
     border-bottom: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
     margin-top: 126pt
     padding-bottom: 7pt
@@ -329,7 +328,6 @@ section
       line-height: 24pt
       font-weight: normal
     p[data-type="author"]
-      font-family: Merriweather, serif
       font-size: 11pt
       margin-top: 66pt
   &[data-type="copyright-page"]
@@ -428,7 +426,6 @@ section[data-type="chapter"] header
 nav[data-type="toc"]
   > h1
     /* table of contents heading
-    font-family: Merriweather, serif
     font-size: 16pt
     line-height: 22pt
     margin-top: 87pt
@@ -529,8 +526,7 @@ nav[data-type="toc"] li[data-type="appendix"]
 /* shared styles for all chapter-level headings
 
 section
-  &[data-type="preface"] > h1, &[data-type="foreword"] > h1, &[data-type="chapter"] > h1, &[data-type="appendix"] > h1
-    font-family: 'Merriweather', serif
+  &[data-type="preface"] > h1, &[data-type="foreword"] > h1, &[data-type="appendix"] > h1
     line-height: 22pt
     margin-bottom: 0.9in
     margin-top: 0.5in
@@ -570,7 +566,6 @@ h1, h2, h3, h4, h5, h6
 section
   &[data-type="sect1"] > h1
     /* A-level headings
-    font-family: 'Merriweather', serif
     font-weight: bold
     font-size: 12pt
     line-height: 16pt
@@ -630,14 +625,12 @@ section
   @bottom-left-corner
     content: counter(page, lower-roman)
 
-
 @page preface:right
   @top-right
     content: string(ChapterTitle)
 
   @bottom-right-corner
     content: counter(page, lower-roman)
-
 
 @page preface:blank
   @bottom-left-corner
@@ -662,7 +655,6 @@ section
   @top-right
     content: none
 
-
 @page foreword:left
   @top-left
     content: string(ChapterTitle)
@@ -677,7 +669,6 @@ section
 
   @bottom-right-corner
     content: counter(page, lower-roman)
-
 
 @page foreword:blank
   @bottom-left-corner
@@ -698,6 +689,7 @@ section
 div[data-type="part"]
   page: blank
   page-break-before: right
+  margin: -1in
   > h1
     font-family: 'OpenSans-CondBold', sans-serif
     font-size: 18pt
@@ -722,7 +714,6 @@ div[data-type="part"]
   @top-right
     content: none
 
-
 @page chapter:left
   @bottom-left-corner
     content: counter(page)
@@ -730,14 +721,12 @@ div[data-type="part"]
   @top-left
     content: "CHAPTER " counter(ChapterNumber) ": " string(ChapterTitle)
 
-
 @page chapter:right
   @bottom-right-corner
     content: counter(page)
 
   @top-right
     content: string(SectionTitle)
-
 
 @page chapter:blank
   @bottom-left-corner
@@ -751,7 +740,6 @@ div[data-type="part"]
 
   @top-left
     content: none
-
 
 /* page number resets to 1 on the first chapter
 
@@ -783,14 +771,12 @@ section
   @bottom-right
     content: "Appendix " counter(AppendixNumber, upper-alpha) ", " string(ChapterTitle)
 
-
 @page appendix:right
   @bottom-right
     content: counter(page)
 
   @bottom-left
     content: string(SectionTitle)
-
 
 /* lists
 
@@ -832,7 +818,6 @@ table caption
   margin-bottom: 5pt
   page-break-after: avoid
   text-align: left
-  font-family: Merriweather, serif
   font-style: italic
   font-size: 7.5pt
   line-height: 10pt
@@ -891,9 +876,7 @@ td
 
 figure
   display: block
-  border-top: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
-  border-bottom: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
-  margin: 20pt -1.625in
+  margin: 16pt -1in
   padding: 8.64pt 1.625in
   width: 4.375in
   clear: both
@@ -908,7 +891,6 @@ figure
     margin-right: -1.25in
     width: 1in
     text-align: left
-    font-family: Merriweather, serif
     font-style: italic
     font-size: 7.5pt
     line-height: 10pt
@@ -970,13 +952,11 @@ aside
   p, dd
     /* sidebar text
     font-size: 7.5pt
-    font-family: Merriweather, serif
     line-height: 11.5pt
     text-indent: 0
     margin-bottom: 6pt
   dt
     font-size: 7.5pt
-    font-family: Merriweather, serif
     font-weight: bold
 
 /* admonitions
@@ -991,14 +971,12 @@ div
     page-break-inside: avoid
   &[data-type="note"] p, &[data-type="warning"] p
     /* admon text
-    font-family: Merriweather, serif
     text-align: left
     text-indent: 0
     font-size: 7.5pt
     line-height: 11pt
     margin-bottom: 6pt
   &[data-type="note"] li, &[data-type="warning"] li
-    font-family: Merriweather, serif
     font-size: 7.5pt
   &[data-type="note"] h1, &[data-type="warning"] h1
     /* admonition titles
@@ -1037,7 +1015,6 @@ div[data-type="example"]
     margin-bottom: 5pt
     page-break-after: avoid
     text-align: left
-    font-family: Merriweather, serif
     font-style: italic
     font-size: 7.5pt
     line-height: 10pt
@@ -1086,7 +1063,6 @@ div
     width: 1in
     page-break-inside: avoid
     text-align: left
-    font-family: Merriweather, serif
     font-style: italic
     font-size: 7.5pt
     line-height: 10pt
