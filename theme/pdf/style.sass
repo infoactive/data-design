@@ -81,7 +81,7 @@ $color-names: blue yellow green violet red
 .icon
   width: 240px
   height: 240px
-  border-radius: 20pt
+  border-radius: 120px
   margin: 1in auto .5in
 
 .icon img
@@ -313,7 +313,7 @@ section[data-type="chapter"] header
   margin-bottom: 4em
   h1
     font-family: 'source_sans_probold', sans-serif
-    font-size: 30pt
+    font-size: 40pt
     margin-top: 0
     margin-bottom: 0
     text-align: center
@@ -332,6 +332,7 @@ section[data-type="chapter"] header
       color: #aaa
       font-size: 12pt
       margin-bottom: .5in
+      page-break-before: always
 
 /* paged media
 @page toc:first
@@ -636,8 +637,6 @@ section
 /* parts
 
 div[data-type="part"]
-  page: blank
-  page-break-before: right
   margin: -1in
   > h1
     font-size: 18pt

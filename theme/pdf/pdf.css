@@ -131,7 +131,7 @@ div[data-type="part"].red {
 .icon {
   width: 240px;
   height: 240px;
-  border-radius: 20pt;
+  border-radius: 120px;
   margin: 1in auto 0.5in; }
 
 .icon img {
@@ -327,7 +327,7 @@ section[data-type="chapter"] header {
   margin-bottom: 4em; }
   section[data-type="chapter"] header h1 {
     font-family: "source_sans_probold", sans-serif;
-    font-size: 30pt;
+    font-size: 40pt;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
@@ -345,7 +345,8 @@ section[data-type="chapter"] header {
     section[data-type="chapter"] header p[data-type="author"] {
       color: #aaaaaa;
       font-size: 12pt;
-      margin-bottom: 0.5in; }
+      margin-bottom: 0.5in;
+      page-break-before: always; }
 
 /* paged media */
 @page toc:first {
@@ -596,8 +597,6 @@ section[data-type="foreword"] {
     content: none; } }
 /* parts */
 div[data-type="part"] {
-  page: blank;
-  page-break-before: right;
   margin: -1in; }
   div[data-type="part"] > h1 {
     font-size: 18pt;
