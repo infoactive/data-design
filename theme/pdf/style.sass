@@ -651,12 +651,43 @@ div[data-type="part"]
   //@top-left
     //content: none
 
-@page chapter
-  @bottom-right-corner
+//@page chapter
+  //@bottom-right-corner
+    //content: counter(page)
+
+  //@top-left
+    //content: "CHAPTER " counter(ChapterNumberTOC) ": " string(ChapterTitle)
+
+@page chapter:first
+  @top-right
+    content: none
+
+@page chapter:left
+  @bottom-left-corner
     content: counter(page)
 
   @top-left
-    content: "CHAPTER " counter(ChapterNumberTOC) ": " string(ChapterTitle)
+    content: "CHAPTER " counter(ChapterNumber) ": " string(ChapterTitle)
+
+@page chapter:right
+  @bottom-right-corner
+    content: counter(page)
+
+  @top-right
+    content: string(SectionTitle)
+
+@page chapter:blank
+  @bottom-left-corner
+    content: none
+
+  @bottom-right-corner
+    content: none
+
+  @top-right
+    content: none
+
+  @top-left
+    content: none
 
 /* page number resets to 1 on the first chapter
 
