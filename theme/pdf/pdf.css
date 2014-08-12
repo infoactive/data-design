@@ -175,9 +175,9 @@ figure[data-type="cover"] {
   margin: 0;
   padding: 0; }
 @page {
-  margin-left: 1in;
-  margin-right: 1in;
-  @bottom-left-corner {
+  margin-left: 0.75in;
+  margin-right: 0.75in;
+  @bottom-right-corner {
     font-family: "source_sans_proregular", sans-serif;
     font-size: 9pt;
     text-align: left;
@@ -595,8 +595,8 @@ section[data-type="foreword"] {
 div[data-type="part"] {
   page: blank;
   page-break-before: right;
-  margin: 0;
-  width: 100%;
+  margin: -0.75in;
+  width: 9in;
   max-width: 100%;
   height: auto;
   min-height: 100%;
@@ -604,7 +604,7 @@ div[data-type="part"] {
   position: fixed;
   page-break-after: always; }
   div[data-type="part"] > h1 {
-    font-size: 18pt;
+    font-size: 30pt;
     line-height: 22pt;
     text-align: center;
     margin-left: 1in;
@@ -613,6 +613,7 @@ div[data-type="part"] {
     margin-bottom: 28pt;
     padding: 1in;
     counter-increment: PartNumber;
+    text-transform: uppercase;
     color: white; }
     div[data-type="part"] > h1:before {
       font-size: 11pt;
@@ -623,7 +624,8 @@ div[data-type="part"] {
       margin-top: 72pt;
       margin-bottom: 34pt; }
     div[data-type="part"] > h1 p {
-      color: white; }
+      color: white;
+      margin: 0.75in; }
 
 /* chapters */
 @page chapter:first {
@@ -729,7 +731,8 @@ th {
   margin-top: 0;
   border-top: 0.5pt solid cmyk(0%, 0%, 0%, 100%);
   border-bottom: 0.5pt solid cmyk(0%, 0%, 0%, 100%);
-  padding: 4.5pt 0.0625in 4.5pt 0.0625in; }
+  padding: 4.5pt 0.0625in 4.5pt 0.0625in;
+  color: white; }
 
 td {
   padding: 4.5pt 0.0625in 4.5pt 0.0625in;
@@ -740,14 +743,12 @@ td {
 
 th, td {
   border-bottom: 1px solid #d1d2d4;
-  border-left: 1px solid #d1d2d4;
-  padding: 0.7em 1.3em; }
+  border-left: 1px solid #d1d2d4; }
   th:last-child, td:last-child {
     border-right: 1px solid #d1d2d4; }
 
 tr {
-  border-width: 0px;
-  color: white; }
+  border-width: 0px; }
   tr:first-child {
     border-top: 1px solid #d1d2d4; }
 

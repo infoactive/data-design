@@ -121,9 +121,9 @@ figure[data-type="cover"]
 
 
 @page
-  margin-left: 1in
-  margin-right: 1in
-  @bottom-left-corner
+  margin-left: .75in
+  margin-right: .75in
+  @bottom-right-corner
     font-family: "source_sans_proregular", sans-serif
     font-size: 9pt
     text-align: left
@@ -617,8 +617,8 @@ section
 div[data-type="part"]
   page: blank
   page-break-before: right
-  margin: 0
-  width: 100%
+  margin: -.75in
+  width: 9in
   max-width: 100%
   height: auto
   min-height: 100%
@@ -626,7 +626,7 @@ div[data-type="part"]
   position: fixed
   page-break-after: always
   > h1
-    font-size: 18pt
+    font-size: 30pt
     line-height: 22pt
     text-align: center
     margin-left: 1in
@@ -635,6 +635,7 @@ div[data-type="part"]
     margin-bottom: 28pt
     padding: 1in
     counter-increment: PartNumber
+    text-transform: uppercase
     color: #fff
     &:before
       font-size: 11pt
@@ -646,6 +647,7 @@ div[data-type="part"]
       margin-bottom: 34pt
     p
       color: #fff
+      margin: .75in
 
 /* chapters
 
@@ -769,6 +771,7 @@ th
   border-top: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
   border-bottom: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
   padding: 4.5pt 0.0625in 4.5pt 0.0625in
+  color: #fff
 
 td
   padding: 4.5pt 0.0625in 4.5pt 0.0625in
@@ -780,13 +783,11 @@ td
 th, td
   border-bottom: 1px solid $gray
   border-left: 1px solid $gray
-  padding: .7em 1.3em
   &:last-child
     border-right: 1px solid $gray
 
 tr
   border-width: 0px
-  color: #fff
   &:first-child
     border-top: 1px solid $gray
 
