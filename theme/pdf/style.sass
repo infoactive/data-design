@@ -69,6 +69,8 @@ $color-names: blue yellow green violet red
       background: $light-color
     tr.custom.extra-highlight
       background: darken($light-color, 10)
+    section[data-type="sect1"]
+      border-top: 18px solid $color
   div[data-type="part"].#{nth($color-names, $i)}
     background: darken($color, 5)
     .content
@@ -77,8 +79,6 @@ $color-names: blue yellow green violet red
       background: $color
     + .navigation ul
       background: lighten(desaturate($color, 2), 8)
-  section[data-type="sect1"]
-    border-top: 18px solid $color
 
 .icon
   width: 240px
@@ -195,18 +195,18 @@ h1 + p, h2 + p, h3 + P
 p, dd
   font-family: "source_sans_proregular", sans-serif
   text-indent: 0in
-  font-size: 12pt
-  line-height: 14pt
+  font-size: 11.5pt
+  line-height: 15pt
   margin-bottom: 13pt
   text-align: justify
 
 h3
   font-family: "source_sans_probold", sans-serif
-  font-size: 16pt
+  font-size: 14pt
   color: #aaaaaa
   text-transform: uppercase
   margin-top: 20pt
-  margin-bottom: 10pt
+  margin-bottom: 5pt
 
 /* global styles
 
@@ -617,13 +617,14 @@ section
 div[data-type="part"]
   page: blank
   page-break-before: right
-  margin: -1in
+  margin: 0
   width: 100%
   max-width: 100%
   height: auto
   min-height: 100%
   color: white
-  //position: fixed
+  position: fixed
+  page-break-after: always
   > h1
     font-size: 18pt
     line-height: 22pt
@@ -785,6 +786,7 @@ th, td
 
 tr
   border-width: 0px
+  color: #fff
   &:first-child
     border-top: 1px solid $gray
 
