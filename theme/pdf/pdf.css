@@ -584,11 +584,12 @@ div[data-type="part"] {
   padding: 0.75in;
   max-width: 100%;
   height: auto;
-  min-height: 100%;
+  min-height: 11in;
   color: white;
   position: fixed;
   page-break-after: always; }
   div[data-type="part"] header h1 {
+    font-family: "source_sans_probold", sans-serif;
     font-size: 30pt;
     line-height: 22pt;
     text-align: center;
@@ -596,14 +597,15 @@ div[data-type="part"] {
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 28pt;
-    padding: 1in;
+    padding: 0.5in;
     counter-increment: PartNumber;
     text-transform: uppercase;
-    color: #6baf44; }
+    color: white; }
+    div[data-type="part"] header h1 img {
+      display: block;
+      margin-bottom: 0.5in; }
   div[data-type="part"] p {
-    color: white;
-    margin: 0.75in;
-    padding: 0.75in; }
+    color: white; }
 
 /* chapters */
 @page chapter:first {
