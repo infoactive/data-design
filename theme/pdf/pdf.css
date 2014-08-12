@@ -610,13 +610,6 @@ div[data-type="part"] {
       color: white; }
 
 /* chapters */
-@page chapter:first {
-  @top-right {
-    content: none; }
-  @bottom-right-corner {
-    content: none; }
-  @top-left {
-    content: none; } }
 @page chapter {
   @bottom-right-corner {
     content: counter(page); }
