@@ -471,8 +471,9 @@ nav[data-type="toc"] li[data-type="appendix"] {
 /* preface, chapter, and appendix headings */
 /* shared styles for all chapter-level headings */
 section[data-type="preface"] > h1, section[data-type="foreword"] > h1, section[data-type="appendix"] > h1 {
+  font-family: "source_sans_probold", sans-serif;
   line-height: 22pt;
-  margin-bottom: 0.9in;
+  margin-bottom: 0.25in;
   margin-top: 0.5in;
   text-align: left;
   font-size: 32pt;
@@ -523,7 +524,6 @@ section[data-type="sect1"] > h1 {
   /* A-heads are also displayed in chapter footers */ }
 section[data-type="preface"] {
   page: preface;
-  page-break-before: right;
   /* forces the preface to start on a right hand page */
   counter-reset: FigureNumber TableNumber ExampleNumber EquationNumber footnote;
   /* setting auto-numbers for figures, tables, and footnotes to start at 1 */ }
@@ -532,7 +532,6 @@ section[data-type="preface"] {
     font-weight: normal; }
 section[data-type="foreword"] {
   page: foreword;
-  page-break-before: right;
   /* forces the foreword to start on a right hand page */
   counter-reset: FigureNumber TableNumber ExampleNumber EquationNumber footnote;
   /* setting auto-numbers for figures, tables, and footnotes to start at 1 */ }
@@ -583,7 +582,7 @@ section[data-type="foreword"] {
 /* parts */
 div[data-type="part"] {
   page: blank;
-  page-break-before: right;
+  page-break-before: always;
   margin: -0.75in;
   width: 9in;
   padding: 0.75in;
