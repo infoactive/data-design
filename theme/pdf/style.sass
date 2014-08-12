@@ -77,6 +77,8 @@ $color-names: blue yellow green violet red
       background: $color
     + .navigation ul
       background: lighten(desaturate($color, 2), 8)
+  section[data-type="sect1"]
+    border-top: 18px solid $color
 
 .icon
   width: 240px
@@ -193,17 +195,18 @@ h1 + p, h2 + p, h3 + P
 p, dd
   font-family: "source_sans_proregular", sans-serif
   text-indent: 0in
-  font-size: 11pt
-  line-height: 13pt
+  font-size: 12pt
+  line-height: 14pt
   margin-bottom: 13pt
   text-align: justify
 
 h3
   font-family: "source_sans_probold", sans-serif
+  font-size: 16pt
   color: #aaaaaa
   text-transform: uppercase
-  margin-top: .5in
-  margin-bottom: 0
+  margin-top: 20pt
+  margin-bottom: 10pt
 
 /* global styles
 
@@ -499,6 +502,10 @@ h1, h2, h3, h4, h5, h6
   text-align: left
   font-weight: normal
 
+section[data-type="sect1"]
+  margin-top: .5in
+  padding-top: .5in
+
 section
   &[data-type="sect1"] > h1
     /* A-level headings
@@ -645,6 +652,9 @@ div[data-type="part"]
   @top-right
     content: none
 
+  @top-left
+    content: none
+
   @bottom-right-corner
     content: none
 
@@ -765,6 +775,18 @@ td
   font-family: "source_sans_proregular", sans-serif
   font-size: 9pt
   line-height: 10pt
+
+th, td
+  border-bottom: 1px solid $gray
+  border-left: 1px solid $gray
+  padding: .7em 1.3em
+  &:last-child
+    border-right: 1px solid $gray
+
+tr
+  border-width: 0px
+  &:first-child
+    border-top: 1px solid $gray
 
 table p
   /* table body text
