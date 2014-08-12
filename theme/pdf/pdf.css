@@ -587,10 +587,11 @@ div[data-type="part"] {
   margin: -0.75in;
   width: 9in;
   padding: 0.75in;
+  padding-bottom: 6in;
   max-width: 100%;
+  min-height: 100%;
   height: auto;
-  color: white;
-  position: fixed; }
+  color: white; }
   div[data-type="part"] header h1 {
     font-family: "source_sans_probold", sans-serif;
     font-size: 30pt;
