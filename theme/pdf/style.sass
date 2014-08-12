@@ -608,7 +608,6 @@ div[data-type="part"]
   height: auto
   min-height: 11in
   color: white
-  position: fixed
   page-break-after: always
   header h1
     font-family: "source_sans_probold", sans-serif
@@ -656,7 +655,7 @@ section
     counter-reset: page 1
   &[data-type="chapter"]
     page: chapter
-    //page-break-before: right
+    page-break-before: always
     /* forces new chapters to start on a right hand page
     counter-reset: TableNumber FigureNumber ExampleNumber EquationNumber footnote
   &[data-type="appendix"]
@@ -840,7 +839,7 @@ img
   margin: 15pt auto
 
 figure img
-  max-width: 4.375in
+  max-width: 6in
   margin: 0 auto
 
 dt img
