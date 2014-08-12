@@ -585,8 +585,7 @@ div[data-type="part"] {
   max-width: 100%;
   height: auto;
   min-height: 100%;
-  color: white;
-  position: fixed; }
+  color: white; }
   div[data-type="part"] > h1 {
     font-size: 18pt;
     line-height: 22pt;
@@ -612,26 +611,14 @@ div[data-type="part"] {
 /* chapters */
 @page chapter:first {
   @top-right {
-    content: none; } }
-@page chapter:left {
-  @bottom-left-corner {
-    content: counter(page); }
-  @top-left {
-    content: "CHAPTER " counter(ChapterNumber) ": " string(ChapterTitle); } }
-@page chapter:right {
-  @bottom-right-corner {
-    content: counter(page); }
-  @top-right {
-    content: string(SectionTitle); } }
-@page chapter:blank {
-  @bottom-left-corner {
     content: none; }
   @bottom-right-corner {
-    content: none; }
-  @top-right {
-    content: none; }
-  @top-left {
     content: none; } }
+@page chapter {
+  @bottom-right-corner {
+    content: counter(page); }
+  @top-left {
+    content: "CHAPTER " counter(ChapterNumberTOC) ": " string(ChapterTitle); } }
 /* page number resets to 1 on the first chapter */
 section.pagenumrestart {
   counter-reset: page 1; }

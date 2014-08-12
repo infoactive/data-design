@@ -616,7 +616,7 @@ div[data-type="part"]
   height: auto
   min-height: 100%
   color: white
-  position: fixed
+  //position: fixed
   > h1
     font-size: 18pt
     line-height: 22pt
@@ -641,53 +641,19 @@ div[data-type="part"]
 
 /* chapters
 
-//@page chapter:first
-  //@top-right
-    //content: none
-
-  //@bottom-right-corner
-    //content: none
-
-  //@top-left
-    //content: none
-
-//@page chapter
-  //@bottom-right-corner
-    //content: counter(page)
-
-  //@top-left
-    //content: "CHAPTER " counter(ChapterNumberTOC) ": " string(ChapterTitle)
-
 @page chapter:first
   @top-right
     content: none
 
-@page chapter:left
-  @bottom-left-corner
-    content: counter(page)
-
-  @top-left
-    content: "CHAPTER " counter(ChapterNumber) ": " string(ChapterTitle)
-
-@page chapter:right
-  @bottom-right-corner
-    content: counter(page)
-
-  @top-right
-    content: string(SectionTitle)
-
-@page chapter:blank
-  @bottom-left-corner
-    content: none
-
   @bottom-right-corner
     content: none
 
-  @top-right
-    content: none
+@page chapter
+  @bottom-right-corner
+    content: counter(page)
 
   @top-left
-    content: none
+    content: "CHAPTER " counter(ChapterNumberTOC) ": " string(ChapterTitle)
 
 /* page number resets to 1 on the first chapter
 
