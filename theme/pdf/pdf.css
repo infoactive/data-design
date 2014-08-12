@@ -164,7 +164,7 @@ figure[data-type="cover"] {
 @page cover {
   margin: 0;
   padding: 0; }
-@page :left {
+@page {
   margin-left: 1in;
   margin-right: 1in;
   @bottom-left-corner {
@@ -180,20 +180,6 @@ figure[data-type="cover"] {
     margin-top: 6pt; }
   @sidenote {
     margin-left: -1.25in; } }
-@page :right {
-  margin-right: 1in;
-  margin-left: 1in;
-  @bottom-right-corner {
-    font-family: "source_sans_proregular", sans-serif;
-    font-size: 9pt;
-    text-align: right;
-    margin-top: 5pt;
-    margin-right: 0.5in; }
-  @top-right {
-    font-family: "source_sans_proregular", sans-serif;
-    font-size: 8pt;
-    text-align: right;
-    margin-top: 6pt; } }
 @page :blank {
   /* defining a truly blank master page */
   @bottom-left-corner {
@@ -364,15 +350,10 @@ section[data-type="chapter"] header {
     content: counter(page,lower-roman); }
   @top-right {
     content: none; } }
-@page toc:left {
+@page toc {
   @bottom-left-corner {
     content: counter(page,lower-roman); }
   @top-left {
-    content: "Table of Contents"; } }
-@page toc:right {
-  @bottom-right-corner {
-    content: counter(page,lower-roman); }
-  @top-right {
     content: "Table of Contents"; } }
 @page toc:blank {
   @bottom-left-corner {
@@ -561,15 +542,10 @@ section[data-type="foreword"] {
     content: counter(page,lower-roman); }
   @top-right {
     content: none; } }
-@page preface:left {
+@page preface {
   @top-left {
     content: string(ChapterTitle); }
   @bottom-left-corner {
-    content: counter(page,lower-roman); } }
-@page preface:right {
-  @top-right {
-    content: string(ChapterTitle); }
-  @bottom-right-corner {
     content: counter(page,lower-roman); } }
 @page preface:blank {
   @bottom-left-corner {
@@ -586,15 +562,10 @@ section[data-type="foreword"] {
     content: counter(page,lower-roman); }
   @top-right {
     content: none; } }
-@page foreword:left {
+@page foreword {
   @top-left {
     content: string(ChapterTitle); }
   @bottom-left-corner {
-    content: counter(page,lower-roman); } }
-@page foreword:right {
-  @top-right {
-    content: string(ChapterTitle); }
-  @bottom-right-corner {
     content: counter(page,lower-roman); } }
 @page foreword:blank {
   @bottom-left-corner {
@@ -642,16 +613,11 @@ div[data-type="part"] {
 @page chapter:first {
   @top-right {
     content: none; } }
-@page chapter:left {
+@page chapter {
   @bottom-left-corner {
     content: counter(page); }
   @top-left {
-    content: "CHAPTER " counter(ChapterNumber) ": " string(ChapterTitle); } }
-@page chapter:right {
-  @bottom-right-corner {
-    content: counter(page); }
-  @top-right {
-    content: string(SectionTitle); } }
+    content: "CHAPTER " counter(ChapterNumberTOC) ": " string(ChapterTitle); } }
 @page chapter:blank {
   @bottom-left-corner {
     content: none; }
