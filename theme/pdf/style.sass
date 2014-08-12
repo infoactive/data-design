@@ -645,25 +645,18 @@ div[data-type="part"]
   @top-right
     content: none
 
+  @bottom-right-corner
+    content: none
+
+  @top-left
+    content: none
+
 @page chapter
-  @bottom-left-corner
+  @bottom-right-corner
     content: counter(page)
 
   @top-left
     content: "CHAPTER " counter(ChapterNumberTOC) ": " string(ChapterTitle)
-
-@page chapter:blank
-  @bottom-left-corner
-    content: none
-
-  @bottom-right-corner
-    content: none
-
-  @top-right
-    content: none
-
-  @top-left
-    content: none
 
 /* page number resets to 1 on the first chapter
 
