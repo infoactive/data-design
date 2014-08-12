@@ -82,7 +82,7 @@ $color-names: blue yellow green violet red
   width: 240px
   height: 240px
   border-radius: 120px
-  margin: .25in auto .5in
+  margin: .5in auto
 
 .icon img
   width: 150px
@@ -126,6 +126,7 @@ figure[data-type="cover"]
     font-size: 9pt
     text-align: left
     margin-top: 5pt
+    margin-left: 1in
 
   @top-left
     font-family: "source_sans_proregular", sans-serif
@@ -145,6 +146,7 @@ figure[data-type="cover"]
     font-size: 9pt
     text-align: right
     margin-top: 5pt
+    margin-right: 1in
 
   @top-right
     font-family: "source_sans_proregular", sans-serif
@@ -839,9 +841,8 @@ td
 
 figure
   display: block
-  margin: 16pt -1in
-  padding: 8.64pt 1in
-  max-width: 6in
+  margin: 16pt 0 
+  padding: 8.64pt 0
   clear: both
   text-align: center
   /* in AH Land, this is how you center an img in a block
@@ -858,6 +859,9 @@ figure
     font-size: 7.5pt
     line-height: 10pt
     hyphens: none
+  img
+    margin: 0 auto
+    text-align: center
 
 figcaption:before
   font-family: "source_sans_probold", sans-serif
