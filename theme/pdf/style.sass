@@ -35,110 +35,59 @@
   font-weight: normal
   font-style: normal
 
-.blue
-  blockquote, [data-type="example"]
-    border-color: #41a2ba
-  a, blockquote:before
-    color: #41a2ba
-  .icon, th
-    background: #41a2ba
-  table:not(.custom) tr:nth-child(2n + 1), .highlight
-    background: #f4fafb
-  tr.custom.extra-highlight
-    background: #cfe8ee
+$yellow: #eeb11e
+$red: #cf4627
+$blue: #41a2ba
+$violet: #3e5084
+$green: #6baf44
+$light-gray: #efefef
+$gray: #d1d2d4
 
-div[data-type="part"].blue
-  background: #3a92a7
-  .content
-    background: #3a92a7
-  header
-    background: #41a2ba
-  + .navigation ul
-    background: #5fb0c4
+$light-yellow: lighten($yellow, 44)
+$light-red: lighten($red, 50)
+$light-blue: lighten($blue, 48)
+$light-violet: lighten($violet, 60)
+$light-green: lighten($green, 50)
 
-.yellow
-  blockquote, [data-type="example"]
-    border-color: #eeb11e
-  a, blockquote:before
-    color: #eeb11e
-  .icon, th
-    background: #eeb11e
-  table:not(.custom) tr:nth-child(2n + 1), .highlight
-    background: #fef9ef
-  tr.custom.extra-highlight
-    background: #fae9bf
+$colors: $blue $yellow $green $violet $red
+$light-colors: $light-blue $light-yellow $light-green $light-violet $light-red
 
-div[data-type="part"].yellow
-  background: #e1a411
-  .content
-    background: #e1a411
-  header
-    background: #eeb11e
-  + .navigation ul
-    background: #efbd46
+$color-names: blue yellow green violet red
 
-.green
-  blockquote, [data-type="example"]
-    border-color: #6baf44
-  a, blockquote:before
-    color: #6baf44
-  .icon, th
-    background: #6baf44
-  table:not(.custom) tr:nth-child(2n + 1), .highlight
-    background: #f8fcf6
-  tr.custom.extra-highlight
-    background: #dcedd2
+@for $i from 1 through 5
+  $color: nth($colors, $i)
+  $light-color: nth($light-colors, $i)
+  $color-name: nth($color-names, $i)
+  .#{nth($color-names, $i)}
+    blockquote, [data-type="example"]
+      border-color: $color
+    a, blockquote:before
+      color: $color
+    .icon, th
+      background: $color
+    table:not(.custom) tr:nth-child(2n + 1), .highlight
+      background: $light-color
+    tr.custom.extra-highlight
+      background: darken($light-color, 10)
+  div[data-type="part"].#{nth($color-names, $i)}
+    background: darken($color, 5)
+    .content
+      background: darken($color, 5)
+    header
+      background: $color
+    + .navigation ul
+      background: lighten(desaturate($color, 2), 8)
 
-div[data-type="part"].green
-  background: #609d3d
-  .content
-    background: #609d3d
-  header
-    background: #6baf44
-  + .navigation ul
-    background: #81bd5e
+.icon
+  width: 240px
+  height: 240px
+  border-radius: 50%
+  margin: 1.5in auto 1in
 
-.violet
-  blockquote, [data-type="example"]
-    border-color: #3e5084
-  a, blockquote:before
-    color: #3e5084
-  .icon, th
-    background: #3e5084
-  table:not(.custom) tr:nth-child(2n + 1), .highlight
-    background: #f8f9fc
-  tr.custom.extra-highlight
-    background: #d5dbec
-
-div[data-type="part"].violet
-  background: #364573
-  .content
-    background: #364573
-  header
-    background: #3e5084
-  + .navigation ul
-    background: #4d629d
-
-.red
-  blockquote, [data-type="example"]
-    border-color: #cf4627
-  a, blockquote:before
-    color: #cf4627
-  .icon, th
-    background: #cf4627
-  table:not(.custom) tr:nth-child(2n + 1), .highlight
-    background: #fef9f7
-  tr.custom.extra-highlight
-    background: #f5d4cd
-
-div[data-type="part"].red
-  background: #ba3f23
-  .content
-    background: #ba3f23
-  header
-    background: #cf4627
-  + .navigation ul
-    background: #d96145
+.icon img
+  width: 150px
+  height: 150px
+  margin: 45px
 
 @page
   /* defining overall trim size and page layout
