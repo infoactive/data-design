@@ -304,33 +304,35 @@ section
 /* dedication
 
 /* table of contents
-section[data-type="chapter"] header
-  border-bottom: 18px solid #eeeeee
-  margin-bottom: 4em
-  h1
-    font-family: 'source_sans_probold', sans-serif
-    font-size: 32pt
-    margin-top: 0
-    margin-bottom: 0
-    text-align: center
-    text-transform: uppercase
-    color: #444
-    -webkit-font-smoothing: antialiased
-  h2
+section[data-type="chapter"]
+  position: relative
+  header
+    border-bottom: 18px solid #eeeeee
+    margin-bottom: 4em
+    h1
+      font-family: 'source_sans_probold', sans-serif
+      font-size: 32pt
+      margin-top: 0
+      margin-bottom: 0
+      text-align: center
+      text-transform: uppercase
+      color: #444
+      -webkit-font-smoothing: antialiased
+    h2
 
-  p
-    font-family: 'source_sans_prolight', sans-serif
-    text-align: center
-    text-transform: uppercase
-    margin: 0pt 16pt
-    letter-spacing: 1pt
-    font-size: 16pt
-    padding: .3in
-    &[data-type="author"]
-      color: #aaa
-      font-size: 12pt
-      margin-bottom: .5in
-      page-break-after: always
+    p
+      font-family: 'source_sans_prolight', sans-serif
+      text-align: center
+      text-transform: uppercase
+      margin: 0pt 16pt
+      letter-spacing: 1pt
+      font-size: 16pt
+      padding: .3in
+      &[data-type="author"]
+        color: #aaa
+        font-size: 12pt
+        margin-bottom: .5in
+        page-break-after: always
 
 /* paged media
 @page toc:first
@@ -608,9 +610,9 @@ div[data-type="part"]
   width: 9in
   padding: .75in
   max-width: 100%
-  height: 7.75in
-  max-height: 100%
+  height: 7.5in
   color: white
+  position: fixed
   header h1
     font-family: "source_sans_probold", sans-serif
     font-size: 30pt
