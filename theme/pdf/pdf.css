@@ -516,22 +516,6 @@ section[data-type="sect1"] > h1 {
   margin-bottom: 14pt;
   string-set: SectionTitle self;
   /* A-heads are also displayed in chapter footers */ }
-section[data-type="sect2"] > h2 {
-  /* B-level headings */
-  font-family: "source_sans_proregular", sans-serif;
-  font-weight: bold;
-  font-size: 11pt;
-  line-height: 12pt;
-  margin-top: 18pt;
-  margin-bottom: 13pt; }
-section[data-type="sect3"] > h3 {
-  /* C-level headings */
-  font-family: "source_sans_prosemibold", sans-serif;
-  font-size: 9.5pt;
-  margin-top: 14pt;
-  margin-bottom: 10pt;
-  line-height: 14pt;
-  text-transform: uppercase; }
 section[data-type="preface"] {
   page: preface;
   page-break-before: right;
@@ -604,7 +588,7 @@ div[data-type="part"] {
   color: white;
   position: fixed;
   page-break-after: always; }
-  div[data-type="part"] h1 {
+  div[data-type="part"] header h1 {
     font-size: 30pt;
     line-height: 22pt;
     text-align: center;
@@ -615,7 +599,7 @@ div[data-type="part"] {
     padding: 1in;
     counter-increment: PartNumber;
     text-transform: uppercase;
-    color: white; }
+    color: #6baf44; }
   div[data-type="part"] p {
     color: white;
     margin: 0.75in;
