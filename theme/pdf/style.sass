@@ -81,8 +81,8 @@ $color-names: blue yellow green violet red
 .icon
   width: 240px
   height: 240px
-  border-radius: 50%
-  margin: 1.5in auto 1in
+  border-radius: 20pt
+  margin: 1in auto .5in
 
 .icon img
   width: 150px
@@ -208,7 +208,7 @@ h1 + p, h2 + p, h3 + P
 p, dd
   font-family: "source_sans_proregular", sans-serif
   text-indent: 0in
-  font-size: 9.5pt
+  font-size: 11pt
   line-height: 13pt
   margin-bottom: 13pt
   text-align: justify
@@ -640,7 +640,6 @@ div[data-type="part"]
   page-break-before: right
   margin: -1in
   > h1
-    font-family: 'OpenSans-CondBold', sans-serif
     font-size: 18pt
     line-height: 22pt
     text-align: center
@@ -649,9 +648,8 @@ div[data-type="part"]
     margin-top: 0
     margin-bottom: 28pt
     counter-increment: PartNumber
-    color: white
+    color: #fff
     &:before
-      font-family: 'OpenSans-Semibold', sans-serif
       font-size: 11pt
       text-transform: uppercase
       content: "Part " counter(PartNumber)
@@ -660,7 +658,7 @@ div[data-type="part"]
       margin-top: 72pt
       margin-bottom: 34pt
     p
-      color: white
+      color: #fff
 
 /* chapters
 
