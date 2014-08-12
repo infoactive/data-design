@@ -597,35 +597,29 @@ div[data-type="part"] {
   page-break-before: right;
   margin: -0.75in;
   width: 9in;
+  padding: 0.75in;
   max-width: 100%;
   height: auto;
   min-height: 100%;
   color: white;
   position: fixed;
   page-break-after: always; }
-  div[data-type="part"] > h1 {
+  div[data-type="part"] h1 {
     font-size: 30pt;
     line-height: 22pt;
     text-align: center;
-    margin-left: 1in;
-    margin-right: 1in;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 0;
     margin-bottom: 28pt;
     padding: 1in;
     counter-increment: PartNumber;
     text-transform: uppercase;
     color: white; }
-    div[data-type="part"] > h1:before {
-      font-size: 11pt;
-      text-transform: uppercase;
-      content: "Part " counter(PartNumber);
-      display: block;
-      text-align: center;
-      margin-top: 72pt;
-      margin-bottom: 34pt; }
-    div[data-type="part"] > h1 p {
-      color: white;
-      margin: 0.75in; }
+  div[data-type="part"] p {
+    color: white;
+    margin: 0.75in;
+    padding: 0.75in; }
 
 /* chapters */
 @page chapter:first {
