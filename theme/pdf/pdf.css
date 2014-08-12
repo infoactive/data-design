@@ -132,7 +132,7 @@ div[data-type="part"].red {
   width: 240px;
   height: 240px;
   border-radius: 120px;
-  margin: 1in auto 0.5in; }
+  margin: 0.25in auto 0.5in; }
 
 .icon img {
   width: 150px;
@@ -242,11 +242,19 @@ p, dd {
   margin-bottom: 13pt;
   text-align: justify; }
 
+h3 {
+  font-family: "source_sans_probold", sans-serif;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  margin-top: 0.5in;
+  margin-bottom: 0; }
+
 /* global styles */
 body {
   -ah-kerning-mode: pair;
   -ah-hyphenate-hyphenated-word: false;
-  hyphens: auto; }
+  hyphens: auto;
+  font-family: "source_sans_proregular", sans-serif; }
 
 /* general inlines */
 a {
@@ -327,7 +335,7 @@ section[data-type="chapter"] header {
   margin-bottom: 4em; }
   section[data-type="chapter"] header h1 {
     font-family: "source_sans_probold", sans-serif;
-    font-size: 40pt;
+    font-size: 32pt;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
@@ -346,7 +354,7 @@ section[data-type="chapter"] header {
       color: #aaaaaa;
       font-size: 12pt;
       margin-bottom: 0.5in;
-      page-break-before: always; }
+      page-break-after: always; }
 
 /* paged media */
 @page toc:first {
@@ -597,6 +605,8 @@ section[data-type="foreword"] {
     content: none; } }
 /* parts */
 div[data-type="part"] {
+  page: blank;
+  page-break-before: right;
   margin: -1in; }
   div[data-type="part"] > h1 {
     font-size: 18pt;
@@ -764,8 +774,8 @@ td code {
 figure {
   display: block;
   margin: 16pt -1in;
-  padding: 8.64pt 1.625in;
-  width: 4.375in;
+  padding: 8.64pt 1in;
+  max-width: 6in;
   clear: both;
   text-align: center;
   /* in AH Land, this is how you center an img in a block */
