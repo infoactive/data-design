@@ -584,7 +584,7 @@ div[data-type="part"] {
   padding: 0.75in;
   max-width: 100%;
   height: auto;
-  min-height: 11in;
+  min-height: 9in;
   color: white;
   page-break-after: always; }
   div[data-type="part"] header h1 {
