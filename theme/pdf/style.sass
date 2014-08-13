@@ -478,7 +478,7 @@ section
     color: #aaa
   &[data-type="preface"] > h1, &[data-type="foreword"] > h1
     string-set: ChapterTitle self
-  &[data-type="chapter"] > h1
+  &[data-type="chapter"] > h1, section[data-type="chapter"] > header > h1
     string-set: ChapterTitle self, SectionTitle self
     counter-increment: ChapterNumber
   &[data-type="appendix"] > h1
@@ -651,7 +651,7 @@ div[data-type="part"]
     content: counter(page)
 
   @top-left
-    content: "CHAPTER " counter(ChapterNumberTOC) ": " string(ChapterTitle)
+    content: "CHAPTER " counter(ChapterNumber) ": " string(ChapterTitle)
 
 /* page number resets to 1 on the first chapter
 
