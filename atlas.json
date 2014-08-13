@@ -39,8 +39,7 @@
   "formats": {
     "pdf": {
       "version": "web",
-      "toc": true,
-      "antennahouse_version": "AHFormatterV62_64-MR3"
+      "toc": true
     },
     "epub": {},
     "mobi": {},
