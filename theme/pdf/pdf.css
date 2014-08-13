@@ -480,7 +480,7 @@ section[data-type="preface"] > h1, section[data-type="foreword"] > h1, section[d
   color: #aaaaaa; }
 section[data-type="preface"] > h1, section[data-type="foreword"] > h1 {
   string-set: ChapterTitle self; }
-section[data-type="chapter"] > h1, section[@data-type="chapter"] > header {
+section[data-type="chapter"] > h1, section[data-type="chapter"] > header {
   string-set: ChapterTitle self, SectionTitle self;
   counter-increment: ChapterNumber; }
 section[data-type="appendix"] > h1 {
