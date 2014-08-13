@@ -480,7 +480,7 @@ section[data-type="preface"] > h1, section[data-type="foreword"] > h1, section[d
   color: #aaaaaa; }
 section[data-type="preface"] > h1, section[data-type="foreword"] > h1 {
   string-set: ChapterTitle self; }
-section[data-type="chapter"] > h1 {
+section[data-type="chapter"] > h1, section[@data-type="chapter"] > header {
   string-set: ChapterTitle self, SectionTitle self;
   counter-increment: ChapterNumber; }
 section[data-type="appendix"] > h1 {
@@ -623,7 +623,7 @@ div[data-type="part"] {
   @bottom-right-corner {
     content: counter(page); }
   @top-left {
-    content: "CHAPTER " counter(ChapterNumberTOC) ": " string(ChapterTitle); } }
+    content: "CHAPTER " counter(ChapterNumber) ": " string(ChapterTitle); } }
 /* page number resets to 1 on the first chapter */
 section.pagenumrestart {
   counter-reset: page 1; }
