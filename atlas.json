@@ -14,7 +14,16 @@
     "03-collecting-data/ch04-types-of-survey-questions.html",
     "03-collecting-data/ch05-additional-data-collection-methods.html",
     "03-collecting-data/ch06-finding-external-data.html",
-    "04-preparing-data/04-section-cover.html"
+    "04-preparing-data/04-section-cover.html",
+    "04-preparing-data/ch07-getting-data-ready-for-cleaning.html",
+    "04-preparing-data/ch08-data-cleaning.html",
+    "04-preparing-data/ch09-types-of-data-checks.html",
+    "04-preparing-data/ch10-what-data-cleaning-can-and-cant-catch.html",
+    "04-preparing-data/ch11-data-transformations.html",
+    "07-conclusion/07-section-cover.html",
+    "07-conclusion/resources.html",
+    "07-conclusion/glossary.html",
+    "07-conclusion/contributors.html"
   ],
   "formats": {
     "pdf": {
