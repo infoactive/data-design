@@ -38,7 +38,7 @@
   "formats": {
     "pdf": {
       "version": "web",
-      "toc": true
+      "toc": false
     },
     "epub": {},
     "mobi": {},
