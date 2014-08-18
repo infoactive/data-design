@@ -3,6 +3,7 @@
   "files": [
     "01-intro/titlepage.html",
     "01-intro/license.html",
+    "01-intro/table-of-contents.html",
     "01-intro/preface.html",
     "01-intro/foreword.html",
     "01-intro/how-to-use-this-book.html",
