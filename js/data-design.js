@@ -19,3 +19,12 @@ $( document ).ready(function() {
   }
 
 });
+
+document.addEventListener('keydown', function(event) {
+  if(event.keyCode == 37) { // Left arrow key pressed
+      $('#previous_page').children()[0].click(); // Click the previous link button
+  }
+  else if(event.keyCode == 39) { // Right arrow key pressed
+      $('#next_page').children()[0].click(); // Click the next link button
+  }
+});
