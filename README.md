@@ -38,6 +38,8 @@ This is the best option if you want to go off in your own direction, or just wan
 
 What's even better? This is super easy to do. Just go [to the repository](https://github.com/infoactive/data-design) and click `Fork` in the upper right corner. Voila! You're now the proud owner of a brand spanking new *Data + Design* repository.
 
+Please note that we are keeping the project's CSS in a separate repository ([link](https://github.com/infoactive/data-design-theme/)). You'll need this if you want to generate your own builds of the book.
+
 ### Fork Us! (Redux)
 
 Hey, wait a minute! What's up with this? It's just the same thing all over again!
