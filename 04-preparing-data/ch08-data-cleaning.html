@@ -9,7 +9,7 @@
 <section data-type="sect1">
 <p>Now that you have a prepped dataset, you&rsquo;re ready to get it clean. What does that mean though? What exactly are clean data and what do we have to do get them that way?</p>
 
-<p>Well, when we clean data, we&rsquo;re going through and identifying incorrect information &mdash; wrong numbers, misspellings, etc. &mdash; and deciding whether to correct them (if they are correctable) or to remove them altogether. Like in data preparation, many <a class="glossterm" target="_blank" href="glossary01.html#cleaning-data">data cleaning</a> tasks are a combination of computerized tasks and manual work, since it is important for you to review the potential errors the computer identifies to see if they are, in fact, errors. Some of the items your computer flags as problems may turn out to just be extreme observations so it&rsquo;s critical that you remain involved in the process. Don&rsquo;t just automate it all or you risk the possibility of deleting valid data! </p>
+<p>Well, when we clean data, we&rsquo;re going through and identifying incorrect information &mdash; wrong numbers, misspellings, etc. &mdash; and deciding whether to correct them (if they are correctable) or to remove them altogether. Like in data preparation, many <a class="glossterm" target="_blank" href="glossary01.html#cleaning-data">data cleaning</a> tasks are a combination of computerized tasks and manual work, since it is important for you to review the potential errors the computer identifies to see if they are, in fact, errors. Some of the items your computer flags as problems may turn out to just be extreme observations so it&rsquo;s critical that you remain involved in the process. Don&rsquo;t just automate it all or you risk the possibility of deleting valid data!</p>
 
 <h2>So What Do We Do?</h2>
 
@@ -17,7 +17,7 @@
 
 <h2>Range Checks</h2>
 
-<p><a class="glossterm" target="_blank" href="glossary01.html#check-range">Range checks</a> are a very straightforward procedure that we use on numeric fields to see if any values in the dataset are above or below the most extreme acceptable values for that variable. Let&rsquo;s use an example of homework scores. Pretend that you&rsquo;re a college professor and your teaching assistants entered the first set of homework scores for the semester. You want to make sure they entered everything correctly, so you go into the dataset and sort by the column that contains the scores for the first homework, graded on a scale of 0-100. You see the first few rows:</p>
+<p><a class="glossterm" target="_blank" href="glossary01.html#check-range">Range checks</a> are a straightforward procedure that we use on numeric fields to see if any values in the dataset are above or below the most extreme acceptable values for that variable. Let&rsquo;s use an example of homework scores. Pretend that you&rsquo;re a college professor and your teaching assistants entered the first set of homework scores for the semester. You want to make sure they entered everything correctly, so you go into the dataset and sort by the column that contains the scores for the first homework, graded on a scale of 0-100. You see the first few rows:</p>
 
 <table>
 	<tbody>
@@ -74,7 +74,7 @@
 	</tbody>
 </table>
 
-<p>Here, one score is much lower than the others. In this situation, it is possible that the score should have been entered as a 90 instead. This is another record that would make sense to flag and check with the source record. This is a good example of why it is important to be personally involved in the data checking process for variables that carry a lot of weight, like student grades or primary outcome variables for research projects. However, hand-checking all the variables in a dataset can be very time-consuming, especially if the dataset is large. Additionally, not all variables are created equal: it is up to you to decide which variables require involved personal attention and which can be checked automatically.</p>
+<p>Here, one score is much lower than the others. In this situation, it is possible that the score should have been entered as a 90 instead. This is another record that would make sense to flag and check with the source record. This is a good example of why it is important to be personally involved in the data checking process for variables that carry a lot of weight, like student grades or primary outcome variables for research projects. However, hand-checking all the variables in a dataset can be time-consuming, especially if the dataset is large. Additionally, not all variables are created equal: it is up to you to decide which variables require involved personal attention and which can be checked automatically.</p>
 
 <div data-type="warning"><p>Range checks will work no matter what your range is. Maybe you&rsquo;re expecting a decimal between 0 and 1, or your variable is normal body temperature in Fahrenheit so you&rsquo;re expecting mostly values between 97.0 and 99.0, allowing for people that run cold and hot. You can always look and see if there are values stored in that variable group that are too low or high.</p></div>
 
